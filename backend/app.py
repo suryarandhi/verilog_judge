@@ -1,21 +1,50 @@
 import os
+import secrets
+from datetime import timedelta
 
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
+from auth import auth_bp
+from db import init_db
 from judge import PROBLEMS_DIR, judge_submission, load_problem, load_problem_list
+from progress import progress_bp
 from utils import ensure_dir
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FRONTEND_DIR = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend'))
 SUBMISSIONS_DIR = os.path.join(BASE_DIR, 'submissions')
+DATA_DIR = os.environ.get('DATA_DIR', BASE_DIR)
+SECRET_KEY_FILE = os.path.join(DATA_DIR, '.secret_key')
 
 ensure_dir(FRONTEND_DIR)
 ensure_dir(SUBMISSIONS_DIR)
+ensure_dir(DATA_DIR)
+init_db()
+
+
+def load_or_create_secret_key():
+    env_key = os.environ.get('SECRET_KEY')
+    if env_key:
+        return env_key
+    if os.path.exists(SECRET_KEY_FILE):
+        with open(SECRET_KEY_FILE, 'r', encoding='utf-8') as handle:
+            return handle.read().strip()
+    key = secrets.token_hex(32)
+    with open(SECRET_KEY_FILE, 'w', encoding='utf-8') as handle:
+        handle.write(key)
+    return key
+
 
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path='')
-CORS(app)
+app.secret_key = load_or_create_secret_key()
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)
+CORS(app, supports_credentials=True)
+
+app.register_blueprint(auth_bp)
+app.register_blueprint(progress_bp)
 
 
 @app.route('/')

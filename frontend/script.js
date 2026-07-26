@@ -6,6 +6,8 @@ const streakKey = 'verilogJudgeStreak';
 const attemptPrefix = 'verilogJudgeAttempts:';
 const hintPrefix = 'verilogJudgeHintLevel:';
 
+let currentUser = null;
+let globalLeaderboardCache = [];
 let allProblems = [];
 let activeProblem = null;
 let activeProblemStartedAt = Date.now();
@@ -741,6 +743,205 @@ async function fetchJson(url, options = {}) {
   return data;
 }
 
+async function fetchCurrentUser() {
+  try {
+    const data = await fetchJson(`${apiBase}/auth/me`);
+    currentUser = data.user || null;
+  } catch (error) {
+    currentUser = null;
+  }
+  return currentUser;
+}
+
+function renderAuthWidget() {
+  const widget = document.getElementById('authWidget');
+  if (!widget) {
+    return;
+  }
+  if (currentUser) {
+    widget.innerHTML = `
+      <div class="auth-chip">
+        <span class="auth-username">${escapeHtml(currentUser.username)}</span>
+        <button id="authLogoutButton" class="auth-link-button" type="button">Log out</button>
+      </div>
+    `;
+    document.getElementById('authLogoutButton')?.addEventListener('click', handleLogout);
+  } else {
+    widget.innerHTML = `<button id="authSigninButton" class="auth-signin-button" type="button">Sign in</button>`;
+    document.getElementById('authSigninButton')?.addEventListener('click', () => openAuthModal('login'));
+  }
+}
+
+function openAuthModal(initialTab) {
+  closeAuthModal();
+  const backdrop = document.createElement('div');
+  backdrop.className = 'auth-modal-backdrop';
+  backdrop.id = 'authModalBackdrop';
+  backdrop.innerHTML = `
+    <div class="auth-modal" role="dialog" aria-modal="true">
+      <div class="auth-modal-tabs">
+        <button type="button" data-tab="login">Sign in</button>
+        <button type="button" data-tab="register">Create account</button>
+      </div>
+      <h2 id="authModalTitle">Sign in</h2>
+      <form id="authForm">
+        <div class="auth-field">
+          <label for="authUsername">Username</label>
+          <input id="authUsername" name="username" type="text" autocomplete="username" required />
+        </div>
+        <div class="auth-field">
+          <label for="authPassword">Password</label>
+          <input id="authPassword" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <p id="authError" class="auth-error"></p>
+        <div class="auth-modal-actions">
+          <button type="button" class="secondary-button" id="authCancelButton">Cancel</button>
+          <button type="submit" class="primary-button" id="authSubmitButton">Sign in</button>
+        </div>
+      </form>
+    </div>
+  `;
+  document.body.appendChild(backdrop);
+
+  const setTab = (tab) => {
+    backdrop.querySelectorAll('[data-tab]').forEach((button) => {
+      button.classList.toggle('active', button.dataset.tab === tab);
+    });
+    backdrop.querySelector('#authModalTitle').textContent = tab === 'login' ? 'Sign in' : 'Create account';
+    backdrop.querySelector('#authSubmitButton').textContent = tab === 'login' ? 'Sign in' : 'Create account';
+    backdrop.querySelector('#authPassword').autocomplete = tab === 'login' ? 'current-password' : 'new-password';
+    backdrop.dataset.mode = tab;
+    backdrop.querySelector('#authError').textContent = '';
+  };
+  backdrop.querySelectorAll('[data-tab]').forEach((button) => {
+    button.addEventListener('click', () => setTab(button.dataset.tab));
+  });
+  setTab(initialTab || 'login');
+
+  backdrop.querySelector('#authCancelButton').addEventListener('click', closeAuthModal);
+  backdrop.addEventListener('click', (event) => {
+    if (event.target === backdrop) {
+      closeAuthModal();
+    }
+  });
+  backdrop.querySelector('#authForm').addEventListener('submit', handleAuthSubmit);
+}
+
+function closeAuthModal() {
+  document.getElementById('authModalBackdrop')?.remove();
+}
+
+async function handleAuthSubmit(event) {
+  event.preventDefault();
+  const backdrop = document.getElementById('authModalBackdrop');
+  const mode = backdrop.dataset.mode;
+  const username = document.getElementById('authUsername').value.trim();
+  const password = document.getElementById('authPassword').value;
+  const errorBox = document.getElementById('authError');
+  const submitButton = document.getElementById('authSubmitButton');
+  errorBox.textContent = '';
+  submitButton.disabled = true;
+
+  try {
+    const endpoint = mode === 'login' ? 'login' : 'register';
+    const data = await fetchJson(`${apiBase}/auth/${endpoint}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+    currentUser = data.user;
+    closeAuthModal();
+    renderAuthWidget();
+    await syncAccountAfterLogin();
+  } catch (error) {
+    errorBox.textContent = error.message;
+  } finally {
+    submitButton.disabled = false;
+  }
+}
+
+async function handleLogout() {
+  try {
+    await fetchJson(`${apiBase}/auth/logout`, { method: 'POST' });
+  } catch (error) {
+    // Ignore network errors on logout; clear local state regardless.
+  }
+  currentUser = null;
+  renderAuthWidget();
+  if (document.getElementById('problemGrid')) {
+    rerenderHome();
+  }
+}
+
+async function syncAccountAfterLogin() {
+  if (!currentUser) {
+    return;
+  }
+  try {
+    const [progressData, statsData] = await Promise.all([
+      fetchJson(`${apiBase}/me/progress`),
+      fetchJson(`${apiBase}/me/stats`),
+    ]);
+    const localProgress = readProgress();
+    Object.entries(progressData.progress || {}).forEach(([problemId, entry]) => {
+      if (entry.accepted) {
+        localProgress[problemId] = {
+          accepted: true,
+          acceptedAt: entry.acceptedAt || localProgress[problemId]?.acceptedAt || new Date().toISOString(),
+          lastAcceptedAt: entry.lastAcceptedAt || new Date().toISOString(),
+        };
+      }
+    });
+    writeProgress(localProgress);
+
+    const stats = statsData.stats || {};
+    writeJsonStorage(streakKey, {
+      count: stats.streak_count || 0,
+      lastDay: stats.last_streak_day || '',
+    });
+  } catch (error) {
+    // Server sync is best-effort; local data stays intact if it fails.
+  }
+  if (document.getElementById('problemGrid')) {
+    rerenderHome();
+  }
+}
+
+async function syncAcceptedToServer(problemId, result) {
+  if (!currentUser) {
+    return;
+  }
+  const code = window.editorInstance?.getValue() || '';
+  const problem = activeProblem || allProblems.find((item) => item.id === problemId) || {};
+  const codeLines = code.split('\n').filter((line) => line.trim()).length;
+  const solveSeconds = Math.max(1, Math.round((Date.now() - activeProblemStartedAt) / 1000));
+  const score = Math.max(10, 1000 - solveSeconds - codeLines * 2);
+  try {
+    await fetchJson(`${apiBase}/progress/accept`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        problem_id: problemId,
+        title: problem.title || problemId,
+        score,
+        code_lines: codeLines,
+        solve_seconds: solveSeconds,
+        sim_time: result.time_seconds || 0,
+      }),
+    });
+  } catch (error) {
+    // Best-effort sync; the local leaderboard already recorded this attempt.
+  }
+}
+
+async function initAuth() {
+  await fetchCurrentUser();
+  renderAuthWidget();
+  if (currentUser) {
+    await syncAccountAfterLogin();
+  }
+}
+
 function difficultyClass(difficulty) {
   return `difficulty-pill difficulty-${String(difficulty).toLowerCase()}`;
 }
@@ -1003,6 +1204,7 @@ function rerenderHome() {
   renderDailyChallenge();
   renderDailyDvPrep();
   renderLeaderboard();
+  renderGlobalLeaderboard();
   renderVerificationLab();
   renderProgressMap();
 }
@@ -1106,6 +1308,30 @@ function renderLeaderboard() {
       </div>
     `).join('')}
   `;
+}
+
+async function renderGlobalLeaderboard() {
+  const board = document.getElementById('globalLeaderboard');
+  if (!board) {
+    return;
+  }
+  try {
+    const data = await fetchJson(`${apiBase}/leaderboard`);
+    globalLeaderboardCache = data.leaderboard || [];
+  } catch (error) {
+    board.innerHTML = `<p class="muted-text">Global leaderboard is unavailable right now.</p>`;
+    return;
+  }
+  if (!globalLeaderboardCache.length) {
+    board.innerHTML = `<p class="muted-text">No accounts have solved a problem yet. Sign in and submit an accepted solution to be first.</p>`;
+    return;
+  }
+  board.innerHTML = globalLeaderboardCache.map((entry, index) => `
+    <div class="leaderboard-row">
+      <span>${index + 1}. ${escapeHtml(entry.username)}</span>
+      <span>${entry.accepted_count} solved &middot; streak ${entry.best_streak} &middot; ${entry.total_score} pts</span>
+    </div>
+  `).join('');
 }
 
 function renderVerificationLab() {
@@ -1882,6 +2108,7 @@ async function submitSolution(problemId) {
     if (result.verdict === 'Accepted') {
       markAccepted(problemId);
       recordLeaderboard(problemId, result);
+      syncAcceptedToServer(problemId, result);
       updateSolutionButton(problemId);
     }
   } catch (error) {
@@ -2054,6 +2281,8 @@ async function loadProblemPage() {
     document.getElementById('problemContent').textContent = error.message;
   }
 }
+
+initAuth();
 
 if (document.getElementById('problemGrid')) {
   loadHomePage().catch((error) => {

@@ -1,1 +1,8 @@
- __pycache__/ *.pyc backend/submissions/ *.log .venv/ venv/
+__pycache__/
+*.pyc
+backend/submissions/
+*.log
+.venv/
+venv/
+backend/verilog_judge.db
+backend/.secret_key
