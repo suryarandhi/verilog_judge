@@ -1,0 +1,11 @@
+{
+  "title": "Select Bit 0 of 4",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Select bit 0 from a 4-bit input.\\n\\nRequired module:\\nmodule bit_select_4bit_0(input [3:0] a, output y);",
+  "template": "module bit_select_4bit_0(input [3:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

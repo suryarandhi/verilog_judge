@@ -1,0 +1,86 @@
+{
+  "problem_id": "zero_detector",
+  "code": "module zero_detector(input [7:0] a, output  reg is_zero);\nwire z;\n  // Write your code here\n assign  z=(a[0] | a[1] | a[2] | a[3] | a[4] | a[5] | a[6]| a[7]);\n always@(*) begin\n  if (z==0)\n  is_zero = 1;\n  else\n  is_zero =0;\n end\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "expected": [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "1\n0\n0\n0\n0\n0\n0\n0",
+    "submission_id": "e55fbfaf-a",
+    "time_seconds": 0.291,
+    "waveform_url": "/api/waveform/e55fbfaf-a"
+  },
+  "timestamp": "2026-05-16 19:54:49"
+}

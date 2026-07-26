@@ -1,0 +1,61 @@
+{
+  "problem_id": "half_adder",
+  "code": "module half_adder(input a, input b, output sum, output carry);\n  assign sum = a ^ b;\n  assign carry = a & b;\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "0 0 0 0",
+      "0 1 1 0",
+      "1 0 1 0",
+      "1 1 0 1",
+      "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\half_adder\\tb.v:16: $finish called at 20000 (1ps)"
+    ],
+    "expected": [
+      "0 0 0 0",
+      "0 1 1 0",
+      "1 0 1 0",
+      "1 1 0 1"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0 0 0 0",
+        "expected": "0 0 0 0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0 1 1 0",
+        "expected": "0 1 1 0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1 0 1 0",
+        "expected": "1 0 1 0"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "1 1 0 1",
+        "expected": "1 1 0 1"
+      },
+      {
+        "index": 5,
+        "passed": false,
+        "actual": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\half_adder\\tb.v:16: $finish called at 20000 (1ps)",
+        "expected": ""
+      }
+    ],
+    "passed_tests": 4,
+    "total_tests": 5,
+    "hidden_tests": 4,
+    "raw_output": "0 0 0 0\n0 1 1 0\n1 0 1 0\n1 1 0 1\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\half_adder\\tb.v:16: $finish called at 20000 (1ps)",
+    "submission_id": "c290d8ae-c",
+    "time_seconds": 0.157,
+    "waveform_url": "/api/waveform/c290d8ae-c"
+  },
+  "timestamp": "2026-07-02 23:59:09"
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "absolute_difference",
+  "code": "module absolute_difference(input [7:0] a, input [7:0] b, output reg [7:0] diff);\n  always @(*) begin\n      diff = 8'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "expected": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "raw_output": "xxxxxxxx\nxxxxxxxx\nxxxxxxxx\nxxxxxxxx",
+    "submission_id": "4ef3953a-6",
+    "time_seconds": 0.281,
+    "waveform_url": "/api/waveform/4ef3953a-6"
+  },
+  "timestamp": "2026-05-16 01:34:11"
+}

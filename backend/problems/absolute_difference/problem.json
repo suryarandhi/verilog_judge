@@ -1,0 +1,28 @@
+{
+  "id": "absolute_difference",
+  "title": "Absolute Difference",
+  "difficulty": "Medium",
+  "category": "Arithmetic",
+  "tags": [
+    "difference",
+    "absolute",
+    "arithmetic"
+  ],
+  "statement": "Design a unit that computes the absolute difference between two unsigned 8-bit values. The output should always be nonnegative and equal to |a - b|. This combinational block is useful in error detection and distance metrics.",
+  "module_signature": "module absolute_difference(input [7:0] a, input [7:0] b, output reg [7:0] diff);",
+  "behavior": [
+    "diff equals a - b when a >= b.",
+    "diff equals b - a when b > a.",
+    "Output must be nonnegative and unsigned.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential storage or clocks."
+  ],
+  "example": "a b | diff\n00000100 00000011 | 00000001\n00000010 00000100 | 00000010",
+  "hint": "Use a comparator to choose the subtraction direction.",
+  "template": "module absolute_difference(input [7:0] a, input [7:0] b, output reg [7:0] diff);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "unsigned_multiplier_4x4",
+  "title": "4x4 Unsigned Multiplier",
+  "difficulty": "Hard",
+  "category": "Arithmetic",
+  "tags": [
+    "multiplier",
+    "datapath",
+    "arithmetic"
+  ],
+  "statement": "Implement a 4x4 unsigned multiplier that produces an 8-bit product for two 4-bit operands. The module must be purely combinational and suitable for use in a small datapath block. This exercise covers boolean multiplication and partial product accumulation.",
+  "module_signature": "module unsigned_multiplier_4x4(input [3:0] a, input [3:0] b, output [7:0] product);",
+  "behavior": [
+    "product = a * b.",
+    "All outputs must update combinationally.",
+    "No sequential or registered logic may be used.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use behavioral loops to build the multiplier if you want a structural solution."
+  ],
+  "example": "a b | product\n0011 0101 | 00001111\n1111 1111 | 11100001",
+  "hint": "Think of partial products and addition of shifted terms.",
+  "template": "module unsigned_multiplier_4x4(input [3:0] a, input [3:0] b, output [7:0] product);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

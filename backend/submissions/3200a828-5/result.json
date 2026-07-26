@@ -1,0 +1,25 @@
+{
+  "problem_id": "read_after_write_buffer",
+  "code": "module read_after_write_buffer(input clk, input rst, input wr_en, input [3:0] addr, input [7:0] data_in, input rd_en, input [3:0] rd_addr, output reg [7:0] data_out);\n  always @(*) begin\n      data_out = 8'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "expected": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "raw_output": "xxxxxxxx\nxxxxxxxx\nxxxxxxxx\nxxxxxxxx",
+    "submission_id": "3200a828-5",
+    "time_seconds": 0.274,
+    "waveform_url": "/api/waveform/3200a828-5"
+  },
+  "timestamp": "2026-05-16 01:34:28"
+}

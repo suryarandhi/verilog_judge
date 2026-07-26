@@ -1,0 +1,28 @@
+{
+  "id": "bitwise_nand",
+  "title": "Bitwise NAND",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "nand",
+    "bitwise",
+    "combinational"
+  ],
+  "statement": "Create an 8-bit bitwise NAND operator. The output should be the bitwise NAND of the two 8-bit inputs. This module is useful for building logic functions and implementing complex logic gates.",
+  "module_signature": "module bitwise_nand(input [7:0] a, input [7:0] b, output [7:0] y);",
+  "behavior": [
+    "y is the bitwise NAND of a and b.",
+    "The result is 1 for each bit pair that is not both 1.",
+    "The design must be combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use registers or sequential constructs."
+  ],
+  "example": "a b | y\n11110000 10101010 | 01010101",
+  "hint": "Use bitwise operators directly for the NAND operation.",
+  "template": "module bitwise_nand(input [7:0] a, input [7:0] b, output [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

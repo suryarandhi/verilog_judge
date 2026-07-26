@@ -1,0 +1,11 @@
+{
+  "title": "Toggle Bit 4 of 16",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Toggle bit 4 of a 16-bit input.\\n\\nRequired module:\\nmodule bit_toggle_16bit_4(input [15:0] a, output [15:0] y);",
+  "template": "module bit_toggle_16bit_4(input [15:0] a, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

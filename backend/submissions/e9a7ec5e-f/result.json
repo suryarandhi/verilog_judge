@@ -1,0 +1,37 @@
+{
+  "problem_id": "zero_detector",
+  "code": "module zero_detector(input [7:0] a, output is_zero);\nwire z;\n  // Write your code here\n assign  z=(a[0] | a[1] | a[2] | a[3] | a[4] | a[5] | a[6]| a[7]);\n  if z==0:\n  is_zero = 1;\n  else\n  is_zero =0;\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e9a7ec5e-f\\submission.v:5: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e9a7ec5e-f\\submission.v:6: error: invalid module item.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e9a7ec5e-f\\submission.v:7: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e9a7ec5e-f\\submission.v:8: error: invalid module item.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e9a7ec5e-f\\submission.v:5: syntax error"
+      },
+      {
+        "line": 6,
+        "message": "error: invalid module item.",
+        "friendly": "error: invalid module item.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e9a7ec5e-f\\submission.v:6: error: invalid module item."
+      },
+      {
+        "line": 7,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e9a7ec5e-f\\submission.v:7: syntax error"
+      },
+      {
+        "line": 8,
+        "message": "error: invalid module item.",
+        "friendly": "error: invalid module item.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e9a7ec5e-f\\submission.v:8: error: invalid module item."
+      }
+    ],
+    "submission_id": "e9a7ec5e-f",
+    "time_seconds": 0.234
+  },
+  "timestamp": "2026-05-16 19:52:57"
+}

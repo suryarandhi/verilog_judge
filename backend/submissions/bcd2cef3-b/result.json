@@ -1,0 +1,27 @@
+{
+  "problem_id": "odd_parity_3bit",
+  "code": "module odd_parity_3bit(input [2:0] a, output y);\n  assign y = ^a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 0",
+      "001 1",
+      "011 0",
+      "111 1",
+      "101 0"
+    ],
+    "expected": [
+      "000 0",
+      "001 1",
+      "011 0",
+      "111 1",
+      "101 0"
+    ],
+    "raw_output": "000 0\n001 1\n011 0\n111 1\n101 0",
+    "submission_id": "bcd2cef3-b",
+    "time_seconds": 0.188,
+    "waveform_url": "/api/waveform/bcd2cef3-b"
+  },
+  "timestamp": "2026-05-15 23:47:42"
+}

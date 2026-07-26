@@ -1,0 +1,11 @@
+{
+  "problem_id": "synchronous_clear_counter",
+  "code": "module synchronous_clear_counter(input clk, input rst, input clear, output reg [3:0] count);\n  // Write your code here\nalways@(posedge clk) begin\nif (rst or clear)\ncount<=4'b0000;\nelse\ncount<=count+1;\nend\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\cf7d51ba-b\\submission.v:4: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\cf7d51ba-b\\submission.v:4: error: Malformed conditional expression.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\synchronous_clear_counter\\tb.v:18: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\synchronous_clear_counter\\tb.v:19: warning: Numeric constant truncated to 1 bits.",
+    "submission_id": "cf7d51ba-b",
+    "time_seconds": 0.26
+  },
+  "timestamp": "2026-05-16 12:02:07"
+}

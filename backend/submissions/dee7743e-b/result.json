@@ -1,0 +1,27 @@
+{
+  "problem_id": "nonzero_detector_3bit",
+  "code": "module nonzero_detector_3bit(input [2:0] a, output y);\n  assign y = a != 0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 0",
+      "001 1",
+      "111 1",
+      "100 1",
+      "101 1"
+    ],
+    "expected": [
+      "000 0",
+      "001 1",
+      "111 1",
+      "100 1",
+      "101 1"
+    ],
+    "raw_output": "000 0\n001 1\n111 1\n100 1\n101 1",
+    "submission_id": "dee7743e-b",
+    "time_seconds": 0.215,
+    "waveform_url": "/api/waveform/dee7743e-b"
+  },
+  "timestamp": "2026-05-15 23:47:39"
+}

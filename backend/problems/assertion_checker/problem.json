@@ -1,0 +1,28 @@
+{
+  "id": "assertion_checker",
+  "title": "Assertion Checker",
+  "difficulty": "Medium",
+  "category": "Verification",
+  "tags": [
+    "assertion",
+    "monitor",
+    "verification"
+  ],
+  "statement": "Create a combinational property checker that asserts when a 4-bit value is out of a safe range and holds a fault flag. The module should output an alert signal when the value exceeds 12. This helps verify safety conditions in a datapath.",
+  "module_signature": "module assertion_checker(input [3:0] value, output reg fault);",
+  "behavior": [
+    "fault is 1 when value > 12.",
+    "fault is 0 otherwise.",
+    "The checker is combinational in behavior.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential storage for the quality check."
+  ],
+  "example": "value | fault\n1100 | 0\n1101 | 1",
+  "hint": "Implement the condition with simple comparison logic.",
+  "template": "module assertion_checker(input [3:0] value, output reg fault);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

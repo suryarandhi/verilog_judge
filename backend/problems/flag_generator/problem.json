@@ -1,0 +1,29 @@
+{
+  "id": "flag_generator",
+  "title": "Flag Generator",
+  "difficulty": "Medium",
+  "category": "Datapath",
+  "tags": [
+    "flags",
+    "status",
+    "datapath"
+  ],
+  "statement": "Create a flag generator that computes zero, negative, parity, and carry flags from an 8-bit arithmetic result and carry-in signal. The module should produce outputs suitable for a processor status register. The logic must be combinational.",
+  "module_signature": "module flag_generator(input [7:0] result, input carry_in, output zero, output negative, output parity, output carry_out);",
+  "behavior": [
+    "zero is 1 when result == 0.",
+    "negative reflects result[7].",
+    "parity is 1 when result contains an even number of ones.",
+    "carry_out mirrors carry_in for this block.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential constructs."
+  ],
+  "example": "result carry_in | zero negative parity carry_out\n00000000 0 | 1 0 1 0",
+  "hint": "Compute flags from the result bits and carry signal.",
+  "template": "module flag_generator(input [7:0] result, input carry_in, output zero, output negative, output parity, output carry_out);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

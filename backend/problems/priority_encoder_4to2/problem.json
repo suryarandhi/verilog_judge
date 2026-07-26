@@ -1,0 +1,28 @@
+{
+  "id": "priority_encoder_4to2",
+  "title": "4-to-2 Priority Encoder",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "encoder",
+    "priority",
+    "combinational"
+  ],
+  "statement": "Implement a 4-to-2 priority encoder that outputs the binary index of the highest-priority set input. If no input is asserted, valid should be low and code should be zero. Priority is assigned from input 3 down to input 0.",
+  "module_signature": "module priority_encoder_4to2(input [3:0] in, output reg [1:0] code, output reg valid);",
+  "behavior": [
+    "code reports the highest asserted bit position when any input is set.",
+    "valid is 1 when any bit is asserted, else 0.",
+    "The module must be purely combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use registers beyond combinational output assignments."
+  ],
+  "example": "in   | valid code\n0000 | 0 00\n0101 | 1 10\n1000 | 1 11",
+  "hint": "Evaluate inputs from highest to lowest priority.",
+  "template": "module priority_encoder_4to2(input [3:0] in, output reg [1:0] code, output reg valid);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

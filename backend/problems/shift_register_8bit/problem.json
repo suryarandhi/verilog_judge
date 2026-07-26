@@ -1,0 +1,30 @@
+{
+  "id": "shift_register_8bit",
+  "title": "8-bit Shift Register",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "shift-register",
+    "serial",
+    "sequential"
+  ],
+  "statement": "Design an 8-bit shift register with serial input and parallel output. On each clock edge, the bits should shift one position toward the MSB, and the serial input should enter at the LSB. A synchronous clear should reset the register to zero.",
+  "module_signature": "module shift_register_8bit(input clk, input rst, input serial_in, output reg [7:0] q);",
+  "behavior": [
+    "On rising clock, q shifts left by one with serial_in entering q[0].",
+    "rst synchronously clears q to 0.",
+    "The output q is updated only on clock edges.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not infer a combinational shift chain that bypasses the clock."
+  ],
+  "example": "clk rst serial_in | q\n0 1 0 | 00000000\n1 0 1 | 00000001\n1 0 0 | 00000010",
+  "hint": "Model the register as eight flip-flops updated in one clocked block.",
+  "template": "module shift_register_8bit(input clk, input rst, input serial_in, output reg [7:0] q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

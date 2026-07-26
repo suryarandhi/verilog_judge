@@ -1,0 +1,55 @@
+{
+  "problem_id": "population_count",
+  "code": "module population_count(input [7:0] a, output reg [3:0] count);\n  // Write your code here\n  always@(*) begin \n    if(!a) begin\n      count =3'b000;\n      else begin\n        for(i=0;i<8;i=i+1) begin\n        if (a[i]) begin\n          count = count+1'b1;\n        end\n        end\n      end\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:6: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:7: Syntax in assignment statement l-value.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:7: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:7: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:7: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:9: Syntax in assignment statement l-value.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:12: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\population_count\\tb.v:2: error: invalid module item.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\population_count\\tb.v:4: count wire definition conflicts with reg definition at D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:1.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\population_count\\tb.v:4: error: Net ``count'' has already been declared.",
+    "compile_errors": [
+      {
+        "line": 6,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:6: syntax error"
+      },
+      {
+        "line": 7,
+        "message": "Syntax in assignment statement l-value.",
+        "friendly": "Syntax in assignment statement l-value.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:7: Syntax in assignment statement l-value."
+      },
+      {
+        "line": 7,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:7: syntax error"
+      },
+      {
+        "line": 7,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:7: error: malformed statement"
+      },
+      {
+        "line": 7,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:7: syntax error"
+      },
+      {
+        "line": 9,
+        "message": "Syntax in assignment statement l-value.",
+        "friendly": "Syntax in assignment statement l-value.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:9: Syntax in assignment statement l-value."
+      },
+      {
+        "line": 12,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3b6c2b29-0\\submission.v:12: syntax error"
+      }
+    ],
+    "submission_id": "3b6c2b29-0",
+    "time_seconds": 0.168
+  },
+  "timestamp": "2026-05-23 10:04:55"
+}

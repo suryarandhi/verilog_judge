@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_clear_4bit_0",
+  "code": "module bit_clear_4bit_0(input [3:0] a, output [3:0] y);\n  assign y = a & ~(4'b1 << 0);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0000",
+      "0001 0000",
+      "1111 1110",
+      "1010 1010"
+    ],
+    "expected": [
+      "0000 0000",
+      "0001 0000",
+      "1111 1110",
+      "1010 1010"
+    ],
+    "raw_output": "0000 0000\n0001 0000\n1111 1110\n1010 1010",
+    "submission_id": "5ce93107-9",
+    "time_seconds": 0.196,
+    "waveform_url": "/api/waveform/5ce93107-9"
+  },
+  "timestamp": "2026-05-15 23:47:01"
+}

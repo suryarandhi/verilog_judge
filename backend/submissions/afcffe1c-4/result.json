@@ -1,0 +1,25 @@
+{
+  "problem_id": "decoder_2to4",
+  "code": "module decoder_2to4(input [1:0] a, output [3:0] y);\n  assign y = 4'b1 << a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 0001",
+      "01 0010",
+      "10 0100",
+      "11 1000"
+    ],
+    "expected": [
+      "00 0001",
+      "01 0010",
+      "10 0100",
+      "11 1000"
+    ],
+    "raw_output": "00 0001\n01 0010\n10 0100\n11 1000",
+    "submission_id": "afcffe1c-4",
+    "time_seconds": 0.17,
+    "waveform_url": "/api/waveform/afcffe1c-4"
+  },
+  "timestamp": "2026-05-15 23:47:29"
+}

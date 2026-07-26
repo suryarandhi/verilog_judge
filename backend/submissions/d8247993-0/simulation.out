@@ -1,0 +1,68 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011525D0 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01262028_0 .var "clk", 0 0;
+v01262080_0 .var "d", 0 0;
+v0126D920_0 .net "q", 0 0, v01261F78_0; 1 drivers
+v0126D978_0 .var "rst", 0 0;
+S_012657A0 .scope module, "dut" "find_bug_dff_reset_polarity" 2 8, 3 1, S_011525D0;
+ .timescale 0 0;
+v01265828_0 .net "clk", 0 0, v01262028_0; 1 drivers
+v01265880_0 .net "d", 0 0, v01262080_0; 1 drivers
+v01261F78_0 .var "q", 0 0;
+v01261FD0_0 .net "rst", 0 0, v0126D978_0; 1 drivers
+E_01264228 .event "_s0";
+    .scope S_012657A0;
+T_0 ;
+    %wait E_01264228;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_011525D0;
+T_1 ;
+    %set/v v01262028_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v01262028_0, 1;
+    %inv 8, 1;
+    %set/v v01262028_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_011525D0;
+T_2 ;
+    %vpi_call 2 12 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 13 "$dumpvars", 1'sb0, S_011525D0;
+    %set/v v01262028_0, 0, 1;
+    %set/v v0126D978_0, 1, 1;
+    %set/v v01262080_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b", v0126D920_0;
+    %set/v v01262028_0, 0, 1;
+    %set/v v0126D978_0, 0, 1;
+    %set/v v01262080_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b", v0126D920_0;
+    %set/v v01262028_0, 0, 1;
+    %set/v v0126D978_0, 0, 1;
+    %set/v v01262080_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b", v0126D920_0;
+    %set/v v01262028_0, 0, 1;
+    %set/v v0126D978_0, 0, 1;
+    %set/v v01262080_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b", v0126D920_0;
+    %vpi_call 2 18 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\find_bug_dff_reset_polarity\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\d8247993-0\submission.v";

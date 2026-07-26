@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Adder",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Design a 16-bit adder with carry out.\\n\\nRequired module:\\nmodule adder_16bit(input [15:0] a, input [15:0] b, output [15:0] sum, output cout);",
+  "template": "module adder_16bit(input [15:0] a, input [15:0] b, output [15:0] sum, output cout);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

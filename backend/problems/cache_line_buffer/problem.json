@@ -1,0 +1,30 @@
+{
+  "id": "cache_line_buffer",
+  "title": "Cache Line Buffer",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "cache",
+    "buffer",
+    "memory"
+  ],
+  "statement": "Create a simple 4-line cache buffer that stores 16-bit tag/data pairs and supplies data on hits. The module should check tags for a hit and output valid data only on hits. A miss is indicated by valid being low.",
+  "module_signature": "module cache_line_buffer(input clk, input rst, input [1:0] index, input [7:0] tag, input [15:0] data_in, input write_en, output reg [15:0] data_out, output reg hit);",
+  "behavior": [
+    "hit is 1 when the requested tag matches the stored tag at index.",
+    "data_out holds valid data only on a hit.",
+    "rst invalidates all cache lines.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use built-in cache or associative memory primitives."
+  ],
+  "example": "index tag write_en | hit data_out\n00 00000001 0 | 0 xxxx\n01 00000010 1 | 0 data",
+  "hint": "Store separate tag and data arrays with enable control.",
+  "template": "module cache_line_buffer(input clk, input rst, input [1:0] index, input [7:0] tag, input [15:0] data_in, input write_en, output reg [15:0] data_out, output reg hit);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,30 @@
+{
+  "id": "fifo_sync_8x8",
+  "title": "Synchronous FIFO",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "fifo",
+    "memory",
+    "sequential"
+  ],
+  "statement": "Implement a synchronous FIFO with 8 entries of 8-bit width and separate read/write ports. The module should support push and pop operations, report full and empty conditions, and store data in internal memory. The FIFO must prevent reads when empty and writes when full, while preserving first-in, first-out order.",
+  "module_signature": "module fifo_sync_8x8(input clk, input rst, input write_en, input read_en, input [7:0] din, output reg [7:0] dout, output reg full, output reg empty);",
+  "behavior": [
+    "write_en stores din into the FIFO when full is 0.",
+    "read_en outputs the next stored value when empty is 0.",
+    "full and empty reflect the current FIFO status.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use external memory macros; implement storage internally."
+  ],
+  "example": "write_en read_en | full empty dout\n1 0 | 0 0 xx\n0 1 | 0 0 stored",
+  "hint": "Use a circular buffer with separate write and read pointers.",
+  "template": "module fifo_sync_8x8(input clk, input rst, input write_en, input read_en, input [7:0] din, output reg [7:0] dout, output reg full, output reg empty);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Reduction AND",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "reduction"
+  ],
+  "description": "Reduce a 8-bit input to one output bit.\\n\\nRequired module:\\nmodule reduction_and_8bit(input [7:0] a, output y);",
+  "template": "module reduction_and_8bit(input [7:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

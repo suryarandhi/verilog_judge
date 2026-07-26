@@ -1,0 +1,119 @@
+$date
+	Sat May 16 11:19:33 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 8 # b [7:0] $end
+$var reg 8 $ c [7:0] $end
+$var reg 8 % d [7:0] $end
+$var reg 2 & sel [1:0] $end
+$scope module dut $end
+$var wire 8 ' a [7:0] $end
+$var wire 8 ( b [7:0] $end
+$var wire 8 ) c [7:0] $end
+$var wire 8 * d [7:0] $end
+$var wire 2 + sel [1:0] $end
+$var wire 8 , y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bz ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+bz !
+$end
+#1000
+b1 &
+b1 +
+b1 %
+b1 *
+b1 $
+b1 )
+b1 #
+b1 (
+b1 "
+b1 '
+#2000
+b0 &
+b0 +
+b11111111 %
+b11111111 *
+b11111111 $
+b11111111 )
+b11111111 #
+b11111111 (
+b11111111 "
+b11111111 '
+#3000
+b1 &
+b1 +
+b10101010 %
+b10101010 *
+b10101010 $
+b10101010 )
+b10101010 #
+b10101010 (
+b10101010 "
+b10101010 '
+#4000
+b0 &
+b0 +
+b10 %
+b10 *
+b10 $
+b10 )
+b10 #
+b10 (
+b10 "
+b10 '
+#5000
+b1 &
+b1 +
+b11 %
+b11 *
+b11 $
+b11 )
+b11 #
+b11 (
+b11 "
+b11 '
+#6000
+b0 &
+b0 +
+b1111111 %
+b1111111 *
+b1111111 $
+b1111111 )
+b1111111 #
+b1111111 (
+b1111111 "
+b1111111 '
+#7000
+b1 &
+b1 +
+b10101010 %
+b10101010 *
+b10101010 $
+b10101010 )
+b10101010 #
+b10101010 (
+b10101010 "
+b10101010 '
+#8000

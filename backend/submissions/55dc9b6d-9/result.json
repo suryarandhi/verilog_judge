@@ -1,0 +1,27 @@
+{
+  "problem_id": "adder_4bit",
+  "code": "module adder_4bit(input [3:0] a, input [3:0] b, output [3:0] sum, output cout);\n  assign {cout, sum} = a + b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0000 0000 0",
+      "0001 0001 0010 0",
+      "1111 0001 0000 1",
+      "0111 0101 1100 0",
+      "1111 1111 1110 1"
+    ],
+    "expected": [
+      "0000 0000 0000 0",
+      "0001 0001 0010 0",
+      "1111 0001 0000 1",
+      "0111 0101 1100 0",
+      "1111 1111 1110 1"
+    ],
+    "raw_output": "0000 0000 0000 0\n0001 0001 0010 0\n1111 0001 0000 1\n0111 0101 1100 0\n1111 1111 1110 1",
+    "submission_id": "55dc9b6d-9",
+    "time_seconds": 0.2,
+    "waveform_url": "/api/waveform/55dc9b6d-9"
+  },
+  "timestamp": "2026-05-15 23:46:54"
+}

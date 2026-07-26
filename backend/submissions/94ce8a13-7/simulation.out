@@ -1,0 +1,49 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01124EC0 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01121FD0_0 .var "a", 0 0;
+v01122028_0 .var "b", 0 0;
+v01125840_0 .net "carry", 0 0, L_01125960; 1 drivers
+v01125898_0 .net "sum", 0 0, L_01122080; 1 drivers
+S_011251E8 .scope module, "dut" "half_adder" 2 6, 3 1, S_01124EC0;
+ .timescale 0 0;
+L_01122080 .functor XOR 1, v01121FD0_0, v01122028_0, C4<0>, C4<0>;
+L_01125960 .functor AND 1, v01121FD0_0, v01122028_0, C4<1>, C4<1>;
+v01162B70_0 .net "a", 0 0, v01121FD0_0; 1 drivers
+v01162BC8_0 .net "b", 0 0, v01122028_0; 1 drivers
+v01162C20_0 .alias "carry", 0 0, v01125840_0;
+v01121F78_0 .alias "sum", 0 0, v01125898_0;
+    .scope S_01124EC0;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_01124EC0;
+    %set/v v01121FD0_0, 0, 1;
+    %set/v v01122028_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b %b %b", v01121FD0_0, v01122028_0, v01125898_0, v01125840_0;
+    %set/v v01121FD0_0, 0, 1;
+    %set/v v01122028_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b %b %b", v01121FD0_0, v01122028_0, v01125898_0, v01125840_0;
+    %set/v v01121FD0_0, 1, 1;
+    %set/v v01122028_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b %b", v01121FD0_0, v01122028_0, v01125898_0, v01125840_0;
+    %set/v v01121FD0_0, 1, 1;
+    %set/v v01122028_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b %b", v01121FD0_0, v01122028_0, v01125898_0, v01125840_0;
+    %vpi_call 2 16 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\half_adder\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\94ce8a13-7\submission.v";

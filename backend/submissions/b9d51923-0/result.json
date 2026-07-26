@@ -1,0 +1,86 @@
+{
+  "problem_id": "gated_d_latch",
+  "code": "module gated_d_latch(input en, input d, output reg q);\n  // Write your code here\n  always@(*) begin\n  if(en)\n  q<=d;\n  else\n  q<=0;\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "expected": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 3,
+        "passed": false,
+        "actual": "0",
+        "expected": "1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 7,
+        "passed": false,
+        "actual": "0",
+        "expected": "1"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      }
+    ],
+    "passed_tests": 6,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0\n1\n0\n0\n0\n1\n0\n0",
+    "submission_id": "b9d51923-0",
+    "time_seconds": 0.697,
+    "waveform_url": "/api/waveform/b9d51923-0"
+  },
+  "timestamp": "2026-05-18 09:58:34"
+}

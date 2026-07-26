@@ -1,0 +1,30 @@
+{
+  "id": "bcd_to_7segment",
+  "title": "BCD to 7-segment Display",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "decoder",
+    "display",
+    "truth-table"
+  ],
+  "statement": "Design a BCD to 7-segment decoder for decimal digits 0 through 9. The output segment vector is active high and ordered as {a,b,c,d,e,f,g}. Invalid BCD inputs from 10 to 15 should turn all segments off. The circuit is purely combinational.",
+  "module_signature": "module bcd_to_7seg(input [3:0] bcd, output reg [6:0] seg);",
+  "behavior": [
+    "Drive the correct active-high segment pattern for BCD values 0 through 9.",
+    "Drive all segments low for invalid BCD inputs 10 through 15.",
+    "Do not store state or depend on a clock.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Must be synthesizable Verilog.",
+    "Use combinational logic.",
+    "Do not infer latches."
+  ],
+  "example": "bcd  digit  seg\n0000 0      1111110\n0001 1      0110000\n1010 invalid 0000000",
+  "hint": "A case statement maps cleanly from BCD values to segment patterns.",
+  "template": "module bcd_to_7seg(input [3:0] bcd, output reg [6:0] seg);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,30 @@
+{
+  "id": "rising_edge_detector",
+  "title": "Rising Edge Detector",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "edge-detector",
+    "flip-flop",
+    "sequential"
+  ],
+  "statement": "Implement a rising edge detector that asserts a pulse for one cycle when the input transitions from 0 to 1 on the clock edge. The output must be synchronous and only high for a single clock cycle per rising edge. It must ignore level changes that do not occur on clock boundaries.",
+  "module_signature": "module rising_edge_detector(input clk, input rst, input signal, output reg pulse);",
+  "behavior": [
+    "pulse is 1 for exactly one clock cycle after signal rises from 0 to 1.",
+    "pulse is 0 otherwise.",
+    "rst clears internal state synchronously and sets pulse to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Use sequential logic with registered state; do not use asynchronous edge detection macros."
+  ],
+  "example": "clk signal | pulse\n0 0 | 0\n1 1 | 1\n0 1 | 0",
+  "hint": "Store the previous input value and compare it to the current value on each clock.",
+  "template": "module rising_edge_detector(input clk, input rst, input signal, output reg pulse);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

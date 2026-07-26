@@ -1,0 +1,66 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0125ABB0 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01258420_0 .var "a", 1 0;
+v01258478_0 .var "b", 1 0;
+v01155278_0 .net "cout", 0 0, L_01154CF8; 1 drivers
+v01155380_0 .net "sum", 1 0, L_01155068; 1 drivers
+S_0125A880 .scope module, "dut" "adder_2bit" 2 7, 3 1, S_0125ABB0;
+ .timescale 0 0;
+v01132950_0 .net *"_s10", 0 0, C4<0>; 1 drivers
+v011329A8_0 .net *"_s11", 2 0, L_01155328; 1 drivers
+v01132A00_0 .net *"_s3", 2 0, L_011552D0; 1 drivers
+v01251F68_0 .net *"_s6", 0 0, C4<0>; 1 drivers
+v01251FC0_0 .net *"_s7", 2 0, L_011550C0; 1 drivers
+v01252018_0 .net "a", 1 0, v01258420_0; 1 drivers
+v01252070_0 .net "b", 1 0, v01258478_0; 1 drivers
+v01258370_0 .alias "cout", 0 0, v01155278_0;
+v012583C8_0 .alias "sum", 1 0, v01155380_0;
+L_01154CF8 .part L_01155328, 2, 1;
+L_01155068 .part L_01155328, 0, 2;
+L_011552D0 .concat [ 2 1 0 0], v01258420_0, C4<0>;
+L_011550C0 .concat [ 2 1 0 0], v01258478_0, C4<0>;
+L_01155328 .arith/sum 3, L_011552D0, L_011550C0;
+    .scope S_0125ABB0;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 11 "$dumpvars", 1'sb0, S_0125ABB0;
+    %set/v v01258420_0, 0, 2;
+    %set/v v01258478_0, 0, 2;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b %b %b", v01258420_0, v01258478_0, v01155380_0, v01155278_0;
+    %movi 8, 1, 2;
+    %set/v v01258420_0, 8, 2;
+    %movi 8, 1, 2;
+    %set/v v01258478_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b %b %b", v01258420_0, v01258478_0, v01155380_0, v01155278_0;
+    %set/v v01258420_0, 1, 2;
+    %movi 8, 1, 2;
+    %set/v v01258478_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b %b", v01258420_0, v01258478_0, v01155380_0, v01155278_0;
+    %movi 8, 1, 2;
+    %set/v v01258420_0, 8, 2;
+    %movi 8, 1, 2;
+    %set/v v01258478_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b %b", v01258420_0, v01258478_0, v01155380_0, v01155278_0;
+    %set/v v01258420_0, 1, 2;
+    %set/v v01258478_0, 1, 2;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b %b %b %b", v01258420_0, v01258478_0, v01155380_0, v01155278_0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\adder_2bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\3f7781d3-2\submission.v";

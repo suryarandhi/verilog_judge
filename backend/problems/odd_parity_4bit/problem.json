@@ -1,0 +1,11 @@
+{
+  "title": "4-bit Odd Parity",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "parity"
+  ],
+  "description": "Compute odd parity for a 4-bit input.\\n\\nRequired module:\\nmodule odd_parity_4bit(input [3:0] a, output y);",
+  "template": "module odd_parity_4bit(input [3:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

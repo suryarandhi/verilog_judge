@@ -1,0 +1,11 @@
+{
+  "title": "Set Bit 4 of 8",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Set bit 4 of a 8-bit input.\\n\\nRequired module:\\nmodule bit_set_8bit_4(input [7:0] a, output [7:0] y);",
+  "template": "module bit_set_8bit_4(input [7:0] a, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

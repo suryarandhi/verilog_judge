@@ -1,0 +1,11 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(\n    input clk,\n    input rst,\n    output reg [3:0] q\n);\n\nalways @(posedge clk)\nbegin\n    if (rst)\n        q <= 4'b0000;\n    else\n        q <= {q[2:0], ~q[3]};\nend\n\ne",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\johnson_counter_4bit\\tb.v:1: error: `timescale directive can not be inside a module definition.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\johnson_counter_4bit\\tb.v:2: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\fce41f9e-f\\submission.v:15: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\johnson_counter_4bit\\tb.v:5: q wire definition conflicts with reg definition at D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\fce41f9e-f\\submission.v:4.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\johnson_counter_4bit\\tb.v:5: error: Net ``q'' has already been declared.",
+    "submission_id": "fce41f9e-f",
+    "time_seconds": 0.231
+  },
+  "timestamp": "2026-05-16 01:40:26"
+}

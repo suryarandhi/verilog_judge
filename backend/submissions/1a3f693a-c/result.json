@@ -1,0 +1,27 @@
+{
+  "problem_id": "reduction_and_16bit",
+  "code": "module reduction_and_16bit(input [15:0] a, output y);\n  assign y = &a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000000000000000 0",
+      "0000000000000001 0",
+      "1111111111111111 1",
+      "1000000000000000 0",
+      "1010101010101010 0"
+    ],
+    "expected": [
+      "0000000000000000 0",
+      "0000000000000001 0",
+      "1111111111111111 1",
+      "1000000000000000 0",
+      "1010101010101010 0"
+    ],
+    "raw_output": "0000000000000000 0\n0000000000000001 0\n1111111111111111 1\n1000000000000000 0\n1010101010101010 0",
+    "submission_id": "1a3f693a-c",
+    "time_seconds": 0.212,
+    "waveform_url": "/api/waveform/1a3f693a-c"
+  },
+  "timestamp": "2026-05-15 23:47:45"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "bit_pulse_generator",
+  "title": "Bit Pulse Generator",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "pulse",
+    "sequential",
+    "register"
+  ],
+  "statement": "Implement a one-shot pulse generator that produces a single-cycle pulse whenever an input bit transitions from 0 to 1. The output must remain low otherwise and reset synchronously. This is useful for edge-triggered event capture in sequential logic.",
+  "module_signature": "module bit_pulse_generator(input clk, input rst, input in_bit, output reg pulse);",
+  "behavior": [
+    "pulse is 1 for exactly one cycle after a rising transition.",
+    "pulse is 0 for all other cycles.",
+    "rst synchronously clears pulse to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous edge detection or latches."
+  ],
+  "example": "in_bit | pulse\n0 0 1 | 1\n1 1 0 | 0",
+  "hint": "Store the previous sampled value and compare it to the current value.",
+  "template": "module bit_pulse_generator(input clk, input rst, input in_bit, output reg pulse);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

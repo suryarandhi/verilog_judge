@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Zero Detector",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "detector"
+  ],
+  "description": "Detect a condition on a 16-bit input.\\n\\nRequired module:\\nmodule zero_detector_16bit(input [15:0] a, output y);",
+  "template": "module zero_detector_16bit(input [15:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

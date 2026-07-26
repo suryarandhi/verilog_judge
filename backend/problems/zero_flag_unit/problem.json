@@ -1,0 +1,28 @@
+{
+  "id": "zero_flag_unit",
+  "title": "Zero Flag Unit",
+  "difficulty": "Easy",
+  "category": "Datapath",
+  "tags": [
+    "flag",
+    "zero",
+    "datapath"
+  ],
+  "statement": "Design a zero flag unit that asserts when an 8-bit value is zero. This unit is a datapath status generator used in branch and condition evaluation. The output should be combinational and instantaneous with input changes.",
+  "module_signature": "module zero_flag_unit(input [7:0] value, output zero);",
+  "behavior": [
+    "zero is 1 when value == 0.",
+    "zero is 0 otherwise.",
+    "No sequential elements may be used.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use registers or flip-flops."
+  ],
+  "example": "value | zero\n00000000 | 1\n00000001 | 0",
+  "hint": "Compare all bits to zero at once.",
+  "template": "module zero_flag_unit(input [7:0] value, output zero);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

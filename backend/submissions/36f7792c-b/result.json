@@ -1,0 +1,37 @@
+{
+  "problem_id": "zero_flag_unit",
+  "code": "module zero_flag_unit(input [7:0] value, output zero);\n  // Write your code here\n  always@(*) begin\n  if(value == 0)\n  zero =0;\n  else\n  zero = 1;\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\36f7792c-b\\submission.v:5: error: zero is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\36f7792c-b\\submission.v:1:      : zero is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\36f7792c-b\\submission.v:7: error: zero is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\36f7792c-b\\submission.v:1:      : zero is declared here as wire.\n2 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: zero is not a valid l-value in tb.dut.",
+        "friendly": "error: zero is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\36f7792c-b\\submission.v:5: error: zero is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": zero is declared here as wire.",
+        "friendly": ": zero is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\36f7792c-b\\submission.v:1:      : zero is declared here as wire."
+      },
+      {
+        "line": 7,
+        "message": "error: zero is not a valid l-value in tb.dut.",
+        "friendly": "error: zero is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\36f7792c-b\\submission.v:7: error: zero is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": zero is declared here as wire.",
+        "friendly": ": zero is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\36f7792c-b\\submission.v:1:      : zero is declared here as wire."
+      }
+    ],
+    "submission_id": "36f7792c-b",
+    "time_seconds": 0.179
+  },
+  "timestamp": "2026-05-18 22:24:50"
+}

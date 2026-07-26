@@ -1,0 +1,37 @@
+{
+  "problem_id": "majority_gate",
+  "code": "module majority_gate(input a, input b, input c, output y);\n  // Write your code here\n  always@(*) begin\n    if((a==1&b==1&c==0) | (a==0&b==1&c==1) | (a==1&b==0&c==1) | (a==1&b==1&c==1))\n    y<=1;\n    else\n    y<=0;\n  end \nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:17: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:17: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:17: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:18: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:18: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:18: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b5c14efe-f\\submission.v:5: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b5c14efe-f\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b5c14efe-f\\submission.v:7: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b5c14efe-f\\submission.v:1:      : y is declared here as wire.\n2 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b5c14efe-f\\submission.v:5: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b5c14efe-f\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 7,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b5c14efe-f\\submission.v:7: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b5c14efe-f\\submission.v:1:      : y is declared here as wire."
+      }
+    ],
+    "submission_id": "b5c14efe-f",
+    "time_seconds": 1.057
+  },
+  "timestamp": "2026-05-17 17:34:08"
+}

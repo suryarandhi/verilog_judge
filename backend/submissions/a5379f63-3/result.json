@@ -1,0 +1,27 @@
+{
+  "problem_id": "reduction_and_4bit",
+  "code": "module reduction_and_4bit(input [3:0] a, output y);\n  assign y = &a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0",
+      "0001 0",
+      "1111 1",
+      "1000 0",
+      "1010 0"
+    ],
+    "expected": [
+      "0000 0",
+      "0001 0",
+      "1111 1",
+      "1000 0",
+      "1010 0"
+    ],
+    "raw_output": "0000 0\n0001 0\n1111 1\n1000 0\n1010 0",
+    "submission_id": "a5379f63-3",
+    "time_seconds": 0.21,
+    "waveform_url": "/api/waveform/a5379f63-3"
+  },
+  "timestamp": "2026-05-15 23:46:10"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "overflow_detector",
+  "title": "Signed Overflow Detector",
+  "difficulty": "Medium",
+  "category": "Arithmetic",
+  "tags": [
+    "overflow",
+    "detector",
+    "arithmetic"
+  ],
+  "statement": "Create a signed overflow detector for 8-bit addition. The module should assert overflow whenever two operands and the result violate signed overflow rules. This is a common condition check in ALUs and arithmetic pipelines.",
+  "module_signature": "module overflow_detector(input signed [7:0] a, input signed [7:0] b, input signed [7:0] sum, output overflow);",
+  "behavior": [
+    "overflow is 1 when adding a and b produces a signed result outside [-128, 127].",
+    "overflow is 0 for all other cases.",
+    "Outputs must be purely combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use registers or sequential logic."
+  ],
+  "example": "a b sum | overflow\n01111111 00000001 10000000 | 1\n10000000 10000000 00000000 | 1\n00000001 00000001 00000010 | 0",
+  "hint": "Check if the operands have the same sign and the result has a different sign.",
+  "template": "module overflow_detector(input signed [7:0] a, input signed [7:0] b, input signed [7:0] sum, output overflow);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

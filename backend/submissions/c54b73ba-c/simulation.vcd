@@ -1,0 +1,62 @@
+$date
+	Fri May 15 23:45:08 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 1 ! cout $end
+$var wire 3 " sum [2:0] $end
+$var reg 3 # a [2:0] $end
+$var reg 3 $ b [2:0] $end
+$scope module dut $end
+$var wire 3 % a [2:0] $end
+$var wire 3 & b [2:0] $end
+$var wire 1 ! cout $end
+$var wire 3 ' sum [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+0!
+$end
+#5000
+b10 "
+b10 '
+b1 $
+b1 &
+b1 #
+b1 %
+#10000
+b0 "
+b0 '
+1!
+b111 #
+b111 %
+#15000
+b101 "
+b101 '
+0!
+b10 $
+b10 &
+b11 #
+b11 %
+#20000
+b110 "
+b110 '
+1!
+b111 $
+b111 &
+b111 #
+b111 %
+#25000

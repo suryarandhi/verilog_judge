@@ -1,0 +1,19 @@
+{
+  "problem_id": "constant_zero_8bit",
+  "code": "module constant_zero_8bit(output [7:0] y);\n  assign y = 8'b0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000"
+    ],
+    "expected": [
+      "00000000"
+    ],
+    "raw_output": "00000000",
+    "submission_id": "3c40d369-3",
+    "time_seconds": 0.204,
+    "waveform_url": "/api/waveform/3c40d369-3"
+  },
+  "timestamp": "2026-05-15 23:47:27"
+}

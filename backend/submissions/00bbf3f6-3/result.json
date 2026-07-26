@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_select_8bit_3",
+  "code": "module bit_select_8bit_3(input [7:0] a, output y);\n  assign y = a[3];\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000 0",
+      "00001000 1",
+      "11111111 1",
+      "10101010 1"
+    ],
+    "expected": [
+      "00000000 0",
+      "00001000 1",
+      "11111111 1",
+      "10101010 1"
+    ],
+    "raw_output": "00000000 0\n00001000 1\n11111111 1\n10101010 1",
+    "submission_id": "00bbf3f6-3",
+    "time_seconds": 0.225,
+    "waveform_url": "/api/waveform/00bbf3f6-3"
+  },
+  "timestamp": "2026-05-15 23:47:09"
+}

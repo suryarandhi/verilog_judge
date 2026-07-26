@@ -1,0 +1,11 @@
+{
+  "title": "1-bit AND",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 1-bit bitwise AND circuit.\\n\\nRequired module:\\nmodule and_1bit(input [0:0] a, input [0:0] b, output [0:0] y);",
+  "template": "module and_1bit(input [0:0] a, input [0:0] b, output [0:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

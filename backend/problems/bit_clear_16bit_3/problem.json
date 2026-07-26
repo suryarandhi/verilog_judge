@@ -1,0 +1,11 @@
+{
+  "title": "Clear Bit 3 of 16",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Clear bit 3 of a 16-bit input.\\n\\nRequired module:\\nmodule bit_clear_16bit_3(input [15:0] a, output [15:0] y);",
+  "template": "module bit_clear_16bit_3(input [15:0] a, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

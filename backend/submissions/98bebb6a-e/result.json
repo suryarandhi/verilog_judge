@@ -1,0 +1,27 @@
+{
+  "problem_id": "reduction_xor_4bit",
+  "code": "module reduction_xor_4bit(input [3:0] a, output y);\n  assign y = ^a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0",
+      "0001 1",
+      "1111 0",
+      "1000 1",
+      "1010 0"
+    ],
+    "expected": [
+      "0000 0",
+      "0001 1",
+      "1111 0",
+      "1000 1",
+      "1010 0"
+    ],
+    "raw_output": "0000 0\n0001 1\n1111 0\n1000 1\n1010 0",
+    "submission_id": "98bebb6a-e",
+    "time_seconds": 0.241,
+    "waveform_url": "/api/waveform/98bebb6a-e"
+  },
+  "timestamp": "2026-05-15 23:46:12"
+}

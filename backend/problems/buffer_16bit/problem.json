@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Buffer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Pass a 16-bit input directly to the output.\\n\\nRequired module:\\nmodule buffer_16bit(input [15:0] a, output [15:0] y);",
+  "template": "module buffer_16bit(input [15:0] a, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

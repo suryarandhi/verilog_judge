@@ -1,0 +1,28 @@
+{
+  "id": "formal_property_checker",
+  "title": "Formal Property Checker",
+  "difficulty": "Hard",
+  "category": "Verification",
+  "tags": [
+    "assertion",
+    "formal",
+    "verification"
+  ],
+  "statement": "Create an assertion-like module that flags when an 8-bit input violates a safety property: the value must never exceed 200 when a permit signal is low. The output should be 1 only when the violation occurs. This mimics simple formal verification properties in hardware checking.",
+  "module_signature": "module formal_property_checker(input [7:0] value, input permit, output reg violation);",
+  "behavior": [
+    "violation is 1 when permit is 0 and value > 200.",
+    "violation is 0 otherwise.",
+    "The module behavior is combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential state or clocks."
+  ],
+  "example": "permit value | violation\n0 11001001 | 1\n1 11001001 | 0",
+  "hint": "Use a single condition that captures both permit and threshold.",
+  "template": "module formal_property_checker(input [7:0] value, input permit, output reg violation);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,11 @@
+{
+  "problem_id": "all_ones_detector_3bit",
+  "code": "module all_ones_detector_3bit(input [2:0] a, output y);\n  assign y = a == {3{1'b1}}};\nendmodule\n",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\305354d2-5\\submission.v:2: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\305354d2-5\\submission.v:2: error: syntax error in continuous assignment",
+    "submission_id": "305354d2-5",
+    "time_seconds": 0.169
+  },
+  "timestamp": "2026-05-15 23:45:09"
+}

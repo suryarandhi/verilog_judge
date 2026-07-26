@@ -1,0 +1,25 @@
+{
+  "problem_id": "find_bug_priority_encoder",
+  "code": "module find_bug_priority_encoder(input [7:0] in, output reg [2:0] code, output reg valid);\n  always @(*) begin\n      code = 3'b0;\n      valid = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxx x",
+      "xxx x",
+      "xxx x",
+      "xxx x"
+    ],
+    "expected": [
+      "xxx x",
+      "xxx x",
+      "xxx x",
+      "xxx x"
+    ],
+    "raw_output": "xxx x\nxxx x\nxxx x\nxxx x",
+    "submission_id": "11732780-d",
+    "time_seconds": 0.275,
+    "waveform_url": "/api/waveform/11732780-d"
+  },
+  "timestamp": "2026-05-16 01:34:21"
+}

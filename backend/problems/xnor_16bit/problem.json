@@ -1,0 +1,11 @@
+{
+  "title": "16-bit XNOR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 16-bit bitwise XNOR circuit.\\n\\nRequired module:\\nmodule xnor_16bit(input [15:0] a, input [15:0] b, output [15:0] y);",
+  "template": "module xnor_16bit(input [15:0] a, input [15:0] b, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

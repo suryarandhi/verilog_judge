@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_toggle_4bit_2",
+  "code": "module bit_toggle_4bit_2(input [3:0] a, output [3:0] y);\n  assign y = a ^ (4'b1 << 2);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0100",
+      "0100 0000",
+      "1111 1011",
+      "1010 1110"
+    ],
+    "expected": [
+      "0000 0100",
+      "0100 0000",
+      "1111 1011",
+      "1010 1110"
+    ],
+    "raw_output": "0000 0100\n0100 0000\n1111 1011\n1010 1110",
+    "submission_id": "34cbf5d0-f",
+    "time_seconds": 0.174,
+    "waveform_url": "/api/waveform/34cbf5d0-f"
+  },
+  "timestamp": "2026-05-15 23:47:20"
+}

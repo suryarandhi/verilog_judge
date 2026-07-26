@@ -1,0 +1,25 @@
+{
+  "problem_id": "decoder_3to8",
+  "code": "module decoder_3to8(input [2:0] sel, output [7:0] y);\n  assign y = 8'b00000001 << sel;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000001",
+      "00000010",
+      "00000001",
+      "00000010"
+    ],
+    "expected": [
+      "00000001",
+      "00000010",
+      "00000001",
+      "00000010"
+    ],
+    "raw_output": "00000001\n00000010\n00000001\n00000010",
+    "submission_id": "d6dce920-7",
+    "time_seconds": 0.29,
+    "waveform_url": "/api/waveform/d6dce920-7"
+  },
+  "timestamp": "2026-05-16 01:34:19"
+}

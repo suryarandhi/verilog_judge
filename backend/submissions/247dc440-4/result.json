@@ -1,0 +1,27 @@
+{
+  "problem_id": "even_parity_4bit",
+  "code": "module even_parity_4bit(input [3:0] a, output y);\n  assign y = ~^a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 1",
+      "0001 0",
+      "0011 1",
+      "1111 1",
+      "1010 1"
+    ],
+    "expected": [
+      "0000 1",
+      "0001 0",
+      "0011 1",
+      "1111 1",
+      "1010 1"
+    ],
+    "raw_output": "0000 1\n0001 0\n0011 1\n1111 1\n1010 1",
+    "submission_id": "247dc440-4",
+    "time_seconds": 0.202,
+    "waveform_url": "/api/waveform/247dc440-4"
+  },
+  "timestamp": "2026-05-15 23:47:31"
+}

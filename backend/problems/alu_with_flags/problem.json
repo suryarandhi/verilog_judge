@@ -1,0 +1,29 @@
+{
+  "id": "alu_with_flags",
+  "title": "ALU with Flags",
+  "difficulty": "Hard",
+  "category": "Datapath",
+  "tags": [
+    "alu",
+    "flags",
+    "datapath"
+  ],
+  "statement": "Design an 8-bit ALU that performs add, subtract, AND, OR, and XOR operations and also generates zero, negative, and carry flags. The flags should reflect the result of the selected operation. This module is a key datapath component in a microprocessor.",
+  "module_signature": "module alu_with_flags(input [7:0] a, input [7:0] b, input [2:0] op, output reg [7:0] result, output reg zero, output reg negative, output reg carry);",
+  "behavior": [
+    "result reflects the selected arithmetic or logical operation.",
+    "zero is 1 when result is 0.",
+    "negative is 1 when result[7] is 1.",
+    "carry is 1 for unsigned addition or subtraction carry/borrow.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential registers beyond output registers assigned in combinational logic."
+  ],
+  "example": "a b op | result zero negative carry\n00000001 00000001 000 | 00000010 0 0 0",
+  "hint": "Compute all operation results and then select the appropriate one.",
+  "template": "module alu_with_flags(input [7:0] a, input [7:0] b, input [2:0] op, output reg [7:0] result, output reg zero, output reg negative, output reg carry);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

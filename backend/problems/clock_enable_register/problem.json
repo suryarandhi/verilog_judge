@@ -1,0 +1,30 @@
+{
+  "id": "clock_enable_register",
+  "title": "Clock-Enable Register",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "register",
+    "clock enable",
+    "sequential"
+  ],
+  "statement": "Create an 8-bit register with a clock-enable signal that updates its output only when enable is high on a clock edge. When enable is low, the output remains unchanged. A synchronous reset should clear the register to zero.",
+  "module_signature": "module clock_enable_register(input clk, input rst, input en, input [7:0] d, output reg [7:0] q);",
+  "behavior": [
+    "If en is 1 on the rising edge, q <= d.",
+    "If en is 0, q holds its value.",
+    "rst synchronously resets q to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous reset or latches in the implementation."
+  ],
+  "example": "clk rst en d      | q\n0 1 0 10101010 | 00000000\n1 0 1 10101010 | 10101010\n1 0 0 01010101 | 10101010",
+  "hint": "A single clocked always block with conditional enable is enough.",
+  "template": "module clock_enable_register(input clk, input rst, input en, input [7:0] d, output reg [7:0] q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

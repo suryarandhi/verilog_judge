@@ -1,0 +1,25 @@
+{
+  "problem_id": "shift_register_8bit",
+  "code": "module shift_register_8bit(input clk, input rst, input serial_in, output reg [7:0] q);\n  always @(*) begin\n      q = 8'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "expected": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "raw_output": "xxxxxxxx\nxxxxxxxx\nxxxxxxxx\nxxxxxxxx",
+    "submission_id": "f7be7711-8",
+    "time_seconds": 0.282,
+    "waveform_url": "/api/waveform/f7be7711-8"
+  },
+  "timestamp": "2026-05-16 01:34:32"
+}

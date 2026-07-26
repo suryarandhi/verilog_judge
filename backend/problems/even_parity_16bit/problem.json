@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Even Parity",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "parity"
+  ],
+  "description": "Compute even parity for a 16-bit input.\\n\\nRequired module:\\nmodule even_parity_16bit(input [15:0] a, output y);",
+  "template": "module even_parity_16bit(input [15:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

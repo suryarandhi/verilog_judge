@@ -1,0 +1,27 @@
+{
+  "problem_id": "reduction_and_8bit",
+  "code": "module reduction_and_8bit(input [7:0] a, output y);\n  assign y = &a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000 0",
+      "00000001 0",
+      "11111111 1",
+      "10000000 0",
+      "10101010 0"
+    ],
+    "expected": [
+      "00000000 0",
+      "00000001 0",
+      "11111111 1",
+      "10000000 0",
+      "10101010 0"
+    ],
+    "raw_output": "00000000 0\n00000001 0\n11111111 1\n10000000 0\n10101010 0",
+    "submission_id": "dc16cade-4",
+    "time_seconds": 0.221,
+    "waveform_url": "/api/waveform/dc16cade-4"
+  },
+  "timestamp": "2026-05-15 23:46:10"
+}

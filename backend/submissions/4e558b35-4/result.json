@@ -1,0 +1,25 @@
+{
+  "problem_id": "formal_property_checker",
+  "code": "module formal_property_checker(input [7:0] value, input permit, output reg violation);\n  always @(*) begin\n      violation = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "4e558b35-4",
+    "time_seconds": 0.241,
+    "waveform_url": "/api/waveform/4e558b35-4"
+  },
+  "timestamp": "2026-05-16 01:34:22"
+}

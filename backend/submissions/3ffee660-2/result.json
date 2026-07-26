@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_toggle_8bit_5",
+  "code": "module bit_toggle_8bit_5(input [7:0] a, output [7:0] y);\n  assign y = a ^ (8'b1 << 5);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000 00100000",
+      "00100000 00000000",
+      "11111111 11011111",
+      "10101010 10001010"
+    ],
+    "expected": [
+      "00000000 00100000",
+      "00100000 00000000",
+      "11111111 11011111",
+      "10101010 10001010"
+    ],
+    "raw_output": "00000000 00100000\n00100000 00000000\n11111111 11011111\n10101010 10001010",
+    "submission_id": "3ffee660-2",
+    "time_seconds": 0.194,
+    "waveform_url": "/api/waveform/3ffee660-2"
+  },
+  "timestamp": "2026-05-15 23:47:22"
+}

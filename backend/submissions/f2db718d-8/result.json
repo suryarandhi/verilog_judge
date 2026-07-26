@@ -1,0 +1,25 @@
+{
+  "problem_id": "bus_arbiter",
+  "code": "module bus_arbiter(input clk, input rst, input [2:0] req, output reg [2:0] grant);\n  always @(*) begin\n      grant = 3'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxx",
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "expected": [
+      "xxx",
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "raw_output": "xxx\nxxx\nxxx\nxxx",
+    "submission_id": "f2db718d-8",
+    "time_seconds": 0.267,
+    "waveform_url": "/api/waveform/f2db718d-8"
+  },
+  "timestamp": "2026-05-16 01:34:15"
+}

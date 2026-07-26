@@ -1,0 +1,11 @@
+{
+  "title": "OR Gate",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "gates"
+  ],
+  "description": "Design a 2-input OR gate.\n\nRequired module:\nmodule or_gate(input a, input b, output y);\n\nBehavior:\n- y is 1 when a or b is 1",
+  "template": "module or_gate(input a, input b, output y);\n  // Write your code here\n\nendmodule",
+  "curated": false
+}

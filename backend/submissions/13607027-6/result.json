@@ -1,0 +1,25 @@
+{
+  "problem_id": "majority_gate",
+  "code": "module majority_gate(input a, input b, input c, output y);\n  assign y = (a & b) | (a & c) | (b & c);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "expected": [
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "raw_output": "0\n1\n1\n0",
+    "submission_id": "13607027-6",
+    "time_seconds": 0.274,
+    "waveform_url": "/api/waveform/13607027-6"
+  },
+  "timestamp": "2026-05-16 01:34:24"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "d_flipflop_sync_reset",
+  "title": "D Flip-Flop with Synchronous Reset",
+  "difficulty": "Easy",
+  "category": "Sequential",
+  "tags": [
+    "flip-flop",
+    "synchronous reset",
+    "register"
+  ],
+  "statement": "Design a D flip-flop with synchronous active-high reset. On each rising clock edge, if reset is high the output should clear to zero; otherwise it should capture the D input. This is fundamental sequential storage for registered datapaths.",
+  "module_signature": "module d_flipflop_sync_reset(input clk, input rst, input d, output reg q);",
+  "behavior": [
+    "On rising clock edge, if rst is high, q becomes 0.",
+    "If rst is low, q follows d on the clock edge.",
+    "No asynchronous reset or direct set is allowed.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not infer asynchronous behavior or use latches."
+  ],
+  "example": "clk rst d | q\n0 1 1 | 0\n1 0 1 | 1\n1 0 0 | 0",
+  "hint": "Use a clocked always block with rst in the sensitivity list for synchronous reset.",
+  "template": "module d_flipflop_sync_reset(input clk, input rst, input d, output reg q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

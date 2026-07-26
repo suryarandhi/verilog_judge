@@ -1,0 +1,30 @@
+{
+  "id": "pointer_based_buffer",
+  "title": "Pointer-Based Buffer",
+  "difficulty": "Medium",
+  "category": "Memory",
+  "tags": [
+    "buffer",
+    "pointer",
+    "memory"
+  ],
+  "statement": "Design a 4-entry buffer with separate write and read pointers and full/empty indicators. Writes should advance the write pointer and reads advance the read pointer on the clock. The buffer must be circular and handle simultaneous write/read correctly.",
+  "module_signature": "module pointer_based_buffer(input clk, input rst, input write_en, input read_en, input [7:0] din, output reg [7:0] dout, output reg full, output reg empty);",
+  "behavior": [
+    "write_en stores din when full is 0.",
+    "read_en outputs the next value when empty is 0.",
+    "full/empty flags indicate buffer status.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use external queue primitives."
+  ],
+  "example": "write_en read_en | full empty dout\n1 0 | 0 0 xx\n0 1 | 0 0 stored",
+  "hint": "Maintain write/read pointers and count entries.",
+  "template": "module pointer_based_buffer(input clk, input rst, input write_en, input read_en, input [7:0] din, output reg [7:0] dout, output reg full, output reg empty);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

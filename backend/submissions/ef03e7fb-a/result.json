@@ -1,0 +1,18 @@
+{
+  "problem_id": "testbench_for_mux",
+  "code": "module testbench_for_mux; // testbench only;\n  initial begin\n    $display(\"OK\");\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "OK"
+    ],
+    "expected": [
+      "OK"
+    ],
+    "raw_output": "OK",
+    "submission_id": "ef03e7fb-a",
+    "time_seconds": 0.279
+  },
+  "timestamp": "2026-05-16 01:34:35"
+}

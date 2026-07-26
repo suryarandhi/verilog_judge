@@ -1,0 +1,27 @@
+{
+  "problem_id": "subtractor_3bit",
+  "code": "module subtractor_3bit(input [2:0] a, input [2:0] b, output [2:0] diff, output borrow);\n  assign diff = a - b;\n  assign borrow = a < b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 000 000 0",
+      "001 001 000 0",
+      "111 001 110 0",
+      "011 010 001 0",
+      "111 111 000 0"
+    ],
+    "expected": [
+      "000 000 000 0",
+      "001 001 000 0",
+      "111 001 110 0",
+      "011 010 001 0",
+      "111 111 000 0"
+    ],
+    "raw_output": "000 000 000 0\n001 001 000 0\n111 001 110 0\n011 010 001 0\n111 111 000 0",
+    "submission_id": "68403a66-4",
+    "time_seconds": 0.223,
+    "waveform_url": "/api/waveform/68403a66-4"
+  },
+  "timestamp": "2026-05-15 23:47:50"
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "saturating_counter",
+  "code": "module saturating_counter(input clk, input rst, input en, output reg [3:0] count);\n  always @(*) begin\n      count = 4'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    "expected": [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    "raw_output": "xxxx\nxxxx\nxxxx\nxxxx",
+    "submission_id": "e11315d8-d",
+    "time_seconds": 0.292,
+    "waveform_url": "/api/waveform/e11315d8-d"
+  },
+  "timestamp": "2026-05-16 01:34:30"
+}

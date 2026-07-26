@@ -1,0 +1,33 @@
+{
+  "problem_id": "full_adder",
+  "code": "module full_adder(input a, input b, input cin, output sum, output cout);\n  assign sum = a ^ b ^ cin;\n  assign cout = (a & b) | (a & cin) | (b & cin);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0 0 0 0",
+      "0 0 1 1 0",
+      "0 1 0 1 0",
+      "0 1 1 0 1",
+      "1 0 0 1 0",
+      "1 0 1 0 1",
+      "1 1 0 0 1",
+      "1 1 1 1 1"
+    ],
+    "expected": [
+      "0 0 0 0 0",
+      "0 0 1 1 0",
+      "0 1 0 1 0",
+      "0 1 1 0 1",
+      "1 0 0 1 0",
+      "1 0 1 0 1",
+      "1 1 0 0 1",
+      "1 1 1 1 1"
+    ],
+    "raw_output": "0 0 0 0 0\n0 0 1 1 0\n0 1 0 1 0\n0 1 1 0 1\n1 0 0 1 0\n1 0 1 0 1\n1 1 0 0 1\n1 1 1 1 1",
+    "submission_id": "3c21bd41-c",
+    "time_seconds": 0.223,
+    "waveform_url": "/api/waveform/3c21bd41-c"
+  },
+  "timestamp": "2026-05-15 23:38:55"
+}

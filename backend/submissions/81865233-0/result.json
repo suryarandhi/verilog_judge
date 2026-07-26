@@ -1,0 +1,29 @@
+{
+  "problem_id": "d_flipflop",
+  "code": "module d_flipflop(input clk, input reset, input d, output reg q);\n  always @(posedge clk or posedge reset) begin\n    if (reset) begin\n      q <= 1'b0;\n    end else begin\n      q <= d;\n    end\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1 0 0",
+      "0 1 1",
+      "0 0 0",
+      "0 1 1",
+      "1 1 0",
+      "0 0 0"
+    ],
+    "expected": [
+      "1 0 0",
+      "0 1 1",
+      "0 0 0",
+      "0 1 1",
+      "1 1 0",
+      "0 0 0"
+    ],
+    "raw_output": "1 0 0\n0 1 1\n0 0 0\n0 1 1\n1 1 0\n0 0 0",
+    "submission_id": "81865233-0",
+    "time_seconds": 0.201,
+    "waveform_url": "/api/waveform/81865233-0"
+  },
+  "timestamp": "2026-05-15 23:45:50"
+}

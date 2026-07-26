@@ -1,0 +1,3 @@
+module adder_16bit(input [15:0] a, input [15:0] b, output [15:0] sum, output cout);
+  assign {cout, sum} = a + b;
+endmodule

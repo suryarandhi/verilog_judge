@@ -1,0 +1,11 @@
+{
+  "title": "4-bit Decrementer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Build a 4-bit decrementer.\\n\\nRequired module:\\nmodule decrementer_4bit(input [3:0] a, output [3:0] y);",
+  "template": "module decrementer_4bit(input [3:0] a, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

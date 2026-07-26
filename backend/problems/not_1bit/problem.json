@@ -1,0 +1,11 @@
+{
+  "title": "1-bit NOT",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 1-bit inverter.\\n\\nRequired module:\\nmodule not_1bit(input [0:0] a, output [0:0] y);",
+  "template": "module not_1bit(input [0:0] a, output [0:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,11 @@
+{
+  "title": "2-bit Nonzero Detector",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "detector"
+  ],
+  "description": "Detect a condition on a 2-bit input.\\n\\nRequired module:\\nmodule nonzero_detector_2bit(input [1:0] a, output y);",
+  "template": "module nonzero_detector_2bit(input [1:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

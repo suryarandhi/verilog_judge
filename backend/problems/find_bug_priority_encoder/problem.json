@@ -1,0 +1,28 @@
+{
+  "id": "find_bug_priority_encoder",
+  "title": "Find the Bug: Priority Encoder",
+  "difficulty": "Medium",
+  "category": "Verification",
+  "tags": [
+    "debugging",
+    "priority",
+    "combinational"
+  ],
+  "statement": "A priority encoder module fails when multiple inputs are asserted simultaneously. Your task is to identify the bug in the priority logic and fix the encoder so it always reports the highest-priority asserted bit. The corrected module should also assert valid only when at least one input is high.",
+  "module_signature": "module find_bug_priority_encoder(input [7:0] in, output reg [2:0] code, output reg valid);",
+  "behavior": [
+    "code indicates the highest-priority asserted bit.",
+    "valid is 1 when any input is high.",
+    "ties are resolved by highest input index.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential or registered state other than combinational outputs."
+  ],
+  "example": "in | valid code\n00010010 | 1 100\n11000000 | 1 111",
+  "hint": "Examine the input bits from highest priority to lowest.",
+  "template": "module find_bug_priority_encoder(input [7:0] in, output reg [2:0] code, output reg valid);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

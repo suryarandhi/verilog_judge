@@ -1,0 +1,25 @@
+{
+  "problem_id": "mux_2to1",
+  "code": "module mux_2to1(input [7:0] a, input [7:0] b, input [3:0]sel, output [7:0] y);\n  // Write your code here\n  always@(*) begin\n  case(sel)\n  3'b000:y=8'b00000001;\n  3'b001:y=8'b00000010;\n  3'b010:y=8'b00000100;\n  3'b011:y=8'b00001000;\n  3'b100:y=8'b00010000;\n  3'b101:y=8'b00100000;\n  3'b110:y=8'b01000000;\n  3'b111:y=8'b10000000;\n  default:8'bxxxxxxxx;\n  endcase\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\34988e53-3\\submission.v:13: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\34988e53-3\\submission.v:13: error: malformed statement",
+    "compile_errors": [
+      {
+        "line": 13,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\34988e53-3\\submission.v:13: syntax error"
+      },
+      {
+        "line": 13,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\34988e53-3\\submission.v:13: error: malformed statement"
+      }
+    ],
+    "submission_id": "34988e53-3",
+    "time_seconds": 0.218
+  },
+  "timestamp": "2026-05-16 19:29:22"
+}

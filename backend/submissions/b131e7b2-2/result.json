@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_pulse_generator",
+  "code": "module bit_pulse_generator(input clk, input rst, input in_bit, output reg pulse);\n  always @(*) begin\n      pulse = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "b131e7b2-2",
+    "time_seconds": 0.24,
+    "waveform_url": "/api/waveform/b131e7b2-2"
+  },
+  "timestamp": "2026-05-16 01:34:14"
+}

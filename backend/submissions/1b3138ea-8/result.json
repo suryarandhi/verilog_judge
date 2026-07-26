@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_set_8bit_7",
+  "code": "module bit_set_8bit_7(input [7:0] a, output [7:0] y);\n  assign y = a | (8'b1 << 7);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000 10000000",
+      "10000000 10000000",
+      "11111111 11111111",
+      "10101010 10101010"
+    ],
+    "expected": [
+      "00000000 10000000",
+      "10000000 10000000",
+      "11111111 11111111",
+      "10101010 10101010"
+    ],
+    "raw_output": "00000000 10000000\n10000000 10000000\n11111111 11111111\n10101010 10101010",
+    "submission_id": "1b3138ea-8",
+    "time_seconds": 0.26,
+    "waveform_url": "/api/waveform/1b3138ea-8"
+  },
+  "timestamp": "2026-05-15 23:45:34"
+}

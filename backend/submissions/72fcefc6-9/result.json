@@ -1,0 +1,27 @@
+{
+  "problem_id": "incrementer_4bit",
+  "code": "module incrementer_4bit(input [3:0] a, output [3:0] y);\n  assign y = a + 1'b1;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0001",
+      "0001 0010",
+      "0010 0011",
+      "1111 0000",
+      "1010 1011"
+    ],
+    "expected": [
+      "0000 0001",
+      "0001 0010",
+      "0010 0011",
+      "1111 0000",
+      "1010 1011"
+    ],
+    "raw_output": "0000 0001\n0001 0010\n0010 0011\n1111 0000\n1010 1011",
+    "submission_id": "72fcefc6-9",
+    "time_seconds": 0.267,
+    "waveform_url": "/api/waveform/72fcefc6-9"
+  },
+  "timestamp": "2026-05-15 23:45:56"
+}

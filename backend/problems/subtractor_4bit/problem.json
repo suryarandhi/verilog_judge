@@ -1,0 +1,11 @@
+{
+  "title": "4-bit Subtractor",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Design a 4-bit subtractor with borrow out.\\n\\nRequired module:\\nmodule subtractor_4bit(input [3:0] a, input [3:0] b, output [3:0] diff, output borrow);",
+  "template": "module subtractor_4bit(input [3:0] a, input [3:0] b, output [3:0] diff, output borrow);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

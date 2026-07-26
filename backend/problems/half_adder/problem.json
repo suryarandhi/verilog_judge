@@ -1,0 +1,11 @@
+{
+  "title": "Half Adder",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "gates"
+  ],
+  "description": "Design a half adder module that takes two 1-bit inputs, a and b, and produces two 1-bit outputs: sum and carry.\n\nRequired module:\nmodule half_adder(input a, input b, output sum, output carry);\n\nBehavior:\n- sum is a XOR b\n- carry is a AND b",
+  "template": "module half_adder(input a, input b, output sum, output carry);\n  // Write your code here\n\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,23 @@
+{
+  "problem_id": "barrel_shifter_32bit",
+  "code": "module barrel_shifter_32(input [31:0] data_in, input [4:0] shamt, input dir, output [31:0] data_out);\n  assign data_out = dir ? (data_in >> shamt) : (data_in << shamt);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000001  2 0 00000004",
+      "80000000  4 1 08000000",
+      "000000ff  0 0 000000ff"
+    ],
+    "expected": [
+      "00000001  2 0 00000004",
+      "80000000  4 1 08000000",
+      "000000ff  0 0 000000ff"
+    ],
+    "raw_output": "00000001  2 0 00000004\n80000000  4 1 08000000\n000000ff  0 0 000000ff",
+    "submission_id": "fd94efe7-b",
+    "time_seconds": 0.282,
+    "waveform_url": "/api/waveform/fd94efe7-b"
+  },
+  "timestamp": "2026-05-16 00:05:54"
+}

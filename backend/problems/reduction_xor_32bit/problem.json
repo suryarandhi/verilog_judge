@@ -1,0 +1,11 @@
+{
+  "title": "32-bit Reduction XOR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "reduction"
+  ],
+  "description": "Reduce a 32-bit input to one output bit.\\n\\nRequired module:\\nmodule reduction_xor_32bit(input [31:0] a, output y);",
+  "template": "module reduction_xor_32bit(input [31:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

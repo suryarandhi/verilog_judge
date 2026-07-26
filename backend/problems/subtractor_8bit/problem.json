@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Subtractor",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Design a 8-bit subtractor with borrow out.\\n\\nRequired module:\\nmodule subtractor_8bit(input [7:0] a, input [7:0] b, output [7:0] diff, output borrow);",
+  "template": "module subtractor_8bit(input [7:0] a, input [7:0] b, output [7:0] diff, output borrow);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

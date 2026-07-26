@@ -1,0 +1,30 @@
+{
+  "id": "find_bug_memory_arbitration",
+  "title": "Find the Bug: Memory Arbitration",
+  "difficulty": "Hard",
+  "category": "Verification",
+  "tags": [
+    "debugging",
+    "memory",
+    "arbiter"
+  ],
+  "statement": "A memory arbiter is granting the wrong requester when two requests arrive at once. Your task is to correct the arbitration logic so the highest-priority requester wins and grants remain stable until release. The corrected arbiter must also deassert all grants when no requests are active.",
+  "module_signature": "module find_bug_memory_arbitration(input clk, input rst, input [2:0] req, output reg [2:0] grant);",
+  "behavior": [
+    "One grant at most may be asserted at a time.",
+    "Highest-priority request wins when multiple requests are active.",
+    "rst synchronously clears all grants.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Avoid asynchronous or combinational grant chasing."
+  ],
+  "example": "req grant\n110 100\n010 010",
+  "hint": "Use a registered grant state and update it each clock cycle.",
+  "template": "module find_bug_memory_arbitration(input clk, input rst, input [2:0] req, output reg [2:0] grant);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,11 @@
+{
+  "title": "3-bit Nonzero Detector",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "detector"
+  ],
+  "description": "Detect a condition on a 3-bit input.\\n\\nRequired module:\\nmodule nonzero_detector_3bit(input [2:0] a, output y);",
+  "template": "module nonzero_detector_3bit(input [2:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

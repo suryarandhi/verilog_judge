@@ -1,0 +1,25 @@
+{
+  "problem_id": "buffer_4bit",
+  "code": "module buffer_4bit(input [3:0] a, output [3:0] y);\n  assign y = a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0000",
+      "0001 0001",
+      "1111 1111",
+      "1010 1010"
+    ],
+    "expected": [
+      "0000 0000",
+      "0001 0001",
+      "1111 1111",
+      "1010 1010"
+    ],
+    "raw_output": "0000 0000\n0001 0001\n1111 1111\n1010 1010",
+    "submission_id": "2903c0f2-4",
+    "time_seconds": 0.224,
+    "waveform_url": "/api/waveform/2903c0f2-4"
+  },
+  "timestamp": "2026-05-15 23:47:23"
+}

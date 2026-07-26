@@ -1,0 +1,86 @@
+{
+  "problem_id": "conditional_incrementer",
+  "code": "module conditional_incrementer(input [7:0] a, input enable, output  reg[7:0] y);\n always@(*) begin\n if(enable)\n y = a+1;\n else\n y=a;\n end\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000",
+      "00000010",
+      "00000000",
+      "10101010",
+      "00000010",
+      "00000100",
+      "01111111",
+      "10101010"
+    ],
+    "expected": [
+      "00000000",
+      "00000010",
+      "00000000",
+      "10101010",
+      "00000010",
+      "00000100",
+      "01111111",
+      "10101010"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "10101010",
+        "expected": "10101010"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "00000100",
+        "expected": "00000100"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "01111111",
+        "expected": "01111111"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "10101010",
+        "expected": "10101010"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "00000000\n00000010\n00000000\n10101010\n00000010\n00000100\n01111111\n10101010",
+    "submission_id": "c356c357-5",
+    "time_seconds": 0.266,
+    "waveform_url": "/api/waveform/c356c357-5"
+  },
+  "timestamp": "2026-05-18 22:31:17"
+}

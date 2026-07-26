@@ -1,0 +1,25 @@
+{
+  "problem_id": "population_count",
+  "code": "module population_count(input [7:0] a, output reg [3:0] count);\n  integer i;\n  always @(*) begin\n    count = 4'd0;\n    for (i = 0; i < 8; i = i + 1) count = count + a[i];\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000",
+      "0001",
+      "1000",
+      "0100"
+    ],
+    "expected": [
+      "0000",
+      "0001",
+      "1000",
+      "0100"
+    ],
+    "raw_output": "0000\n0001\n1000\n0100",
+    "submission_id": "6a36def7-9",
+    "time_seconds": 0.282,
+    "waveform_url": "/api/waveform/6a36def7-9"
+  },
+  "timestamp": "2026-05-16 01:34:27"
+}

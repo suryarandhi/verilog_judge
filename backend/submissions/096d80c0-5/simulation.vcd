@@ -1,0 +1,53 @@
+$date
+	Fri May 15 23:45:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 4 ! y [3:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$var reg 1 $ sel $end
+$scope module dut $end
+$var wire 4 % a [3:0] $end
+$var wire 4 & b [3:0] $end
+$var wire 1 ' sel $end
+$var wire 4 ( y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 (
+0'
+b1111 &
+b0 %
+0$
+b1111 #
+b0 "
+b0 !
+$end
+#5000
+b1111 !
+b1111 (
+1$
+1'
+#10000
+b1 !
+b1 (
+0$
+0'
+b10 #
+b10 &
+b1 "
+b1 %
+#15000
+b10 !
+b10 (
+1$
+1'
+#20000

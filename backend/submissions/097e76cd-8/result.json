@@ -1,0 +1,25 @@
+{
+  "problem_id": "compare_select",
+  "code": "module compare_select(input [7:0] a, input [7:0] b, input sel, output reg [7:0] y);\n  // Write your code here\n  always@(*) begin\n    if (sel) begin\n    y<= max(a,b)\n    end else begin\n    y<=min(a,b)\n    end\n  end\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\097e76cd-8\\submission.v:6: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\097e76cd-8\\submission.v:8: syntax error",
+    "compile_errors": [
+      {
+        "line": 6,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\097e76cd-8\\submission.v:6: syntax error"
+      },
+      {
+        "line": 8,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\097e76cd-8\\submission.v:8: syntax error"
+      }
+    ],
+    "submission_id": "097e76cd-8",
+    "time_seconds": 0.959
+  },
+  "timestamp": "2026-06-09 21:39:15"
+}

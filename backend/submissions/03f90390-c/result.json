@@ -1,0 +1,73 @@
+{
+  "problem_id": "compare_select",
+  "code": "module compare_select(input [7:0] a, input [7:0] b, input sel, output reg [7:0] y,max);\n your code here\nalways@(*) begin\n    if (a>b)\nmax <= a;\nmin <= b;\nelse \nmax = b;\nmin = a;\n  // Write\n\n    if (sel) begin\n    y<= max(a,b);\n    end else begin\n    y<=min(a,b);\n    end\n  end\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:2: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:2: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:6: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:8: error: invalid module item.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:9: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:9: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:13: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:13: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:15: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:15: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\compare_select\\tb.v:2: error: invalid module item.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\compare_select\\tb.v:6: y wire definition conflicts with reg definition at D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:1.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\compare_select\\tb.v:6: error: Net ``y'' has already been declared.",
+    "compile_errors": [
+      {
+        "line": 2,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:2: syntax error"
+      },
+      {
+        "line": 2,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:2: error: Invalid module instantiation"
+      },
+      {
+        "line": 6,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:6: error: Invalid module instantiation"
+      },
+      {
+        "line": 8,
+        "message": "error: invalid module item.",
+        "friendly": "error: invalid module item.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:8: error: invalid module item."
+      },
+      {
+        "line": 9,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:9: syntax error"
+      },
+      {
+        "line": 9,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:9: error: Invalid module instantiation"
+      },
+      {
+        "line": 13,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:13: syntax error"
+      },
+      {
+        "line": 13,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:13: error: Invalid module instantiation"
+      },
+      {
+        "line": 15,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:15: syntax error"
+      },
+      {
+        "line": 15,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03f90390-c\\submission.v:15: error: Invalid module instantiation"
+      }
+    ],
+    "submission_id": "03f90390-c",
+    "time_seconds": 0.183
+  },
+  "timestamp": "2026-06-09 21:47:21"
+}

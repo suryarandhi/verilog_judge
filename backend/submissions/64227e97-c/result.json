@@ -1,0 +1,86 @@
+{
+  "problem_id": "decoder_3to8",
+  "code": "module decoder_3to8(input [2:0] sel, output  reg [7:0] y);\n  // Write your code here\n  always@(*) begin\n    case(sel)\n    3'b000:y=8'b00000001;\n    3'b001:y=8'b00000010;\n    3'b010:y=8'b00000100;\n    3'b011:y=8'b00001000;\n    3'b100:y=8'b00010000;\n    3'b101:y=8'b00100000;\n    3'b110:y=8'b01000000;\n    3'b111:y=8'b10000000;\n    default:y=8'b0000000;\n    endcase\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000001",
+      "00000010",
+      "00000001",
+      "00000010",
+      "00000001",
+      "00000010",
+      "00000001",
+      "00000010"
+    ],
+    "expected": [
+      "00000001",
+      "00000010",
+      "00000001",
+      "00000010",
+      "00000001",
+      "00000010",
+      "00000001",
+      "00000010"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "00000001",
+        "expected": "00000001"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "00000001",
+        "expected": "00000001"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "00000001",
+        "expected": "00000001"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "00000001",
+        "expected": "00000001"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "00000001\n00000010\n00000001\n00000010\n00000001\n00000010\n00000001\n00000010",
+    "submission_id": "64227e97-c",
+    "time_seconds": 0.247,
+    "waveform_url": "/api/waveform/64227e97-c"
+  },
+  "timestamp": "2026-05-16 19:40:21"
+}

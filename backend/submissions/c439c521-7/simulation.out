@@ -1,0 +1,145 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0126EF50 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01262010_0 .var "a", 7 0;
+v0126E168_0 .var "b", 7 0;
+v0126E1C0_0 .net "eq", 0 0, v01263BB8_0; 1 drivers
+v0126E218_0 .net "gt", 0 0, v01261F60_0; 1 drivers
+v0126E270_0 .net "lt", 0 0, v01261FB8_0; 1 drivers
+S_01263AD8 .scope module, "dut" "signed_mag_compare" 2 5, 3 1, S_0126EF50;
+ .timescale 0 0;
+v0126D740_0 .net "a", 7 0, v01262010_0; 1 drivers
+v01263B60_0 .net "b", 7 0, v0126E168_0; 1 drivers
+v01263BB8_0 .var "eq", 0 0;
+v01261F60_0 .var "gt", 0 0;
+v01261FB8_0 .var "lt", 0 0;
+E_0126EC90 .event edge, v0126D740_0, v01263B60_0, v01261F60_0, v01263BB8_0;
+    .scope S_01263AD8;
+T_0 ;
+    %wait E_0126EC90;
+    %set/v v01261F60_0, 0, 1;
+    %set/v v01263BB8_0, 0, 1;
+    %set/v v01261FB8_0, 0, 1;
+    %load/v 8, v0126D740_0, 8;
+    %load/v 16, v01263B60_0, 8;
+    %cmp/u 8, 16, 8;
+    %jmp/0xz  T_0.0, 4;
+    %set/v v01263BB8_0, 1, 1;
+    %jmp T_0.1;
+T_0.0 ;
+    %ix/load 1, 7, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.2, 4;
+    %load/x1p 8, v0126D740_0, 1;
+    %jmp T_0.3;
+T_0.2 ;
+    %mov 8, 2, 1;
+T_0.3 ;
+; Save base=8 wid=1 in lookaside.
+    %ix/load 1, 7, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.4, 4;
+    %load/x1p 9, v01263B60_0, 1;
+    %jmp T_0.5;
+T_0.4 ;
+    %mov 9, 2, 1;
+T_0.5 ;
+; Save base=9 wid=1 in lookaside.
+    %cmp/u 8, 9, 1;
+    %inv 4, 1;
+    %jmp/0xz  T_0.6, 4;
+    %ix/load 1, 7, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.8, 4;
+    %load/x1p 8, v0126D740_0, 1;
+    %jmp T_0.9;
+T_0.8 ;
+    %mov 8, 2, 1;
+T_0.9 ;
+; Save base=8 wid=1 in lookaside.
+    %inv 8, 1;
+    %set/v v01261F60_0, 8, 1;
+    %jmp T_0.7;
+T_0.6 ;
+    %ix/load 1, 7, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.10, 4;
+    %load/x1p 8, v0126D740_0, 1;
+    %jmp T_0.11;
+T_0.10 ;
+    %mov 8, 2, 1;
+T_0.11 ;
+; Save base=8 wid=1 in lookaside.
+    %cmpi/u 8, 0, 1;
+    %jmp/0xz  T_0.12, 4;
+    %load/v 8, v01263B60_0, 7; Only need 7 of 8 bits
+; Save base=8 wid=7 in lookaside.
+    %load/v 15, v0126D740_0, 7; Only need 7 of 8 bits
+; Save base=15 wid=7 in lookaside.
+    %cmp/u 8, 15, 7;
+    %mov 8, 5, 1;
+    %set/v v01261F60_0, 8, 1;
+    %jmp T_0.13;
+T_0.12 ;
+    %load/v 8, v0126D740_0, 7; Only need 7 of 8 bits
+; Save base=8 wid=7 in lookaside.
+    %load/v 15, v01263B60_0, 7; Only need 7 of 8 bits
+; Save base=15 wid=7 in lookaside.
+    %cmp/u 8, 15, 7;
+    %mov 8, 5, 1;
+    %set/v v01261F60_0, 8, 1;
+T_0.13 ;
+T_0.7 ;
+T_0.1 ;
+    %load/v 8, v01261F60_0, 1;
+    %inv 8, 1;
+    %load/v 9, v01263BB8_0, 1;
+    %inv 9, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_0.14, 8;
+    %set/v v01261FB8_0, 1, 1;
+T_0.14 ;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0126EF50;
+T_1 ;
+    %vpi_call 2 7 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 7 "$dumpvars", 1'sb0, S_0126EF50;
+    %movi 8, 5, 8;
+    %set/v v01262010_0, 8, 8;
+    %movi 8, 131, 8;
+    %set/v v0126E168_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 8 "$display", "%b %b %b %b %b", v01262010_0, v0126E168_0, v0126E218_0, v0126E1C0_0, v0126E270_0;
+    %movi 8, 133, 8;
+    %set/v v01262010_0, 8, 8;
+    %movi 8, 131, 8;
+    %set/v v0126E168_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 9 "$display", "%b %b %b %b %b", v01262010_0, v0126E168_0, v0126E218_0, v0126E1C0_0, v0126E270_0;
+    %movi 8, 4, 8;
+    %set/v v01262010_0, 8, 8;
+    %movi 8, 4, 8;
+    %set/v v0126E168_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 10 "$display", "%b %b %b %b %b", v01262010_0, v0126E168_0, v0126E218_0, v0126E1C0_0, v0126E270_0;
+    %movi 8, 129, 8;
+    %set/v v01262010_0, 8, 8;
+    %movi 8, 1, 8;
+    %set/v v0126E168_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 11 "$display", "%b %b %b %b %b", v01262010_0, v0126E168_0, v0126E218_0, v0126E1C0_0, v0126E270_0;
+    %vpi_call 2 12 "$finish";
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\signed_magnitude_comparator\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\c439c521-7\submission.v";

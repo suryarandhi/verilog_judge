@@ -1,0 +1,86 @@
+{
+  "problem_id": "priority_encoder_8to3",
+  "code": "module priority_encoder_8to3(input [7:0] in, output reg [2:0] code, output reg valid);\n  // Write your code here\n   always@(*) begin\n    if(in) begin\n      valid = 1'b1;\n    casez(in)\n  8'b00000001:code=3'b000;\n  8'b0000001?:code=3'b001;\n  8'b000001??:code=3'b010;\n  8'b00001???:code=3'b011;\n  8'b0001????:code=3'b100;\n  8'b001?????:code=3'b101;\n  8'b01??????:code=3'b110;\n  8'b1???????:code=3'b111;\n    endcase\n    end\n  else begin\n    code = 3'b000;\n    valid=0;\n\n  end\n   end\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 0",
+      "000 1",
+      "111 1",
+      "111 1",
+      "001 1",
+      "001 1",
+      "110 1",
+      "111 1"
+    ],
+    "expected": [
+      "000 0",
+      "000 1",
+      "111 1",
+      "111 1",
+      "001 1",
+      "001 1",
+      "110 1",
+      "111 1"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "000 0",
+        "expected": "000 0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "000 1",
+        "expected": "000 1"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "111 1",
+        "expected": "111 1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "111 1",
+        "expected": "111 1"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "001 1",
+        "expected": "001 1"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "001 1",
+        "expected": "001 1"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "110 1",
+        "expected": "110 1"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "111 1",
+        "expected": "111 1"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "000 0\n000 1\n111 1\n111 1\n001 1\n001 1\n110 1\n111 1",
+    "submission_id": "c8cf297a-3",
+    "time_seconds": 0.259,
+    "waveform_url": "/api/waveform/c8cf297a-3"
+  },
+  "timestamp": "2026-05-22 12:32:25"
+}

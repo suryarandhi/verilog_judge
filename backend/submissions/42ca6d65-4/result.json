@@ -1,0 +1,11 @@
+{
+  "problem_id": "all_ones_detector_16bit",
+  "code": "module all_ones_detector_16bit(input [15:0] a, output y);\n  assign y = a == {16{1'b1}}};\nendmodule\n",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\42ca6d65-4\\submission.v:2: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\42ca6d65-4\\submission.v:2: error: syntax error in continuous assignment",
+    "submission_id": "42ca6d65-4",
+    "time_seconds": 0.197
+  },
+  "timestamp": "2026-05-15 23:45:08"
+}

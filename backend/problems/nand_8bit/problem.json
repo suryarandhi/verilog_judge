@@ -1,0 +1,11 @@
+{
+  "title": "8-bit NAND",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 8-bit bitwise NAND circuit.\\n\\nRequired module:\\nmodule nand_8bit(input [7:0] a, input [7:0] b, output [7:0] y);",
+  "template": "module nand_8bit(input [7:0] a, input [7:0] b, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

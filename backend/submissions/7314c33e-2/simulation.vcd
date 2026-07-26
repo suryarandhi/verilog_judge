@@ -1,0 +1,51 @@
+$date
+	Fri May 15 23:47:39 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 16 ! y [15:0] $end
+$var reg 16 " a [15:0] $end
+$var reg 16 # b [15:0] $end
+$scope module dut $end
+$var wire 16 $ a [15:0] $end
+$var wire 16 % b [15:0] $end
+$var wire 16 & y [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111111111111111 &
+b0 %
+b0 $
+b0 #
+b0 "
+b1111111111111111 !
+$end
+#5000
+b0 !
+b0 &
+b1111111111111111 #
+b1111111111111111 %
+#10000
+b0 #
+b0 %
+b1111111111111111 "
+b1111111111111111 $
+#15000
+b1111111111111111 #
+b1111111111111111 %
+#20000
+b1000000000000000 "
+b1000000000000000 $
+#25000
+b1010101010101010 #
+b1010101010101010 %
+b101010101010101 "
+b101010101010101 $
+#30000

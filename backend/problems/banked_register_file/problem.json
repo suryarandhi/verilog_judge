@@ -1,0 +1,30 @@
+{
+  "id": "banked_register_file",
+  "title": "Banked Register File",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "register-file",
+    "banked",
+    "memory"
+  ],
+  "statement": "Implement a banked register file with two 8-entry banks and one write port. The bank select signal chooses which bank receives writes. Reads should return values from both banks simultaneously on separate outputs.",
+  "module_signature": "module banked_register_file(input clk, input rst, input write_en, input bank_sel, input [2:0] write_addr, input [7:0] write_data, input [2:0] read_addr_a, input [2:0] read_addr_b, output [7:0] read_data_a, output [7:0] read_data_b);",
+  "behavior": [
+    "write_data is stored in the selected bank when write_en is 1.",
+    "read_data_a and read_data_b reflect their respective bank values.",
+    "rst synchronously clears both banks.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use vendor-specific multi-bank memory macros."
+  ],
+  "example": "bank_sel write_en write_addr | read_data_a\n0 1 010 | data",
+  "hint": "Model each bank as an independent register array.",
+  "template": "module banked_register_file(input clk, input rst, input write_en, input bank_sel, input [2:0] write_addr, input [7:0] write_data, input [2:0] read_addr_a, input [2:0] read_addr_b, output [7:0] read_data_a, output [7:0] read_data_b);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

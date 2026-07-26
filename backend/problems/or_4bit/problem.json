@@ -1,0 +1,11 @@
+{
+  "title": "4-bit OR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 4-bit bitwise OR circuit.\\n\\nRequired module:\\nmodule or_4bit(input [3:0] a, input [3:0] b, output [3:0] y);",
+  "template": "module or_4bit(input [3:0] a, input [3:0] b, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

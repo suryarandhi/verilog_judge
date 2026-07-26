@@ -1,0 +1,25 @@
+{
+  "problem_id": "memory_arbiter_3to1",
+  "code": "module memory_arbiter_3to1(input clk, input rst, input [2:0] req, output reg [2:0] grant);\n  always @(*) begin\n      grant = 3'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxx",
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "expected": [
+      "xxx",
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "raw_output": "xxx\nxxx\nxxx\nxxx",
+    "submission_id": "723292ad-3",
+    "time_seconds": 0.23,
+    "waveform_url": "/api/waveform/723292ad-3"
+  },
+  "timestamp": "2026-05-16 01:34:25"
+}

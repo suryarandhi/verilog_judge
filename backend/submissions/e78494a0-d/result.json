@@ -1,0 +1,25 @@
+{
+  "problem_id": "vending_machine_controller",
+  "code": "module vending_machine_controller(input clk, input rst, input coin5, input coin10, output reg dispense);\n  always @(*) begin\n      dispense = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "e78494a0-d",
+    "time_seconds": 0.266,
+    "waveform_url": "/api/waveform/e78494a0-d"
+  },
+  "timestamp": "2026-05-16 01:34:37"
+}

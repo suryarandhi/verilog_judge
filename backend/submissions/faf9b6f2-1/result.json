@@ -1,0 +1,86 @@
+{
+  "problem_id": "population_count",
+  "code": "module population_count(input [7:0] a, output reg [3:0] count);\n  // Write your code here\n  integer i;\n\n\n  always@(*) begin \n        count=0;\n        for(i=0;i<8;i=i+1) begin\n        //if (a[i]) begin\n          //count = count+1'b1;\n        //end\n\n        count = count+a[i];\n        end\n      end\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000",
+      "0001",
+      "1000",
+      "0100",
+      "0001",
+      "0010",
+      "0111",
+      "0100"
+    ],
+    "expected": [
+      "0000",
+      "0001",
+      "1000",
+      "0100",
+      "0001",
+      "0010",
+      "0111",
+      "0100"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0000",
+        "expected": "0000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0001",
+        "expected": "0001"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1000",
+        "expected": "1000"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0100",
+        "expected": "0100"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0001",
+        "expected": "0001"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0010",
+        "expected": "0010"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0111",
+        "expected": "0111"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0100",
+        "expected": "0100"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0000\n0001\n1000\n0100\n0001\n0010\n0111\n0100",
+    "submission_id": "faf9b6f2-1",
+    "time_seconds": 0.205,
+    "waveform_url": "/api/waveform/faf9b6f2-1"
+  },
+  "timestamp": "2026-05-23 10:09:57"
+}

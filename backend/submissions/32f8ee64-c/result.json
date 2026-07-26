@@ -1,0 +1,25 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(input clk, input rst, output reg [3:0] q);\n  // Write your code here\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    "expected": [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    "raw_output": "xxxx\nxxxx\nxxxx\nxxxx",
+    "submission_id": "32f8ee64-c",
+    "time_seconds": 0.276,
+    "waveform_url": "/api/waveform/32f8ee64-c"
+  },
+  "timestamp": "2026-05-16 01:39:26"
+}

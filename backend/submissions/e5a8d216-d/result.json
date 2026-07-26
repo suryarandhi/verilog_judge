@@ -1,0 +1,43 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(input clk, input rst,output reg [3:0] q);\n  // Write your code here\n  always@(posedge clk) begin\n    if(rst)\n    q<=4'b0;\n    else begin\n    out[1] = out[0];\n    out[2] = out[1];\n    out[3] = out[2];\n    out[0] = ~out[3];\n    end\n    out=q;\n  end\n  endmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:7: error: Could not find variable ``out['sd1]'' in ``tb.dut''\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:8: error: Could not find variable ``out['sd2]'' in ``tb.dut''\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:9: error: Could not find variable ``out['sd3]'' in ``tb.dut''\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:10: error: Could not find variable ``out['sd0]'' in ``tb.dut''\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:12: error: Could not find variable ``out'' in ``tb.dut''\n5 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 7,
+        "message": "error: Could not find variable ``out['sd1]'' in ``tb.dut''",
+        "friendly": "error: Could not find variable ``out['sd1]'' in ``tb.dut''",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:7: error: Could not find variable ``out['sd1]'' in ``tb.dut''"
+      },
+      {
+        "line": 8,
+        "message": "error: Could not find variable ``out['sd2]'' in ``tb.dut''",
+        "friendly": "error: Could not find variable ``out['sd2]'' in ``tb.dut''",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:8: error: Could not find variable ``out['sd2]'' in ``tb.dut''"
+      },
+      {
+        "line": 9,
+        "message": "error: Could not find variable ``out['sd3]'' in ``tb.dut''",
+        "friendly": "error: Could not find variable ``out['sd3]'' in ``tb.dut''",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:9: error: Could not find variable ``out['sd3]'' in ``tb.dut''"
+      },
+      {
+        "line": 10,
+        "message": "error: Could not find variable ``out['sd0]'' in ``tb.dut''",
+        "friendly": "error: Could not find variable ``out['sd0]'' in ``tb.dut''",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:10: error: Could not find variable ``out['sd0]'' in ``tb.dut''"
+      },
+      {
+        "line": 12,
+        "message": "error: Could not find variable ``out'' in ``tb.dut''",
+        "friendly": "error: Could not find variable ``out'' in ``tb.dut''",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\e5a8d216-d\\submission.v:12: error: Could not find variable ``out'' in ``tb.dut''"
+      }
+    ],
+    "submission_id": "e5a8d216-d",
+    "time_seconds": 0.2
+  },
+  "timestamp": "2026-05-18 10:41:22"
+}

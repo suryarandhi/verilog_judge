@@ -1,0 +1,30 @@
+{
+  "id": "thermal_shutdown_fsm",
+  "title": "Thermal Shutdown FSM",
+  "difficulty": "Hard",
+  "category": "FSM",
+  "tags": [
+    "fsm",
+    "safety",
+    "threshold"
+  ],
+  "statement": "Create a thermal shutdown controller that disables an output when temperature exceeds a threshold and re-enables it only after the temperature drops below a lower hysteresis threshold. The output must not chatter when temperature hovers near the boundary. A synchronous reset should immediately disable the output.",
+  "module_signature": "module thermal_shutdown_fsm(input clk, input rst, input [7:0] temp, output reg fan_enable);",
+  "behavior": [
+    "fan_enable is 0 when temp >= 100.",
+    "fan_enable remains 1 until temp drops below 90.",
+    "rst synchronously disables the fan_enable output.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use combinational hysteresis or latches."
+  ],
+  "example": "temp fan_enable\n100 0\n095 1\n099 0",
+  "hint": "Use separate states for enabled and disabled conditions with hysteresis boundaries.",
+  "template": "module thermal_shutdown_fsm(input clk, input rst, input [7:0] temp, output reg fan_enable);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

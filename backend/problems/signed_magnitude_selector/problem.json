@@ -1,0 +1,28 @@
+{
+  "id": "signed_magnitude_selector",
+  "title": "Signed Magnitude Selector",
+  "difficulty": "Medium",
+  "category": "Datapath",
+  "tags": [
+    "signed",
+    "selector",
+    "datapath"
+  ],
+  "statement": "Design a datapath selector that compares two 8-bit signed operands and outputs the one with larger signed magnitude when a control input is set. It should also output a flag indicating if the selected operand was negative. This shows magnitude-based decision logic in datapaths.",
+  "module_signature": "module signed_magnitude_selector(input signed [7:0] a, input signed [7:0] b, input sel, output reg signed [7:0] y, output reg negative);",
+  "behavior": [
+    "If sel is 0, select the larger signed operand by value.",
+    "If sel is 1, select the operand with larger absolute magnitude.",
+    "negative indicates if y is negative.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not infer sequential state; output may be reg for combinational assignment."
+  ],
+  "example": "a b sel | y negative\n00000010 11111110 0 | 00000010 0",
+  "hint": "Implement both signed comparison and absolute-value magnitude comparison.",
+  "template": "module signed_magnitude_selector(input signed [7:0] a, input signed [7:0] b, input sel, output reg signed [7:0] y, output reg negative);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

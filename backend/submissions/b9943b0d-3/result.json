@@ -1,0 +1,25 @@
+{
+  "problem_id": "comparator_unsigned",
+  "code": "module comparator_unsigned(input [7:0] a, input [7:0] b, output gt, output eq, output lt);\n  // Write your code here\n  always@(*) begin\n    if(a>b)\n    gt=1;\n    eq=0;\n    lt=0;\n    if(a==b)\n    eq=1;\n    gt=0;\n    lt=0;\n    else\n    gt=0;\n    eq=0;\n    lt=1;\n  end\n  \nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b9943b0d-3\\submission.v:12: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b9943b0d-3\\submission.v:13: Syntax in assignment statement l-value.",
+    "compile_errors": [
+      {
+        "line": 12,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b9943b0d-3\\submission.v:12: syntax error"
+      },
+      {
+        "line": 13,
+        "message": "Syntax in assignment statement l-value.",
+        "friendly": "Syntax in assignment statement l-value.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b9943b0d-3\\submission.v:13: Syntax in assignment statement l-value."
+      }
+    ],
+    "submission_id": "b9943b0d-3",
+    "time_seconds": 0.194
+  },
+  "timestamp": "2026-05-18 22:15:21"
+}

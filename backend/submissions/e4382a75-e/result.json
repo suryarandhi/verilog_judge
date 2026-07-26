@@ -1,0 +1,27 @@
+{
+  "problem_id": "comparator_3bit",
+  "code": "module comparator_3bit(input [2:0] a, input [2:0] b, output gt, output eq, output lt);\n  assign gt = a > b;\n  assign eq = a == b;\n  assign lt = a < b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 000 0 1 0",
+      "001 001 0 1 0",
+      "111 001 1 0 0",
+      "011 010 1 0 0",
+      "111 111 0 1 0"
+    ],
+    "expected": [
+      "000 000 0 1 0",
+      "001 001 0 1 0",
+      "111 001 1 0 0",
+      "011 010 1 0 0",
+      "111 111 0 1 0"
+    ],
+    "raw_output": "000 000 0 1 0\n001 001 0 1 0\n111 001 1 0 0\n011 010 1 0 0\n111 111 0 1 0",
+    "submission_id": "e4382a75-e",
+    "time_seconds": 0.18,
+    "waveform_url": "/api/waveform/e4382a75-e"
+  },
+  "timestamp": "2026-05-15 23:47:24"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "absolute_value_unit",
+  "title": "Absolute Value Unit",
+  "difficulty": "Medium",
+  "category": "Combinational",
+  "tags": [
+    "absolute",
+    "signed",
+    "datapath"
+  ],
+  "statement": "Design an absolute value unit that converts a signed 8-bit input to its nonnegative magnitude. The output should be the input when nonnegative and the two\u2019s complement negation when negative. This module is used in datapath units requiring magnitude comparisons.",
+  "module_signature": "module absolute_value_unit(input signed [7:0] a, output reg [7:0] y);",
+  "behavior": [
+    "y is equal to a when a is nonnegative.",
+    "y is equal to -a when a is negative.",
+    "The design must be combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not infer sequential storage or clocks."
+  ],
+  "example": "a | y\n00000011 | 00000011\n11111101 | 00000011",
+  "hint": "Select between a and its negation based on the sign bit.",
+  "template": "module absolute_value_unit(input signed [7:0] a, output reg [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

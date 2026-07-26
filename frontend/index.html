@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verilog Judge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/">Verilog Judge</a>
+      <div class="metric">
+        <span id="problemCount">0</span>
+        <small>RTL challenges</small>
+      </div>
+      <div class="metric metric-secondary">
+        <span id="solvedCount">0</span>
+        <small>accepted locally</small>
+      </div>
+      <input id="searchInput" type="search" placeholder="Search problems" />
+      <div class="filter-stack" aria-label="Problem filters">
+        <select id="difficultyFilter">
+          <option value="all">All difficulties</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+          <option value="Expert">Expert</option>
+        </select>
+        <select id="categoryFilter">
+          <option value="all">All categories</option>
+        </select>
+        <select id="statusFilter">
+          <option value="all">All statuses</option>
+          <option value="solved">Accepted</option>
+          <option value="unsolved">Unsolved</option>
+        </select>
+      </div>
+      <nav id="problemList" class="problem-list" aria-label="Problems"></nav>
+    </aside>
+
+    <main class="home">
+      <section class="workspace-intro">
+        <div>
+          <p class="eyebrow">Digital electronics practice</p>
+          <h1>Solve hardware design problems with real Verilog simulation.</h1>
+          <p class="lede">Pick a circuit, write the module, and submit it against hidden Icarus Verilog testbenches.</p>
+        </div>
+        <div class="chip-board" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <h2>Problem Set</h2>
+            <p id="resultSummary">Start with gates and adders, then move into sequential logic.</p>
+          </div>
+          <select id="sortSelect">
+            <option value="title">Sort by title</option>
+            <option value="difficulty">Sort by difficulty</option>
+            <option value="category">Sort by category</option>
+          </select>
+        </div>
+        <div id="problemGrid" class="problem-grid"></div>
+      </section>
+
+      <section class="dashboard-grid">
+        <section class="panel compact-panel">
+          <div class="section-heading">
+            <div>
+              <h2>Learning Tracks</h2>
+              <p>Practice by verification and RTL topic.</p>
+            </div>
+          </div>
+          <div id="trackGrid" class="track-grid"></div>
+        </section>
+
+        <section class="panel compact-panel">
+          <div class="section-heading">
+            <div>
+              <h2>Daily Challenge</h2>
+              <p id="dailySubtitle">A fresh RTL prompt outside the 100-problem bank.</p>
+            </div>
+          </div>
+          <div id="dailyChallenge" class="daily-card"></div>
+        </section>
+
+        <section class="panel compact-panel">
+          <div class="section-heading">
+            <div>
+              <h2>Daily DV Prep</h2>
+              <p>One verification concept, interview question, and practice task.</p>
+            </div>
+          </div>
+          <div id="dailyDvPrep" class="daily-card dv-prep-card"></div>
+        </section>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <h2>Progress Map</h2>
+            <p>Topic coverage based on accepted local submissions.</p>
+          </div>
+        </div>
+        <div id="progressMap" class="progress-map"></div>
+      </section>
+
+      <section class="dashboard-grid">
+        <section class="panel compact-panel">
+          <div class="section-heading">
+            <div>
+              <h2>Local Leaderboard</h2>
+              <p>Fast solves, compact code, score, and streaks on this browser.</p>
+            </div>
+          </div>
+          <div id="leaderboard" class="leaderboard"></div>
+        </section>
+
+        <section class="panel compact-panel">
+          <div class="section-heading">
+            <div>
+              <h2>Verification Lab</h2>
+              <p>Assertion, constrained-random, coverage, and bug-fix practice.</p>
+            </div>
+          </div>
+          <div id="verificationLab" class="practice-list"></div>
+        </section>
+
+        <section class="panel compact-panel">
+          <div class="section-heading">
+            <div>
+              <h2>SystemVerilog / UVM Quiz</h2>
+              <p>Language and methodology checks outside RTL coding.</p>
+            </div>
+          </div>
+          <div id="quizLab" class="quiz-lab"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "problem_id": "shift_right_4bit",
+  "code": "module shift_right_4bit(input [3:0] a, input [1:0] shamt, output [3:0] y);\n  assign y = a >> shamt;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0001 00 0001",
+      "0001 01 0000",
+      "1111 01 0111",
+      "0101 10 0001",
+      "1000 01 0100"
+    ],
+    "expected": [
+      "0001 00 0001",
+      "0001 01 0000",
+      "1111 01 0111",
+      "0101 10 0001",
+      "1000 01 0100"
+    ],
+    "raw_output": "0001 00 0001\n0001 01 0000\n1111 01 0111\n0101 10 0001\n1000 01 0100",
+    "submission_id": "a050df1e-7",
+    "time_seconds": 0.184,
+    "waveform_url": "/api/waveform/a050df1e-7"
+  },
+  "timestamp": "2026-05-15 23:47:49"
+}

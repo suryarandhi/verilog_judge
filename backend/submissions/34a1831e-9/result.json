@@ -1,0 +1,25 @@
+{
+  "problem_id": "find_bug_memory_arbitration",
+  "code": "module find_bug_memory_arbitration(input clk, input rst, input [2:0] req, output reg [2:0] grant);\n  always @(*) begin\n      grant = 3'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxx",
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "expected": [
+      "xxx",
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "raw_output": "xxx\nxxx\nxxx\nxxx",
+    "submission_id": "34a1831e-9",
+    "time_seconds": 0.246,
+    "waveform_url": "/api/waveform/34a1831e-9"
+  },
+  "timestamp": "2026-05-16 01:34:21"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "D Flip-Flop",
+  "difficulty": "Medium",
+  "tags": [
+    "sequential",
+    "flip-flop"
+  ],
+  "description": "Design a positive edge-triggered D flip-flop with an active-high asynchronous reset.\n\nRequired module:\nmodule d_flipflop(input clk, input reset, input d, output reg q);\n\nBehavior:\n- When reset is 1, q becomes 0 immediately\n- Otherwise, q takes d on each rising edge of clk",
+  "template": "module d_flipflop(input clk, input reset, input d, output reg q);\n  // Write your code here\n\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": "population_count",
+  "title": "Population Count",
+  "difficulty": "Medium",
+  "category": "Combinational",
+  "tags": [
+    "popcount",
+    "bit-count",
+    "combinational"
+  ],
+  "statement": "Create a combinational unit that counts the number of 1 bits in an 8-bit input and outputs the count. This is useful for Hamming weight calculations and error checking circuits.",
+  "module_signature": "module population_count(input [7:0] a, output reg [3:0] count);",
+  "behavior": [
+    "count is the number of ones in a.",
+    "The output must be correct for any 8-bit input.",
+    "No sequential or register-based counting is allowed.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential loops or memory-based counters."
+  ],
+  "example": "a        | count\n00000000 | 0000\n11110000 | 0100\n10101010 | 0100",
+  "hint": "Use a tree of bitwise adders or reduction logic.",
+  "template": "module population_count(input [7:0] a, output reg [3:0] count);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

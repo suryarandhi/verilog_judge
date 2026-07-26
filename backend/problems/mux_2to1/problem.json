@@ -1,0 +1,28 @@
+{
+  "id": "mux_2to1",
+  "title": "2:1 Multiplexer",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "mux",
+    "selector",
+    "combinational"
+  ],
+  "statement": "Implement a 2:1 multiplexer that selects between two 8-bit inputs based on a single select line. The module must drive the output combinationally with no registers or clocks. The select signal must be stable during evaluation. This circuit is a classic data-path selector used in ALU and routing logic.",
+  "module_signature": "module mux_2to1(input [7:0] a, input [7:0] b, input sel, output [7:0] y);",
+  "behavior": [
+    "If sel is 0, y must equal a; if sel is 1, y must equal b.",
+    "No sequential elements; behavior must be purely combinational.",
+    "All bits of y must update immediately after inputs change.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use any clocks or sequential constructs."
+  ],
+  "example": "a b sel | y\n00000000 11111111 0 | 00000000\n00000000 11111111 1 | 11111111\n10101010 01010101 1 | 01010101",
+  "hint": "Use a single conditional assignment or bitwise mask.",
+  "template": "module mux_2to1(input [7:0] a, input [7:0] b, input sel, output [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

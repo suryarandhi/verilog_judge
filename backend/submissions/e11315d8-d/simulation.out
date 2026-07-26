@@ -1,0 +1,68 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01142840 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012BD808_0 .var "clk", 0 0;
+v012BD860_0 .net "count", 3 0, v012B2040_0; 1 drivers
+v012BD8B8_0 .var "en", 0 0;
+v012BD910_0 .var "rst", 0 0;
+S_012B1F60 .scope module, "dut" "saturating_counter" 2 8, 3 1, S_01142840;
+ .timescale 0 0;
+v012B1FE8_0 .net "clk", 0 0, v012BD808_0; 1 drivers
+v012B2040_0 .var "count", 3 0;
+v012BD758_0 .net "en", 0 0, v012BD8B8_0; 1 drivers
+v012BD7B0_0 .net "rst", 0 0, v012BD910_0; 1 drivers
+E_012B78D0 .event "_s0";
+    .scope S_012B1F60;
+T_0 ;
+    %wait E_012B78D0;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_01142840;
+T_1 ;
+    %set/v v012BD808_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v012BD808_0, 1;
+    %inv 8, 1;
+    %set/v v012BD808_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_01142840;
+T_2 ;
+    %vpi_call 2 12 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 13 "$dumpvars", 1'sb0, S_01142840;
+    %set/v v012BD808_0, 0, 1;
+    %set/v v012BD910_0, 1, 1;
+    %set/v v012BD8B8_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b", v012BD860_0;
+    %set/v v012BD808_0, 0, 1;
+    %set/v v012BD910_0, 0, 1;
+    %set/v v012BD8B8_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b", v012BD860_0;
+    %set/v v012BD808_0, 0, 1;
+    %set/v v012BD910_0, 0, 1;
+    %set/v v012BD8B8_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b", v012BD860_0;
+    %set/v v012BD808_0, 0, 1;
+    %set/v v012BD910_0, 0, 1;
+    %set/v v012BD8B8_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b", v012BD860_0;
+    %vpi_call 2 18 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\saturating_counter\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\e11315d8-d\submission.v";

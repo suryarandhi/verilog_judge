@@ -1,0 +1,86 @@
+{
+  "problem_id": "gray_counter_3bit",
+  "code": "module gray_counter_3bit(\n    input clk,\n    input reset,\n    output reg [2:0] gray\n);\nreg [2:0] bin;\nreg [2:0] next_bin;\nalways @(posedge clk) begin\n    if (reset) begin\n        bin  <= 3'b000;\n        gray <= 3'b000;\n    end\n    else begin\n        next_bin = bin + 1'b1;\n        bin <= next_bin;\n        gray[2] <= next_bin[2];\n        gray[1] <= next_bin[2] ^ next_bin[1];\n        gray[0] <= next_bin[1] ^ next_bin[0];\n    end\nend\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000",
+      "001",
+      "011",
+      "010",
+      "110",
+      "111",
+      "101",
+      "100"
+    ],
+    "expected": [
+      "000",
+      "001",
+      "011",
+      "010",
+      "110",
+      "111",
+      "101",
+      "100"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "000",
+        "expected": "000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "001",
+        "expected": "001"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "011",
+        "expected": "011"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "010",
+        "expected": "010"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "110",
+        "expected": "110"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "111",
+        "expected": "111"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "101",
+        "expected": "101"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "100",
+        "expected": "100"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "000\n001\n011\n010\n110\n111\n101\n100",
+    "submission_id": "1520afe7-f",
+    "time_seconds": 0.141,
+    "waveform_url": "/api/waveform/1520afe7-f"
+  },
+  "timestamp": "2026-07-03 00:13:28"
+}

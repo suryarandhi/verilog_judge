@@ -1,0 +1,53 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01162A58 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012F5510_0 .var/s "a", 7 0;
+v012F5568_0 .var/s "b", 7 0;
+v012F55C0_0 .net "eq", 0 0, C4<0>; 1 drivers
+v012FEB68_0 .net "gt", 0 0, C4<0>; 1 drivers
+v012FEBC0_0 .net "lt", 0 0, C4<0>; 1 drivers
+S_01162AE0 .scope module, "dut" "sign_magnitude_comparator" 2 9, 3 1, S_01162A58;
+ .timescale 0 0;
+v012F57F0_0 .net/s "a", 7 0, v012F5510_0; 1 drivers
+v012F1F88_0 .net/s "b", 7 0, v012F5568_0; 1 drivers
+v012F1FE0_0 .alias "eq", 0 0, v012F55C0_0;
+v012F2038_0 .alias "gt", 0 0, v012FEB68_0;
+v012F54B8_0 .alias "lt", 0 0, v012FEBC0_0;
+    .scope S_01162A58;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 13 "$dumpvars", 1'sb0, S_01162A58;
+    %set/v v012F5510_0, 0, 8;
+    %set/v v012F5568_0, 0, 8;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b", v012FEB68_0, v012F55C0_0, v012FEBC0_0;
+    %movi 8, 1, 8;
+    %set/v v012F5510_0, 8, 8;
+    %movi 8, 1, 8;
+    %set/v v012F5568_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b", v012FEB68_0, v012F55C0_0, v012FEBC0_0;
+    %set/v v012F5510_0, 1, 8;
+    %set/v v012F5568_0, 1, 8;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b %b %b", v012FEB68_0, v012F55C0_0, v012FEBC0_0;
+    %movi 8, 170, 8;
+    %set/v v012F5510_0, 8, 8;
+    %movi 8, 170, 8;
+    %set/v v012F5568_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b %b %b", v012FEB68_0, v012F55C0_0, v012FEBC0_0;
+    %vpi_call 2 18 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\sign_magnitude_comparator\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\fd2292ca-4\submission.v";

@@ -1,0 +1,86 @@
+{
+  "problem_id": "zero_flag_unit",
+  "code": "module zero_flag_unit(input [7:0] value, output reg zero);\n  // Write your code here\n  always@(*) begin\n  if(value == 0)\n  zero =1;\n  else\n  zero = 0;\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "expected": [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "1\n0\n0\n0\n0\n0\n0\n0",
+    "submission_id": "88ae4f07-7",
+    "time_seconds": 0.343,
+    "waveform_url": "/api/waveform/88ae4f07-7"
+  },
+  "timestamp": "2026-05-18 22:26:51"
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": "counter_4bit",
+  "code": "module counter_4bit(input clk, input reset, input enable, output reg [3:0] count);\n  always @(posedge clk or posedge reset) begin\n    if (reset) begin\n      count <= 4'b0000;\n    end else if (enable) begin\n      count <= count + 4'b0001;\n    end\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1 0 0000",
+      "0 1 0001",
+      "0 1 0010",
+      "0 0 0010",
+      "0 1 0011",
+      "1 1 0000"
+    ],
+    "expected": [
+      "1 0 0000",
+      "0 1 0001",
+      "0 1 0010",
+      "0 0 0010",
+      "0 1 0011",
+      "1 1 0000"
+    ],
+    "raw_output": "1 0 0000\n0 1 0001\n0 1 0010\n0 0 0010\n0 1 0011\n1 1 0000",
+    "submission_id": "38b4f357-d",
+    "time_seconds": 0.217,
+    "waveform_url": "/api/waveform/38b4f357-d"
+  },
+  "timestamp": "2026-05-15 23:45:48"
+}

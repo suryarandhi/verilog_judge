@@ -1,0 +1,28 @@
+{
+  "id": "testbench_for_branch_unit",
+  "title": "Write Testbench for Branch Unit",
+  "difficulty": "Medium",
+  "category": "Verification",
+  "tags": [
+    "testbench",
+    "branch",
+    "verification"
+  ],
+  "statement": "Write a testbench for a branch condition unit that checks negative and zero flags. The testbench should apply representative values and verify the taken output. It should help catch logic errors in branch evaluation.",
+  "module_signature": "module testbench_for_branch_unit; // testbench only",
+  "behavior": [
+    "Instantiate the branch condition DUT.",
+    "Apply signed values around zero and negative boundaries.",
+    "Verify taken matches the expected branch decision.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not alter the DUT module in the testbench."
+  ],
+  "example": "value branch_neg | taken\n11111111 1 | 1\n00000001 1 | 0",
+  "hint": "Cover both zero, negative, and positive cases.",
+  "template": "module testbench_for_branch_unit;\n  // Write your testbench or checker here\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,86 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(input clk, input rst,output reg [3:0] q);\n\n  // Write your code here\n  always@(posedge clk) begin\n    if(rst)\n    q<=4'b0000;\n    else \n    q[1] <= q[0];\n    q[2] <= q[1];\n    q[3] <= q[2];\n    q[0] <= ~q[3];\n    end\n    \n  endmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Your design produced unknown x/z output. Drive every output deterministically for all tested cases.",
+    "actual": [
+      "xx0x",
+      "x0xx",
+      "0xxx",
+      "xxx1",
+      "xx1x",
+      "x1xx",
+      "1xxx",
+      "xxx0"
+    ],
+    "expected": [
+      "0000",
+      "1000",
+      "1100",
+      "1110",
+      "1111",
+      "0111",
+      "0011",
+      "0001"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": false,
+        "actual": "xx0x",
+        "expected": "0000"
+      },
+      {
+        "index": 2,
+        "passed": false,
+        "actual": "x0xx",
+        "expected": "1000"
+      },
+      {
+        "index": 3,
+        "passed": false,
+        "actual": "0xxx",
+        "expected": "1100"
+      },
+      {
+        "index": 4,
+        "passed": false,
+        "actual": "xxx1",
+        "expected": "1110"
+      },
+      {
+        "index": 5,
+        "passed": false,
+        "actual": "xx1x",
+        "expected": "1111"
+      },
+      {
+        "index": 6,
+        "passed": false,
+        "actual": "x1xx",
+        "expected": "0111"
+      },
+      {
+        "index": 7,
+        "passed": false,
+        "actual": "1xxx",
+        "expected": "0011"
+      },
+      {
+        "index": 8,
+        "passed": false,
+        "actual": "xxx0",
+        "expected": "0001"
+      }
+    ],
+    "passed_tests": 0,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "xx0x\nx0xx\n0xxx\nxxx1\nxx1x\nx1xx\n1xxx\nxxx0",
+    "submission_id": "54107297-1",
+    "time_seconds": 0.25,
+    "waveform_url": "/api/waveform/54107297-1"
+  },
+  "timestamp": "2026-05-18 10:45:00"
+}

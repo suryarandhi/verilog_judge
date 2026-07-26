@@ -1,0 +1,28 @@
+{
+  "id": "testbench_for_mux",
+  "title": "Write Testbench for Multiplexer",
+  "difficulty": "Medium",
+  "category": "Verification",
+  "tags": [
+    "testbench",
+    "verification",
+    "mux"
+  ],
+  "statement": "Write a testbench for a 2:1 multiplexer module. The testbench should apply all combinations of the two inputs and select line, then print the selected output. The design should confirm the multiplexer behaves correctly for every vector.",
+  "module_signature": "module testbench_for_mux; // testbench only",
+  "behavior": [
+    "Instantiate the mux DUT.",
+    "Apply all four combinations of inputs with sel = 0 and sel = 1.",
+    "Check that output matches the selected input.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not alter the DUT interface in the testbench."
+  ],
+  "example": "a b sel | y\n0 0 0 | 0\n1 1 1 | 1",
+  "hint": "Use sequential stimulus generation in the initial block.",
+  "template": "module testbench_for_mux;\n  // Write your testbench or checker here\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": "nonzero_detector_4bit",
+  "code": "module nonzero_detector_4bit(input [3:0] a, output y);\n  assign y = a != 0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0",
+      "0001 1",
+      "1111 1",
+      "1000 1",
+      "1010 1"
+    ],
+    "expected": [
+      "0000 0",
+      "0001 1",
+      "1111 1",
+      "1000 1",
+      "1010 1"
+    ],
+    "raw_output": "0000 0\n0001 1\n1111 1\n1000 1\n1010 1",
+    "submission_id": "a3a3623b-d",
+    "time_seconds": 0.235,
+    "waveform_url": "/api/waveform/a3a3623b-d"
+  },
+  "timestamp": "2026-05-15 23:46:03"
+}

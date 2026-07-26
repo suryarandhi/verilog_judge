@@ -1,0 +1,56 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011E5678 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01222FB0_0 .var "a", 7 0;
+v011E1F60_0 .var "b", 7 0;
+v011E1FB8_0 .net "eq", 0 0, L_011EEEA0; 1 drivers
+v011E2010_0 .net "gt", 0 0, L_011EEE48; 1 drivers
+v011EEDF0_0 .net "lt", 0 0, L_011EEF30; 1 drivers
+S_011E5508 .scope module, "dut" "comparator_unsigned" 2 9, 3 1, S_011E5678;
+ .timescale 0 0;
+v011E5998_0 .net "a", 7 0, v01222FB0_0; 1 drivers
+v011E59F0_0 .net "b", 7 0, v011E1F60_0; 1 drivers
+v011E5A48_0 .alias "eq", 0 0, v011E1FB8_0;
+v01222F00_0 .alias "gt", 0 0, v011E2010_0;
+v01222F58_0 .alias "lt", 0 0, v011EEDF0_0;
+L_011EEE48 .cmp/gt 8, v01222FB0_0, v011E1F60_0;
+L_011EEEA0 .cmp/eq 8, v01222FB0_0, v011E1F60_0;
+L_011EEF30 .cmp/gt 8, v011E1F60_0, v01222FB0_0;
+    .scope S_011E5678;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 13 "$dumpvars", 1'sb0, S_011E5678;
+    %set/v v01222FB0_0, 0, 8;
+    %set/v v011E1F60_0, 0, 8;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b", v011E2010_0, v011E1FB8_0, v011EEDF0_0;
+    %movi 8, 1, 8;
+    %set/v v01222FB0_0, 8, 8;
+    %movi 8, 1, 8;
+    %set/v v011E1F60_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b", v011E2010_0, v011E1FB8_0, v011EEDF0_0;
+    %set/v v01222FB0_0, 1, 8;
+    %set/v v011E1F60_0, 1, 8;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b %b %b", v011E2010_0, v011E1FB8_0, v011EEDF0_0;
+    %movi 8, 170, 8;
+    %set/v v01222FB0_0, 8, 8;
+    %movi 8, 170, 8;
+    %set/v v011E1F60_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b %b %b", v011E2010_0, v011E1FB8_0, v011EEDF0_0;
+    %vpi_call 2 18 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\comparator_unsigned\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\d4d8b088-0\submission.v";

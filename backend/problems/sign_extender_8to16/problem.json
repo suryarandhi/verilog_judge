@@ -1,0 +1,28 @@
+{
+  "id": "sign_extender_8to16",
+  "title": "Sign Extender",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "sign-extender",
+    "datapath",
+    "combinational"
+  ],
+  "statement": "Design an 8-bit sign extender that converts a signed 8-bit input into a 16-bit two\u2019s complement output. The top 8 bits of the result must be copies of the input sign bit. The module is used in datapath code to widen signed values before arithmetic.",
+  "module_signature": "module sign_extender(input [7:0] a, output [15:0] y);",
+  "behavior": [
+    "y[7:0] must equal a.",
+    "y[15:8] must be all 1s when a[7] is 1 and all 0s when a[7] is 0.",
+    "Only combinational logic is allowed.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential constructs or memory elements."
+  ],
+  "example": "a        | y\n10000000 | 11111111_10000000\n01111111 | 00000000_01111111",
+  "hint": "Copy the sign bit across the upper bits.",
+  "template": "module sign_extender(input [7:0] a, output [15:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "mux4_8bit",
+  "code": "module mux4_8bit(input [7:0] a, input [7:0] b, input [7:0] c, input [7:0] d, input [1:0] sel, output reg [7:0] y);\n  always @(*) begin\n    case (sel)\n      2'b00: y = a;\n      2'b01: y = b;\n      2'b10: y = c;\n      default: y = d;\n    endcase\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 00000000",
+      "01 00000001",
+      "10 11111111",
+      "11 10101010"
+    ],
+    "expected": [
+      "00 00000000",
+      "01 00000001",
+      "10 11111111",
+      "11 10101010"
+    ],
+    "raw_output": "00 00000000\n01 00000001\n10 11111111\n11 10101010",
+    "submission_id": "5eda1555-1",
+    "time_seconds": 0.141,
+    "waveform_url": "/api/waveform/5eda1555-1"
+  },
+  "timestamp": "2026-05-15 23:47:36"
+}

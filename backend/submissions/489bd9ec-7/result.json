@@ -1,0 +1,25 @@
+{
+  "problem_id": "gray_counter_3bit",
+  "code": "module gray_counter_3bit(input clk, input reset, output reg [2:0] gray);\n  always @(*) begin\n      gray = 3'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxx",
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "expected": [
+      "xxx",
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "raw_output": "xxx\nxxx\nxxx\nxxx",
+    "submission_id": "489bd9ec-7",
+    "time_seconds": 0.23,
+    "waveform_url": "/api/waveform/489bd9ec-7"
+  },
+  "timestamp": "2026-05-16 01:34:23"
+}

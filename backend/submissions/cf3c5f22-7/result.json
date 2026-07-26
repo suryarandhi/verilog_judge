@@ -1,0 +1,27 @@
+{
+  "problem_id": "not_2bit",
+  "code": "module not_2bit(input [1:0] a, output [1:0] y);\n  assign y = ~a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 11",
+      "11 00",
+      "01 10",
+      "10 01",
+      "10 01"
+    ],
+    "expected": [
+      "00 11",
+      "11 00",
+      "01 10",
+      "10 01",
+      "10 01"
+    ],
+    "raw_output": "00 11\n11 00\n01 10\n10 01\n10 01",
+    "submission_id": "cf3c5f22-7",
+    "time_seconds": 0.229,
+    "waveform_url": "/api/waveform/cf3c5f22-7"
+  },
+  "timestamp": "2026-05-15 23:46:05"
+}

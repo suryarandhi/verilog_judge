@@ -1,0 +1,19 @@
+{
+  "problem_id": "byte_swap_32",
+  "code": "module byte_swap_32(input [31:0] data_in, output [31:0] data_out);\n  // Write your code here\n  assign data_out = data_in[0:31];\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\ddaa883c-d\\submission.v:3: error: part select data_in[0:31] is out of order.\n1 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 3,
+        "message": "error: part select data_in[0:31] is out of order.",
+        "friendly": "error: part select data_in[0:31] is out of order.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\ddaa883c-d\\submission.v:3: error: part select data_in[0:31] is out of order."
+      }
+    ],
+    "submission_id": "ddaa883c-d",
+    "time_seconds": 0.219
+  },
+  "timestamp": "2026-05-17 21:07:51"
+}

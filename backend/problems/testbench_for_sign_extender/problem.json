@@ -1,0 +1,28 @@
+{
+  "id": "testbench_for_sign_extender",
+  "title": "Write Testbench for Sign Extender",
+  "difficulty": "Easy",
+  "category": "Verification",
+  "tags": [
+    "testbench",
+    "sign-extension",
+    "verification"
+  ],
+  "statement": "Write a testbench that exercises a sign extender with positive and negative inputs. The testbench should confirm the extended bits replicate the sign bit correctly. It should print the input and output values for verification.",
+  "module_signature": "module testbench_for_sign_extender; // testbench only",
+  "behavior": [
+    "Instantiate the sign extender DUT.",
+    "Apply examples with positive and negative 8-bit values.",
+    "Verify the upper bits match the sign bit.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not modify the DUT interface."
+  ],
+  "example": "a        | y\n10000000 | 11111111_10000000\n01111111 | 00000000_01111111",
+  "hint": "Use both negative and nonnegative examples in the testbench.",
+  "template": "module testbench_for_sign_extender;\n  // Write your testbench or checker here\nendmodule",
+  "curated": true
+}

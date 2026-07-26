@@ -1,0 +1,11 @@
+{
+  "title": "4:16 Decoder",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "decoder"
+  ],
+  "description": "Design a 4-to-16 decoder.\\n\\nRequired module:\\nmodule decoder_4to16(input [3:0] a, output [15:0] y);",
+  "template": "module decoder_4to16(input [3:0] a, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

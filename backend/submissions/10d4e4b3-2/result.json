@@ -1,0 +1,91 @@
+{
+  "problem_id": "mux_2to1",
+  "code": "module mux_2to1(input [7:0] a, input [7:0] b, input [3:0]sel, output [7:0] y);\n  // Write your code here\n  case(sel)\n  sel= 3'b000:y=8'b00000001;\n  sel= 3'b001:y=8'b00000010;\n  sel= 3'b010:y=8'000000100;\n  sel= 3'b011:y=8'b00001000;\n  sel= 3'b100:y=8'b00010000;\n  sel= 3'b101:y=8'b00100000;\n  sel= 3'b110:y=8'b01000000;\n  sel= 3'b111:y=8'b10000000;\n  default:8'bx;\n  endcase\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:4: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:4: error: invalid module item.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:5: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:5: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:6: error: unmatched character (')\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:6: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:7: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:8: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:9: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:10: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:11: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:12: error: invalid module item.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:13: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\mux_2to1\\tb.v:2: error: invalid module item.",
+    "compile_errors": [
+      {
+        "line": 4,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:4: syntax error"
+      },
+      {
+        "line": 4,
+        "message": "error: invalid module item.",
+        "friendly": "error: invalid module item.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:4: error: invalid module item."
+      },
+      {
+        "line": 5,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:5: syntax error"
+      },
+      {
+        "line": 5,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:5: error: Invalid module instantiation"
+      },
+      {
+        "line": 6,
+        "message": "error: unmatched character (')",
+        "friendly": "error: unmatched character (')",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:6: error: unmatched character (')"
+      },
+      {
+        "line": 6,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:6: error: Invalid module instantiation"
+      },
+      {
+        "line": 7,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:7: error: Invalid module instantiation"
+      },
+      {
+        "line": 8,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:8: error: Invalid module instantiation"
+      },
+      {
+        "line": 9,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:9: error: Invalid module instantiation"
+      },
+      {
+        "line": 10,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:10: error: Invalid module instantiation"
+      },
+      {
+        "line": 11,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:11: error: Invalid module instantiation"
+      },
+      {
+        "line": 12,
+        "message": "error: invalid module item.",
+        "friendly": "error: invalid module item.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:12: error: invalid module item."
+      },
+      {
+        "line": 13,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\10d4e4b3-2\\submission.v:13: syntax error"
+      }
+    ],
+    "submission_id": "10d4e4b3-2",
+    "time_seconds": 0.855
+  },
+  "timestamp": "2026-05-16 19:25:41"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "read_after_write_buffer",
+  "title": "Read-After-Write Buffer",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "buffer",
+    "hazard",
+    "memory"
+  ],
+  "statement": "Design a read-after-write buffer that forwards the most recent write value to reads of the same address before the write commits to memory. The module should support synchronous writes and combinational reads with forwarding. This avoids stale data hazards in simple memory systems.",
+  "module_signature": "module read_after_write_buffer(input clk, input rst, input wr_en, input [3:0] addr, input [7:0] data_in, input rd_en, input [3:0] rd_addr, output reg [7:0] data_out);",
+  "behavior": [
+    "If a pending write matches rd_addr, data_out returns the new write data.",
+    "Otherwise, data_out returns the stored memory value.",
+    "rst clears pending writes and memory contents.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use implicit vendor forward logic or asynchronous memory primitives."
+  ],
+  "example": "wr_en addr data_in rd_en rd_addr | data_out\n1 0010 10101010 1 0010 | 10101010",
+  "hint": "Track the pending write address and data separately.",
+  "template": "module read_after_write_buffer(input clk, input rst, input wr_en, input [3:0] addr, input [7:0] data_in, input rd_en, input [3:0] rd_addr, output reg [7:0] data_out);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

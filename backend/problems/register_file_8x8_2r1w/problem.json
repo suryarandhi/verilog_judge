@@ -1,0 +1,30 @@
+{
+  "id": "register_file_8x8_2r1w",
+  "title": "8-Register File: 2 Read Ports, 1 Write Port",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "register-file",
+    "memory",
+    "datapath"
+  ],
+  "statement": "Design an 8-register file with two asynchronous read ports and one synchronous write port. Reads should return the contents of addressed registers immediately, while writes occur on the clock edge. A synchronous reset should clear all registers to zero.",
+  "module_signature": "module register_file_8x8_2r1w(input clk, input rst, input write_en, input [2:0] write_addr, input [7:0] write_data, input [2:0] read_addr_a, input [2:0] read_addr_b, output [7:0] read_data_a, output [7:0] read_data_b);",
+  "behavior": [
+    "read_data_a and read_data_b reflect the contents at the read addresses.",
+    "write occurs on the rising edge when write_en is 1.",
+    "rst synchronously clears all registers to zero.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous writes or multi-clock memories."
+  ],
+  "example": "write_en write_addr write_data | read_addr_a read_data_a\n1 010 00001111 | 010 00001111",
+  "hint": "Implement the register file as an array of flip-flops indexed by address.",
+  "template": "module register_file_8x8_2r1w(input clk, input rst, input write_en, input [2:0] write_addr, input [7:0] write_data, input [2:0] read_addr_a, input [2:0] read_addr_b, output [7:0] read_data_a, output [7:0] read_data_b);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

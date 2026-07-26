@@ -1,0 +1,28 @@
+{
+  "id": "detect_msb_one",
+  "title": "MSB One Detector",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "detector",
+    "combinational",
+    "bit-scan"
+  ],
+  "statement": "Design an 8-bit detector that asserts output when the most significant bit of the input is 1. The circuit should ignore lower bits and react combinationally to input changes. This is useful for sign detection and branch decisions in unsigned comparisons.",
+  "module_signature": "module detect_msb_one(input [7:0] a, output msb_one);",
+  "behavior": [
+    "msb_one is 1 when a[7] is 1.",
+    "msb_one is 0 otherwise.",
+    "No sequential or clocked logic is permitted.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use any registers or case-statements that infer state."
+  ],
+  "example": "a        | msb_one\n10000000 | 1\n01111111 | 0",
+  "hint": "Only the top bit determines the output.",
+  "template": "module detect_msb_one(input [7:0] a, output msb_one);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

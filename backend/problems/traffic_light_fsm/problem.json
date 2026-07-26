@@ -1,0 +1,30 @@
+{
+  "id": "traffic_light_fsm",
+  "title": "Traffic Light FSM",
+  "difficulty": "Medium",
+  "category": "FSM",
+  "tags": [
+    "traffic light",
+    "moore",
+    "fsm"
+  ],
+  "statement": "Design a 3-state traffic light controller that cycles through Red, Green, and Yellow on each clock edge. The controller should spend one cycle in each state and then transition to the next in the sequence Red -> Green -> Yellow -> Red. A synchronous reset should force the controller to Red.",
+  "module_signature": "module traffic_light_fsm(input clk, input rst, output reg red, output reg green, output reg yellow);",
+  "behavior": [
+    "Only one of red, green, or yellow may be asserted at a time.",
+    "The state sequence is Red, Green, Yellow, then back to Red.",
+    "rst synchronously forces the state to Red.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not infer latches or asynchronous state changes."
+  ],
+  "example": "state | red green yellow\nRed   | 1 0 0\nGreen | 0 1 0\nYellow| 0 0 1",
+  "hint": "Implement a Moore FSM where outputs depend only on the current state.",
+  "template": "module traffic_light_fsm(input clk, input rst, output reg red, output reg green, output reg yellow);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

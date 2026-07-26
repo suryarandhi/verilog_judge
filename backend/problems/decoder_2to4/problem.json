@@ -1,0 +1,11 @@
+{
+  "title": "2:4 Decoder",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "decoder"
+  ],
+  "description": "Design a 2-to-4 decoder.\\n\\nRequired module:\\nmodule decoder_2to4(input [1:0] a, output [3:0] y);",
+  "template": "module decoder_2to4(input [1:0] a, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

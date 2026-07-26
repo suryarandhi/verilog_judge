@@ -1,0 +1,37 @@
+{
+  "problem_id": "address_incrementer",
+  "code": "module address_incrementer(input [15:0] addr, input incr, output [15:0] next_addr);\n  // Write your code here\n  always@(*) begin\n    if(incr)\n    next_addr = addr+1;\n    else\n    next_addr = addr;\n  end\n\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\address_incrementer\\tb.v:16: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\address_incrementer\\tb.v:17: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03ad9b86-2\\submission.v:5: error: next_addr is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03ad9b86-2\\submission.v:1:      : next_addr is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03ad9b86-2\\submission.v:7: error: next_addr is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03ad9b86-2\\submission.v:1:      : next_addr is declared here as wire.\n2 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: next_addr is not a valid l-value in tb.dut.",
+        "friendly": "error: next_addr is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03ad9b86-2\\submission.v:5: error: next_addr is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": next_addr is declared here as wire.",
+        "friendly": ": next_addr is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03ad9b86-2\\submission.v:1:      : next_addr is declared here as wire."
+      },
+      {
+        "line": 7,
+        "message": "error: next_addr is not a valid l-value in tb.dut.",
+        "friendly": "error: next_addr is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03ad9b86-2\\submission.v:7: error: next_addr is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": next_addr is declared here as wire.",
+        "friendly": ": next_addr is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\03ad9b86-2\\submission.v:1:      : next_addr is declared here as wire."
+      }
+    ],
+    "submission_id": "03ad9b86-2",
+    "time_seconds": 0.169
+  },
+  "timestamp": "2026-05-17 18:34:43"
+}

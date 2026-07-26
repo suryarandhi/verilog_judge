@@ -1,0 +1,11 @@
+{
+  "title": "4-bit Incrementer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Build a 4-bit incrementer.\\n\\nRequired module:\\nmodule incrementer_4bit(input [3:0] a, output [3:0] y);",
+  "template": "module incrementer_4bit(input [3:0] a, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

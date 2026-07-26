@@ -1,0 +1,11 @@
+{
+  "title": "8-bit OR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 8-bit bitwise OR circuit.\\n\\nRequired module:\\nmodule or_8bit(input [7:0] a, input [7:0] b, output [7:0] y);",
+  "template": "module or_8bit(input [7:0] a, input [7:0] b, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

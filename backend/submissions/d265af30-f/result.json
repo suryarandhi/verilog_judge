@@ -1,0 +1,27 @@
+{
+  "problem_id": "subtractor_2bit",
+  "code": "module subtractor_2bit(input [1:0] a, input [1:0] b, output [1:0] diff, output borrow);\n  assign diff = a - b;\n  assign borrow = a < b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 00 00 0",
+      "01 01 00 0",
+      "11 01 10 0",
+      "01 01 00 0",
+      "11 11 00 0"
+    ],
+    "expected": [
+      "00 00 00 0",
+      "01 01 00 0",
+      "11 01 10 0",
+      "01 01 00 0",
+      "11 11 00 0"
+    ],
+    "raw_output": "00 00 00 0\n01 01 00 0\n11 01 10 0\n01 01 00 0\n11 11 00 0",
+    "submission_id": "d265af30-f",
+    "time_seconds": 0.158,
+    "waveform_url": "/api/waveform/d265af30-f"
+  },
+  "timestamp": "2026-05-15 23:47:50"
+}

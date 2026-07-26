@@ -1,0 +1,28 @@
+{
+  "id": "conditional_incrementer",
+  "title": "Conditional Incrementer",
+  "difficulty": "Easy",
+  "category": "Arithmetic",
+  "tags": [
+    "incrementer",
+    "arithmetic",
+    "combinational"
+  ],
+  "statement": "Build an 8-bit conditional incrementer that adds 1 to the operand when enable is high, and otherwise passes the operand unchanged. The output must be stable combinationally and must not use storage elements. This supports increment-by-one operations in datapath circuits.",
+  "module_signature": "module conditional_incrementer(input [7:0] a, input enable, output [7:0] y);",
+  "behavior": [
+    "If enable is 1, y = a + 1.",
+    "If enable is 0, y = a.",
+    "The implementation must be combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Avoid clocked predicates or registers."
+  ],
+  "example": "a enable | y\n00000000 1 | 00000001\n11111111 1 | 00000000\n01010101 0 | 01010101",
+  "hint": "Use addition only when enable is asserted.",
+  "template": "module conditional_incrementer(input [7:0] a, input enable, output [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

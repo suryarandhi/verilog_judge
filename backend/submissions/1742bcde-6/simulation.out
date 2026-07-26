@@ -1,0 +1,84 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011E89D8 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v011EED70_0 .var "addr", 9 0;
+v011EEDC8_0 .var "clk", 0 0;
+v011EEE20_0 .var "din", 7 0;
+v011EEE78_0 .net "dout", 7 0, v011E1FB8_0; 1 drivers
+v011EEED0_0 .var "rst", 0 0;
+v011EEF28_0 .var "wr_en", 0 0;
+S_011E8510 .scope module, "dut" "sram_1kx8" 2 10, 3 1, S_011E89D8;
+ .timescale 0 0;
+v01222BB0_0 .net "addr", 9 0, v011EED70_0; 1 drivers
+v01222C08_0 .net "clk", 0 0, v011EEDC8_0; 1 drivers
+v011E1F60_0 .net "din", 7 0, v011EEE20_0; 1 drivers
+v011E1FB8_0 .var "dout", 7 0;
+v011E2010_0 .net "rst", 0 0, v011EEED0_0; 1 drivers
+v011E2068_0 .net "wr_en", 0 0, v011EEF28_0; 1 drivers
+E_011EC1F8 .event "_s0";
+    .scope S_011E8510;
+T_0 ;
+    %wait E_011EC1F8;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_011E89D8;
+T_1 ;
+    %set/v v011EEDC8_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v011EEDC8_0, 1;
+    %inv 8, 1;
+    %set/v v011EEDC8_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_011E89D8;
+T_2 ;
+    %vpi_call 2 14 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 15 "$dumpvars", 1'sb0, S_011E89D8;
+    %set/v v011EEDC8_0, 0, 1;
+    %set/v v011EEED0_0, 1, 1;
+    %set/v v011EEF28_0, 0, 1;
+    %set/v v011EED70_0, 0, 10;
+    %set/v v011EEE20_0, 0, 8;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b", v011EEE78_0;
+    %set/v v011EEDC8_0, 0, 1;
+    %set/v v011EEED0_0, 0, 1;
+    %set/v v011EEF28_0, 1, 1;
+    %movi 8, 1, 10;
+    %set/v v011EED70_0, 8, 10;
+    %movi 8, 1, 8;
+    %set/v v011EEE20_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b", v011EEE78_0;
+    %set/v v011EEDC8_0, 0, 1;
+    %set/v v011EEED0_0, 0, 1;
+    %set/v v011EEF28_0, 0, 1;
+    %set/v v011EED70_0, 1, 10;
+    %set/v v011EEE20_0, 1, 8;
+    %delay 5000, 0;
+    %vpi_call 2 18 "$display", "%b", v011EEE78_0;
+    %set/v v011EEDC8_0, 0, 1;
+    %set/v v011EEED0_0, 0, 1;
+    %set/v v011EEF28_0, 1, 1;
+    %movi 8, 170, 10;
+    %set/v v011EED70_0, 8, 10;
+    %movi 8, 170, 8;
+    %set/v v011EEE20_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 19 "$display", "%b", v011EEE78_0;
+    %vpi_call 2 20 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\sram_1kx8\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\1742bcde-6\submission.v";

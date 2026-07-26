@@ -1,0 +1,27 @@
+{
+  "problem_id": "decrementer_3bit",
+  "code": "module decrementer_3bit(input [2:0] a, output [2:0] y);\n  assign y = a - 1'b1;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 111",
+      "001 000",
+      "010 001",
+      "111 110",
+      "101 100"
+    ],
+    "expected": [
+      "000 111",
+      "001 000",
+      "010 001",
+      "111 110",
+      "101 100"
+    ],
+    "raw_output": "000 111\n001 000\n010 001\n111 110\n101 100",
+    "submission_id": "63526164-c",
+    "time_seconds": 0.219,
+    "waveform_url": "/api/waveform/63526164-c"
+  },
+  "timestamp": "2026-05-15 23:47:30"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Comparator",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "comparison"
+  ],
+  "description": "Design a 16-bit unsigned comparator.\\n\\nRequired module:\\nmodule comparator_16bit(input [15:0] a, input [15:0] b, output gt, output eq, output lt);",
+  "template": "module comparator_16bit(input [15:0] a, input [15:0] b, output gt, output eq, output lt);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

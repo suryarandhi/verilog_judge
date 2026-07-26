@@ -1,0 +1,25 @@
+{
+  "problem_id": "traffic_light_fsm",
+  "code": "module traffic_light_fsm(input clk, input rst, output reg red, output reg green, output reg yellow);\n  always @(*) begin\n      red = 1'b0;\n      green = 1'b0;\n      yellow = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x x x",
+      "x x x",
+      "x x x",
+      "x x x"
+    ],
+    "expected": [
+      "x x x",
+      "x x x",
+      "x x x",
+      "x x x"
+    ],
+    "raw_output": "x x x\nx x x\nx x x\nx x x",
+    "submission_id": "2572a937-f",
+    "time_seconds": 0.239,
+    "waveform_url": "/api/waveform/2572a937-f"
+  },
+  "timestamp": "2026-05-16 01:34:36"
+}

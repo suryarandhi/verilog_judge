@@ -1,0 +1,121 @@
+{
+  "problem_id": "comparator_unsigned",
+  "code": "module comparator_unsigned(input [7:0] a, input [7:0] b, output gt, output eq, output lt);\n  // Write your code here\n  always@(*) begin\n    if(a>b)\n    gt==1;\n    eq==0;\n    lt==0;\n    if(a==b)\n    eq==1;\n    gt==o;\n    lt==0;\n    else\n    gt==0;\n    eq==0;\n    lt==1;\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:5: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:5: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:6: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:6: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:7: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:7: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:9: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:9: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:10: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:10: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:11: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:11: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:12: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:13: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:14: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:14: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:15: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:15: error: malformed statement",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:5: syntax error"
+      },
+      {
+        "line": 5,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:5: error: malformed statement"
+      },
+      {
+        "line": 6,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:6: syntax error"
+      },
+      {
+        "line": 6,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:6: error: malformed statement"
+      },
+      {
+        "line": 7,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:7: syntax error"
+      },
+      {
+        "line": 7,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:7: error: malformed statement"
+      },
+      {
+        "line": 9,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:9: syntax error"
+      },
+      {
+        "line": 9,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:9: error: malformed statement"
+      },
+      {
+        "line": 10,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:10: syntax error"
+      },
+      {
+        "line": 10,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:10: error: malformed statement"
+      },
+      {
+        "line": 11,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:11: syntax error"
+      },
+      {
+        "line": 11,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:11: error: malformed statement"
+      },
+      {
+        "line": 12,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:12: syntax error"
+      },
+      {
+        "line": 13,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:13: error: malformed statement"
+      },
+      {
+        "line": 14,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:14: syntax error"
+      },
+      {
+        "line": 14,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:14: error: malformed statement"
+      },
+      {
+        "line": 15,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:15: syntax error"
+      },
+      {
+        "line": 15,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f7281bf6-7\\submission.v:15: error: malformed statement"
+      }
+    ],
+    "submission_id": "f7281bf6-7",
+    "time_seconds": 0.743
+  },
+  "timestamp": "2026-05-18 22:11:13"
+}

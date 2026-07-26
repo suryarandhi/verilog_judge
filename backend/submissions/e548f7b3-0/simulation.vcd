@@ -1,0 +1,87 @@
+$date
+	Sat May 16 01:34:16 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 16 ! data_out [15:0] $end
+$var wire 1 " hit $end
+$var reg 1 # clk $end
+$var reg 16 $ data_in [15:0] $end
+$var reg 2 % index [1:0] $end
+$var reg 1 & rst $end
+$var reg 8 ' tag [7:0] $end
+$var reg 1 ( write_en $end
+$scope module dut $end
+$var event 1 ) _s0 $end
+$var wire 1 * clk $end
+$var wire 16 + data_in [15:0] $end
+$var wire 2 , index [1:0] $end
+$var wire 1 - rst $end
+$var wire 8 . tag [7:0] $end
+$var wire 1 / write_en $end
+$var reg 16 0 data_out [15:0] $end
+$var reg 1 1 hit $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x1
+bx 0
+0/
+b0 .
+1-
+b0 ,
+b0 +
+0*
+1)
+0(
+b0 '
+1&
+b0 %
+b0 $
+0#
+x"
+bx !
+$end
+#5000
+1(
+1/
+b1 $
+b1 +
+b1 '
+b1 .
+b1 %
+b1 ,
+0&
+0-
+0#
+0*
+#10000
+b1111111111111111 $
+b1111111111111111 +
+b11111111 '
+b11111111 .
+b11 %
+b11 ,
+0#
+0*
+#15000
+0(
+0/
+b10101010 $
+b10101010 +
+b10101010 '
+b10101010 .
+b10 %
+b10 ,
+0#
+0*
+#20000
+1#
+1*

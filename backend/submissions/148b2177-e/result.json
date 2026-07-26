@@ -1,0 +1,11 @@
+{
+  "problem_id": "d_flipflop",
+  "code": "module d_flipflop(input clk, input reset, input d, output reg q);\n  // Write your code here\nalways@(*) begin\nif(reset)\nd<=0\nelse\nd<=q\nend\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\148b2177-e\\submission.v:6: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:2: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:3: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:3: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:4: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:4: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:6: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:6: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:8: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop\\tb.v:9: error: malformed statement",
+    "submission_id": "148b2177-e",
+    "time_seconds": 0.269
+  },
+  "timestamp": "2026-05-15 23:31:07"
+}

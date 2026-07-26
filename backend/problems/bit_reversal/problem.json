@@ -1,0 +1,28 @@
+{
+  "id": "bit_reversal",
+  "title": "Bit Reversal",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "bit-manipulation",
+    "combinational",
+    "datapath"
+  ],
+  "statement": "Implement an 8-bit bit reversal module that outputs the input bits in reverse order. The least significant input bit should become the most significant output bit. This is commonly used in signal processing algorithms.",
+  "module_signature": "module bit_reversal(input [7:0] a, output [7:0] y);",
+  "behavior": [
+    "y is the bitwise reverse of a.",
+    "The module must be purely combinational.",
+    "No sequential storage is allowed.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use loops or registers to perform the reversal."
+  ],
+  "example": "a        | y\n00000001 | 10000000\n10101010 | 01010101",
+  "hint": "Map each input bit to its reversed output position explicitly.",
+  "template": "module bit_reversal(input [7:0] a, output [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

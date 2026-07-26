@@ -1,0 +1,30 @@
+{
+  "id": "identify_race_condition",
+  "title": "Identify the Race Condition",
+  "difficulty": "Hard",
+  "category": "Verification",
+  "tags": [
+    "race",
+    "debugging",
+    "sequential"
+  ],
+  "statement": "A sequential module shows intermittent behavior because two signals are assigned in parallel when they should be ordered. Your task is to identify the race condition in the design and rewrite the logic so the updates occur in a deterministic clocked manner. The corrected circuit should behave consistently under all clock cycles.",
+  "module_signature": "module identify_race_condition(input clk, input rst, input a, input b, output reg [1:0] q);",
+  "behavior": [
+    "q updates on the clock edge without hazards from parallel combinational assignments.",
+    "rst synchronously clears q to 0.",
+    "The corrected design must avoid race conditions between q bits.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use nested nonblocking/blocking mix-ups that create races."
+  ],
+  "example": "clk rst a b | q\n1 0 1 0 | 01\n1 0 0 1 | 10",
+  "hint": "Use nonblocking assignments consistently in the clocked block.",
+  "template": "module identify_race_condition(input clk, input rst, input a, input b, output reg [1:0] q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

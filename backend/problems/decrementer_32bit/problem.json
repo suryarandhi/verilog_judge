@@ -1,0 +1,11 @@
+{
+  "title": "32-bit Decrementer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Build a 32-bit decrementer.\\n\\nRequired module:\\nmodule decrementer_32bit(input [31:0] a, output [31:0] y);",
+  "template": "module decrementer_32bit(input [31:0] a, output [31:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

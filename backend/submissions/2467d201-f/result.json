@@ -1,0 +1,27 @@
+{
+  "problem_id": "register_4bit",
+  "code": "module register_4bit(input clk, input reset, input load, input [3:0] d, output reg [3:0] q);\n  always @(posedge clk or posedge reset) begin\n    if (reset) begin\n      q <= 4'b0000;\n    end else if (load) begin\n      q <= d;\n    end\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1 0 0000 0000",
+      "0 1 1010 1010",
+      "0 0 1111 1010",
+      "0 1 0101 0101",
+      "1 1 0101 0000"
+    ],
+    "expected": [
+      "1 0 0000 0000",
+      "0 1 1010 1010",
+      "0 0 1111 1010",
+      "0 1 0101 0101",
+      "1 1 0101 0000"
+    ],
+    "raw_output": "1 0 0000 0000\n0 1 1010 1010\n0 0 1111 1010\n0 1 0101 0101\n1 1 0101 0000",
+    "submission_id": "2467d201-f",
+    "time_seconds": 0.214,
+    "waveform_url": "/api/waveform/2467d201-f"
+  },
+  "timestamp": "2026-05-15 23:38:56"
+}

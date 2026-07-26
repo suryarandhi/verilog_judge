@@ -1,0 +1,58 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011B3EA8 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v00A734A8_0 .var "a", 7 0;
+v00A73820_0 .net "parity", 0 0, L_00A73878; 1 drivers
+S_011B3F30 .scope module, "dut" "even_parity_generator" 2 6, 3 1, S_011B3EA8;
+ .timescale 0 0;
+v00A733F8_0 .net "a", 7 0, v00A734A8_0; 1 drivers
+v00A73450_0 .alias "parity", 0 0, v00A73820_0;
+L_00A73878 .reduce/xnor v00A734A8_0;
+    .scope S_011B3EA8;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_011B3EA8;
+    %set/v v00A734A8_0, 0, 8;
+    %delay 1000, 0;
+    %vpi_call 2 11 "$display", "%b", v00A73820_0;
+    %movi 8, 1, 8;
+    %set/v v00A734A8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 12 "$display", "%b", v00A73820_0;
+    %set/v v00A734A8_0, 1, 8;
+    %delay 1000, 0;
+    %vpi_call 2 13 "$display", "%b", v00A73820_0;
+    %movi 8, 170, 8;
+    %set/v v00A734A8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 14 "$display", "%b", v00A73820_0;
+    %movi 8, 2, 8;
+    %set/v v00A734A8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 15 "$display", "%b", v00A73820_0;
+    %movi 8, 3, 8;
+    %set/v v00A734A8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 16 "$display", "%b", v00A73820_0;
+    %movi 8, 127, 8;
+    %set/v v00A734A8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 17 "$display", "%b", v00A73820_0;
+    %movi 8, 170, 8;
+    %set/v v00A734A8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 18 "$display", "%b", v00A73820_0;
+    %vpi_call 2 19 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\even_parity_generator\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\079eb2a3-2\submission.v";

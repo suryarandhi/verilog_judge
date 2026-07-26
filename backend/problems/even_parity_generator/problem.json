@@ -1,0 +1,28 @@
+{
+  "id": "even_parity_generator",
+  "title": "Even Parity Generator",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "parity",
+    "reduction",
+    "combinational"
+  ],
+  "statement": "Implement an even parity generator for an 8-bit input. The output should be high when the input contains an even number of ones. The module must be stable for all input vectors and suitable for parity checking in simple link-layer circuits.",
+  "module_signature": "module even_parity_generator(input [7:0] a, output parity);",
+  "behavior": [
+    "parity is 1 when the number of 1 bits in a is even.",
+    "parity is 0 when the number of 1 bits is odd.",
+    "No sequential or clocked logic may be used.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use built-in reduction XOR directly if you want a structural solution."
+  ],
+  "example": "a        | parity\n00000000 | 1\n00000001 | 0\n10101010 | 1",
+  "hint": "Treat parity as a multi-input XOR reduction with inverted output.",
+  "template": "module even_parity_generator(input [7:0] a, output parity);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

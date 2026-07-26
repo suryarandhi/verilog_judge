@@ -1,0 +1,30 @@
+{
+  "id": "up_down_counter",
+  "title": "Up/Down Counter",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "counter",
+    "bidirectional",
+    "sequential"
+  ],
+  "statement": "Implement an up/down counter that increments or decrements a 4-bit value based on a direction input. On each clock edge it should count up when direction is 1 and down when direction is 0. A synchronous reset must set the counter to zero.",
+  "module_signature": "module up_down_counter(input clk, input rst, input dir, output reg [3:0] count);",
+  "behavior": [
+    "If dir is 1, count increments on each clock edge.",
+    "If dir is 0, count decrements on each clock edge.",
+    "rst synchronously resets count to 0000.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous operations or parallel load features."
+  ],
+  "example": "clk rst dir | count\n0 1 0 | 0000\n1 0 1 | 0001\n1 0 0 | 0000",
+  "hint": "Implement count with straightforward increment/decrement logic and a reset branch.",
+  "template": "module up_down_counter(input clk, input rst, input dir, output reg [3:0] count);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

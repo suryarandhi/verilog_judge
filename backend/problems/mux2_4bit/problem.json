@@ -1,0 +1,11 @@
+{
+  "title": "4-bit 2:1 Mux",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "mux"
+  ],
+  "description": "Design a 4-bit 2:1 multiplexer.\\n\\nRequired module:\\nmodule mux2_4bit(input [3:0] a, input [3:0] b, input sel, output [3:0] y);",
+  "template": "module mux2_4bit(input [3:0] a, input [3:0] b, input sel, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

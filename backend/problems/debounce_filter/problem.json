@@ -1,0 +1,30 @@
+{
+  "id": "debounce_filter",
+  "title": "Debounce Filter",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "debounce",
+    "filter",
+    "sequential"
+  ],
+  "statement": "Implement a debounce filter that only changes output after the input has remained stable for two consecutive clock cycles. This suppresses mechanical switch bounce. A synchronous reset must initialize the clean output to zero.",
+  "module_signature": "module debounce_filter(input clk, input rst, input noisy, output reg clean);",
+  "behavior": [
+    "clean changes only when noisy remains stable for two cycles.",
+    "clean holds its previous value during instability.",
+    "rst synchronously clears clean to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not infer latches or asynchronous glitch detectors."
+  ],
+  "example": "noisy clean\n0 0\n1 0\n1 1",
+  "hint": "Store the previous input sample and require agreement across two cycles.",
+  "template": "module debounce_filter(input clk, input rst, input noisy, output reg clean);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

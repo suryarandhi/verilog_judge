@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Reduction XOR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "reduction"
+  ],
+  "description": "Reduce a 16-bit input to one output bit.\\n\\nRequired module:\\nmodule reduction_xor_16bit(input [15:0] a, output y);",
+  "template": "module reduction_xor_16bit(input [15:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

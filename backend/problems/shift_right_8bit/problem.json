@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Shift Right",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "shift"
+  ],
+  "description": "Shift a 8-bit input right.\\n\\nRequired module:\\nmodule shift_right_8bit(input [7:0] a, input [2:0] shamt, output [7:0] y);",
+  "template": "module shift_right_8bit(input [7:0] a, input [2:0] shamt, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

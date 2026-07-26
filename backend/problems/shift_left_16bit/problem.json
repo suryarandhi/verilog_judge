@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Shift Left",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "shift"
+  ],
+  "description": "Shift a 16-bit input left.\\n\\nRequired module:\\nmodule shift_left_16bit(input [15:0] a, input [3:0] shamt, output [15:0] y);",
+  "template": "module shift_left_16bit(input [15:0] a, input [3:0] shamt, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

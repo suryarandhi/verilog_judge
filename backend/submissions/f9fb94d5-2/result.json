@@ -1,0 +1,27 @@
+{
+  "problem_id": "decrementer_4bit",
+  "code": "module decrementer_4bit(input [3:0] a, output [3:0] y);\n  assign y = a - 1'b1;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 1111",
+      "0001 0000",
+      "0010 0001",
+      "1111 1110",
+      "1010 1001"
+    ],
+    "expected": [
+      "0000 1111",
+      "0001 0000",
+      "0010 0001",
+      "1111 1110",
+      "1010 1001"
+    ],
+    "raw_output": "0000 1111\n0001 0000\n0010 0001\n1111 1110\n1010 1001",
+    "submission_id": "f9fb94d5-2",
+    "time_seconds": 0.288,
+    "waveform_url": "/api/waveform/f9fb94d5-2"
+  },
+  "timestamp": "2026-05-15 23:45:52"
+}

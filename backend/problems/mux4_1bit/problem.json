@@ -1,0 +1,11 @@
+{
+  "title": "1-bit 4:1 Mux",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "mux"
+  ],
+  "description": "Design a 1-bit 4:1 multiplexer.\\n\\nRequired module:\\nmodule mux4_1bit(input [0:0] a, input [0:0] b, input [0:0] c, input [0:0] d, input [1:0] sel, output reg [0:0] y);",
+  "template": "module mux4_1bit(input [0:0] a, input [0:0] b, input [0:0] c, input [0:0] d, input [1:0] sel, output reg [0:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

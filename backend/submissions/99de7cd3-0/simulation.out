@@ -1,0 +1,21 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00F32250 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+S_00CF1F88 .scope module, "dut" "write_testbench_full_adder" 2 3, 3 1, S_00F32250;
+ .timescale 0 0;
+    .scope S_00CF1F88;
+T_0 ;
+    %vpi_call 3 3 "$display", "OK";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\write_testbench_full_adder\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\99de7cd3-0\submission.v";

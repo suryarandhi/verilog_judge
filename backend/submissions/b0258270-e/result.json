@@ -1,0 +1,37 @@
+{
+  "problem_id": "majority_gate",
+  "code": "module majority_gate(input a, input b, input c, output reg y);\n  // Write your code here\n  always@(*) begin\n    ifif ((a & b) | (b & c) | (a & c))\n    y<=1;\n    else\n    y<=0;\n  end \nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b0258270-e\\submission.v:5: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b0258270-e\\submission.v:5: Syntax in assignment statement l-value.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b0258270-e\\submission.v:6: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b0258270-e\\submission.v:7: Syntax in assignment statement l-value.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:17: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:17: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:17: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:18: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:18: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\majority_gate\\tb.v:18: warning: Numeric constant truncated to 1 bits.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b0258270-e\\submission.v:5: syntax error"
+      },
+      {
+        "line": 5,
+        "message": "Syntax in assignment statement l-value.",
+        "friendly": "Syntax in assignment statement l-value.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b0258270-e\\submission.v:5: Syntax in assignment statement l-value."
+      },
+      {
+        "line": 6,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b0258270-e\\submission.v:6: syntax error"
+      },
+      {
+        "line": 7,
+        "message": "Syntax in assignment statement l-value.",
+        "friendly": "Syntax in assignment statement l-value.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\b0258270-e\\submission.v:7: Syntax in assignment statement l-value."
+      }
+    ],
+    "submission_id": "b0258270-e",
+    "time_seconds": 0.18
+  },
+  "timestamp": "2026-05-17 17:39:40"
+}

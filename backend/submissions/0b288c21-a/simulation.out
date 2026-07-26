@@ -1,0 +1,55 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00A38218 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v00A31F60_0 .var "a", 31 0;
+v00A31FB8_0 .var "dir", 0 0;
+v00A32010_0 .var "shamt", 4 0;
+v011B0C08_0 .net "y", 31 0, C4<00000000000000000000000000000000>; 1 drivers
+S_00A38988 .scope module, "dut" "barrel_shifter_32bit" 2 8, 3 1, S_00A38218;
+ .timescale 0 0;
+v01192950_0 .net "a", 31 0, v00A31F60_0; 1 drivers
+v00A3EF48_0 .net "dir", 0 0, v00A31FB8_0; 1 drivers
+v011929A8_0 .net "shamt", 4 0, v00A32010_0; 1 drivers
+v01192A00_0 .alias "y", 31 0, v011B0C08_0;
+    .scope S_00A38218;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 12 "$dumpvars", 1'sb0, S_00A38218;
+    %set/v v00A31F60_0, 0, 32;
+    %set/v v00A32010_0, 0, 5;
+    %set/v v00A31FB8_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b", v011B0C08_0;
+    %movi 8, 1, 32;
+    %set/v v00A31F60_0, 8, 32;
+    %movi 8, 1, 5;
+    %set/v v00A32010_0, 8, 5;
+    %set/v v00A31FB8_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b", v011B0C08_0;
+    %set/v v00A31F60_0, 1, 32;
+    %set/v v00A32010_0, 1, 5;
+    %set/v v00A31FB8_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b", v011B0C08_0;
+    %movi 8, 170, 32;
+    %set/v v00A31F60_0, 8, 32;
+    %movi 8, 10, 5;
+    %set/v v00A32010_0, 8, 5;
+    %set/v v00A31FB8_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b", v011B0C08_0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\barrel_shifter_32bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\0b288c21-a\submission.v";

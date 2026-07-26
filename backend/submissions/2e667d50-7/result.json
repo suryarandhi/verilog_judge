@@ -1,0 +1,25 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(\n    input clk,\n    input rst,\n    output reg [3:0] q\n);\n\nalways @(posedge clk)\nbegin\n    if (rst)\n        q <= 4'b0000;\n    else\n        q <= {q[2:0], ~q[3]};\nend\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    "expected": [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    "raw_output": "xxxx\nxxxx\nxxxx\nxxxx",
+    "submission_id": "2e667d50-7",
+    "time_seconds": 0.287,
+    "waveform_url": "/api/waveform/2e667d50-7"
+  },
+  "timestamp": "2026-05-16 01:40:16"
+}

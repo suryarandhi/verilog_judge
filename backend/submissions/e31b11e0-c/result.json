@@ -1,0 +1,86 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(input clk, input rst,output reg [3:0] q);\n\n  // Write your code here\n  always@(posedge clk) begin\n    if(rst)\n    q<=4'b0000;\n    else  begin\n    q[1] <= q[0];\n    q[2] <= q[1];\n    q[3] <= q[2];\n    q[0] <= ~q[3];\n    end \n    end\n    \n  endmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "0000",
+      "0001",
+      "0011",
+      "0111",
+      "1111",
+      "1110",
+      "1100",
+      "1000"
+    ],
+    "expected": [
+      "0000",
+      "1000",
+      "1100",
+      "1110",
+      "1111",
+      "0111",
+      "0011",
+      "0001"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0000",
+        "expected": "0000"
+      },
+      {
+        "index": 2,
+        "passed": false,
+        "actual": "0001",
+        "expected": "1000"
+      },
+      {
+        "index": 3,
+        "passed": false,
+        "actual": "0011",
+        "expected": "1100"
+      },
+      {
+        "index": 4,
+        "passed": false,
+        "actual": "0111",
+        "expected": "1110"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "1111",
+        "expected": "1111"
+      },
+      {
+        "index": 6,
+        "passed": false,
+        "actual": "1110",
+        "expected": "0111"
+      },
+      {
+        "index": 7,
+        "passed": false,
+        "actual": "1100",
+        "expected": "0011"
+      },
+      {
+        "index": 8,
+        "passed": false,
+        "actual": "1000",
+        "expected": "0001"
+      }
+    ],
+    "passed_tests": 2,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0000\n0001\n0011\n0111\n1111\n1110\n1100\n1000",
+    "submission_id": "e31b11e0-c",
+    "time_seconds": 0.373,
+    "waveform_url": "/api/waveform/e31b11e0-c"
+  },
+  "timestamp": "2026-05-18 10:45:41"
+}

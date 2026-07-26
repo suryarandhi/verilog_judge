@@ -1,0 +1,11 @@
+{
+  "title": "3-bit Incrementer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Build a 3-bit incrementer.\\n\\nRequired module:\\nmodule incrementer_3bit(input [2:0] a, output [2:0] y);",
+  "template": "module incrementer_3bit(input [2:0] a, output [2:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

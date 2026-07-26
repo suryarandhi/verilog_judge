@@ -1,0 +1,30 @@
+{
+  "id": "signed_magnitude_comparator",
+  "title": "Signed Magnitude Comparator",
+  "difficulty": "Medium",
+  "category": "Combinational",
+  "tags": [
+    "comparator",
+    "signed-magnitude",
+    "priority-logic"
+  ],
+  "statement": "Design a comparator for signed-magnitude numbers. Each 8-bit input uses bit 7 as the sign bit and bits 6:0 as magnitude. Positive numbers are greater than negative numbers, except equal magnitudes with equal signs are equal. The circuit is combinational.",
+  "module_signature": "module signed_mag_compare(input [7:0] a, input [7:0] b, output reg gt, output reg eq, output reg lt);",
+  "behavior": [
+    "a[7] and b[7] are sign bits where 1 means negative.",
+    "a[6:0] and b[6:0] are magnitudes.",
+    "If signs differ, the positive operand is greater.",
+    "If both are negative, smaller magnitude is greater.",
+    "eq is 1 only when sign and magnitude match."
+  ],
+  "constraints": [
+    "Must be synthesizable Verilog.",
+    "Use combinational logic.",
+    "Do not infer latches.",
+    "Do not convert to two's complement internally."
+  ],
+  "example": "a        b        gt eq lt\n00000101 10000011 1  0  0\n10000101 10000011 0  0  1\n00000100 00000100 0  1  0",
+  "hint": "Compare signs first, then compare magnitudes with reversed meaning for two negative values.",
+  "template": "module signed_mag_compare(input [7:0] a, input [7:0] b, output reg gt, output reg eq, output reg lt);\n  // Write your code here\n\nendmodule",
+  "curated": false
+}

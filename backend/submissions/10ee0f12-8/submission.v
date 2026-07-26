@@ -1,0 +1,9 @@
+module detect_msb_one(input [7:0] a, output  reg msb_one);
+always@(*) begin
+
+  if(a[7] == 1)
+  msb_one = 1;
+  else
+  msb_one = 0;
+end
+endmodule

@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Register",
+  "difficulty": "Medium",
+  "tags": [
+    "sequential",
+    "register"
+  ],
+  "description": "Design a 8-bit register with load enable and active-high asynchronous reset.\\n\\nRequired module:\\nmodule register_8bit(input clk, input reset, input load, input [7:0] d, output reg [7:0] q);",
+  "template": "module register_8bit(input clk, input reset, input load, input [7:0] d, output reg [7:0] q);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

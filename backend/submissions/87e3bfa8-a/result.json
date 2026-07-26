@@ -1,0 +1,27 @@
+{
+  "problem_id": "not_3bit",
+  "code": "module not_3bit(input [2:0] a, output [2:0] y);\n  assign y = ~a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 111",
+      "111 000",
+      "001 110",
+      "100 011",
+      "101 010"
+    ],
+    "expected": [
+      "000 111",
+      "111 000",
+      "001 110",
+      "100 011",
+      "101 010"
+    ],
+    "raw_output": "000 111\n111 000\n001 110\n100 011\n101 010",
+    "submission_id": "87e3bfa8-a",
+    "time_seconds": 0.27,
+    "waveform_url": "/api/waveform/87e3bfa8-a"
+  },
+  "timestamp": "2026-05-15 23:46:05"
+}

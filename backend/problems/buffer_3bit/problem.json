@@ -1,0 +1,11 @@
+{
+  "title": "3-bit Buffer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Pass a 3-bit input directly to the output.\\n\\nRequired module:\\nmodule buffer_3bit(input [2:0] a, output [2:0] y);",
+  "template": "module buffer_3bit(input [2:0] a, output [2:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

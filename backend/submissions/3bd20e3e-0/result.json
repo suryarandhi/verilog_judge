@@ -1,0 +1,19 @@
+{
+  "problem_id": "byte_swap_32",
+  "code": "module byte_swap_32(input [31:0] data_in, output [31:0] data_out);\n  // Write your code here\n  assign data_out = {0,data_in[0],data_in[1],data_in[2],data_in[3],data_in[4],data_in[5],data_in[6],data_in[7],data_in[8],data_in[9],data_in[10],data_in[11],data_in[12],data_in[13],data_in[14],data_in[15],data_in[16],data_in[17],data_in[18],data_in[19],data_in[20],data_in[21],data_in[22],data_in[23],data_in[24],data_in[25],data_in[26],data_in[27],data_in[28],data_in[29],data_in[30],data_in[31]};\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3bd20e3e-0\\submission.v:3: error: Concatenation operand \"'sd0\" has indefinite width.\n1 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 3,
+        "message": "error: Concatenation operand \"'sd0\" has indefinite width.",
+        "friendly": "Invalid expression or operator usage. Check the operands around this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3bd20e3e-0\\submission.v:3: error: Concatenation operand \"'sd0\" has indefinite width."
+      }
+    ],
+    "submission_id": "3bd20e3e-0",
+    "time_seconds": 0.184
+  },
+  "timestamp": "2026-05-17 21:06:51"
+}

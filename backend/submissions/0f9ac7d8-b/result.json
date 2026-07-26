@@ -1,0 +1,11 @@
+{
+  "problem_id": "d_flipflop_sync_reset",
+  "code": "module d_flipflop_sync_reset(input clk, input rst, input d, output reg q);\n always@(posedge clk or posedge reset) begin\n if(reset)\n q<=1'b0;\n else\n q<=d;\n end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0f9ac7d8-b\\submission.v:3: error: Unable to bind wire/reg/memory `reset' in `tb.dut'\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0f9ac7d8-b\\submission.v:3: error: Unable to elaborate condition expression.\n2 error(s) during elaboration.",
+    "submission_id": "0f9ac7d8-b",
+    "time_seconds": 0.962
+  },
+  "timestamp": "2026-05-16 10:47:05"
+}

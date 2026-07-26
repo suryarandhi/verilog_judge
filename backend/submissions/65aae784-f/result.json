@@ -1,0 +1,29 @@
+{
+  "problem_id": "and_3bit",
+  "code": "module and_3bit(input [2:0] a, input [2:0] b, output [2:0] y);\n  assign y = a & b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 000 000",
+      "000 111 000",
+      "111 000 000",
+      "111 111 111",
+      "100 111 100",
+      "010 101 000"
+    ],
+    "expected": [
+      "000 000 000",
+      "000 111 000",
+      "111 000 000",
+      "111 111 111",
+      "100 111 100",
+      "010 101 000"
+    ],
+    "raw_output": "000 000 000\n000 111 000\n111 000 000\n111 111 111\n100 111 100\n010 101 000",
+    "submission_id": "65aae784-f",
+    "time_seconds": 0.24,
+    "waveform_url": "/api/waveform/65aae784-f"
+  },
+  "timestamp": "2026-05-15 23:46:57"
+}

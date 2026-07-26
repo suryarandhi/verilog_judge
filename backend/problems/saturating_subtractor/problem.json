@@ -1,0 +1,28 @@
+{
+  "id": "saturating_subtractor",
+  "title": "Saturating Subtractor",
+  "difficulty": "Medium",
+  "category": "Arithmetic",
+  "tags": [
+    "subtractor",
+    "saturating",
+    "arithmetic"
+  ],
+  "statement": "Implement an 8-bit saturating subtractor that clamps the signed result at -128 or +127 on overflow. The subtractor should compute a - b and saturate the result when the signed difference exceeds representable bounds. This prevents wraparound in arithmetic datapaths.",
+  "module_signature": "module saturating_subtractor(input signed [7:0] a, input signed [7:0] b, output reg signed [7:0] y);",
+  "behavior": [
+    "y = a - b unless signed overflow occurs.",
+    "Positive overflow saturates to 127.",
+    "Negative overflow saturates to -128.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use behavioral constructs that ignore signed overflow semantics."
+  ],
+  "example": "a b | y\n01111111 11111111 | 01111111\n10000000 00000001 | 10000000",
+  "hint": "Detect signed overflow by comparing operand signs and result signs.",
+  "template": "module saturating_subtractor(input signed [7:0] a, input signed [7:0] b, output reg signed [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

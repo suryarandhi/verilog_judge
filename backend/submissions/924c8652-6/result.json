@@ -1,0 +1,86 @@
+{
+  "problem_id": "address_incrementer",
+  "code": "module address_incrementer(input [15:0] addr, input incr, output reg [15:0] next_addr);\n  // Write your code here\n  always@(*) begin\n    if(incr)\n    next_addr = addr+1;\n    else\n    next_addr = addr;\n  end\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000000000000000",
+      "0000000000000010",
+      "0000000000000000",
+      "0000000010101010",
+      "0000000000000010",
+      "0000000000000100",
+      "0111111111111111",
+      "1111111110101010"
+    ],
+    "expected": [
+      "0000000000000000",
+      "0000000000000010",
+      "0000000000000000",
+      "0000000010101010",
+      "0000000000000010",
+      "0000000000000100",
+      "0111111111111111",
+      "1111111110101010"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0000000000000000",
+        "expected": "0000000000000000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0000000000000010",
+        "expected": "0000000000000010"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "0000000000000000",
+        "expected": "0000000000000000"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0000000010101010",
+        "expected": "0000000010101010"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0000000000000010",
+        "expected": "0000000000000010"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0000000000000100",
+        "expected": "0000000000000100"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0111111111111111",
+        "expected": "0111111111111111"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "1111111110101010",
+        "expected": "1111111110101010"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0000000000000000\n0000000000000010\n0000000000000000\n0000000010101010\n0000000000000010\n0000000000000100\n0111111111111111\n1111111110101010",
+    "submission_id": "924c8652-6",
+    "time_seconds": 0.229,
+    "waveform_url": "/api/waveform/924c8652-6"
+  },
+  "timestamp": "2026-05-17 18:34:48"
+}

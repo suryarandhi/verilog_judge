@@ -1,0 +1,30 @@
+{
+  "id": "johnson_counter_4bit",
+  "title": "4-bit Johnson Counter",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "counter",
+    "shift-register",
+    "sequential"
+  ],
+  "statement": "Implement a 4-bit Johnson counter that rotates inverted feedback through the register. On each clock edge the MSB is fed back inverted into the LSB, producing eight unique states. A synchronous reset should return the counter to 0000.",
+  "module_signature": "module johnson_counter_4bit(input clk, input rst, output reg [3:0] q);",
+  "behavior": [
+    "q cycles through eight unique states with inverted feedback.",
+    "rst synchronously resets q to 0000.",
+    "Updates occur only on clock edges.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use memory arrays or asynchronous logic."
+  ],
+  "example": "clk rst | q\n0 1 | 0000\n1 0 | 1000\n1 0 | 1100",
+  "hint": "Implement the register as a shift register with inverted MSB feedback.",
+  "template": "module johnson_counter_4bit(input clk, input rst, output reg [3:0] q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

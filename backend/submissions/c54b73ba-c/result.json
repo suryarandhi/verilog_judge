@@ -1,0 +1,27 @@
+{
+  "problem_id": "adder_3bit",
+  "code": "module adder_3bit(input [2:0] a, input [2:0] b, output [2:0] sum, output cout);\n  assign {cout, sum} = a + b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 000 000 0",
+      "001 001 010 0",
+      "111 001 000 1",
+      "011 010 101 0",
+      "111 111 110 1"
+    ],
+    "expected": [
+      "000 000 000 0",
+      "001 001 010 0",
+      "111 001 000 1",
+      "011 010 101 0",
+      "111 111 110 1"
+    ],
+    "raw_output": "000 000 000 0\n001 001 010 0\n111 001 000 1\n011 010 101 0\n111 111 110 1",
+    "submission_id": "c54b73ba-c",
+    "time_seconds": 0.162,
+    "waveform_url": "/api/waveform/c54b73ba-c"
+  },
+  "timestamp": "2026-05-15 23:45:08"
+}

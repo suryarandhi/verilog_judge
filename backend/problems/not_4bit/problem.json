@@ -1,0 +1,11 @@
+{
+  "title": "4-bit NOT",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 4-bit inverter.\\n\\nRequired module:\\nmodule not_4bit(input [3:0] a, output [3:0] y);",
+  "template": "module not_4bit(input [3:0] a, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

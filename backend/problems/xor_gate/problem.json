@@ -1,0 +1,11 @@
+{
+  "title": "XOR Gate",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "gates"
+  ],
+  "description": "Design a 2-input XOR gate.\n\nRequired module:\nmodule xor_gate(input a, input b, output y);\n\nBehavior:\n- y is 1 when exactly one input is 1",
+  "template": "module xor_gate(input a, input b, output y);\n  // Write your code here\n\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": "verify_fifo_full_empty",
+  "title": "Verify FIFO Full/Empty",
+  "difficulty": "Hard",
+  "category": "Verification",
+  "tags": [
+    "fifo",
+    "testbench",
+    "memory"
+  ],
+  "statement": "Design a testbench that verifies an 8-entry FIFO sets full and empty flags correctly and preserves data order. The testbench should perform writes until full, then reads until empty, checking the output stream. It must catch misbehavior in both boundary conditions.",
+  "module_signature": "module verify_fifo_full_empty; // testbench only",
+  "behavior": [
+    "Check that full goes high when the FIFO is full.",
+    "Check that empty goes high when the FIFO is empty.",
+    "Verify data comes out in the same order it went in.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not rely on unspecified timing; use clocked stimulus."
+  ],
+  "example": "push pop | data out\n1 0 | A B C...\n0 1 | A B C...",
+  "hint": "Use a deterministic sequence of writes and reads in your testbench.",
+  "template": "module verify_fifo_full_empty;\n  // Write your testbench or checker here\nendmodule",
+  "curated": true
+}

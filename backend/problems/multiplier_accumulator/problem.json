@@ -1,0 +1,30 @@
+{
+  "id": "multiplier_accumulator",
+  "title": "Multiplier Accumulator",
+  "difficulty": "Hard",
+  "category": "Arithmetic",
+  "tags": [
+    "multiplier",
+    "accumulator",
+    "arithmetic"
+  ],
+  "statement": "Build a 4-bit multiplier-accumulator that multiplies two 4-bit unsigned operands and adds the result to an 8-bit accumulator. The accumulator must update on a clock edge and support synchronous reset. This unit is common in DSP datapaths.",
+  "module_signature": "module multiplier_accumulator(input clk, input rst, input en, input [3:0] a, input [3:0] b, output reg [7:0] acc);",
+  "behavior": [
+    "When en is 1, acc <= acc + (a * b) on the rising edge.",
+    "If en is 0, acc retains its value.",
+    "rst synchronously clears acc to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous reset or combinational accumulation."
+  ],
+  "example": "clk rst en a b | acc\n0 1 0 xx | 00000000\n1 0 1 0011 0010 | 00000110",
+  "hint": "Use a register for acc and compute the product combinationally.",
+  "template": "module multiplier_accumulator(input clk, input rst, input en, input [3:0] a, input [3:0] b, output reg [7:0] acc);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

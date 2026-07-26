@@ -1,0 +1,11 @@
+{
+  "title": "1-bit XOR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 1-bit bitwise XOR circuit.\\n\\nRequired module:\\nmodule xor_1bit(input [0:0] a, input [0:0] b, output [0:0] y);",
+  "template": "module xor_1bit(input [0:0] a, input [0:0] b, output [0:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

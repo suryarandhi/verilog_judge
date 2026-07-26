@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_set_4bit_2",
+  "code": "module bit_set_4bit_2(input [3:0] a, output [3:0] y);\n  assign y = a | (4'b1 << 2);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0100",
+      "0100 0100",
+      "1111 1111",
+      "1010 1110"
+    ],
+    "expected": [
+      "0000 0100",
+      "0100 0100",
+      "1111 1111",
+      "1010 1110"
+    ],
+    "raw_output": "0000 0100\n0100 0100\n1111 1111\n1010 1110",
+    "submission_id": "392b64c8-8",
+    "time_seconds": 0.259,
+    "waveform_url": "/api/waveform/392b64c8-8"
+  },
+  "timestamp": "2026-05-15 23:45:31"
+}

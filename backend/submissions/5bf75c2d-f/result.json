@@ -1,0 +1,86 @@
+{
+  "problem_id": "even_parity_generator",
+  "code": "module even_parity_generator(input [7:0] a, output parity);\n  // Write your code here\n  assign parity = ~(a[0]^a[1]^a[2]^a[3]^a[4]^a[5]^a[6]^a[7]);\n  //assign parity = ~^a;(also give same result );\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1",
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "expected": [
+      "1",
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "1\n0\n1\n1\n0\n1\n0\n1",
+    "submission_id": "5bf75c2d-f",
+    "time_seconds": 0.274,
+    "waveform_url": "/api/waveform/5bf75c2d-f"
+  },
+  "timestamp": "2026-05-18 09:56:07"
+}

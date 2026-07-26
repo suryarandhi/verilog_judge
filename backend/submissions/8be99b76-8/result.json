@@ -1,0 +1,33 @@
+{
+  "problem_id": "multiplexer_2to1",
+  "code": "module mux_2to1(input i0, input i1, input sel, output y);\n  assign y = sel ? i1 : i0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0 0 0",
+      "0 0 1 0",
+      "0 1 0 0",
+      "0 1 1 1",
+      "1 0 0 1",
+      "1 0 1 0",
+      "1 1 0 1",
+      "1 1 1 1"
+    ],
+    "expected": [
+      "0 0 0 0",
+      "0 0 1 0",
+      "0 1 0 0",
+      "0 1 1 1",
+      "1 0 0 1",
+      "1 0 1 0",
+      "1 1 0 1",
+      "1 1 1 1"
+    ],
+    "raw_output": "0 0 0 0\n0 0 1 0\n0 1 0 0\n0 1 1 1\n1 0 0 1\n1 0 1 0\n1 1 0 1\n1 1 1 1",
+    "submission_id": "8be99b76-8",
+    "time_seconds": 0.206,
+    "waveform_url": "/api/waveform/8be99b76-8"
+  },
+  "timestamp": "2026-05-15 23:47:34"
+}

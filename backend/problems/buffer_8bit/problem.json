@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Buffer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Pass a 8-bit input directly to the output.\\n\\nRequired module:\\nmodule buffer_8bit(input [7:0] a, output [7:0] y);",
+  "template": "module buffer_8bit(input [7:0] a, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,58 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01247D18 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01132978_0 .var "a", 3 0;
+v01241F58_0 .var "shamt", 1 0;
+v01241FB0_0 .net "y", 3 0, L_01242008; 1 drivers
+S_01132898 .scope module, "dut" "shift_left_4bit" 2 7, 3 1, S_01247D18;
+ .timescale 0 0;
+v01245380_0 .net "a", 3 0, v01132978_0; 1 drivers
+v01247DA0_0 .net "shamt", 1 0, v01241F58_0; 1 drivers
+v01132920_0 .alias "y", 3 0, v01241FB0_0;
+L_01242008 .shift/l 4, v01132978_0, v01241F58_0;
+    .scope S_01247D18;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 11 "$dumpvars", 1'sb0, S_01247D18;
+    %movi 8, 1, 4;
+    %set/v v01132978_0, 8, 4;
+    %set/v v01241F58_0, 0, 2;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b %b", v01132978_0, v01241F58_0, v01241FB0_0;
+    %movi 8, 1, 4;
+    %set/v v01132978_0, 8, 4;
+    %movi 8, 1, 2;
+    %set/v v01241F58_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b %b", v01132978_0, v01241F58_0, v01241FB0_0;
+    %set/v v01132978_0, 1, 4;
+    %movi 8, 1, 2;
+    %set/v v01241F58_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b", v01132978_0, v01241F58_0, v01241FB0_0;
+    %movi 8, 5, 4;
+    %set/v v01132978_0, 8, 4;
+    %movi 8, 2, 2;
+    %set/v v01241F58_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b", v01132978_0, v01241F58_0, v01241FB0_0;
+    %movi 8, 8, 4;
+    %set/v v01132978_0, 8, 4;
+    %movi 8, 1, 2;
+    %set/v v01241F58_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b %b %b", v01132978_0, v01241F58_0, v01241FB0_0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\shift_left_4bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\317c2d1f-5\submission.v";

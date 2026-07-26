@@ -1,0 +1,57 @@
+$date
+	Sat May 16 01:34:17 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 8 # b [7:0] $end
+$var reg 1 $ sel $end
+$scope module dut $end
+$var event 1 % _s0 $end
+$var wire 8 & a [7:0] $end
+$var wire 8 ' b [7:0] $end
+$var wire 1 ( sel $end
+$var reg 8 ) y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx )
+0(
+b0 '
+b0 &
+1%
+0$
+b0 #
+b0 "
+bx !
+$end
+#5000
+1$
+1(
+b1 #
+b1 '
+b1 "
+b1 &
+#10000
+0$
+0(
+b11111111 #
+b11111111 '
+b11111111 "
+b11111111 &
+#15000
+1$
+1(
+b10101010 #
+b10101010 '
+b10101010 "
+b10101010 &
+#20000

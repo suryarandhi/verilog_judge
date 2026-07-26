@@ -1,0 +1,30 @@
+{
+  "id": "vending_machine_controller",
+  "title": "Vending Machine Controller",
+  "difficulty": "Hard",
+  "category": "FSM",
+  "tags": [
+    "fsm",
+    "controller",
+    "state-machine"
+  ],
+  "statement": "Build a simple vending machine controller that accepts coins of 5 and 10 units and dispenses a product when at least 15 units are inserted. It must maintain accumulated credit across clock cycles and produce a pulse when the product is ready. A synchronous reset should clear the stored credit.",
+  "module_signature": "module vending_machine_controller(input clk, input rst, input coin5, input coin10, output reg dispense);",
+  "behavior": [
+    "Track the inserted amount and dispense when credit >= 15.",
+    "dispense pulses high for one cycle when product is released.",
+    "rst synchronously resets the stored credit to zero.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous counters or unclocked state storage."
+  ],
+  "example": "coin5 coin10 | dispense\n0 1      | 0\n1 0      | 0\n1 1      | 1",
+  "hint": "Use an FSM with a small credit accumulator and transitions for each coin type.",
+  "template": "module vending_machine_controller(input clk, input rst, input coin5, input coin10, output reg dispense);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

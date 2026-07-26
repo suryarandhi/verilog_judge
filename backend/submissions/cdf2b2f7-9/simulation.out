@@ -1,0 +1,68 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012225A0 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v011E5850_0 .var "clk", 0 0;
+v011ED920_0 .var "d", 0 0;
+v011ED978_0 .net "q", 0 0, v011E57A0_0; 1 drivers
+v011ED9D0_0 .var "rst", 0 0;
+S_011E1F60 .scope module, "dut" "d_flipflop_sync_reset" 2 8, 3 1, S_012225A0;
+ .timescale 0 0;
+v011E1FE8_0 .net "clk", 0 0, v011E5850_0; 1 drivers
+v011E2040_0 .net "d", 0 0, v011ED920_0; 1 drivers
+v011E57A0_0 .var "q", 0 0;
+v011E57F8_0 .net "rst", 0 0, v011ED9D0_0; 1 drivers
+E_011E3EA8 .event "_s0";
+    .scope S_011E1F60;
+T_0 ;
+    %wait E_011E3EA8;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_012225A0;
+T_1 ;
+    %set/v v011E5850_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v011E5850_0, 1;
+    %inv 8, 1;
+    %set/v v011E5850_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_012225A0;
+T_2 ;
+    %vpi_call 2 12 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 13 "$dumpvars", 1'sb0, S_012225A0;
+    %set/v v011E5850_0, 0, 1;
+    %set/v v011ED9D0_0, 1, 1;
+    %set/v v011ED920_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b", v011ED978_0;
+    %set/v v011E5850_0, 0, 1;
+    %set/v v011ED9D0_0, 0, 1;
+    %set/v v011ED920_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b", v011ED978_0;
+    %set/v v011E5850_0, 0, 1;
+    %set/v v011ED9D0_0, 0, 1;
+    %set/v v011ED920_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b", v011ED978_0;
+    %set/v v011E5850_0, 0, 1;
+    %set/v v011ED9D0_0, 0, 1;
+    %set/v v011ED920_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b", v011ED978_0;
+    %vpi_call 2 18 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\d_flipflop_sync_reset\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\cdf2b2f7-9\submission.v";

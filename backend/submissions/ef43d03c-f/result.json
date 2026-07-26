@@ -1,0 +1,86 @@
+{
+  "problem_id": "absolute_value_unit",
+  "code": "module absolute_value_unit(\n    input signed [7:0] a,\n    output reg [7:0] y\n);\n\nalways @(*) begin\n    if (a[7] == 1'b1)\n        y = ~a + 1'b1;   // 2's complement\n    else\n        y = a;\nend\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000",
+      "00000001",
+      "00000001",
+      "01010110",
+      "00000010",
+      "00000011",
+      "01111111",
+      "01010110"
+    ],
+    "expected": [
+      "00000000",
+      "00000001",
+      "00000001",
+      "01010110",
+      "00000010",
+      "00000011",
+      "01111111",
+      "01010110"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "00000001",
+        "expected": "00000001"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "00000001",
+        "expected": "00000001"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "01010110",
+        "expected": "01010110"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "00000011",
+        "expected": "00000011"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "01111111",
+        "expected": "01111111"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "01010110",
+        "expected": "01010110"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "00000000\n00000001\n00000001\n01010110\n00000010\n00000011\n01111111\n01010110",
+    "submission_id": "ef43d03c-f",
+    "time_seconds": 0.236,
+    "waveform_url": "/api/waveform/ef43d03c-f"
+  },
+  "timestamp": "2026-06-09 22:15:02"
+}

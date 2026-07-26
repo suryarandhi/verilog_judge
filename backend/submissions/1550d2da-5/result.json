@@ -1,0 +1,86 @@
+{
+  "problem_id": "carry_generate_combiner",
+  "code": "module carry_generate_combiner(\n    input [7:0] a,\n    input [7:0] b,\n    output g,\n    output p\n);\n\nwire [8:0] temp;\n\nassign temp = a + b;\n\nassign g = temp[8];      // carry out generated\nassign p = &(a ^ b);     // block propagates carry\n\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "0 0",
+      "0 0",
+      "1 0",
+      "1 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "1 0"
+    ],
+    "expected": [
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 3,
+        "passed": false,
+        "actual": "1 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 4,
+        "passed": false,
+        "actual": "1 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 8,
+        "passed": false,
+        "actual": "1 0",
+        "expected": "0 0"
+      }
+    ],
+    "passed_tests": 5,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0 0\n0 0\n1 0\n1 0\n0 0\n0 0\n0 0\n1 0",
+    "submission_id": "1550d2da-5",
+    "time_seconds": 0.252,
+    "waveform_url": "/api/waveform/1550d2da-5"
+  },
+  "timestamp": "2026-05-23 10:18:26"
+}

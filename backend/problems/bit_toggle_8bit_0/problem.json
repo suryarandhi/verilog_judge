@@ -1,0 +1,11 @@
+{
+  "title": "Toggle Bit 0 of 8",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Toggle bit 0 of a 8-bit input.\\n\\nRequired module:\\nmodule bit_toggle_8bit_0(input [7:0] a, output [7:0] y);",
+  "template": "module bit_toggle_8bit_0(input [7:0] a, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

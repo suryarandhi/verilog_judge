@@ -1,0 +1,79 @@
+$date
+	Sat May 16 01:34:16 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 8 ! dout [7:0] $end
+$var wire 1 " empty $end
+$var wire 1 # full $end
+$var reg 1 $ clk $end
+$var reg 8 % din [7:0] $end
+$var reg 1 & pop $end
+$var reg 1 ' push $end
+$var reg 1 ( rst $end
+$scope module dut $end
+$var event 1 ) _s0 $end
+$var wire 1 * clk $end
+$var wire 8 + din [7:0] $end
+$var wire 1 , pop $end
+$var wire 1 - push $end
+$var wire 1 . rst $end
+$var reg 8 / dout [7:0] $end
+$var reg 1 0 empty $end
+$var reg 1 1 full $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x1
+x0
+bx /
+1.
+0-
+0,
+b0 +
+0*
+1)
+1(
+0'
+0&
+b0 %
+0$
+x#
+x"
+bx !
+$end
+#5000
+b1 %
+b1 +
+1&
+1,
+1'
+1-
+0(
+0.
+0$
+0*
+#10000
+b11111111 %
+b11111111 +
+0$
+0*
+#15000
+b10101010 %
+b10101010 +
+0&
+0,
+0'
+0-
+0$
+0*
+#20000
+1$
+1*

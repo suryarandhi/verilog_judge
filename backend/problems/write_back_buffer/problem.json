@@ -1,0 +1,30 @@
+{
+  "id": "write_back_buffer",
+  "title": "Write-Back Buffer",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "buffer",
+    "write-back",
+    "memory"
+  ],
+  "statement": "Design a write-back buffer that holds one pending write and forwards reads to the updated value when necessary. When a write is pending and a read targets the same address, the buffered value should be returned instead of the older memory value. The buffer should commit data on the next clock cycle.",
+  "module_signature": "module write_back_buffer(input clk, input rst, input wr_en, input [3:0] addr, input [7:0] data_in, input rd_en, input [3:0] rd_addr, output reg [7:0] data_out, output reg pending);",
+  "behavior": [
+    "pending is 1 when a write is staged but not yet committed.",
+    "Reads to the pending address return the buffered data.",
+    "rst clears the pending buffer state.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use actual external memory primitives; model the buffer behavior explicitly."
+  ],
+  "example": "wr_en addr data_in rd_en rd_addr | pending data_out\n1 0010 10101010 1 0010 | 1 10101010",
+  "hint": "Track the pending address and data separately from the memory array.",
+  "template": "module write_back_buffer(input clk, input rst, input wr_en, input [3:0] addr, input [7:0] data_in, input rd_en, input [3:0] rd_addr, output reg [7:0] data_out, output reg pending);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

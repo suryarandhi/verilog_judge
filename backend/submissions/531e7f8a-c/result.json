@@ -1,0 +1,25 @@
+{
+  "problem_id": "pedestrian_crossing_controller",
+  "code": "module pedestrian_crossing_controller(input clk, input rst, input walk_request, output reg vehicle_green, output reg vehicle_yellow, output reg vehicle_red, output reg walk);\n  always @(*) begin\n      vehicle_green = 1'b0;\n      vehicle_yellow = 1'b0;\n      vehicle_red = 1'b0;\n      walk = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x x x x",
+      "x x x x",
+      "x x x x",
+      "x x x x"
+    ],
+    "expected": [
+      "x x x x",
+      "x x x x",
+      "x x x x",
+      "x x x x"
+    ],
+    "raw_output": "x x x x\nx x x x\nx x x x\nx x x x",
+    "submission_id": "531e7f8a-c",
+    "time_seconds": 0.25,
+    "waveform_url": "/api/waveform/531e7f8a-c"
+  },
+  "timestamp": "2026-05-16 01:34:27"
+}

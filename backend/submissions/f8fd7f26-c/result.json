@@ -1,0 +1,25 @@
+{
+  "problem_id": "compare_select",
+  "code": "module compare_select(input [7:0] a, input [7:0] b, input sel, output reg [7:0] y);\n  always @(*) begin\n      y = 8'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "expected": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "raw_output": "xxxxxxxx\nxxxxxxxx\nxxxxxxxx\nxxxxxxxx",
+    "submission_id": "f8fd7f26-c",
+    "time_seconds": 0.273,
+    "waveform_url": "/api/waveform/f8fd7f26-c"
+  },
+  "timestamp": "2026-05-16 01:34:17"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "shifter_mux",
+  "title": "Shifter Multiplexer",
+  "difficulty": "Medium",
+  "category": "Datapath",
+  "tags": [
+    "shifter",
+    "mux",
+    "datapath"
+  ],
+  "statement": "Create a multiplexer that selects among four 8-bit shift-related values: the original input, input shifted left by one, input shifted right by one, and bitwise inverse. The selection is controlled by sel. This unit demonstrates a datapath selection stage.",
+  "module_signature": "module shifter_mux(input [7:0] a, input [7:0] b, input [1:0] sel, output [7:0] y);",
+  "behavior": [
+    "sel=00 outputs a.",
+    "sel=01 outputs a << 1.",
+    "sel=10 outputs a >> 1.",
+    "sel=11 outputs ~a.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not infer sequential state or registers."
+  ],
+  "example": "a sel | y\n00000001 01 | 00000010\n00000010 10 | 00000001",
+  "hint": "Use separate combinational expressions for each option.",
+  "template": "module shifter_mux(input [7:0] a, input [7:0] b, input [1:0] sel, output [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "d_flipflop_sync_reset",
+  "code": "module d_flipflop_sync_reset(input clk, input rst, input d, output reg q);\n\nalways @(negedge  clk)\nbegin\n    if (rst)\n        q <= 1'b0;\n    else\n        q <= d;\nend\n\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "0\n1\n1\n0",
+    "submission_id": "bd9e3f18-d",
+    "time_seconds": 0.215,
+    "waveform_url": "/api/waveform/bd9e3f18-d"
+  },
+  "timestamp": "2026-05-16 11:01:22"
+}

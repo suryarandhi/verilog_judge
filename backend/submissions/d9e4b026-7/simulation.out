@@ -1,0 +1,57 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012B5538 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012B5788_0 .var "a", 7 0;
+v01142890_0 .var "b", 7 0;
+v011428E8_0 .net "y", 7 0, L_01142940; 1 drivers
+S_012B58E8 .scope module, "dut" "and_8bit" 2 6, 3 1, S_012B5538;
+ .timescale 0 0;
+L_01142940 .functor AND 8, v012B5788_0, v01142890_0, C4<11111111>, C4<11111111>;
+v012B5970_0 .net "a", 7 0, v012B5788_0; 1 drivers
+v012B56D8_0 .net "b", 7 0, v01142890_0; 1 drivers
+v012B5730_0 .alias "y", 7 0, v011428E8_0;
+    .scope S_012B5538;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_012B5538;
+    %set/v v012B5788_0, 0, 8;
+    %set/v v01142890_0, 0, 8;
+    %delay 5000, 0;
+    %vpi_call 2 11 "$display", "%b %b %b", v012B5788_0, v01142890_0, v011428E8_0;
+    %set/v v012B5788_0, 0, 8;
+    %set/v v01142890_0, 1, 8;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b %b", v012B5788_0, v01142890_0, v011428E8_0;
+    %set/v v012B5788_0, 1, 8;
+    %set/v v01142890_0, 0, 8;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b %b", v012B5788_0, v01142890_0, v011428E8_0;
+    %set/v v012B5788_0, 1, 8;
+    %set/v v01142890_0, 1, 8;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b", v012B5788_0, v01142890_0, v011428E8_0;
+    %movi 8, 128, 8;
+    %set/v v012B5788_0, 8, 8;
+    %set/v v01142890_0, 1, 8;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b", v012B5788_0, v01142890_0, v011428E8_0;
+    %movi 8, 85, 8;
+    %set/v v012B5788_0, 8, 8;
+    %movi 8, 170, 8;
+    %set/v v01142890_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b %b %b", v012B5788_0, v01142890_0, v011428E8_0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\and_8bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\d9e4b026-7\submission.v";

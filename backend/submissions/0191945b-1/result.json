@@ -1,0 +1,25 @@
+{
+  "problem_id": "buffer_1bit",
+  "code": "module buffer_1bit(input [0:0] a, output [0:0] y);\n  assign y = a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0",
+      "1 1",
+      "1 1",
+      "1 1"
+    ],
+    "expected": [
+      "0 0",
+      "1 1",
+      "1 1",
+      "1 1"
+    ],
+    "raw_output": "0 0\n1 1\n1 1\n1 1",
+    "submission_id": "0191945b-1",
+    "time_seconds": 0.159,
+    "waveform_url": "/api/waveform/0191945b-1"
+  },
+  "timestamp": "2026-05-15 23:47:23"
+}

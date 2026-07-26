@@ -1,0 +1,27 @@
+{
+  "problem_id": "odd_parity_5bit",
+  "code": "module odd_parity_5bit(input [4:0] a, output y);\n  assign y = ^a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000 0",
+      "00001 1",
+      "00011 0",
+      "11111 1",
+      "10101 1"
+    ],
+    "expected": [
+      "00000 0",
+      "00001 1",
+      "00011 0",
+      "11111 1",
+      "10101 1"
+    ],
+    "raw_output": "00000 0\n00001 1\n00011 0\n11111 1\n10101 1",
+    "submission_id": "7fefaaa7-c",
+    "time_seconds": 0.259,
+    "waveform_url": "/api/waveform/7fefaaa7-c"
+  },
+  "timestamp": "2026-05-15 23:46:07"
+}

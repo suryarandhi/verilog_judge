@@ -1,0 +1,95 @@
+$date
+	Sat May 16 01:34:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 8 ! read_data_a [7:0] $end
+$var wire 8 " read_data_b [7:0] $end
+$var reg 1 # clk $end
+$var reg 3 $ read_addr_a [2:0] $end
+$var reg 3 % read_addr_b [2:0] $end
+$var reg 1 & rst $end
+$var reg 3 ' write_addr [2:0] $end
+$var reg 8 ( write_data [7:0] $end
+$var reg 1 ) write_en $end
+$scope module dut $end
+$var wire 1 * clk $end
+$var wire 3 + read_addr_a [2:0] $end
+$var wire 3 , read_addr_b [2:0] $end
+$var wire 8 - read_data_a [7:0] $end
+$var wire 8 . read_data_b [7:0] $end
+$var wire 1 / rst $end
+$var wire 3 0 write_addr [2:0] $end
+$var wire 8 1 write_data [7:0] $end
+$var wire 1 2 write_en $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+02
+b0 1
+b0 0
+1/
+b0 .
+b0 -
+b0 ,
+b0 +
+0*
+0)
+b0 (
+b0 '
+1&
+b0 %
+b0 $
+0#
+b0 "
+b0 !
+$end
+#5000
+b1 %
+b1 ,
+b1 $
+b1 +
+b1 (
+b1 1
+b1 '
+b1 0
+1)
+12
+0&
+0/
+0#
+0*
+#10000
+b111 %
+b111 ,
+b111 $
+b111 +
+b11111111 (
+b11111111 1
+b111 '
+b111 0
+0#
+0*
+#15000
+b10 %
+b10 ,
+b10 $
+b10 +
+b10101010 (
+b10101010 1
+b10 '
+b10 0
+0)
+02
+0#
+0*
+#20000
+1#
+1*

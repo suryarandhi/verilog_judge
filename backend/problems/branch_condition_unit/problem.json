@@ -1,0 +1,28 @@
+{
+  "id": "branch_condition_unit",
+  "title": "Branch Condition Unit",
+  "difficulty": "Medium",
+  "category": "Datapath",
+  "tags": [
+    "branch",
+    "condition",
+    "datapath"
+  ],
+  "statement": "Create a branch condition unit that asserts a taken signal when an 8-bit signed operand is zero or negative and a separate control bit indicates branch-if-negative. The unit supports conditional branching in a datapath. The output must be combinational.",
+  "module_signature": "module branch_condition_unit(input signed [7:0] value, input branch_neg, output taken);",
+  "behavior": [
+    "taken is 1 when branch_neg is 1 and value is zero or negative.",
+    "taken is 0 otherwise.",
+    "The logic must be combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use registers or sequential state."
+  ],
+  "example": "value branch_neg | taken\n11111111 1 | 1\n00000001 1 | 0",
+  "hint": "Check the sign bit and zero condition only when branch_neg is asserted.",
+  "template": "module branch_condition_unit(input signed [7:0] value, input branch_neg, output taken);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,11 @@
+{
+  "title": "16-bit 4:1 Mux",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "mux"
+  ],
+  "description": "Design a 16-bit 4:1 multiplexer.\\n\\nRequired module:\\nmodule mux4_16bit(input [15:0] a, input [15:0] b, input [15:0] c, input [15:0] d, input [1:0] sel, output reg [15:0] y);",
+  "template": "module mux4_16bit(input [15:0] a, input [15:0] b, input [15:0] c, input [15:0] d, input [1:0] sel, output reg [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

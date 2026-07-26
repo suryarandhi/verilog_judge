@@ -1,0 +1,29 @@
+{
+  "problem_id": "rising_edge_detector",
+  "code": "module rising_edge_detector(input clk, input reset, input signal_in, output reg pulse);\n  reg previous;\n  always @(posedge clk or posedge reset) begin\n    if (reset) begin\n      previous <= 1'b0;\n      pulse <= 1'b0;\n    end else begin\n      pulse <= signal_in & ~previous;\n      previous <= signal_in;\n    end\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0",
+      "0 0",
+      "1 1",
+      "1 0",
+      "0 0",
+      "1 1"
+    ],
+    "expected": [
+      "0 0",
+      "0 0",
+      "1 1",
+      "1 0",
+      "0 0",
+      "1 1"
+    ],
+    "raw_output": "0 0\n0 0\n1 1\n1 0\n0 0\n1 1",
+    "submission_id": "1d7c3bda-e",
+    "time_seconds": 0.278,
+    "waveform_url": "/api/waveform/1d7c3bda-e"
+  },
+  "timestamp": "2026-05-16 00:05:55"
+}

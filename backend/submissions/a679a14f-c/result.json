@@ -1,0 +1,25 @@
+{
+  "problem_id": "or_gate",
+  "code": "module or_gate(input a, input b, output y);\n  assign y = a | b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0 0",
+      "0 1 1",
+      "1 0 1",
+      "1 1 1"
+    ],
+    "expected": [
+      "0 0 0",
+      "0 1 1",
+      "1 0 1",
+      "1 1 1"
+    ],
+    "raw_output": "0 0 0\n0 1 1\n1 0 1\n1 1 1",
+    "submission_id": "a679a14f-c",
+    "time_seconds": 0.173,
+    "waveform_url": "/api/waveform/a679a14f-c"
+  },
+  "timestamp": "2026-05-15 23:39:19"
+}

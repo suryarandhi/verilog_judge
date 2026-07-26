@@ -1,0 +1,11 @@
+{
+  "title": "2-bit Decrementer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Build a 2-bit decrementer.\\n\\nRequired module:\\nmodule decrementer_2bit(input [1:0] a, output [1:0] y);",
+  "template": "module decrementer_2bit(input [1:0] a, output [1:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

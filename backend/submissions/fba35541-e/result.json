@@ -1,0 +1,19 @@
+{
+  "problem_id": "comparator_unsigned",
+  "code": "module mc(A,B,greater,lower,equal)\ninput [7:0]A,B;\ninput clk;\noutput reg greater,lower,equal;\nalways@(*) begin\n  if(A>B) begin\n    greater=1;\n    lower=0;\n    equal=0;\n  end\n  else if(A==B) begin\n    greater=0;\n    lower=0;\n    equal=1;\n  end\n  else begin\n    greater=0;\n    lower=1;\n    equal=0;\n  end\nend\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\fba35541-e\\submission.v:2: syntax error\nI give up.",
+    "compile_errors": [
+      {
+        "line": 2,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\fba35541-e\\submission.v:2: syntax error"
+      }
+    ],
+    "submission_id": "fba35541-e",
+    "time_seconds": 1.141
+  },
+  "timestamp": "2026-05-20 20:38:54"
+}

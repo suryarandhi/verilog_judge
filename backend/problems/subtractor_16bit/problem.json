@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Subtractor",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Design a 16-bit subtractor with borrow out.\\n\\nRequired module:\\nmodule subtractor_16bit(input [15:0] a, input [15:0] b, output [15:0] diff, output borrow);",
+  "template": "module subtractor_16bit(input [15:0] a, input [15:0] b, output [15:0] diff, output borrow);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

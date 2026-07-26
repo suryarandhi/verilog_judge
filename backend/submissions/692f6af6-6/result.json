@@ -1,0 +1,27 @@
+{
+  "problem_id": "comparator_4bit",
+  "code": "module comparator_4bit(input [3:0] a, input [3:0] b, output gt, output eq, output lt);\n  assign gt = a > b;\n  assign eq = a == b;\n  assign lt = a < b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      " 0  0 0 1 0",
+      " 3  7 0 0 1",
+      " 9  2 1 0 0",
+      "15 15 0 1 0",
+      " 8 12 0 0 1"
+    ],
+    "expected": [
+      "0  0 0 1 0",
+      " 3  7 0 0 1",
+      " 9  2 1 0 0",
+      "15 15 0 1 0",
+      " 8 12 0 0 1"
+    ],
+    "raw_output": " 0  0 0 1 0\n 3  7 0 0 1\n 9  2 1 0 0\n15 15 0 1 0\n 8 12 0 0 1",
+    "submission_id": "692f6af6-6",
+    "time_seconds": 0.142,
+    "waveform_url": "/api/waveform/692f6af6-6"
+  },
+  "timestamp": "2026-05-15 23:38:54"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "write_testbench_full_adder",
+  "title": "Write Testbench for Full Adder",
+  "difficulty": "Hard",
+  "category": "Verification",
+  "tags": [
+    "testbench",
+    "verification",
+    "full-adder"
+  ],
+  "statement": "Write a testbench for a given full adder module. The testbench should instantiate the full adder, apply all input combinations, and verify the sum and carry outputs. The expected waveform or prints should be checked automatically in simulation.",
+  "module_signature": "module write_testbench_full_adder; // testbench only",
+  "behavior": [
+    "Instantiate the provided full adder module.",
+    "Apply all eight combinations of inputs a, b, and cin.",
+    "Compare outputs to expected sum and cout values.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not modify the full adder DUT; the testbench should remain separate."
+  ],
+  "example": "a b cin | sum cout\n0 0 0 | 0 0\n1 1 1 | 1 1",
+  "hint": "Use $display and a loop to verify all input combinations.",
+  "template": "module write_testbench_full_adder;\n  // Write your testbench or checker here\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "elevator_floor_controller",
+  "code": "module elevator_floor_controller(input clk, input rst, input request_up, input request_down, output reg [1:0] floor, output reg moving_up, output reg moving_down);\n  always @(*) begin\n      floor = 2'b0;\n      moving_up = 1'b0;\n      moving_down = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xx x x",
+      "xx x x",
+      "xx x x",
+      "xx x x"
+    ],
+    "expected": [
+      "xx x x",
+      "xx x x",
+      "xx x x",
+      "xx x x"
+    ],
+    "raw_output": "xx x x\nxx x x\nxx x x\nxx x x",
+    "submission_id": "73a89927-c",
+    "time_seconds": 0.271,
+    "waveform_url": "/api/waveform/73a89927-c"
+  },
+  "timestamp": "2026-05-16 01:34:20"
+}

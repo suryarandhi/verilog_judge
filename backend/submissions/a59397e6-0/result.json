@@ -1,0 +1,86 @@
+{
+  "problem_id": "bitwise_nand",
+  "code": "module bitwise_nand(input [7:0] a, input [7:0] b, output [7:0] y);\n  // Write your code here\n assign  y = ~(a & b) ;\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "11111111",
+      "11111110",
+      "00000000",
+      "01010101",
+      "11111101",
+      "11111100",
+      "10000000",
+      "01010101"
+    ],
+    "expected": [
+      "11111111",
+      "11111110",
+      "00000000",
+      "01010101",
+      "11111101",
+      "11111100",
+      "10000000",
+      "01010101"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "11111111",
+        "expected": "11111111"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "11111110",
+        "expected": "11111110"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "01010101",
+        "expected": "01010101"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "11111101",
+        "expected": "11111101"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "11111100",
+        "expected": "11111100"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "10000000",
+        "expected": "10000000"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "01010101",
+        "expected": "01010101"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "11111111\n11111110\n00000000\n01010101\n11111101\n11111100\n10000000\n01010101",
+    "submission_id": "a59397e6-0",
+    "time_seconds": 0.233,
+    "waveform_url": "/api/waveform/a59397e6-0"
+  },
+  "timestamp": "2026-05-17 21:19:57"
+}

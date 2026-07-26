@@ -1,0 +1,27 @@
+{
+  "problem_id": "register_2bit",
+  "code": "module register_2bit(input clk, input reset, input load, input [1:0] d, output reg [1:0] q);\n  always @(posedge clk or posedge reset) begin\n    if (reset) begin\n      q <= 2'b0;\n    end else if (load) begin\n      q <= d;\n    end\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1 0 00 00",
+      "0 1 11 11",
+      "0 0 10 11",
+      "0 1 10 10",
+      "1 1 10 00"
+    ],
+    "expected": [
+      "1 0 00 00",
+      "0 1 11 11",
+      "0 0 10 11",
+      "0 1 10 10",
+      "1 1 10 00"
+    ],
+    "raw_output": "1 0 00 00\n0 1 11 11\n0 0 10 11\n0 1 10 10\n1 1 10 00",
+    "submission_id": "f7cdd66c-2",
+    "time_seconds": 0.171,
+    "waveform_url": "/api/waveform/f7cdd66c-2"
+  },
+  "timestamp": "2026-05-15 23:47:48"
+}

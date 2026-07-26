@@ -1,0 +1,30 @@
+{
+  "id": "pulse_stretcher",
+  "title": "Pulse Stretcher",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "pulse",
+    "single-cycle",
+    "sequential"
+  ],
+  "statement": "Design a pulse stretcher that extends a single-cycle input pulse on a 1-bit signal into a two-cycle output pulse. The module should assert the output for the cycle where the input pulse is detected and the following clock cycle. A synchronous reset clears the output and internal state to zero.",
+  "module_signature": "module pulse_stretcher(input clk, input rst, input pulse_in, output reg pulse_out);",
+  "behavior": [
+    "pulse_out is high for two clock cycles after pulse_in is high for one cycle.",
+    "pulse_out is low when pulse_in is low and no stored extension exists.",
+    "rst synchronously clears pulse_out to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous edge detection or latches."
+  ],
+  "example": "clk rst pulse_in | pulse_out\n0 1 0 | 0\n1 0 1 | 1\n1 0 0 | 1",
+  "hint": "Capture the pulse and use stored state to produce a second cycle of output.",
+  "template": "module pulse_stretcher(input clk, input rst, input pulse_in, output reg pulse_out);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

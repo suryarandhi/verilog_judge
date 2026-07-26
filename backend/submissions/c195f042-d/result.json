@@ -1,0 +1,86 @@
+{
+  "problem_id": "threshold_detector",
+  "code": "module threshold_detector(\n    input [7:0] a,\n    output above_threshold\n);\n\nassign above_threshold = (a > 100);\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1"
+    ],
+    "expected": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0\n0\n1\n1\n0\n0\n1\n1",
+    "submission_id": "c195f042-d",
+    "time_seconds": 0.636,
+    "waveform_url": "/api/waveform/c195f042-d"
+  },
+  "timestamp": "2026-05-17 20:53:37"
+}

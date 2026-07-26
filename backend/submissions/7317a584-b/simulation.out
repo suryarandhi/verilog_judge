@@ -1,0 +1,86 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011AE310 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v011A1FB8_0 .var "clk", 0 0;
+v011A2010_0 .var "in_data", 7 0;
+v011AB760_0 .net "in_ready", 0 0, C4<0>; 1 drivers
+v011AB7B8_0 .var "in_valid", 0 0;
+v011AB810_0 .net "out_data", 7 0, v011E30D0_0; 1 drivers
+v011AB868_0 .var "out_ready", 0 0;
+v011AB8C0_0 .net "out_valid", 0 0, v011E3180_0; 1 drivers
+v011AB918_0 .var "reset", 0 0;
+S_011ADA90 .scope module, "dut" "ready_valid_skid_buffer" 2 12, 3 1, S_011AE310;
+ .timescale 0 0;
+v011AEF88_0 .net "clk", 0 0, v011A1FB8_0; 1 drivers
+v011AA538_0 .net "in_data", 7 0, v011A2010_0; 1 drivers
+v011AA590_0 .alias "in_ready", 0 0, v011AB760_0;
+v011AA5E8_0 .net "in_valid", 0 0, v011AB7B8_0; 1 drivers
+v011E30D0_0 .var "out_data", 7 0;
+v011E3128_0 .net "out_ready", 0 0, v011AB868_0; 1 drivers
+v011E3180_0 .var "out_valid", 0 0;
+v011A1F60_0 .net "reset", 0 0, v011AB918_0; 1 drivers
+E_011A9BB0 .event "_s2";
+    .scope S_011ADA90;
+T_0 ;
+    %wait E_011A9BB0;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_011AE310;
+T_1 ;
+    %set/v v011A1FB8_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v011A1FB8_0, 1;
+    %inv 8, 1;
+    %set/v v011A1FB8_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_011AE310;
+T_2 ;
+    %vpi_call 2 16 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 17 "$dumpvars", 1'sb0, S_011AE310;
+    %set/v v011A1FB8_0, 0, 1;
+    %set/v v011AB918_0, 1, 1;
+    %set/v v011AB7B8_0, 0, 1;
+    %set/v v011A2010_0, 0, 8;
+    %set/v v011AB868_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 18 "$display", "%b %b %b", v011AB760_0, v011AB8C0_0, v011AB810_0;
+    %set/v v011A1FB8_0, 0, 1;
+    %set/v v011AB918_0, 0, 1;
+    %set/v v011AB7B8_0, 1, 1;
+    %movi 8, 1, 8;
+    %set/v v011A2010_0, 8, 8;
+    %set/v v011AB868_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 19 "$display", "%b %b %b", v011AB760_0, v011AB8C0_0, v011AB810_0;
+    %set/v v011A1FB8_0, 0, 1;
+    %set/v v011AB918_0, 0, 1;
+    %set/v v011AB7B8_0, 0, 1;
+    %set/v v011A2010_0, 1, 8;
+    %set/v v011AB868_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 20 "$display", "%b %b %b", v011AB760_0, v011AB8C0_0, v011AB810_0;
+    %set/v v011A1FB8_0, 0, 1;
+    %set/v v011AB918_0, 0, 1;
+    %set/v v011AB7B8_0, 1, 1;
+    %movi 8, 170, 8;
+    %set/v v011A2010_0, 8, 8;
+    %set/v v011AB868_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 21 "$display", "%b %b %b", v011AB760_0, v011AB8C0_0, v011AB810_0;
+    %vpi_call 2 22 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\ready_valid_skid_buffer\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\7317a584-b\submission.v";

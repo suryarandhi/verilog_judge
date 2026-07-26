@@ -1,0 +1,37 @@
+{
+  "problem_id": "priority_encoder_8to3",
+  "code": "module priority_encoder_8to3(input [7:0] in, output reg [2:0] code, output valid);\n  // Write your code here\n   always@(*) begin\n    if(in) begin\n      valid = 1'b1;\n    casez(in)\n  8'b00000001:code=3'b000;\n  8'b0000001?:code=3'b001;\n  8'b000001??:code=3'b010;\n  8'b00001???:code=3'b011;\n  8'b0001????:code=3'b100;\n  8'b001?????:code=3'b101;\n  8'b01??????:code=3'b110;\n  8'b1???????:code=3'b111;\n    endcase\n    end\n  else begin\n    code = 3'b000;\n    valid=0;\n\n  end\n   end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\26af0d83-5\\submission.v:5: error: valid is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\26af0d83-5\\submission.v:1:      : valid is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\26af0d83-5\\submission.v:19: error: valid is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\26af0d83-5\\submission.v:1:      : valid is declared here as wire.\n2 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: valid is not a valid l-value in tb.dut.",
+        "friendly": "error: valid is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\26af0d83-5\\submission.v:5: error: valid is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": valid is declared here as wire.",
+        "friendly": ": valid is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\26af0d83-5\\submission.v:1:      : valid is declared here as wire."
+      },
+      {
+        "line": 19,
+        "message": "error: valid is not a valid l-value in tb.dut.",
+        "friendly": "error: valid is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\26af0d83-5\\submission.v:19: error: valid is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": valid is declared here as wire.",
+        "friendly": ": valid is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\26af0d83-5\\submission.v:1:      : valid is declared here as wire."
+      }
+    ],
+    "submission_id": "26af0d83-5",
+    "time_seconds": 0.244
+  },
+  "timestamp": "2026-05-22 12:25:20"
+}

@@ -1,0 +1,27 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01153680 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v011523A0_0 .net "y", 7 0, C4<11111111>; 1 drivers
+S_011522C0 .scope module, "dut" "constant_ones_8bit" 2 4, 3 1, S_01153680;
+ .timescale 0 0;
+v01152348_0 .alias "y", 7 0, v011523A0_0;
+    .scope S_01153680;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 8 "$dumpvars", 1'sb0, S_01153680;
+    %delay 5000, 0;
+    %vpi_call 2 9 "$display", "%b", v011523A0_0;
+    %vpi_call 2 10 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\constant_ones_8bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\1822f585-1\submission.v";

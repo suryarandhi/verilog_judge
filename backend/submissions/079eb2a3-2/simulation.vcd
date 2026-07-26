@@ -1,0 +1,52 @@
+$date
+	Mon May 18 09:54:07 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 1 ! parity $end
+$var reg 8 " a [7:0] $end
+$scope module dut $end
+$var wire 8 # a [7:0] $end
+$var wire 1 ! parity $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 #
+b0 "
+1!
+$end
+#1000
+b1 "
+b1 #
+0!
+#2000
+b11111111 "
+b11111111 #
+1!
+#3000
+b10101010 "
+b10101010 #
+#4000
+b10 "
+b10 #
+0!
+#5000
+b11 "
+b11 #
+1!
+#6000
+b1111111 "
+b1111111 #
+0!
+#7000
+b10101010 "
+b10101010 #
+1!
+#8000

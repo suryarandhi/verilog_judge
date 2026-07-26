@@ -1,0 +1,29 @@
+{
+  "problem_id": "or_1bit",
+  "code": "module or_1bit(input [0:0] a, input [0:0] b, output [0:0] y);\n  assign y = a | b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0 0",
+      "0 1 1",
+      "1 0 1",
+      "1 1 1",
+      "1 1 1",
+      "0 1 1"
+    ],
+    "expected": [
+      "0 0 0",
+      "0 1 1",
+      "1 0 1",
+      "1 1 1",
+      "1 1 1",
+      "0 1 1"
+    ],
+    "raw_output": "0 0 0\n0 1 1\n1 0 1\n1 1 1\n1 1 1\n0 1 1",
+    "submission_id": "3571cc58-7",
+    "time_seconds": 0.215,
+    "waveform_url": "/api/waveform/3571cc58-7"
+  },
+  "timestamp": "2026-05-15 23:47:43"
+}

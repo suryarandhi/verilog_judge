@@ -1,0 +1,33 @@
+{
+  "problem_id": "mux_2to1",
+  "code": "module mux_2to1(input [7:0] a, input [7:0] b, input sel, output [7:0] y); endmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Your design produced unknown x/z output. Drive every output deterministically for all tested cases.",
+    "actual": [
+      "zzzzzzzz",
+      "zzzzzzzz",
+      "zzzzzzzz",
+      "zzzzzzzz",
+      "zzzzzzzz",
+      "zzzzzzzz",
+      "zzzzzzzz",
+      "zzzzzzzz"
+    ],
+    "expected": [
+      "00000000",
+      "00000001",
+      "11111111",
+      "10101010",
+      "00000010",
+      "00000011",
+      "01111111",
+      "10101010"
+    ],
+    "raw_output": "zzzzzzzz\nzzzzzzzz\nzzzzzzzz\nzzzzzzzz\nzzzzzzzz\nzzzzzzzz\nzzzzzzzz\nzzzzzzzz",
+    "submission_id": "13053754-e",
+    "time_seconds": 0.209,
+    "waveform_url": "/api/waveform/13053754-e"
+  },
+  "timestamp": "2026-05-16 11:19:07"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "data_router",
+  "title": "Data Router",
+  "difficulty": "Medium",
+  "category": "Datapath",
+  "tags": [
+    "router",
+    "mux",
+    "datapath"
+  ],
+  "statement": "Implement a 4-way data router that selects one of four 8-bit inputs based on a 2-bit select signal. The selected input should appear on the output without any registered delay. This module is a basic datapath element for multiplexed data paths.",
+  "module_signature": "module data_router(input [7:0] a, input [7:0] b, input [7:0] c, input [7:0] d, input [1:0] sel, output [7:0] y);",
+  "behavior": [
+    "y equals the selected input based on sel.",
+    "The selection is purely combinational.",
+    "No state or clocking is allowed.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Avoid sequential multiplexing or registers."
+  ],
+  "example": "sel a b c d | y\n00 00000001 00000010 00000100 00001000 | 00000001\n11 00000001 00000010 00000100 00001000 | 00001000",
+  "hint": "Use a single multiway select structure.",
+  "template": "module data_router(input [7:0] a, input [7:0] b, input [7:0] c, input [7:0] d, input [1:0] sel, output [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,76 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00864240 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v0086E5B8_0 .var "a", 7 0;
+v0086E610_0 .net "y", 7 0, L_0086E858; 1 drivers
+S_0086A710 .scope module, "dut" "bit_reversal" 2 6, 3 1, S_00864240;
+ .timescale 0 0;
+v008642C8_0 .net *"_s1", 0 0, L_0086E668; 1 drivers
+v00864320_0 .net *"_s11", 0 0, L_0086E800; 1 drivers
+v008633F8_0 .net *"_s13", 0 0, L_0086EA10; 1 drivers
+v00863450_0 .net *"_s15", 0 0, L_0086EA68; 1 drivers
+v008634A8_0 .net *"_s3", 0 0, L_0086E6C0; 1 drivers
+v0086E400_0 .net *"_s5", 0 0, L_0086E718; 1 drivers
+v0086E458_0 .net *"_s7", 0 0, L_0086EB18; 1 drivers
+v0086E4B0_0 .net *"_s9", 0 0, L_0086E9B8; 1 drivers
+v0086E508_0 .net "a", 7 0, v0086E5B8_0; 1 drivers
+v0086E560_0 .alias "y", 7 0, v0086E610_0;
+L_0086E668 .part v0086E5B8_0, 0, 1;
+L_0086E6C0 .part v0086E5B8_0, 1, 1;
+L_0086E718 .part v0086E5B8_0, 2, 1;
+L_0086EB18 .part v0086E5B8_0, 3, 1;
+L_0086E9B8 .part v0086E5B8_0, 4, 1;
+L_0086E800 .part v0086E5B8_0, 5, 1;
+L_0086EA10 .part v0086E5B8_0, 6, 1;
+L_0086EA68 .part v0086E5B8_0, 7, 1;
+LS_0086E858_0_0 .concat [ 1 1 1 1], L_0086EA68, L_0086EA10, L_0086E800, L_0086E9B8;
+LS_0086E858_0_4 .concat [ 1 1 1 1], L_0086EB18, L_0086E718, L_0086E6C0, L_0086E668;
+L_0086E858 .concat [ 4 4 0 0], LS_0086E858_0_0, LS_0086E858_0_4;
+    .scope S_00864240;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_00864240;
+    %set/v v0086E5B8_0, 0, 8;
+    %delay 1000, 0;
+    %vpi_call 2 11 "$display", "%b", v0086E610_0;
+    %movi 8, 1, 8;
+    %set/v v0086E5B8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 12 "$display", "%b", v0086E610_0;
+    %set/v v0086E5B8_0, 1, 8;
+    %delay 1000, 0;
+    %vpi_call 2 13 "$display", "%b", v0086E610_0;
+    %movi 8, 170, 8;
+    %set/v v0086E5B8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 14 "$display", "%b", v0086E610_0;
+    %movi 8, 2, 8;
+    %set/v v0086E5B8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 15 "$display", "%b", v0086E610_0;
+    %movi 8, 3, 8;
+    %set/v v0086E5B8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 16 "$display", "%b", v0086E610_0;
+    %movi 8, 127, 8;
+    %set/v v0086E5B8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 17 "$display", "%b", v0086E610_0;
+    %movi 8, 170, 8;
+    %set/v v0086E5B8_0, 8, 8;
+    %delay 1000, 0;
+    %vpi_call 2 18 "$display", "%b", v0086E610_0;
+    %vpi_call 2 19 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\bit_reversal\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\d57227fd-d\submission.v";

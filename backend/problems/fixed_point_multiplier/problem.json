@@ -1,0 +1,28 @@
+{
+  "id": "fixed_point_multiplier",
+  "title": "Fixed-Point Multiplier",
+  "difficulty": "Hard",
+  "category": "Arithmetic",
+  "tags": [
+    "fixed-point",
+    "multiplier",
+    "arithmetic"
+  ],
+  "statement": "Implement a fixed-point multiplier that multiplies two signed 8-bit values and produces a 16-bit signed product. The module must preserve two\u2019s complement behavior across the full range. This block is used in DSP datapaths for fractional arithmetic.",
+  "module_signature": "module fixed_point_multiplier(input signed [7:0] a, input signed [7:0] b, output signed [15:0] product);",
+  "behavior": [
+    "product = a * b with signed two\u2019s complement semantics.",
+    "All outputs must update combinationally.",
+    "Avoid sequential storage in the multiplier logic.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use clocked registers or behavioral saturation."
+  ],
+  "example": "a b | product\n00000001 00000010 | 0000000000000010\n11111111 00000001 | 1111111111111111",
+  "hint": "Treat the inputs as signed and use full-width product arithmetic.",
+  "template": "module fixed_point_multiplier(input signed [7:0] a, input signed [7:0] b, output signed [15:0] product);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,86 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(\n    input clk,\n    input rst,\n    output reg [3:0] q\n);\n\nalways @(posedge clk) begin\n    if(rst)\n        q <= 4'b0000;\n    else begin\n        q[3] <= ~q[0];\n        q[2] <= q[3];\n        q[1] <= q[2];\n        q[0] <= q[1];\n    end\nend\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000",
+      "1000",
+      "1100",
+      "1110",
+      "1111",
+      "0111",
+      "0011",
+      "0001"
+    ],
+    "expected": [
+      "0000",
+      "1000",
+      "1100",
+      "1110",
+      "1111",
+      "0111",
+      "0011",
+      "0001"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0000",
+        "expected": "0000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "1000",
+        "expected": "1000"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1100",
+        "expected": "1100"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "1110",
+        "expected": "1110"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "1111",
+        "expected": "1111"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0111",
+        "expected": "0111"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0011",
+        "expected": "0011"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0001",
+        "expected": "0001"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0000\n1000\n1100\n1110\n1111\n0111\n0011\n0001",
+    "submission_id": "ff120482-2",
+    "time_seconds": 0.236,
+    "waveform_url": "/api/waveform/ff120482-2"
+  },
+  "timestamp": "2026-05-18 10:47:49"
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "cache_line_buffer",
+  "code": "module cache_line_buffer(input clk, input rst, input [1:0] index, input [7:0] tag, input [15:0] data_in, input write_en, output reg [15:0] data_out, output reg hit);\n  always @(*) begin\n      data_out = 16'b0;\n      hit = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxxxxxxxxxxxxxx x",
+      "xxxxxxxxxxxxxxxx x",
+      "xxxxxxxxxxxxxxxx x",
+      "xxxxxxxxxxxxxxxx x"
+    ],
+    "expected": [
+      "xxxxxxxxxxxxxxxx x",
+      "xxxxxxxxxxxxxxxx x",
+      "xxxxxxxxxxxxxxxx x",
+      "xxxxxxxxxxxxxxxx x"
+    ],
+    "raw_output": "xxxxxxxxxxxxxxxx x\nxxxxxxxxxxxxxxxx x\nxxxxxxxxxxxxxxxx x\nxxxxxxxxxxxxxxxx x",
+    "submission_id": "e548f7b3-0",
+    "time_seconds": 0.242,
+    "waveform_url": "/api/waveform/e548f7b3-0"
+  },
+  "timestamp": "2026-05-16 01:34:16"
+}

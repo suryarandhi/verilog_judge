@@ -1,0 +1,30 @@
+{
+  "id": "circular_buffer",
+  "title": "Circular Buffer",
+  "difficulty": "Medium",
+  "category": "Memory",
+  "tags": [
+    "fifo",
+    "buffer",
+    "memory"
+  ],
+  "statement": "Implement an 8-entry circular buffer with a write pointer and a read pointer. Writes should wrap back to the first entry after the last, and reads should return the oldest stored value. The buffer should include full and empty flags.",
+  "module_signature": "module circular_buffer(input clk, input rst, input push, input pop, input [7:0] din, output reg [7:0] dout, output reg full, output reg empty);",
+  "behavior": [
+    "push writes data when full is 0.",
+    "pop reads data when empty is 0.",
+    "full and empty indicate buffer status.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use built-in queue primitives."
+  ],
+  "example": "push pop | full empty dout\n1 0 | 0 0 xx\n0 1 | 0 0 stored",
+  "hint": "Maintain separate counters for entries and wrap pointer values.",
+  "template": "module circular_buffer(input clk, input rst, input push, input pop, input [7:0] din, output reg [7:0] dout, output reg full, output reg empty);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

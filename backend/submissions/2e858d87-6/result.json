@@ -1,0 +1,33 @@
+{
+  "problem_id": "d_flipflop_sync_reset",
+  "code": "module d_flipflop_sync_reset(input clk, input rst, input d, output reg q);\n  // Write your code here\nalways@(posedge clk) begin\nif(rst)\nq<=1'b0;\nelse\nq<=d;\nend\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "expected": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "raw_output": "0\n1\n1\n0\n0\n1\n0\n0",
+    "submission_id": "2e858d87-6",
+    "time_seconds": 0.233,
+    "waveform_url": "/api/waveform/2e858d87-6"
+  },
+  "timestamp": "2026-05-16 11:23:26"
+}

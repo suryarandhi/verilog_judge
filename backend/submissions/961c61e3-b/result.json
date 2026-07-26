@@ -1,0 +1,29 @@
+{
+  "problem_id": "nand_2bit",
+  "code": "module nand_2bit(input [1:0] a, input [1:0] b, output [1:0] y);\n  assign y = ~(a & b);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 00 11",
+      "00 11 11",
+      "11 00 11",
+      "11 11 00",
+      "10 11 01",
+      "01 10 11"
+    ],
+    "expected": [
+      "00 00 11",
+      "00 11 11",
+      "11 00 11",
+      "11 11 00",
+      "10 11 01",
+      "01 10 11"
+    ],
+    "raw_output": "00 00 11\n00 11 11\n11 00 11\n11 11 00\n10 11 01\n01 10 11",
+    "submission_id": "961c61e3-b",
+    "time_seconds": 0.179,
+    "waveform_url": "/api/waveform/961c61e3-b"
+  },
+  "timestamp": "2026-05-15 23:47:37"
+}

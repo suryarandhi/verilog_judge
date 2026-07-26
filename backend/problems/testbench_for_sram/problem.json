@@ -1,0 +1,28 @@
+{
+  "id": "testbench_for_sram",
+  "title": "Write Testbench for SRAM",
+  "difficulty": "Hard",
+  "category": "Verification",
+  "tags": [
+    "testbench",
+    "sram",
+    "verification"
+  ],
+  "statement": "Develop a testbench for an SRAM behavioral model that performs write and read operations to multiple addresses. The testbench should check that written values are returned correctly after writes and that memory persists across cycles. The design should also verify reset behavior.",
+  "module_signature": "module testbench_for_sram; // testbench only",
+  "behavior": [
+    "Write values to a sequence of addresses.",
+    "Read them back later and compare to expected values.",
+    "Verify that reset invalidates or clears memory if specified.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not alter the SRAM DUT interface."
+  ],
+  "example": "addr wr_en din | dout\n0000 1 10101010 | 10101010\n0000 0 xx | 10101010",
+  "hint": "Use a clocked sequence to exercise writes and reads.",
+  "template": "module testbench_for_sram;\n  // Write your testbench or checker here\nendmodule",
+  "curated": true
+}

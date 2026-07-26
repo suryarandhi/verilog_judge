@@ -1,0 +1,25 @@
+{
+  "problem_id": "bitwise_nand",
+  "code": "module bitwise_nand(input [7:0] a, input [7:0] b, output [7:0] y);\n  // Write your code here\n  y = ~(a && b) ;\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\cd46ee54-6\\submission.v:3: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\cd46ee54-6\\submission.v:3: error: Invalid module instantiation",
+    "compile_errors": [
+      {
+        "line": 3,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\cd46ee54-6\\submission.v:3: syntax error"
+      },
+      {
+        "line": 3,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\cd46ee54-6\\submission.v:3: error: Invalid module instantiation"
+      }
+    ],
+    "submission_id": "cd46ee54-6",
+    "time_seconds": 0.172
+  },
+  "timestamp": "2026-05-17 21:19:39"
+}

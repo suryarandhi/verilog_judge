@@ -1,0 +1,11 @@
+{
+  "title": "8-bit NOT",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 8-bit inverter.\\n\\nRequired module:\\nmodule not_8bit(input [7:0] a, output [7:0] y);",
+  "template": "module not_8bit(input [7:0] a, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

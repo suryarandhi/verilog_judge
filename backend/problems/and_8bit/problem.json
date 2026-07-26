@@ -1,0 +1,11 @@
+{
+  "title": "8-bit AND",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 8-bit bitwise AND circuit.\\n\\nRequired module:\\nmodule and_8bit(input [7:0] a, input [7:0] b, output [7:0] y);",
+  "template": "module and_8bit(input [7:0] a, input [7:0] b, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

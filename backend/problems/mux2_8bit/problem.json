@@ -1,0 +1,11 @@
+{
+  "title": "8-bit 2:1 Mux",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "mux"
+  ],
+  "description": "Design a 8-bit 2:1 multiplexer.\\n\\nRequired module:\\nmodule mux2_8bit(input [7:0] a, input [7:0] b, input sel, output [7:0] y);",
+  "template": "module mux2_8bit(input [7:0] a, input [7:0] b, input sel, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

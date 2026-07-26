@@ -1,0 +1,74 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011526B8 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v0128E388_0 .var "a", 0 0;
+v0128E3E0_0 .var "b", 0 0;
+v0128E438_0 .var "clk", 0 0;
+v0128E490_0 .net "q", 1 0, v0128E2D8_0; 1 drivers
+v0128E4E8_0 .var "rst", 0 0;
+S_01281F60 .scope module, "dut" "identify_race_condition" 2 9, 3 1, S_011526B8;
+ .timescale 0 0;
+v01281FE8_0 .net "a", 0 0, v0128E388_0; 1 drivers
+v01282040_0 .net "b", 0 0, v0128E3E0_0; 1 drivers
+v0128E280_0 .net "clk", 0 0, v0128E438_0; 1 drivers
+v0128E2D8_0 .var "q", 1 0;
+v0128E330_0 .net "rst", 0 0, v0128E4E8_0; 1 drivers
+E_01289728 .event "_s0";
+    .scope S_01281F60;
+T_0 ;
+    %wait E_01289728;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_011526B8;
+T_1 ;
+    %set/v v0128E438_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v0128E438_0, 1;
+    %inv 8, 1;
+    %set/v v0128E438_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_011526B8;
+T_2 ;
+    %vpi_call 2 13 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 14 "$dumpvars", 1'sb0, S_011526B8;
+    %set/v v0128E438_0, 0, 1;
+    %set/v v0128E4E8_0, 1, 1;
+    %set/v v0128E388_0, 0, 1;
+    %set/v v0128E3E0_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b", v0128E490_0;
+    %set/v v0128E438_0, 0, 1;
+    %set/v v0128E4E8_0, 0, 1;
+    %set/v v0128E388_0, 1, 1;
+    %set/v v0128E3E0_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b", v0128E490_0;
+    %set/v v0128E438_0, 0, 1;
+    %set/v v0128E4E8_0, 0, 1;
+    %set/v v0128E388_0, 1, 1;
+    %set/v v0128E3E0_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b", v0128E490_0;
+    %set/v v0128E438_0, 0, 1;
+    %set/v v0128E4E8_0, 0, 1;
+    %set/v v0128E388_0, 0, 1;
+    %set/v v0128E3E0_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 18 "$display", "%b", v0128E490_0;
+    %vpi_call 2 19 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\identify_race_condition\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\635dd616-5\submission.v";

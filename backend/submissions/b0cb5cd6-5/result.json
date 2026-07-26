@@ -1,0 +1,27 @@
+{
+  "problem_id": "zero_detector_2bit",
+  "code": "module zero_detector_2bit(input [1:0] a, output y);\n  assign y = a == 0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 1",
+      "01 0",
+      "11 0",
+      "10 0",
+      "10 0"
+    ],
+    "expected": [
+      "00 1",
+      "01 0",
+      "11 0",
+      "10 0",
+      "10 0"
+    ],
+    "raw_output": "00 1\n01 0\n11 0\n10 0\n10 0",
+    "submission_id": "b0cb5cd6-5",
+    "time_seconds": 0.183,
+    "waveform_url": "/api/waveform/b0cb5cd6-5"
+  },
+  "timestamp": "2026-05-15 23:47:54"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "verify_register_file_read_ports",
+  "title": "Verify Register File Read Ports",
+  "difficulty": "Hard",
+  "category": "Verification",
+  "tags": [
+    "register-file",
+    "verification",
+    "read-port"
+  ],
+  "statement": "Write a testbench that verifies a register file with two read ports returns correct values on both outputs. The testbench should write known values to multiple addresses and compare the read ports for both matching and different addresses. It should also verify proper behavior after reset.",
+  "module_signature": "module verify_register_file_read_ports; // testbench only",
+  "behavior": [
+    "Write values to multiple registers.",
+    "Verify read_data_a and read_data_b return the correct values.",
+    "Check behavior for same-address and different-address reads.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not modify the DUT under test."
+  ],
+  "example": "write_addr read_addr_a read_addr_b | read_data_a read_data_b\n010 010 011 | val val2",
+  "hint": "Use separate read addresses to verify independent read port behavior.",
+  "template": "module verify_register_file_read_ports;\n  // Write your testbench or checker here\nendmodule",
+  "curated": true
+}

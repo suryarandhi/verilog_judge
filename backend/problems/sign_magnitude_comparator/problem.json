@@ -1,0 +1,28 @@
+{
+  "id": "sign_magnitude_comparator",
+  "title": "Signed Magnitude Comparator",
+  "difficulty": "Medium",
+  "category": "Arithmetic",
+  "tags": [
+    "comparator",
+    "signed",
+    "arithmetic"
+  ],
+  "statement": "Design a signed magnitude comparator that compares two 8-bit values treated as signed integers. The outputs should indicate greater-than, equal, and less-than relationships in signed two\u2019s complement form. The comparator should work for negative and positive operands.",
+  "module_signature": "module sign_magnitude_comparator(input signed [7:0] a, input signed [7:0] b, output gt, output eq, output lt);",
+  "behavior": [
+    "gt is 1 when a > b as signed numbers.",
+    "eq is 1 when a == b.",
+    "lt is 1 when a < b.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential logic or internal registers."
+  ],
+  "example": "a b | gt eq lt\n00000001 00000010 | 0 0 1\n11111111 00000001 | 0 0 1\n10000000 01111111 | 0 0 1",
+  "hint": "Signed comparison is different from unsigned comparison when the sign bits differ.",
+  "template": "module sign_magnitude_comparator(input signed [7:0] a, input signed [7:0] b, output gt, output eq, output lt);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

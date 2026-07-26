@@ -1,0 +1,86 @@
+{
+  "problem_id": "compare_select",
+  "code": "module compare_select(input [7:0] a, input [7:0] b, input sel, output reg [7:0] y,max,min);\nalways@(*) begin\nif (a>b) begin\n  max <= a;\n  min <= b;\nend else begin\n  max = b;\n  min = a;\nend\n\nif (sel) begin\n      y<= max ;\nend else begin\n    y<=min ;\n    end\n  end\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000",
+      "00000001",
+      "11111111",
+      "10101010",
+      "00000010",
+      "00000011",
+      "01111111",
+      "10101010"
+    ],
+    "expected": [
+      "00000000",
+      "00000001",
+      "11111111",
+      "10101010",
+      "00000010",
+      "00000011",
+      "01111111",
+      "10101010"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "00000001",
+        "expected": "00000001"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "11111111",
+        "expected": "11111111"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "10101010",
+        "expected": "10101010"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "00000011",
+        "expected": "00000011"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "01111111",
+        "expected": "01111111"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "10101010",
+        "expected": "10101010"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "00000000\n00000001\n11111111\n10101010\n00000010\n00000011\n01111111\n10101010",
+    "submission_id": "333daba8-d",
+    "time_seconds": 0.336,
+    "waveform_url": "/api/waveform/333daba8-d"
+  },
+  "timestamp": "2026-06-09 21:54:07"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "16-bit NOT",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 16-bit inverter.\\n\\nRequired module:\\nmodule not_16bit(input [15:0] a, output [15:0] y);",
+  "template": "module not_16bit(input [15:0] a, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

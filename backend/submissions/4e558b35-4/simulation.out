@@ -1,0 +1,53 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01211FE8 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012159C8_0 .var "permit", 0 0;
+v01215A20_0 .var "value", 7 0;
+v01215A78_0 .net "violation", 0 0, v0121EF40_0; 1 drivers
+S_012526B8 .scope module, "dut" "formal_property_checker" 2 7, 3 1, S_01211FE8;
+ .timescale 0 0;
+v01252740_0 .net "permit", 0 0, v012159C8_0; 1 drivers
+v01252798_0 .net "value", 7 0, v01215A20_0; 1 drivers
+v0121EF40_0 .var "violation", 0 0;
+E_01214028 .event "_s0";
+    .scope S_012526B8;
+T_0 ;
+    %wait E_01214028;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_01211FE8;
+T_1 ;
+    %vpi_call 2 10 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 11 "$dumpvars", 1'sb0, S_01211FE8;
+    %set/v v01215A20_0, 0, 8;
+    %set/v v012159C8_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b", v01215A78_0;
+    %movi 8, 1, 8;
+    %set/v v01215A20_0, 8, 8;
+    %set/v v012159C8_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b", v01215A78_0;
+    %set/v v01215A20_0, 1, 8;
+    %set/v v012159C8_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b", v01215A78_0;
+    %movi 8, 170, 8;
+    %set/v v01215A20_0, 8, 8;
+    %set/v v012159C8_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b", v01215A78_0;
+    %vpi_call 2 16 "$finish";
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\formal_property_checker\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\4e558b35-4\submission.v";

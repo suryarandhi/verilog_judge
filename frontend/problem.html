@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verilog Judge Problem</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+</head>
+<body>
+  <div class="problem-layout">
+    <aside class="problem-statement">
+      <a class="brand" href="/">Verilog Judge</a>
+      <div class="problem-title-row">
+        <h1 id="problemTitle">Loading...</h1>
+        <div class="meta-row">
+          <span id="problemDifficulty" class="difficulty-pill">...</span>
+          <span id="problemCategory" class="category-pill">...</span>
+        </div>
+      </div>
+      <div id="problemTags" class="tag-row"></div>
+      <div class="problem-actions">
+        <a id="previousProblem" class="secondary-link" href="/">Previous</a>
+        <a id="nextProblem" class="secondary-link" href="/">Next</a>
+      </div>
+      <div id="problemContent" class="statement-text"></div>
+    </aside>
+
+    <main class="coding-space">
+      <div class="toolbar">
+        <div>
+          <div class="file-label">solution.v</div>
+          <div id="draftStatus" class="draft-status">Draft ready</div>
+        </div>
+        <div class="toolbar-actions">
+          <button id="hintButton" class="secondary-button" type="button">Hint</button>
+          <button id="debugModeButton" class="secondary-button" type="button">Debug</button>
+          <button id="solutionButton" class="secondary-button" type="button">Solution</button>
+          <button id="resetButton" class="secondary-button" type="button">Reset</button>
+          <button id="submitButton" class="primary-button" type="button">Submit</button>
+        </div>
+      </div>
+      <div id="editor" class="editor-container"></div>
+
+      <section id="assistantPanel" class="assistant-panel" hidden>
+        <div id="hintBox" class="insight-box" hidden></div>
+        <div id="explanationBox" class="insight-box" hidden></div>
+        <div id="solutionBox" class="insight-box" hidden></div>
+        <div id="reviewBox" class="insight-box" hidden></div>
+      </section>
+
+      <section class="output-panel">
+        <div class="result-row">
+          <span id="verdictBadge" class="verdict-badge">Not submitted</span>
+          <span id="executionTime" class="execution-time"></span>
+          <span id="waveformArea" class="waveform-area"></span>
+        </div>
+        <div id="outputConsole" class="output-console">Submit your code to see simulation output.</div>
+      </section>
+
+      <section id="waveformPanel" class="waveform-panel" hidden>
+        <div class="waveform-header">
+          <div>
+            <h2>Waveform</h2>
+            <span id="waveformMeta" class="waveform-meta"></span>
+          </div>
+          <div class="waveform-controls">
+            <input id="waveformSearch" class="waveform-search" type="search" placeholder="Filter signals" />
+            <label class="waveform-toggle">
+              <input id="waveformHideAliases" type="checkbox" checked />
+              <span>Hide aliases</span>
+            </label>
+            <button id="waveformFit" class="secondary-button" type="button">Fit</button>
+            <button id="waveformZoomOut" class="secondary-button" type="button">-</button>
+            <button id="waveformZoomIn" class="secondary-button" type="button">+</button>
+          </div>
+        </div>
+        <div id="waveformViewer" class="waveform-viewer"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>

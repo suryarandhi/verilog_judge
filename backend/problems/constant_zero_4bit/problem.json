@@ -1,0 +1,11 @@
+{
+  "title": "4-bit Constant Zero",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "constants"
+  ],
+  "description": "Drive a constant 4-bit value.\\n\\nRequired module:\\nmodule constant_zero_4bit(output [3:0] y);",
+  "template": "module constant_zero_4bit(output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

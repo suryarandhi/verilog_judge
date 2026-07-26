@@ -1,0 +1,86 @@
+{
+  "problem_id": "priority_encoder_4to2",
+  "code": "module priority_encoder_4to2(input [3:0] in, output reg [1:0] code, output reg valid);\n  // Write your code here\n   always@(*) begin\n    valid = 1;\n    casez (in)\n\n    4'b1???: code = 2'b11;\n    4'b01??: code = 2'b10;\n    4'b001?: code = 2'b01;\n    4'b0001: code = 2'b00;\n    default :begin\n    code = 2'b00;\n    valid = 0;\n    end\n\n    endcase\n   end\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 0",
+      "00 1",
+      "11 1",
+      "11 1",
+      "01 1",
+      "01 1",
+      "10 1",
+      "11 1"
+    ],
+    "expected": [
+      "00 0",
+      "00 1",
+      "11 1",
+      "11 1",
+      "01 1",
+      "01 1",
+      "10 1",
+      "11 1"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "00 0",
+        "expected": "00 0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "00 1",
+        "expected": "00 1"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "11 1",
+        "expected": "11 1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "11 1",
+        "expected": "11 1"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "01 1",
+        "expected": "01 1"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "01 1",
+        "expected": "01 1"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "10 1",
+        "expected": "10 1"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "11 1",
+        "expected": "11 1"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "00 0\n00 1\n11 1\n11 1\n01 1\n01 1\n10 1\n11 1",
+    "submission_id": "d714f818-5",
+    "time_seconds": 0.256,
+    "waveform_url": "/api/waveform/d714f818-5"
+  },
+  "timestamp": "2026-05-17 21:36:54"
+}

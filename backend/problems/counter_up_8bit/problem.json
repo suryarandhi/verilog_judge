@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Up Counter",
+  "difficulty": "Medium",
+  "tags": [
+    "sequential",
+    "counter"
+  ],
+  "description": "Design a 8-bit up counter with enable and active-high asynchronous reset.\\n\\nRequired module:\\nmodule counter_up_8bit(input clk, input reset, input enable, output reg [7:0] count);",
+  "template": "module counter_up_8bit(input clk, input reset, input enable, output reg [7:0] count);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

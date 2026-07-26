@@ -1,0 +1,11 @@
+{
+  "title": "Select Bit 2 of 8",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Select bit 2 from a 8-bit input.\\n\\nRequired module:\\nmodule bit_select_8bit_2(input [7:0] a, output y);",
+  "template": "module bit_select_8bit_2(input [7:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

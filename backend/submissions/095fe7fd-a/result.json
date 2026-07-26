@@ -1,0 +1,19 @@
+{
+  "problem_id": "shift_register_8bit",
+  "code": "module shift_register_8bit(input clk, input rst, input serial_in, output reg [7:0] q);\n  // Write your code here\n  always@(posedge clk) begin\n  if (rst) begin\n    q<=8'b00000000;\n  end\n    else begin\n      q<={q[7:1],serial_in[0]};\n    end\n  end\n\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\shift_register_8bit\\tb.v:18: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\shift_register_8bit\\tb.v:19: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\095fe7fd-a\\submission.v:8: error: can not select part of scalar: serial_in\n1 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 8,
+        "message": "error: can not select part of scalar: serial_in",
+        "friendly": "error: can not select part of scalar: serial_in",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\095fe7fd-a\\submission.v:8: error: can not select part of scalar: serial_in"
+      }
+    ],
+    "submission_id": "095fe7fd-a",
+    "time_seconds": 0.165
+  },
+  "timestamp": "2026-05-22 23:27:41"
+}

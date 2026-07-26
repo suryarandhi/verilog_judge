@@ -1,0 +1,27 @@
+{
+  "problem_id": "reduction_xor_16bit",
+  "code": "module reduction_xor_16bit(input [15:0] a, output y);\n  assign y = ^a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000000000000000 0",
+      "0000000000000001 1",
+      "1111111111111111 0",
+      "1000000000000000 1",
+      "1010101010101010 0"
+    ],
+    "expected": [
+      "0000000000000000 0",
+      "0000000000000001 1",
+      "1111111111111111 0",
+      "1000000000000000 1",
+      "1010101010101010 0"
+    ],
+    "raw_output": "0000000000000000 0\n0000000000000001 1\n1111111111111111 0\n1000000000000000 1\n1010101010101010 0",
+    "submission_id": "c1d0ac22-0",
+    "time_seconds": 0.28,
+    "waveform_url": "/api/waveform/c1d0ac22-0"
+  },
+  "timestamp": "2026-05-15 23:46:12"
+}

@@ -1,0 +1,132 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012CE440 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v011F0688_0 .var "clk", 0 0;
+v011F0058_0 .var "raddr1", 2 0;
+v011F0630_0 .var "raddr2", 2 0;
+v011F0790_0 .net "rdata1", 7 0, L_012CA0A8; 1 drivers
+v011F00B0_0 .net "rdata2", 7 0, L_012CB8C0; 1 drivers
+v011F0108_0 .var "reset", 0 0;
+v011F01B8_0 .var "waddr", 2 0;
+v011F0580_0 .var "wdata", 7 0;
+v011F0210_0 .var "we", 0 0;
+S_012CE198 .scope module, "dut" "regfile_8x8" 2 7, 3 1, S_012CE440;
+ .timescale 0 0;
+L_012CA0A8 .functor BUFZ 8, L_011F04D0, C4<00000000>, C4<00000000>, C4<00000000>;
+L_012CB8C0 .functor BUFZ 8, L_011F0420, C4<00000000>, C4<00000000>, C4<00000000>;
+v012C9F40_0 .net *"_s0", 7 0, L_011F04D0; 1 drivers
+v012C8B88_0 .net *"_s4", 7 0, L_011F0420; 1 drivers
+v012CA050_0 .net "clk", 0 0, v011F0688_0; 1 drivers
+v012C3D38_0 .var/i "i", 31 0;
+v012C3D90_0 .net "raddr1", 2 0, v011F0058_0; 1 drivers
+v012C3DE8_0 .net "raddr2", 2 0, v011F0630_0; 1 drivers
+v012C1F58_0 .alias "rdata1", 7 0, v011F0790_0;
+v012C1FB0_0 .alias "rdata2", 7 0, v011F00B0_0;
+v012C2008 .array "regs", 7 0, 7 0;
+v012C2060_0 .net "reset", 0 0, v011F0108_0; 1 drivers
+v012CB5B8_0 .net "waddr", 2 0, v011F01B8_0; 1 drivers
+v012CB610_0 .net "wdata", 7 0, v011F0580_0; 1 drivers
+v011F03C8_0 .net "we", 0 0, v011F0210_0; 1 drivers
+E_012C7CD8 .event posedge, v012C2060_0, v012CA050_0;
+L_011F04D0 .array/port v012C2008, v011F0058_0;
+L_011F0420 .array/port v012C2008, v011F0630_0;
+    .scope S_012CE198;
+T_0 ;
+    %wait E_012C7CD8;
+    %load/v 8, v012C2060_0, 1;
+    %jmp/0xz  T_0.0, 8;
+    %set/v v012C3D38_0, 0, 32;
+T_0.2 ;
+    %load/v 8, v012C3D38_0, 32;
+   %cmpi/s 8, 8, 32;
+    %jmp/0xz T_0.3, 5;
+    %ix/getv/s 3, v012C3D38_0;
+    %jmp/1 t_0, 4;
+    %ix/load 0, 8, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v012C2008, 0, 0;
+t_0 ;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v012C3D38_0, 32;
+    %set/v v012C3D38_0, 8, 32;
+    %jmp T_0.2;
+T_0.3 ;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/v 8, v011F03C8_0, 1;
+    %jmp/0xz  T_0.4, 8;
+    %load/v 8, v012CB610_0, 8;
+    %ix/getv 3, v012CB5B8_0;
+    %jmp/1 t_1, 4;
+    %ix/load 0, 8, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v012C2008, 0, 8;
+t_1 ;
+T_0.4 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_012CE440;
+T_1 ;
+    %set/v v011F0688_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v011F0688_0, 1;
+    %inv 8, 1;
+    %set/v v011F0688_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_012CE440;
+T_2 ;
+    %vpi_call 2 10 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_012CE440;
+    %set/v v011F0108_0, 1, 1;
+    %set/v v011F0210_0, 0, 1;
+    %set/v v011F01B8_0, 0, 3;
+    %set/v v011F0580_0, 0, 8;
+    %movi 8, 3, 3;
+    %set/v v011F0058_0, 8, 3;
+    %movi 8, 5, 3;
+    %set/v v011F0630_0, 8, 3;
+    %delay 7000, 0;
+    %vpi_call 2 11 "$display", "%h %h", v011F0790_0, v011F00B0_0;
+    %set/v v011F0108_0, 0, 1;
+    %set/v v011F0210_0, 1, 1;
+    %movi 8, 3, 3;
+    %set/v v011F01B8_0, 8, 3;
+    %movi 8, 170, 8;
+    %set/v v011F0580_0, 8, 8;
+    %delay 10000, 0;
+    %movi 8, 5, 3;
+    %set/v v011F01B8_0, 8, 3;
+    %movi 11, 23, 8;
+    %set/v v011F0580_0, 11, 8;
+    %delay 10000, 0;
+    %set/v v011F0210_0, 0, 1;
+    %movi 8, 3, 3;
+    %set/v v011F0058_0, 8, 3;
+    %movi 8, 5, 3;
+    %set/v v011F0630_0, 8, 3;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%h %h", v011F0790_0, v011F00B0_0;
+    %movi 8, 5, 3;
+    %set/v v011F0058_0, 8, 3;
+    %movi 11, 3, 3;
+    %set/v v011F0630_0, 11, 3;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%h %h", v011F0790_0, v011F00B0_0;
+    %vpi_call 2 16 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\register_file_8x8_2r1w\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\cef03bd3-e\submission.v";

@@ -1,0 +1,11 @@
+{
+  "title": "3-bit Adder",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Design a 3-bit adder with carry out.\\n\\nRequired module:\\nmodule adder_3bit(input [2:0] a, input [2:0] b, output [2:0] sum, output cout);",
+  "template": "module adder_3bit(input [2:0] a, input [2:0] b, output [2:0] sum, output cout);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

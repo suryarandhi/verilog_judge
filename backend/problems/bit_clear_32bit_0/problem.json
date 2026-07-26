@@ -1,0 +1,11 @@
+{
+  "title": "Clear Bit 0 of 32",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Clear bit 0 of a 32-bit input.\\n\\nRequired module:\\nmodule bit_clear_32bit_0(input [31:0] a, output [31:0] y);",
+  "template": "module bit_clear_32bit_0(input [31:0] a, output [31:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,11 @@
+{
+  "title": "32-bit Constant Ones",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "constants"
+  ],
+  "description": "Drive a constant 32-bit value.\\n\\nRequired module:\\nmodule constant_ones_32bit(output [31:0] y);",
+  "template": "module constant_ones_32bit(output [31:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

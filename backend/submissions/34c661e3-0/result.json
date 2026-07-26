@@ -1,0 +1,86 @@
+{
+  "problem_id": "shift_register_8bit",
+  "code": "module shift_register_8bit(input clk, input rst, input serial_in, output reg [7:0] q);\n  // Write your code here\n  always@(posedge clk) begin\n  if (rst) begin\n    q<=8'b00000000;\n  end\n    else begin\n      q<={q[6:1],q[0]};\n    end\n  end\n\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000"
+    ],
+    "expected": [
+      "00000000",
+      "00000001",
+      "00000011",
+      "00000110",
+      "00001100",
+      "00011001",
+      "00110010",
+      "01100100"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 2,
+        "passed": false,
+        "actual": "00000000",
+        "expected": "00000001"
+      },
+      {
+        "index": 3,
+        "passed": false,
+        "actual": "00000000",
+        "expected": "00000011"
+      },
+      {
+        "index": 4,
+        "passed": false,
+        "actual": "00000000",
+        "expected": "00000110"
+      },
+      {
+        "index": 5,
+        "passed": false,
+        "actual": "00000000",
+        "expected": "00001100"
+      },
+      {
+        "index": 6,
+        "passed": false,
+        "actual": "00000000",
+        "expected": "00011001"
+      },
+      {
+        "index": 7,
+        "passed": false,
+        "actual": "00000000",
+        "expected": "00110010"
+      },
+      {
+        "index": 8,
+        "passed": false,
+        "actual": "00000000",
+        "expected": "01100100"
+      }
+    ],
+    "passed_tests": 1,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "00000000\n00000000\n00000000\n00000000\n00000000\n00000000\n00000000\n00000000",
+    "submission_id": "34c661e3-0",
+    "time_seconds": 0.197,
+    "waveform_url": "/api/waveform/34c661e3-0"
+  },
+  "timestamp": "2026-05-22 23:25:10"
+}

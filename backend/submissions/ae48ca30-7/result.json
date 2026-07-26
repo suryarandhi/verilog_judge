@@ -1,0 +1,25 @@
+{
+  "problem_id": "find_bug_clock_divider",
+  "code": "module find_bug_clock_divider(input clk, input rst, input [3:0] n, output reg clk_out);\n  always @(*) begin\n      clk_out = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "ae48ca30-7",
+    "time_seconds": 0.256,
+    "waveform_url": "/api/waveform/ae48ca30-7"
+  },
+  "timestamp": "2026-05-16 01:34:20"
+}

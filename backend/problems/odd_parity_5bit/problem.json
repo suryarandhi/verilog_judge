@@ -1,0 +1,11 @@
+{
+  "title": "5-bit Odd Parity",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "parity"
+  ],
+  "description": "Compute odd parity for a 5-bit input.\\n\\nRequired module:\\nmodule odd_parity_5bit(input [4:0] a, output y);",
+  "template": "module odd_parity_5bit(input [4:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

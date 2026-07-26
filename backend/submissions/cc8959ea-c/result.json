@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_select_16bit_4",
+  "code": "module bit_select_16bit_4(input [15:0] a, output y);\n  assign y = a[4];\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000000000000000 0",
+      "0000000000010000 1",
+      "1111111111111111 1",
+      "1010101010101010 0"
+    ],
+    "expected": [
+      "0000000000000000 0",
+      "0000000000010000 1",
+      "1111111111111111 1",
+      "1010101010101010 0"
+    ],
+    "raw_output": "0000000000000000 0\n0000000000010000 1\n1111111111111111 1\n1010101010101010 0",
+    "submission_id": "cc8959ea-c",
+    "time_seconds": 0.238,
+    "waveform_url": "/api/waveform/cc8959ea-c"
+  },
+  "timestamp": "2026-05-15 23:45:20"
+}

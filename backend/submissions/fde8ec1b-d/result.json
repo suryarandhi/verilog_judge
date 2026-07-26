@@ -1,0 +1,27 @@
+{
+  "problem_id": "incrementer_3bit",
+  "code": "module incrementer_3bit(input [2:0] a, output [2:0] y);\n  assign y = a + 1'b1;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 001",
+      "001 010",
+      "010 011",
+      "111 000",
+      "101 110"
+    ],
+    "expected": [
+      "000 001",
+      "001 010",
+      "010 011",
+      "111 000",
+      "101 110"
+    ],
+    "raw_output": "000 001\n001 010\n010 011\n111 000\n101 110",
+    "submission_id": "fde8ec1b-d",
+    "time_seconds": 0.27,
+    "waveform_url": "/api/waveform/fde8ec1b-d"
+  },
+  "timestamp": "2026-05-15 23:47:33"
+}

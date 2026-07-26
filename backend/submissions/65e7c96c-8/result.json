@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_reversal",
+  "code": "module bit_reversal(input [7:0] a, output [7:0] y);\n  assign y = {a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7]};\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000",
+      "10000000",
+      "11111111",
+      "01010101"
+    ],
+    "expected": [
+      "00000000",
+      "10000000",
+      "11111111",
+      "01010101"
+    ],
+    "raw_output": "00000000\n10000000\n11111111\n01010101",
+    "submission_id": "65e7c96c-8",
+    "time_seconds": 0.281,
+    "waveform_url": "/api/waveform/65e7c96c-8"
+  },
+  "timestamp": "2026-05-16 01:34:14"
+}

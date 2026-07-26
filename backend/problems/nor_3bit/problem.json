@@ -1,0 +1,11 @@
+{
+  "title": "3-bit NOR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 3-bit bitwise NOR circuit.\\n\\nRequired module:\\nmodule nor_3bit(input [2:0] a, input [2:0] b, output [2:0] y);",
+  "template": "module nor_3bit(input [2:0] a, input [2:0] b, output [2:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

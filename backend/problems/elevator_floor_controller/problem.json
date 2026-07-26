@@ -1,0 +1,30 @@
+{
+  "id": "elevator_floor_controller",
+  "title": "Elevator Floor Controller",
+  "difficulty": "Hard",
+  "category": "FSM",
+  "tags": [
+    "fsm",
+    "controller",
+    "priority"
+  ],
+  "statement": "Implement a simplified elevator controller for three floors. It should respond to up/down requests and move between floors until the requested floor is reached. The controller must express the current floor and motion state in outputs and use a synchronous reset to return to floor 1.",
+  "module_signature": "module elevator_floor_controller(input clk, input rst, input request_up, input request_down, output reg [1:0] floor, output reg moving_up, output reg moving_down);",
+  "behavior": [
+    "floor encodes the current floor number between 1 and 3.",
+    "moving_up or moving_down indicates the current direction.",
+    "rst synchronously returns the elevator to floor 1 idle.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use memory arrays or asynchronous state inference."
+  ],
+  "example": "request_up request_down | floor moving_up moving_down\n1 0 | 10 1 0\n0 1 | 01 0 1",
+  "hint": "Use a finite set of states to represent floor and motion.",
+  "template": "module elevator_floor_controller(input clk, input rst, input request_up, input request_down, output reg [1:0] floor, output reg moving_up, output reg moving_down);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

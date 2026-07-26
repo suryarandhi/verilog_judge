@@ -1,0 +1,37 @@
+{
+  "problem_id": "threshold_detector",
+  "code": "module threshold_detector(input [7:0] a, input b,output above_threshold);\n  // Write your code here\n  assign  b = (a[0] + 2*a[1] + 4*a[2] + 8*a[3] + 16*a[4] + 32*a[5] + 64*a[5] + 128*a[6] + 256*a[7]);\n  if (b>100)\n  above_threshold <= 1;\n  else\n  above_threshold <= 0;\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\8f57fbe4-4\\submission.v:5: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\8f57fbe4-4\\submission.v:5: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\8f57fbe4-4\\submission.v:7: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\8f57fbe4-4\\submission.v:7: error: Invalid module instantiation",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\8f57fbe4-4\\submission.v:5: syntax error"
+      },
+      {
+        "line": 5,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\8f57fbe4-4\\submission.v:5: error: Invalid module instantiation"
+      },
+      {
+        "line": 7,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\8f57fbe4-4\\submission.v:7: syntax error"
+      },
+      {
+        "line": 7,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\8f57fbe4-4\\submission.v:7: error: Invalid module instantiation"
+      }
+    ],
+    "submission_id": "8f57fbe4-4",
+    "time_seconds": 0.171
+  },
+  "timestamp": "2026-05-17 20:51:48"
+}

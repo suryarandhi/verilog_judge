@@ -1,0 +1,28 @@
+{
+  "id": "gated_d_latch",
+  "title": "Gated D Latch",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "latch",
+    "level-sensitive",
+    "sequential"
+  ],
+  "statement": "Implement a gated D latch that transparently passes the input when enable is high and holds the value when enable is low. The latch must be level-sensitive, not edge-triggered, and must capture the input immediately while enabled. This is a basic storage element used in asynchronous design.",
+  "module_signature": "module gated_d_latch(input en, input d, output reg q);",
+  "behavior": [
+    "When en is 1, q follows d continuously.",
+    "When en is 0, q retains its last value.",
+    "No clock input is permitted.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not infer an edge-triggered flip-flop or use clk signals."
+  ],
+  "example": "en d | q\n1 0 | 0\n1 1 | 1\n0 0 | 1",
+  "hint": "Use transparent latch behavior in a combinational feedback loop.",
+  "template": "module gated_d_latch(input en, input d, output reg q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

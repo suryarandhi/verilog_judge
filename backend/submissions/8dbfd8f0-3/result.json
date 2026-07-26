@@ -1,0 +1,86 @@
+{
+  "problem_id": "carry_generate_combiner",
+  "code": "module carry_generate_combiner(\n    input  [7:0] a,\n    input  [7:0] b,\n    output g,\n    output p\n);\n\nassign g = (a + b > 8'hFF);\nassign p = &(a ^ b);\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0"
+    ],
+    "expected": [
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0",
+      "0 0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0 0",
+        "expected": "0 0"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0 0\n0 0\n0 0\n0 0\n0 0\n0 0\n0 0\n0 0",
+    "submission_id": "8dbfd8f0-3",
+    "time_seconds": 0.259,
+    "waveform_url": "/api/waveform/8dbfd8f0-3"
+  },
+  "timestamp": "2026-05-23 10:19:19"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Decrementer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Build a 8-bit decrementer.\\n\\nRequired module:\\nmodule decrementer_8bit(input [7:0] a, output [7:0] y);",
+  "template": "module decrementer_8bit(input [7:0] a, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

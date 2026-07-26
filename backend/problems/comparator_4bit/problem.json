@@ -1,0 +1,11 @@
+{
+  "title": "4-bit Comparator",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "comparison"
+  ],
+  "description": "Design a 4-bit unsigned comparator.\\n\\nRequired module:\\nmodule comparator_4bit(input [3:0] a, input [3:0] b, output gt, output eq, output lt);",
+  "template": "module comparator_4bit(input [3:0] a, input [3:0] b, output gt, output eq, output lt);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,49 @@
+{
+  "problem_id": "threshold_detector",
+  "code": "module threshold_detector(input [7:0] a, output above_threshold);\n  wire b;\n  // Write your code here\n  always@(*) begin\n  assign  b = (a[0] + 2*a[1] + 4*a[2] + 8*a[3] + 16*a[4] + 32*a[5] + 64*a[5] + 128*a[6] + 256*a[7]);\n  if (b>100)\n  above_threshold <= 1;\n  else\n  above_threshold <= 0;\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:5: error: b is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:2:      : b is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:7: error: above_threshold is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:1:      : above_threshold is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:9: error: above_threshold is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:1:      : above_threshold is declared here as wire.\n3 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: b is not a valid l-value in tb.dut.",
+        "friendly": "error: b is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:5: error: b is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 2,
+        "message": ": b is declared here as wire.",
+        "friendly": ": b is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:2:      : b is declared here as wire."
+      },
+      {
+        "line": 7,
+        "message": "error: above_threshold is not a valid l-value in tb.dut.",
+        "friendly": "error: above_threshold is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:7: error: above_threshold is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": above_threshold is declared here as wire.",
+        "friendly": ": above_threshold is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:1:      : above_threshold is declared here as wire."
+      },
+      {
+        "line": 9,
+        "message": "error: above_threshold is not a valid l-value in tb.dut.",
+        "friendly": "error: above_threshold is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:9: error: above_threshold is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": above_threshold is declared here as wire.",
+        "friendly": ": above_threshold is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7a01189d-b\\submission.v:1:      : above_threshold is declared here as wire."
+      }
+    ],
+    "submission_id": "7a01189d-b",
+    "time_seconds": 0.204
+  },
+  "timestamp": "2026-05-17 20:55:23"
+}

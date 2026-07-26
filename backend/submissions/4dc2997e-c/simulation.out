@@ -1,0 +1,61 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012957A8 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01291FB0_0 .var "a", 7 0;
+v01292008_0 .var "b", 7 0;
+v01292060_0 .net "eq", 0 0, L_012991B0; 1 drivers
+v01299070_0 .net "gt", 0 0, L_01299120; 1 drivers
+v012990C8_0 .net "lt", 0 0, L_0129D9D0; 1 drivers
+S_01295638 .scope module, "dut" "comparator_8bit" 2 6, 3 1, S_012957A8;
+ .timescale 0 0;
+v01298440_0 .net "a", 7 0, v01291FB0_0; 1 drivers
+v01132EF8_0 .net "b", 7 0, v01292008_0; 1 drivers
+v01132F50_0 .alias "eq", 0 0, v01292060_0;
+v01132FA8_0 .alias "gt", 0 0, v01299070_0;
+v01291F58_0 .alias "lt", 0 0, v012990C8_0;
+L_01299120 .cmp/gt 8, v01291FB0_0, v01292008_0;
+L_012991B0 .cmp/eq 8, v01291FB0_0, v01292008_0;
+L_0129D9D0 .cmp/gt 8, v01292008_0, v01291FB0_0;
+    .scope S_012957A8;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_012957A8;
+    %set/v v01291FB0_0, 0, 8;
+    %set/v v01292008_0, 0, 8;
+    %delay 5000, 0;
+    %vpi_call 2 11 "$display", "%b %b %b %b %b", v01291FB0_0, v01292008_0, v01299070_0, v01292060_0, v012990C8_0;
+    %movi 8, 1, 8;
+    %set/v v01291FB0_0, 8, 8;
+    %movi 8, 1, 8;
+    %set/v v01292008_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b %b %b %b", v01291FB0_0, v01292008_0, v01299070_0, v01292060_0, v012990C8_0;
+    %set/v v01291FB0_0, 1, 8;
+    %movi 8, 1, 8;
+    %set/v v01292008_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b %b %b %b", v01291FB0_0, v01292008_0, v01299070_0, v01292060_0, v012990C8_0;
+    %movi 8, 127, 8;
+    %set/v v01291FB0_0, 8, 8;
+    %movi 8, 85, 8;
+    %set/v v01292008_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b %b %b", v01291FB0_0, v01292008_0, v01299070_0, v01292060_0, v012990C8_0;
+    %set/v v01291FB0_0, 1, 8;
+    %set/v v01292008_0, 1, 8;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b %b %b", v01291FB0_0, v01292008_0, v01299070_0, v01292060_0, v012990C8_0;
+    %vpi_call 2 16 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\comparator_8bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\4dc2997e-c\submission.v";

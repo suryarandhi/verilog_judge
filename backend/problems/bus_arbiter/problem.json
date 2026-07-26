@@ -1,0 +1,30 @@
+{
+  "id": "bus_arbiter",
+  "title": "Round-Robin Bus Arbiter",
+  "difficulty": "Hard",
+  "category": "FSM",
+  "tags": [
+    "arbiter",
+    "round-robin",
+    "fsm"
+  ],
+  "statement": "Create a 3-master round-robin bus arbiter that grants access in a fair rotating order. When one master requests the bus, grant it and rotate priority to the next master on the following cycle. If no requests are active, all grants must be deasserted.",
+  "module_signature": "module bus_arbiter(input clk, input rst, input [2:0] req, output reg [2:0] grant);",
+  "behavior": [
+    "One grant at most may be active when requests are present.",
+    "Grant rotates priority fairly among requesting masters.",
+    "rst synchronously returns priority to master 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous priority encoders or memory arrays."
+  ],
+  "example": "req grant\n001 001\n011 010\n111 100",
+  "hint": "Use state to remember the next master to serve after each grant.",
+  "template": "module bus_arbiter(input clk, input rst, input [2:0] req, output reg [2:0] grant);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

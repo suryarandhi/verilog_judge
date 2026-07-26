@@ -1,0 +1,25 @@
+{
+  "problem_id": "gray_counter_3bit",
+  "code": "module gray_counter_3bit(input clk, input reset, output reg [2:0] gray);\n  // Write your code here\n  reg[2:0] bin;\n    always@(posedge clk) begin\n    if(reset) begin\n      bin =3'b000;\n      gray = 3'b000;\n      else begin\n        bin = bin + 1'b1;\n        gray[0] = bin[0];\n        gray [1] = bin[0]  ^ bin[1];\n        gray[2] = bin[1] ^ bin[2];\n        gray[3] = bin[2]  ^ bin[3];\n      end\n    end\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\974a7bfd-0\\submission.v:8: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\974a7bfd-0\\submission.v:9: Syntax in assignment statement l-value.",
+    "compile_errors": [
+      {
+        "line": 8,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\974a7bfd-0\\submission.v:8: syntax error"
+      },
+      {
+        "line": 9,
+        "message": "Syntax in assignment statement l-value.",
+        "friendly": "Syntax in assignment statement l-value.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\974a7bfd-0\\submission.v:9: Syntax in assignment statement l-value."
+      }
+    ],
+    "submission_id": "974a7bfd-0",
+    "time_seconds": 0.16
+  },
+  "timestamp": "2026-05-22 23:04:50"
+}

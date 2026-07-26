@@ -1,0 +1,32 @@
+{
+  "id": "parameterized_clock_divider",
+  "title": "Parameterized Clock Divider",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "counter",
+    "clock-divider",
+    "parameterized"
+  ],
+  "statement": "Design a parameterized clock divider that toggles an output clock after N input clock cycles. Reset clears the counter and output clock. This problem is parameterized because divide ratio is a design parameter, not a separate concept. Assume N is greater than 1.",
+  "module_signature": "module clock_divider #(parameter N = 4)(input clk, input reset, output reg clk_out);",
+  "behavior": [
+    "On reset, clk_out becomes 0 and the internal count clears.",
+    "Count rising edges of clk.",
+    "When the counter reaches N-1, clear the counter and toggle clk_out.",
+    "All state updates occur on the rising edge of clk.",
+    "reset is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When reset is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Must be synthesizable Verilog.",
+    "Do not generate clocks with delays.",
+    "Do not use multiple clock domains internally."
+  ],
+  "example": "N=3\nclk edge: 1 2 3 4 5 6\nclk_out:  0 0 1 1 1 0",
+  "hint": "Use a counter register and toggle clk_out at the terminal count.",
+  "template": "module clock_divider #(parameter N = 4)(input clk, input reset, output reg clk_out);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

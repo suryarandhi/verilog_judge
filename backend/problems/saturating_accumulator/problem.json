@@ -1,0 +1,30 @@
+{
+  "id": "saturating_accumulator",
+  "title": "Saturating Accumulator",
+  "difficulty": "Hard",
+  "category": "Datapath",
+  "tags": [
+    "accumulator",
+    "saturating",
+    "datapath"
+  ],
+  "statement": "Implement an 8-bit accumulator that adds an 8-bit input to its stored value when enable is high and saturates at maximum/minimum values on overflow. It must update on the rising edge of clk and support synchronous reset. This block demonstrates arithmetic accumulation with overflow handling in a datapath.",
+  "module_signature": "module saturating_accumulator(input clk, input rst, input en, input signed [7:0] d, output reg signed [7:0] q);",
+  "behavior": [
+    "On clk rising edge, if en is 1 add d to q and saturate on overflow.",
+    "If en is 0, q retains its value.",
+    "rst synchronously clears q to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous reset or latches."
+  ],
+  "example": "clk rst en d | q\n0 1 0 xx | 00000000\n1 0 1 01111111 | 01111111\n1 0 1 00000001 | 01111111",
+  "hint": "Detect signed overflow when adding q and d.",
+  "template": "module saturating_accumulator(input clk, input rst, input en, input signed [7:0] d, output reg signed [7:0] q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

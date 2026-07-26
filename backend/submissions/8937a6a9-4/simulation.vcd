@@ -1,0 +1,42 @@
+$date
+	Sat May 16 01:34:14 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 1 ! taken $end
+$var reg 1 " branch_neg $end
+$var reg 8 # value [7:0] $end
+$scope module dut $end
+$var wire 1 $ branch_neg $end
+$var wire 1 ! taken $end
+$var wire 8 % value [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+0$
+b0 #
+0"
+0!
+$end
+#5000
+1"
+1$
+b1 #
+b1 %
+#10000
+b11111111 #
+b11111111 %
+#15000
+0"
+0$
+b10101010 #
+b10101010 %
+#20000

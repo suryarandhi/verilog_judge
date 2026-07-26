@@ -1,0 +1,29 @@
+{
+  "problem_id": "counter_up_16bit",
+  "code": "module counter_up_16bit(input clk, input reset, input enable, output reg [15:0] count);\n  always @(posedge clk or posedge reset) begin\n    if (reset) begin\n      count <= 16'b0;\n    end else if (enable) begin\n      count <= count + 16'b1;\n    end\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1 0 0000000000000000",
+      "0 1 0000000000000001",
+      "0 1 0000000000000010",
+      "0 0 0000000000000010",
+      "0 1 0000000000000011",
+      "1 1 0000000000000000"
+    ],
+    "expected": [
+      "1 0 0000000000000000",
+      "0 1 0000000000000001",
+      "0 1 0000000000000010",
+      "0 0 0000000000000010",
+      "0 1 0000000000000011",
+      "1 1 0000000000000000"
+    ],
+    "raw_output": "1 0 0000000000000000\n0 1 0000000000000001\n0 1 0000000000000010\n0 0 0000000000000010\n0 1 0000000000000011\n1 1 0000000000000000",
+    "submission_id": "5e455fc7-8",
+    "time_seconds": 0.273,
+    "waveform_url": "/api/waveform/5e455fc7-8"
+  },
+  "timestamp": "2026-05-15 23:45:48"
+}

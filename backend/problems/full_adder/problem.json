@@ -1,0 +1,11 @@
+{
+  "title": "Full Adder",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Design a full adder module that takes three 1-bit inputs, a, b, and cin, and produces sum and cout.\n\nRequired module:\nmodule full_adder(input a, input b, input cin, output sum, output cout);\n\nBehavior:\n- sum is a XOR b XOR cin\n- cout is 1 when at least two inputs are 1",
+  "template": "module full_adder(input a, input b, input cin, output sum, output cout);\n  // Write your code here\n\nendmodule",
+  "curated": false
+}

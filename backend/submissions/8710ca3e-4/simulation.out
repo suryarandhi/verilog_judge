@@ -1,0 +1,86 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011BDAE8 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v011F3178_0 .var "clk", 0 0;
+v011B1F60_0 .var "din", 7 0;
+v011B1FB8_0 .net "dout", 7 0, v011BBAB8_0; 1 drivers
+v011B2010_0 .net "empty", 0 0, v011BA430_0; 1 drivers
+v011B2068_0 .net "full", 0 0, v011BA488_0; 1 drivers
+v011F1C30_0 .var "pop", 0 0;
+v011F1C88_0 .var "push", 0 0;
+v011F1CE0_0 .var "rst", 0 0;
+S_011BE720 .scope module, "dut" "circular_buffer" 2 12, 3 1, S_011BDAE8;
+ .timescale 0 0;
+v011BEAA8_0 .net "clk", 0 0, v011F3178_0; 1 drivers
+v011BBA60_0 .net "din", 7 0, v011B1F60_0; 1 drivers
+v011BBAB8_0 .var "dout", 7 0;
+v011BA430_0 .var "empty", 0 0;
+v011BA488_0 .var "full", 0 0;
+v011BA4E0_0 .net "pop", 0 0, v011F1C30_0; 1 drivers
+v011F30C8_0 .net "push", 0 0, v011F1C88_0; 1 drivers
+v011F3120_0 .net "rst", 0 0, v011F1CE0_0; 1 drivers
+E_011B9B90 .event "_s0";
+    .scope S_011BE720;
+T_0 ;
+    %wait E_011B9B90;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_011BDAE8;
+T_1 ;
+    %set/v v011F3178_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v011F3178_0, 1;
+    %inv 8, 1;
+    %set/v v011F3178_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_011BDAE8;
+T_2 ;
+    %vpi_call 2 16 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 17 "$dumpvars", 1'sb0, S_011BDAE8;
+    %set/v v011F3178_0, 0, 1;
+    %set/v v011F1CE0_0, 1, 1;
+    %set/v v011F1C88_0, 0, 1;
+    %set/v v011F1C30_0, 0, 1;
+    %set/v v011B1F60_0, 0, 8;
+    %delay 5000, 0;
+    %vpi_call 2 18 "$display", "%b %b %b", v011B1FB8_0, v011B2068_0, v011B2010_0;
+    %set/v v011F3178_0, 0, 1;
+    %set/v v011F1CE0_0, 0, 1;
+    %set/v v011F1C88_0, 1, 1;
+    %set/v v011F1C30_0, 1, 1;
+    %movi 8, 1, 8;
+    %set/v v011B1F60_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 19 "$display", "%b %b %b", v011B1FB8_0, v011B2068_0, v011B2010_0;
+    %set/v v011F3178_0, 0, 1;
+    %set/v v011F1CE0_0, 0, 1;
+    %set/v v011F1C88_0, 1, 1;
+    %set/v v011F1C30_0, 1, 1;
+    %set/v v011B1F60_0, 1, 8;
+    %delay 5000, 0;
+    %vpi_call 2 20 "$display", "%b %b %b", v011B1FB8_0, v011B2068_0, v011B2010_0;
+    %set/v v011F3178_0, 0, 1;
+    %set/v v011F1CE0_0, 0, 1;
+    %set/v v011F1C88_0, 0, 1;
+    %set/v v011F1C30_0, 0, 1;
+    %movi 8, 170, 8;
+    %set/v v011B1F60_0, 8, 8;
+    %delay 5000, 0;
+    %vpi_call 2 21 "$display", "%b %b %b", v011B1FB8_0, v011B2068_0, v011B2010_0;
+    %vpi_call 2 22 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\circular_buffer\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\8710ca3e-4\submission.v";

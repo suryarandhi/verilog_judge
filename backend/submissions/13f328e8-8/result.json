@@ -1,0 +1,19 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(input clk, input rst,reg out,output reg [3:0] q);\n  // Write your code here\n  always@(posedge clk) begin\n    if(rst)\n    q<=4'b0;\n    else begin\n    out[1] = out[0];\n    out[2] = out[1];\n    out[3] = out[2];\n    out[0] = ~out[3];\n    end\n    out=q;\n  end\n  endmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13f328e8-8\\submission.v:1: syntax error\nI give up.",
+    "compile_errors": [
+      {
+        "line": 1,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13f328e8-8\\submission.v:1: syntax error"
+      }
+    ],
+    "submission_id": "13f328e8-8",
+    "time_seconds": 0.191
+  },
+  "timestamp": "2026-05-18 10:40:59"
+}

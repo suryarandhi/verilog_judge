@@ -1,0 +1,86 @@
+{
+  "problem_id": "absolute_difference",
+  "code": "module absolute_difference(input [7:0] a, input [7:0] b, output reg [7:0] diff);\n  // Write your code here\n  always@(*) begin\n    if (a==b) begin\n      diff<=8'b00000000;\n    end\n    else if (a>b) begin\n      diff <= a-b;\n    end\n    else begin\n      diff <= b-a;\n    end \n  end\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000"
+    ],
+    "expected": [
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "00000000\n00000000\n00000000\n00000000\n00000000\n00000000\n00000000\n00000000",
+    "submission_id": "a97ec469-e",
+    "time_seconds": 0.269,
+    "waveform_url": "/api/waveform/a97ec469-e"
+  },
+  "timestamp": "2026-06-09 22:02:53"
+}

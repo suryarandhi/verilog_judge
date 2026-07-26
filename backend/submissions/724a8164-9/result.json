@@ -1,0 +1,86 @@
+{
+  "problem_id": "absolute_value_unit",
+  "code": "module absolute_value_unit(input signed [7:0] a, output reg [7:0] y);\n  // Write your code here\n  always@(*) begin \n    if (a < 8'b00000000) begin\n      y<=-(a);\n    end\n    else begin\n      y<=(a);\n    end\n  end \n\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "00000000",
+      "00000001",
+      "11111111",
+      "10101010",
+      "00000010",
+      "00000011",
+      "01111111",
+      "10101010"
+    ],
+    "expected": [
+      "00000000",
+      "00000001",
+      "00000001",
+      "01010110",
+      "00000010",
+      "00000011",
+      "01111111",
+      "01010110"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "00000000",
+        "expected": "00000000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "00000001",
+        "expected": "00000001"
+      },
+      {
+        "index": 3,
+        "passed": false,
+        "actual": "11111111",
+        "expected": "00000001"
+      },
+      {
+        "index": 4,
+        "passed": false,
+        "actual": "10101010",
+        "expected": "01010110"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "00000010",
+        "expected": "00000010"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "00000011",
+        "expected": "00000011"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "01111111",
+        "expected": "01111111"
+      },
+      {
+        "index": 8,
+        "passed": false,
+        "actual": "10101010",
+        "expected": "01010110"
+      }
+    ],
+    "passed_tests": 5,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "00000000\n00000001\n11111111\n10101010\n00000010\n00000011\n01111111\n10101010",
+    "submission_id": "724a8164-9",
+    "time_seconds": 0.213,
+    "waveform_url": "/api/waveform/724a8164-9"
+  },
+  "timestamp": "2026-06-09 22:12:04"
+}

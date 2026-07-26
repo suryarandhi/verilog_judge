@@ -1,0 +1,86 @@
+{
+  "problem_id": "gated_d_latch",
+  "code": "module gated_d_latch(\n    input en,\n    input d,\n    output reg q = 0\n);\n\nalways @(*) begin\n    if(en)\n        q = d;\n    else\n        q = q;   // hold previous value\nend\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "expected": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0\n1\n1\n0\n0\n1\n1\n0",
+    "submission_id": "7862dc42-4",
+    "time_seconds": 0.292,
+    "waveform_url": "/api/waveform/7862dc42-4"
+  },
+  "timestamp": "2026-05-18 10:02:05"
+}

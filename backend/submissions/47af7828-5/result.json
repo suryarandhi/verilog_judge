@@ -1,0 +1,86 @@
+{
+  "problem_id": "majority_gate",
+  "code": "module majority_gate(input a, input b, input c, output reg y);\n  // Write your code here\n  always@(*) begin\n    if ((a & b) | (b & c) | (a & c))\n    y<=1;\n    else\n    y<=0;\n  end \nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "expected": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0\n1\n1\n0\n0\n1\n0\n0",
+    "submission_id": "47af7828-5",
+    "time_seconds": 0.14,
+    "waveform_url": "/api/waveform/47af7828-5"
+  },
+  "timestamp": "2026-07-03 00:11:34"
+}

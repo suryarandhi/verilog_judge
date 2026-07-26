@@ -1,0 +1,11 @@
+{
+  "title": "8-bit XOR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 8-bit bitwise XOR circuit.\\n\\nRequired module:\\nmodule xor_8bit(input [7:0] a, input [7:0] b, output [7:0] y);",
+  "template": "module xor_8bit(input [7:0] a, input [7:0] b, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "detect_msb_one",
+  "code": "module detect_msb_one(input [7:0] a, output msb_one);\n  assign msb_one = a[7];\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0",
+      "0",
+      "1",
+      "1"
+    ],
+    "expected": [
+      "0",
+      "0",
+      "1",
+      "1"
+    ],
+    "raw_output": "0\n0\n1\n1",
+    "submission_id": "1d2c063e-5",
+    "time_seconds": 0.247,
+    "waveform_url": "/api/waveform/1d2c063e-5"
+  },
+  "timestamp": "2026-05-16 01:34:19"
+}

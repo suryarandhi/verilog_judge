@@ -1,0 +1,28 @@
+{
+  "id": "barrel_shifter_32bit",
+  "title": "32-bit Barrel Shifter",
+  "difficulty": "Hard",
+  "category": "Datapath",
+  "tags": [
+    "shifter",
+    "datapath",
+    "logical-shift"
+  ],
+  "statement": "Implement a 32-bit barrel shifter that performs logical left and logical right shifts based on a direction input. The shift amount is a 5-bit value from 0 to 31. The module should be combinational and preserve zeros in vacated bit positions.",
+  "module_signature": "module barrel_shifter_32bit(input [31:0] a, input [4:0] shamt, input dir, output [31:0] y);",
+  "behavior": [
+    "If dir is 0, shift a left by shamt bits logically.",
+    "If dir is 1, shift a right by shamt bits logically.",
+    "Shifted-in positions must be zeros.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use registers or sequential shifting operations."
+  ],
+  "example": "a shamt dir | y\n00000001 00001 0 | 00000010\n00000001 00001 1 | 00000000",
+  "hint": "Use nested conditional assignments for the shift amount.",
+  "template": "module barrel_shifter_32bit(input [31:0] a, input [4:0] shamt, input dir, output [31:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

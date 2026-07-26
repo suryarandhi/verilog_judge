@@ -1,0 +1,19 @@
+{
+  "problem_id": "constant_ones_2bit",
+  "code": "module constant_ones_2bit(output [1:0] y);\n  assign y = {2{1'b1}};\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "11"
+    ],
+    "expected": [
+      "11"
+    ],
+    "raw_output": "11",
+    "submission_id": "da390515-a",
+    "time_seconds": 0.208,
+    "waveform_url": "/api/waveform/da390515-a"
+  },
+  "timestamp": "2026-05-15 23:45:45"
+}

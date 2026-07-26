@@ -1,0 +1,11 @@
+{
+  "problem_id": "unsigned_multiplier_4x4",
+  "code": "module unsigned_multiplier_4x4(input [3:0] a, input [3:0] b, output [7:0] product);\n  // Write your code here\nassign product =  a*b;\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Tool Missing",
+    "message": "Icarus Verilog was not found. Install iverilog and vvp, then add them to PATH.",
+    "submission_id": "d7fd4e10-f",
+    "time_seconds": 0
+  },
+  "timestamp": "2026-07-02 23:19:15"
+}

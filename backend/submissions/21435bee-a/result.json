@@ -1,0 +1,27 @@
+{
+  "problem_id": "adder_2bit",
+  "code": "module adder_2bit(input [1:0] a, input [1:0] b, output [1:0] sum, output cout);\n  assign {cout, sum} = a + b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 00 00 0",
+      "01 01 10 0",
+      "11 01 00 1",
+      "01 01 10 0",
+      "11 11 10 1"
+    ],
+    "expected": [
+      "00 00 00 0",
+      "01 01 10 0",
+      "11 01 00 1",
+      "01 01 10 0",
+      "11 11 10 1"
+    ],
+    "raw_output": "00 00 00 0\n01 01 10 0\n11 01 00 1\n01 01 10 0\n11 11 10 1",
+    "submission_id": "21435bee-a",
+    "time_seconds": 0.234,
+    "waveform_url": "/api/waveform/21435bee-a"
+  },
+  "timestamp": "2026-05-15 23:45:07"
+}

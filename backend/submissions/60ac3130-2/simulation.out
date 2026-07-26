@@ -1,0 +1,56 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012E5A08 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012E1FC0_0 .var "a", 0 0;
+v012E2018_0 .var "b", 0 0;
+v012E2070_0 .net "y", 0 0, L_012EEC28; 1 drivers
+S_011528B8 .scope module, "dut" "nand_1bit" 2 6, 3 1, S_012E5A08;
+ .timescale 0 0;
+L_012EEB80 .functor AND 1, v012E1FC0_0, v012E2018_0, C4<1>, C4<1>;
+L_012EEC28 .functor NOT 1, L_012EEB80, C4<0>, C4<0>, C4<0>;
+v012E5A90_0 .net *"_s0", 0 0, L_012EEB80; 1 drivers
+v01152940_0 .net "a", 0 0, v012E1FC0_0; 1 drivers
+v01152998_0 .net "b", 0 0, v012E2018_0; 1 drivers
+v012E1F68_0 .alias "y", 0 0, v012E2070_0;
+    .scope S_012E5A08;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_012E5A08;
+    %set/v v012E1FC0_0, 0, 1;
+    %set/v v012E2018_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 11 "$display", "%b %b %b", v012E1FC0_0, v012E2018_0, v012E2070_0;
+    %set/v v012E1FC0_0, 0, 1;
+    %set/v v012E2018_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b %b", v012E1FC0_0, v012E2018_0, v012E2070_0;
+    %set/v v012E1FC0_0, 1, 1;
+    %set/v v012E2018_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b %b", v012E1FC0_0, v012E2018_0, v012E2070_0;
+    %set/v v012E1FC0_0, 1, 1;
+    %set/v v012E2018_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b", v012E1FC0_0, v012E2018_0, v012E2070_0;
+    %set/v v012E1FC0_0, 1, 1;
+    %set/v v012E2018_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b", v012E1FC0_0, v012E2018_0, v012E2070_0;
+    %set/v v012E1FC0_0, 0, 1;
+    %set/v v012E2018_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b %b %b", v012E1FC0_0, v012E2018_0, v012E2070_0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\nand_1bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\60ac3130-2\submission.v";

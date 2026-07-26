@@ -1,0 +1,121 @@
+{
+  "problem_id": "comparator_unsigned",
+  "code": "module comparator_unsigned(input [7:0] a, input [7:0] b, output gt, output eq, output lt);\n  // Write your code here\n  always@(*) begin\n    if(a>b)\n    gt=1;\n    eq=0;\n    lt=0;\n    if(a==b)\n    eq=1;\n    gt=0;\n    lt=0;\n    if(a<b) \n    gt=0;\n    eq=0;\n    lt=1;\n  end\n  \nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:5: error: gt is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : gt is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:6: error: eq is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : eq is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:7: error: lt is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : lt is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:9: error: eq is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : eq is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:10: error: gt is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : gt is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:11: error: lt is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : lt is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:13: error: gt is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : gt is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:14: error: eq is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : eq is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:15: error: lt is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : lt is declared here as wire.\n9 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: gt is not a valid l-value in tb.dut.",
+        "friendly": "error: gt is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:5: error: gt is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": gt is declared here as wire.",
+        "friendly": ": gt is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : gt is declared here as wire."
+      },
+      {
+        "line": 6,
+        "message": "error: eq is not a valid l-value in tb.dut.",
+        "friendly": "error: eq is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:6: error: eq is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": eq is declared here as wire.",
+        "friendly": ": eq is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : eq is declared here as wire."
+      },
+      {
+        "line": 7,
+        "message": "error: lt is not a valid l-value in tb.dut.",
+        "friendly": "error: lt is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:7: error: lt is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": lt is declared here as wire.",
+        "friendly": ": lt is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : lt is declared here as wire."
+      },
+      {
+        "line": 9,
+        "message": "error: eq is not a valid l-value in tb.dut.",
+        "friendly": "error: eq is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:9: error: eq is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": eq is declared here as wire.",
+        "friendly": ": eq is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : eq is declared here as wire."
+      },
+      {
+        "line": 10,
+        "message": "error: gt is not a valid l-value in tb.dut.",
+        "friendly": "error: gt is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:10: error: gt is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": gt is declared here as wire.",
+        "friendly": ": gt is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : gt is declared here as wire."
+      },
+      {
+        "line": 11,
+        "message": "error: lt is not a valid l-value in tb.dut.",
+        "friendly": "error: lt is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:11: error: lt is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": lt is declared here as wire.",
+        "friendly": ": lt is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : lt is declared here as wire."
+      },
+      {
+        "line": 13,
+        "message": "error: gt is not a valid l-value in tb.dut.",
+        "friendly": "error: gt is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:13: error: gt is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": gt is declared here as wire.",
+        "friendly": ": gt is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : gt is declared here as wire."
+      },
+      {
+        "line": 14,
+        "message": "error: eq is not a valid l-value in tb.dut.",
+        "friendly": "error: eq is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:14: error: eq is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": eq is declared here as wire.",
+        "friendly": ": eq is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : eq is declared here as wire."
+      },
+      {
+        "line": 15,
+        "message": "error: lt is not a valid l-value in tb.dut.",
+        "friendly": "error: lt is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:15: error: lt is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": lt is declared here as wire.",
+        "friendly": ": lt is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f3c50a0d-0\\submission.v:1:      : lt is declared here as wire."
+      }
+    ],
+    "submission_id": "f3c50a0d-0",
+    "time_seconds": 0.192
+  },
+  "timestamp": "2026-05-18 22:16:16"
+}

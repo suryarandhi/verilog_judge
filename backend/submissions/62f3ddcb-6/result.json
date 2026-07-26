@@ -1,0 +1,25 @@
+{
+  "problem_id": "pulse_stretcher",
+  "code": "module pulse_stretcher(input clk, input rst, input pulse_in, output reg pulse_out);\n  always @(*) begin\n      pulse_out = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "62f3ddcb-6",
+    "time_seconds": 0.302,
+    "waveform_url": "/api/waveform/62f3ddcb-6"
+  },
+  "timestamp": "2026-05-16 01:34:28"
+}

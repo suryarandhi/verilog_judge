@@ -1,0 +1,29 @@
+{
+  "problem_id": "nor_1bit",
+  "code": "module nor_1bit(input [0:0] a, input [0:0] b, output [0:0] y);\n  assign y = ~(a | b);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0 1",
+      "0 1 0",
+      "1 0 0",
+      "1 1 0",
+      "1 1 0",
+      "0 1 0"
+    ],
+    "expected": [
+      "0 0 1",
+      "0 1 0",
+      "1 0 0",
+      "1 1 0",
+      "1 1 0",
+      "0 1 0"
+    ],
+    "raw_output": "0 0 1\n0 1 0\n1 0 0\n1 1 0\n1 1 0\n0 1 0",
+    "submission_id": "b9c05ef9-8",
+    "time_seconds": 0.24,
+    "waveform_url": "/api/waveform/b9c05ef9-8"
+  },
+  "timestamp": "2026-05-15 23:46:03"
+}

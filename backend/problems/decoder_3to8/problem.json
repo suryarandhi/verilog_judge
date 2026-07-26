@@ -1,0 +1,28 @@
+{
+  "id": "decoder_3to8",
+  "title": "3-to-8 Decoder",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "decoder",
+    "one-hot",
+    "combinational"
+  ],
+  "statement": "Design a 3-to-8 decoder that converts a 3-bit binary input into an eight-bit one-hot output. Only one output line may be asserted at a time while all others remain low. If the input is out of range, all outputs should remain zero. This module is often used in address decoding and instruction dispatch logic.",
+  "module_signature": "module decoder_3to8(input [2:0] sel, output [7:0] y);",
+  "behavior": [
+    "One-hot output: y[i] = 1 when sel equals i, else 0.",
+    "All outputs must be driven combinationally.",
+    "No use of memories, latches, or sequential blocks.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use a behavioral for-loop for the decoder."
+  ],
+  "example": "sel | y\n000 | 00000001\n010 | 00000100\n111 | 10000000",
+  "hint": "Think of the decoder as a binary-to-one-hot converter.",
+  "template": "module decoder_3to8(input [2:0] sel, output [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

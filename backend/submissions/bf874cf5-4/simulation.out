@@ -1,0 +1,50 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011E8988 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v011E2008_0 .var "data_in", 31 0;
+v011E2060_0 .net "data_out", 31 0, L_011EE798; 1 drivers
+S_011E8218 .scope module, "dut" "byte_swap_32" 2 6, 3 1, S_011E8988;
+ .timescale 0 0;
+v011E4AD8_0 .net *"_s1", 7 0, L_011E5950; 1 drivers
+v01222898_0 .net *"_s3", 7 0, L_011E59A8; 1 drivers
+v012228F0_0 .net *"_s5", 7 0, L_011E5A00; 1 drivers
+v01222948_0 .net *"_s7", 7 0, L_011EE740; 1 drivers
+v011E1F58_0 .net "data_in", 31 0, v011E2008_0; 1 drivers
+v011E1FB0_0 .alias "data_out", 31 0, v011E2060_0;
+L_011E5950 .part v011E2008_0, 0, 8;
+L_011E59A8 .part v011E2008_0, 8, 8;
+L_011E5A00 .part v011E2008_0, 16, 8;
+L_011EE740 .part v011E2008_0, 24, 8;
+L_011EE798 .concat [ 8 8 8 8], L_011EE740, L_011E5A00, L_011E59A8, L_011E5950;
+    .scope S_011E8988;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_011E8988;
+    %set/v v011E2008_0, 0, 32;
+    %delay 5000, 0;
+    %vpi_call 2 11 "$display", "%b", v011E2060_0;
+    %movi 8, 1, 32;
+    %set/v v011E2008_0, 8, 32;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b", v011E2060_0;
+    %set/v v011E2008_0, 1, 32;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b", v011E2060_0;
+    %movi 8, 170, 32;
+    %set/v v011E2008_0, 8, 32;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b", v011E2060_0;
+    %vpi_call 2 15 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\byte_swap_32\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\bf874cf5-4\submission.v";

@@ -1,0 +1,19 @@
+{
+  "problem_id": "constant_ones_4bit",
+  "code": "module constant_ones_4bit(output [3:0] y);\n  assign y = {4{1'b1}};\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1111"
+    ],
+    "expected": [
+      "1111"
+    ],
+    "raw_output": "1111",
+    "submission_id": "38e8ef43-8",
+    "time_seconds": 0.2,
+    "waveform_url": "/api/waveform/38e8ef43-8"
+  },
+  "timestamp": "2026-05-15 23:47:26"
+}

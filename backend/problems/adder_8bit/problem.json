@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Adder",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Design a 8-bit adder with carry out.\\n\\nRequired module:\\nmodule adder_8bit(input [7:0] a, input [7:0] b, output [7:0] sum, output cout);",
+  "template": "module adder_8bit(input [7:0] a, input [7:0] b, output [7:0] sum, output cout);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "thermal_shutdown_fsm",
+  "code": "module thermal_shutdown_fsm(input clk, input rst, input [7:0] temp, output reg fan_enable);\n  always @(*) begin\n      fan_enable = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "eaa38628-5",
+    "time_seconds": 0.235,
+    "waveform_url": "/api/waveform/eaa38628-5"
+  },
+  "timestamp": "2026-05-16 01:34:36"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "serial_frame_detector",
+  "title": "Serial Frame Detector",
+  "difficulty": "Hard",
+  "category": "FSM",
+  "tags": [
+    "fsm",
+    "serial",
+    "pattern-detect"
+  ],
+  "statement": "Design an FSM that detects the start and stop framing of a simple serial protocol with one start bit (0), eight data bits, and one stop bit (1). The module should assert a frame_valid pulse when a complete valid frame is received. A synchronous reset clears the detector state.",
+  "module_signature": "module serial_frame_detector(input clk, input rst, input serial_in, output reg frame_valid);",
+  "behavior": [
+    "frame_valid pulses high for one cycle after a correctly framed byte.",
+    "A valid frame begins with 0 and ends with 1.",
+    "rst synchronously returns the FSM to idle state.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use unclocked shift registers or combinational frame detection."
+  ],
+  "example": "serial_in | frame_valid\n0 1 0 1 1 | 1",
+  "hint": "Track the expected position within the frame using FSM states.",
+  "template": "module serial_frame_detector(input clk, input rst, input serial_in, output reg frame_valid);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,3 @@
+module or_4bit(input [3:0] a, input [3:0] b, output [3:0] y);
+  assign y = |;
+endmodule

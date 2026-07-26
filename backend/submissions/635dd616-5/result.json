@@ -1,0 +1,25 @@
+{
+  "problem_id": "identify_race_condition",
+  "code": "module identify_race_condition(input clk, input rst, input a, input b, output reg [1:0] q);\n  always @(*) begin\n      q = 2'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xx",
+      "xx",
+      "xx",
+      "xx"
+    ],
+    "expected": [
+      "xx",
+      "xx",
+      "xx",
+      "xx"
+    ],
+    "raw_output": "xx\nxx\nxx\nxx",
+    "submission_id": "635dd616-5",
+    "time_seconds": 0.282,
+    "waveform_url": "/api/waveform/635dd616-5"
+  },
+  "timestamp": "2026-05-16 01:34:23"
+}

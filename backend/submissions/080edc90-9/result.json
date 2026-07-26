@@ -1,0 +1,27 @@
+{
+  "problem_id": "even_parity_3bit",
+  "code": "module even_parity_3bit(input [2:0] a, output y);\n  assign y = ~^a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 1",
+      "001 0",
+      "011 1",
+      "111 0",
+      "101 1"
+    ],
+    "expected": [
+      "000 1",
+      "001 0",
+      "011 1",
+      "111 0",
+      "101 1"
+    ],
+    "raw_output": "000 1\n001 0\n011 1\n111 0\n101 1",
+    "submission_id": "080edc90-9",
+    "time_seconds": 0.246,
+    "waveform_url": "/api/waveform/080edc90-9"
+  },
+  "timestamp": "2026-05-15 23:45:53"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "compare_select",
+  "title": "Compare-and-Select Unit",
+  "difficulty": "Medium",
+  "category": "Arithmetic",
+  "tags": [
+    "select",
+    "comparator",
+    "arithmetic"
+  ],
+  "statement": "Create a compare-and-select unit that outputs either the smaller or larger of two unsigned values based on a select signal. When sel is 0 the module outputs the smaller value, and when sel is 1 it outputs the larger value. This block is useful in conditional datapath steering.",
+  "module_signature": "module compare_select(input [7:0] a, input [7:0] b, input sel, output reg [7:0] y);",
+  "behavior": [
+    "When sel is 0, y = min(a,b).",
+    "When sel is 1, y = max(a,b).",
+    "If values are equal, output may be either value.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential or clocked logic."
+  ],
+  "example": "a b sel | y\n00000010 00000100 0 | 00000010\n00000010 00000100 1 | 00000100",
+  "hint": "Compare a and b and use the select signal to choose the result.",
+  "template": "module compare_select(input [7:0] a, input [7:0] b, input sel, output reg [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

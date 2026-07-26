@@ -1,0 +1,11 @@
+{
+  "title": "32-bit Nonzero Detector",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "detector"
+  ],
+  "description": "Detect a condition on a 32-bit input.\\n\\nRequired module:\\nmodule nonzero_detector_32bit(input [31:0] a, output y);",
+  "template": "module nonzero_detector_32bit(input [31:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

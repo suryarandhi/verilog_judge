@@ -1,0 +1,19 @@
+{
+  "problem_id": "constant_zero_2bit",
+  "code": "module constant_zero_2bit(output [1:0] y);\n  assign y = 2'b0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00"
+    ],
+    "expected": [
+      "00"
+    ],
+    "raw_output": "00",
+    "submission_id": "f8b4c4e4-5",
+    "time_seconds": 0.211,
+    "waveform_url": "/api/waveform/f8b4c4e4-5"
+  },
+  "timestamp": "2026-05-15 23:47:26"
+}

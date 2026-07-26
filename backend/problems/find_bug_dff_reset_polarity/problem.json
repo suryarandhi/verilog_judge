@@ -1,0 +1,30 @@
+{
+  "id": "find_bug_dff_reset_polarity",
+  "title": "Find the Bug: D Flip-Flop Reset Polarity",
+  "difficulty": "Medium",
+  "category": "Verification",
+  "tags": [
+    "debugging",
+    "reset",
+    "flip-flop"
+  ],
+  "statement": "A broken D flip-flop module is provided that uses the wrong reset polarity and fails to clear on a high reset signal. Your task is to identify the bug and implement the corrected flip-flop with active-high synchronous reset. The module should behave correctly for all clock and reset combinations.",
+  "module_signature": "module find_bug_dff_reset_polarity(input clk, input rst, input d, output reg q);",
+  "behavior": [
+    "q captures d on the rising edge when rst is low.",
+    "q clears to 0 on the rising edge when rst is high.",
+    "The reset is synchronous and active-high.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous reset or implicit level-sensitive constructs."
+  ],
+  "example": "clk rst d | q\n0 1 1 | 0\n1 0 1 | 1\n1 1 0 | 0",
+  "hint": "The bug is the wrong reset polarity in the clocked always block.",
+  "template": "module find_bug_dff_reset_polarity(input clk, input rst, input d, output reg q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,30 @@
+{
+  "id": "synchronous_clear_counter",
+  "title": "Synchronous Clear Counter",
+  "difficulty": "Easy",
+  "category": "Sequential",
+  "tags": [
+    "counter",
+    "reset",
+    "sequential"
+  ],
+  "statement": "Design a 4-bit counter with synchronous clear that counts upward on each clock edge. When clear is asserted, the counter should reset to zero on the next clock. The counter must wrap around after 15 to 0.",
+  "module_signature": "module synchronous_clear_counter(input clk, input rst, input clear, output reg [3:0] count);",
+  "behavior": [
+    "count increments by 1 each clock cycle when clear is 0.",
+    "If clear is 1 on a rising edge, count becomes 0.",
+    "rst synchronously resets count to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous resets or latches."
+  ],
+  "example": "clk rst clear | count\n1 0 0 | 0001\n1 1 0 | 0000",
+  "hint": "Clock the counter and prioritize reset logic correctly.",
+  "template": "module synchronous_clear_counter(input clk, input rst, input clear, output reg [3:0] count);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

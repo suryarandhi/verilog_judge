@@ -1,0 +1,25 @@
+{
+  "problem_id": "mux4_4bit",
+  "code": "module mux4_4bit(input [3:0] a, input [3:0] b, input [3:0] c, input [3:0] d, input [1:0] sel, output reg [3:0] y);\n  always @(*) begin\n    case (sel)\n      2'b00: y = a;\n      2'b01: y = b;\n      2'b10: y = c;\n      default: y = d;\n    endcase\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 0000",
+      "01 0001",
+      "10 1111",
+      "11 1010"
+    ],
+    "expected": [
+      "00 0000",
+      "01 0001",
+      "10 1111",
+      "11 1010"
+    ],
+    "raw_output": "00 0000\n01 0001\n10 1111\n11 1010",
+    "submission_id": "efd60721-6",
+    "time_seconds": 0.26,
+    "waveform_url": "/api/waveform/efd60721-6"
+  },
+  "timestamp": "2026-05-15 23:45:59"
+}

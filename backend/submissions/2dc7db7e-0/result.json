@@ -1,0 +1,25 @@
+{
+  "problem_id": "handshake_controller",
+  "code": "module handshake_controller(input clk, input rst, input req, output reg ack);\n  always @(*) begin\n      ack = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "2dc7db7e-0",
+    "time_seconds": 0.248,
+    "waveform_url": "/api/waveform/2dc7db7e-0"
+  },
+  "timestamp": "2026-05-16 01:34:23"
+}

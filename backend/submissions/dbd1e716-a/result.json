@@ -1,0 +1,27 @@
+{
+  "problem_id": "comparator_8bit",
+  "code": "module comparator_8bit(input [7:0] a, input [7:0] b, output gt, output eq, output lt);\n  assign gt = a > b;\n  assign eq = a == b;\n  assign lt = a < b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000 00000000 0 1 0",
+      "00000001 00000001 0 1 0",
+      "11111111 00000001 1 0 0",
+      "01111111 01010101 1 0 0",
+      "11111111 11111111 0 1 0"
+    ],
+    "expected": [
+      "00000000 00000000 0 1 0",
+      "00000001 00000001 0 1 0",
+      "11111111 00000001 1 0 0",
+      "01111111 01010101 1 0 0",
+      "11111111 11111111 0 1 0"
+    ],
+    "raw_output": "00000000 00000000 0 1 0\n00000001 00000001 0 1 0\n11111111 00000001 1 0 0\n01111111 01010101 1 0 0\n11111111 11111111 0 1 0",
+    "submission_id": "dbd1e716-a",
+    "time_seconds": 0.264,
+    "waveform_url": "/api/waveform/dbd1e716-a"
+  },
+  "timestamp": "2026-05-15 23:45:45"
+}

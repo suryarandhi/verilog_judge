@@ -1,0 +1,11 @@
+{
+  "problem_id": "or_2bit",
+  "code": "module or_2bit(input [1:0] a, input [1:0] b, output [1:0] y);\n  assign y = |;\nendmodule\n",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\9bd685ba-9\\submission.v:2: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\9bd685ba-9\\submission.v:2: error: syntax error in continuous assignment",
+    "submission_id": "9bd685ba-9",
+    "time_seconds": 0.206
+  },
+  "timestamp": "2026-05-15 23:46:08"
+}

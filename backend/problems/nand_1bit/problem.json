@@ -1,0 +1,11 @@
+{
+  "title": "1-bit NAND",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 1-bit bitwise NAND circuit.\\n\\nRequired module:\\nmodule nand_1bit(input [0:0] a, input [0:0] b, output [0:0] y);",
+  "template": "module nand_1bit(input [0:0] a, input [0:0] b, output [0:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

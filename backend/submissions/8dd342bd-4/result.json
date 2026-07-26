@@ -1,0 +1,25 @@
+{
+  "problem_id": "mealy_sequence_detector_1011",
+  "code": "module mealy_1011_detector(input clk, input reset, input din, output reg detected);\n  always @(*) begin\n      detected = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "8dd342bd-4",
+    "time_seconds": 0.276,
+    "waveform_url": "/api/waveform/8dd342bd-4"
+  },
+  "timestamp": "2026-05-16 01:34:24"
+}

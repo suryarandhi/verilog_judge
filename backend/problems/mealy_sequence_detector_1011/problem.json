@@ -1,0 +1,34 @@
+{
+  "id": "mealy_sequence_detector_1011",
+  "title": "Mealy Sequence Detector: 1011",
+  "difficulty": "Medium",
+  "category": "FSM",
+  "tags": [
+    "mealy",
+    "sequence-detector",
+    "overlap",
+    "fsm"
+  ],
+  "statement": "Design a Mealy FSM that detects the serial input pattern 1011. The detector must support overlapping matches. The output should assert in the same cycle that the final bit of the pattern is received. Reset returns the FSM to its initial state.",
+  "module_signature": "module mealy_1011_detector(input clk, input reset, input din, output reg detected);",
+  "behavior": [
+    "Sample din on each rising edge of clk.",
+    "Assert detected for one cycle when the sequence 1011 is observed.",
+    "Support overlapping sequence matches.",
+    "Reset clears the FSM state and detected output.",
+    "All state updates occur on the rising edge of clk.",
+    "reset is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When reset is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Must be synthesizable Verilog.",
+    "Use an FSM.",
+    "Do not use arrays of past input bits."
+  ],
+  "example": "din:      1 0 1 1 0 1 1\ndetected: 0 0 0 1 0 0 1",
+  "hint": "Track the longest suffix that is also a prefix of 1011.",
+  "template": "module mealy_1011_detector(input clk, input reset, input din, output reg detected);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": "traffic_light_fsm",
+  "code": "module traffic_light_fsm(input clk, input reset, input timer_done, output reg red, output reg yellow, output reg green);\n  reg [1:0] state;\n  localparam RED = 2'd0, GREEN = 2'd1, YELLOW = 2'd2;\n  always @(posedge clk or posedge reset) begin\n    if (reset) state <= RED;\n    else if (timer_done) begin\n      case (state)\n        RED: state <= GREEN;\n        GREEN: state <= YELLOW;\n        default: state <= RED;\n      endcase\n    end\n  end\n  always @(*) begin\n    red = state == RED;\n    green = state == GREEN;\n    yellow = state == YELLOW;\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1 0 0",
+      "1 0 0",
+      "0 0 1",
+      "0 1 0",
+      "1 0 0"
+    ],
+    "expected": [
+      "1 0 0",
+      "1 0 0",
+      "0 0 1",
+      "0 1 0",
+      "1 0 0"
+    ],
+    "raw_output": "1 0 0\n1 0 0\n0 0 1\n0 1 0\n1 0 0",
+    "submission_id": "50ef9b5a-0",
+    "time_seconds": 0.437,
+    "waveform_url": "/api/waveform/50ef9b5a-0"
+  },
+  "timestamp": "2026-05-16 00:15:24"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "sram_1kx8",
+  "title": "SRAM Behavioral Model",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "sram",
+    "behavioral",
+    "memory"
+  ],
+  "statement": "Create a simple 1Kx8 SRAM behavioral model with separate read and write enable signals. Reads should output the stored byte at the addressed location, and writes should update memory on the clock edge when write enable is asserted. The design should model synchronous writes and asynchronous reads typical of embedded SRAM.",
+  "module_signature": "module sram_1kx8(input clk, input rst, input wr_en, input [9:0] addr, input [7:0] din, output reg [7:0] dout);",
+  "behavior": [
+    "dout reflects the contents at addr.",
+    "Writes occur on the rising edge when wr_en is 1.",
+    "rst may synchronously clear a subset of memory if desired.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not instantiate vendor-specific RAM primitives."
+  ],
+  "example": "addr wr_en din | dout\n0000000000 0 xx | stored\n0000000001 1 01010101 | 01010101",
+  "hint": "Use a reg array to model the memory contents.",
+  "template": "module sram_1kx8(input clk, input rst, input wr_en, input [9:0] addr, input [7:0] din, output reg [7:0] dout);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

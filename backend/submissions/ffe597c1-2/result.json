@@ -1,0 +1,25 @@
+{
+  "problem_id": "xor_gate",
+  "code": "module xor_gate(input a, input b, output y);\n  assign y = a ^ b;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0 0",
+      "0 1 1",
+      "1 0 1",
+      "1 1 0"
+    ],
+    "expected": [
+      "0 0 0",
+      "0 1 1",
+      "1 0 1",
+      "1 1 0"
+    ],
+    "raw_output": "0 0 0\n0 1 1\n1 0 1\n1 1 0",
+    "submission_id": "ffe597c1-2",
+    "time_seconds": 0.166,
+    "waveform_url": "/api/waveform/ffe597c1-2"
+  },
+  "timestamp": "2026-05-15 23:39:20"
+}

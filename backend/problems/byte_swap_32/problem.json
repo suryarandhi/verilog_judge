@@ -1,0 +1,31 @@
+{
+  "id": "byte_swap_32",
+  "title": "32-bit Byte Swapper",
+  "difficulty": "Easy",
+  "category": "Datapath",
+  "tags": [
+    "byte-order",
+    "datapath",
+    "bit-manipulation"
+  ],
+  "statement": "Design a 32-bit byte swapper that reverses byte order. The least significant byte becomes the most significant byte and vice versa. The operation is purely combinational and is useful for endian conversion in datapaths.",
+  "module_signature": "module byte_swap_32(input [31:0] data_in, output [31:0] data_out);",
+  "behavior": [
+    "data_out[31:24] equals data_in[7:0].",
+    "data_out[23:16] equals data_in[15:8].",
+    "data_out[15:8] equals data_in[23:16].",
+    "data_out[7:0] equals data_in[31:24].",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Must be synthesizable Verilog.",
+    "Use combinational logic.",
+    "Do not use a clock."
+  ],
+  "example": "data_in  = 11223344\ndata_out = 44332211",
+  "hint": "Concatenate the four bytes in reverse order.",
+  "template": "module byte_swap_32(input [31:0] data_in, output [31:0] data_out);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

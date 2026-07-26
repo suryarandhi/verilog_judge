@@ -1,0 +1,25 @@
+{
+  "problem_id": "gated_d_latch",
+  "code": "module gated_d_latch(input en, input d, output reg q);\n  // Write your code here\n  always@(*) begin\n  if(enable)\n  q<=d;\n  else\n  d<=0;\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\gated_d_latch\\tb.v:16: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\gated_d_latch\\tb.v:17: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f9f5d645-a\\submission.v:4: error: Unable to bind wire/reg/memory `enable' in `tb.dut'\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f9f5d645-a\\submission.v:4: error: Unable to elaborate condition expression.\n2 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 4,
+        "message": "error: Unable to bind wire/reg/memory `enable' in `tb.dut'",
+        "friendly": "Signal or module name was not declared, or the name does not match the required interface.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f9f5d645-a\\submission.v:4: error: Unable to bind wire/reg/memory `enable' in `tb.dut'"
+      },
+      {
+        "line": 4,
+        "message": "error: Unable to elaborate condition expression.",
+        "friendly": "error: Unable to elaborate condition expression.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f9f5d645-a\\submission.v:4: error: Unable to elaborate condition expression."
+      }
+    ],
+    "submission_id": "f9f5d645-a",
+    "time_seconds": 0.863
+  },
+  "timestamp": "2026-05-18 09:58:15"
+}

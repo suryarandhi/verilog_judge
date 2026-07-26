@@ -1,0 +1,11 @@
+{
+  "title": "32-bit All Ones Detector",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "detector"
+  ],
+  "description": "Detect a condition on a 32-bit input.\\n\\nRequired module:\\nmodule all_ones_detector_32bit(input [31:0] a, output y);",
+  "template": "module all_ones_detector_32bit(input [31:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

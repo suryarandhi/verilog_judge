@@ -1,0 +1,11 @@
+{
+  "title": "Clear Bit 1 of 4",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Clear bit 1 of a 4-bit input.\\n\\nRequired module:\\nmodule bit_clear_4bit_1(input [3:0] a, output [3:0] y);",
+  "template": "module bit_clear_4bit_1(input [3:0] a, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

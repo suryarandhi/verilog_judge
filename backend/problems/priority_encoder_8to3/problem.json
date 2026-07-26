@@ -1,0 +1,28 @@
+{
+  "id": "priority_encoder_8to3",
+  "title": "8-to-3 Priority Encoder",
+  "difficulty": "Medium",
+  "category": "Combinational",
+  "tags": [
+    "priority",
+    "encoder",
+    "combinational"
+  ],
+  "statement": "Create an 8-to-3 priority encoder that encodes the highest-priority asserted input into a binary output. Input 7 has the highest priority and input 0 the lowest. If no inputs are asserted, output should be zero and valid must be low. The encoder must resolve priority with a single combinational pass.",
+  "module_signature": "module priority_encoder_8to3(input [7:0] in, output reg [2:0] code, output valid);",
+  "behavior": [
+    "code indicates the index of the highest asserted input.",
+    "valid is 1 when any input bit is high, else 0.",
+    "Behavior must be purely combinational despite reg output syntax.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential procedural loops or clocked always blocks."
+  ],
+  "example": "in       | valid code\n00000000 | 0 000\n00010010 | 1 100\n10000001 | 1 111",
+  "hint": "Evaluate inputs from highest to lowest priority.",
+  "template": "module priority_encoder_8to3(input [7:0] in, output reg [2:0] code, output valid);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

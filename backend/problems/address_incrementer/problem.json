@@ -1,0 +1,28 @@
+{
+  "id": "address_incrementer",
+  "title": "Address Incrementer",
+  "difficulty": "Easy",
+  "category": "Datapath",
+  "tags": [
+    "address",
+    "increment",
+    "datapath"
+  ],
+  "statement": "Build an address incrementer that adds 1 to a 16-bit address when incr is high, and otherwise passes the address unchanged. This combinational block is used in instruction fetch and memory addressing paths. The result must wrap naturally on overflow.",
+  "module_signature": "module address_incrementer(input [15:0] addr, input incr, output [15:0] next_addr);",
+  "behavior": [
+    "If incr is 1, next_addr = addr + 1.",
+    "If incr is 0, next_addr = addr.",
+    "The module must be combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use clocks or sequential elements."
+  ],
+  "example": "addr incr | next_addr\n0000000000000000 1 | 0000000000000001\n1111111111111111 1 | 0000000000000000",
+  "hint": "Implement the increment conditionally.",
+  "template": "module address_incrementer(input [15:0] addr, input incr, output [15:0] next_addr);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

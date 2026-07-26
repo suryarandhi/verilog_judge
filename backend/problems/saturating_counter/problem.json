@@ -1,0 +1,30 @@
+{
+  "id": "saturating_counter",
+  "title": "Saturating Counter",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "counter",
+    "saturating",
+    "sequential"
+  ],
+  "statement": "Design a 4-bit saturating counter that increments on each clock edge when enabled, but stops at 15 instead of wrapping. A synchronous reset should return the count to zero. This is useful in control systems where overflow must be prevented.",
+  "module_signature": "module saturating_counter(input clk, input rst, input en, output reg [3:0] count);",
+  "behavior": [
+    "If en is 1, count increments until 15 and then holds.",
+    "If en is 0, count remains unchanged.",
+    "rst synchronously clears count to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not allow the count to wrap around after reaching 15."
+  ],
+  "example": "count en | count_next\n1110 1 | 1111\n1111 1 | 1111",
+  "hint": "Check the current value before incrementing and hold at the limit.",
+  "template": "module saturating_counter(input clk, input rst, input en, output reg [3:0] count);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

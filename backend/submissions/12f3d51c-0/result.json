@@ -1,0 +1,25 @@
+{
+  "problem_id": "d_flipflop_sync_reset",
+  "code": "module d_flipflop_sync_reset(\n    input clk,\n    input rst,\n    input d,\n    output reg q\n);\n\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "12f3d51c-0",
+    "time_seconds": 0.199,
+    "waveform_url": "/api/waveform/12f3d51c-0"
+  },
+  "timestamp": "2026-05-16 11:02:16"
+}

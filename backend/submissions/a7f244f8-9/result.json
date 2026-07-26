@@ -1,0 +1,37 @@
+{
+  "problem_id": "zero_flag_unit",
+  "code": "module zero_flag_unit(input [7:0] value, output zero);\n  // Write your code here\n  always@(*) begin\n  if value == 0;\n  zero =0;\n  else\n  zero = 1;\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a7f244f8-9\\submission.v:4: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a7f244f8-9\\submission.v:4: error: malformed statement\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a7f244f8-9\\submission.v:6: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a7f244f8-9\\submission.v:7: Syntax in assignment statement l-value.",
+    "compile_errors": [
+      {
+        "line": 4,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a7f244f8-9\\submission.v:4: syntax error"
+      },
+      {
+        "line": 4,
+        "message": "error: malformed statement",
+        "friendly": "error: malformed statement",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a7f244f8-9\\submission.v:4: error: malformed statement"
+      },
+      {
+        "line": 6,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a7f244f8-9\\submission.v:6: syntax error"
+      },
+      {
+        "line": 7,
+        "message": "Syntax in assignment statement l-value.",
+        "friendly": "Syntax in assignment statement l-value.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a7f244f8-9\\submission.v:7: Syntax in assignment statement l-value."
+      }
+    ],
+    "submission_id": "a7f244f8-9",
+    "time_seconds": 0.201
+  },
+  "timestamp": "2026-05-18 22:24:35"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Constant Zero",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "constants"
+  ],
+  "description": "Drive a constant 16-bit value.\\n\\nRequired module:\\nmodule constant_zero_16bit(output [15:0] y);",
+  "template": "module constant_zero_16bit(output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

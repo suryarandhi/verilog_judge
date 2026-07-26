@@ -1,0 +1,25 @@
+{
+  "problem_id": "absolute_value_unit",
+  "code": "module absolute_value_unit(input signed [7:0] a, output reg [7:0] y);\n  always @(*) begin\n      y = 8'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "expected": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "raw_output": "xxxxxxxx\nxxxxxxxx\nxxxxxxxx\nxxxxxxxx",
+    "submission_id": "41c5bcbd-7",
+    "time_seconds": 0.266,
+    "waveform_url": "/api/waveform/41c5bcbd-7"
+  },
+  "timestamp": "2026-05-16 01:34:12"
+}

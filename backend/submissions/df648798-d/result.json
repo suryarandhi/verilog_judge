@@ -1,0 +1,27 @@
+{
+  "problem_id": "simple_alu_8bit",
+  "code": "module simple_alu_8(input [7:0] a, input [7:0] b, input [2:0] opcode, output reg [7:0] result, output reg zero, output reg carry);\n  reg [8:0] tmp;\n  always @(*) begin\n    result = 8'b0;\n    carry = 1'b0;\n    tmp = 9'b0;\n    case (opcode)\n      3'b000: begin tmp = a + b; result = tmp[7:0]; carry = tmp[8]; end\n      3'b001: begin result = a - b; carry = a < b; end\n      3'b010: result = a & b;\n      3'b011: result = a | b;\n      3'b100: result = ~a;\n      default: result = 8'b0;\n    endcase\n    zero = result == 8'b0;\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "05 03 000 08 0 0",
+      "05 03 001 02 0 0",
+      "f0 0f 010 00 0 1",
+      "f0 0f 011 ff 0 0",
+      "f0 00 100 0f 0 0"
+    ],
+    "expected": [
+      "05 03 000 08 0 0",
+      "05 03 001 02 0 0",
+      "f0 0f 010 00 0 1",
+      "f0 0f 011 ff 0 0",
+      "f0 00 100 0f 0 0"
+    ],
+    "raw_output": "05 03 000 08 0 0\n05 03 001 02 0 0\nf0 0f 010 00 0 1\nf0 0f 011 ff 0 0\nf0 00 100 0f 0 0",
+    "submission_id": "df648798-d",
+    "time_seconds": 0.531,
+    "waveform_url": "/api/waveform/df648798-d"
+  },
+  "timestamp": "2026-05-16 00:15:23"
+}

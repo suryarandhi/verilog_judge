@@ -1,0 +1,31 @@
+{
+  "problem_id": "comparator_unsigned",
+  "code": "module comparator_unsigned(input [7:0] a, input [7:0] b, output reg gt, output reg eq, output reg lt);\n  // Write your code here\n  always@(*) begin\n    if(a>b) begin\n    gt=1;\n    eq=0;\n    lt=0;\n    end\n    else begin \n    if(a==b)\n    eq=1;\n    gt=0;\n    lt=0;\n    end\n    else begin\n    gt=0;\n    eq=0;\n    lt=1;\n  end\n  end\n  \nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:15: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:16: Syntax in assignment statement l-value.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:20: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\comparator_unsigned\\tb.v:2: error: invalid module item.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\comparator_unsigned\\tb.v:5: gt wire definition conflicts with reg definition at D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:1.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\comparator_unsigned\\tb.v:5: error: Net ``gt'' has already been declared.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\comparator_unsigned\\tb.v:6: eq wire definition conflicts with reg definition at D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:1.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\comparator_unsigned\\tb.v:6: error: Net ``eq'' has already been declared.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\comparator_unsigned\\tb.v:7: lt wire definition conflicts with reg definition at D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:1.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\comparator_unsigned\\tb.v:7: error: Net ``lt'' has already been declared.",
+    "compile_errors": [
+      {
+        "line": 15,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:15: syntax error"
+      },
+      {
+        "line": 16,
+        "message": "Syntax in assignment statement l-value.",
+        "friendly": "Syntax in assignment statement l-value.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:16: Syntax in assignment statement l-value."
+      },
+      {
+        "line": 20,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\79bfe117-6\\submission.v:20: syntax error"
+      }
+    ],
+    "submission_id": "79bfe117-6",
+    "time_seconds": 0.198
+  },
+  "timestamp": "2026-05-18 22:19:31"
+}

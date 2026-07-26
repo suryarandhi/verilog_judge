@@ -1,0 +1,37 @@
+{
+  "problem_id": "mux_2to1",
+  "code": "module mux_2to1(input [7:0] a, input [7:0] b, input sel, output [7:0] y);\n  // Write your code here\nalways@(*) begin\n  if(sel)\n  y<=b;\n  else\n  y<=a;\nend\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3cccfaff-c\\submission.v:5: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3cccfaff-c\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3cccfaff-c\\submission.v:7: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3cccfaff-c\\submission.v:1:      : y is declared here as wire.\n2 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3cccfaff-c\\submission.v:5: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3cccfaff-c\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 7,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3cccfaff-c\\submission.v:7: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3cccfaff-c\\submission.v:1:      : y is declared here as wire."
+      }
+    ],
+    "submission_id": "3cccfaff-c",
+    "time_seconds": 0.212
+  },
+  "timestamp": "2026-05-16 19:34:25"
+}

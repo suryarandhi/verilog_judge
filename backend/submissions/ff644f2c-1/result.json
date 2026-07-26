@@ -1,0 +1,25 @@
+{
+  "problem_id": "buffer_8bit",
+  "code": "module buffer_8bit(input [7:0] a, output [7:0] y);\n  assign y = a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000 00000000",
+      "00000001 00000001",
+      "11111111 11111111",
+      "10101010 10101010"
+    ],
+    "expected": [
+      "00000000 00000000",
+      "00000001 00000001",
+      "11111111 11111111",
+      "10101010 10101010"
+    ],
+    "raw_output": "00000000 00000000\n00000001 00000001\n11111111 11111111\n10101010 10101010",
+    "submission_id": "ff644f2c-1",
+    "time_seconds": 0.257,
+    "waveform_url": "/api/waveform/ff644f2c-1"
+  },
+  "timestamp": "2026-05-15 23:45:43"
+}

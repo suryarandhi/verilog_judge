@@ -1,0 +1,86 @@
+{
+  "problem_id": "synchronous_clear_counter",
+  "code": "module synchronous_clear_counter(input clk, input rst, input clear, output reg [3:0] count);\n  // Write your code here\nalways@(posedge clk or posedge rst) begin\nif (rst) begin\ncount<=4'b0000;\nend else begin\nif(clear) \ncount<=4'b0000;\nelse\ncount<=count+1;\nend\nend\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000",
+      "0000",
+      "0000",
+      "0001",
+      "0010",
+      "0000",
+      "0001",
+      "0010"
+    ],
+    "expected": [
+      "0000",
+      "0000",
+      "0000",
+      "0001",
+      "0010",
+      "0000",
+      "0001",
+      "0010"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0000",
+        "expected": "0000"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0000",
+        "expected": "0000"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "0000",
+        "expected": "0000"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0001",
+        "expected": "0001"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0010",
+        "expected": "0010"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0000",
+        "expected": "0000"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0001",
+        "expected": "0001"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0010",
+        "expected": "0010"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0000\n0000\n0000\n0001\n0010\n0000\n0001\n0010",
+    "submission_id": "e4ab63a3-5",
+    "time_seconds": 0.194,
+    "waveform_url": "/api/waveform/e4ab63a3-5"
+  },
+  "timestamp": "2026-05-17 17:41:58"
+}

@@ -1,0 +1,93 @@
+$date
+	Sat May 16 11:19:25 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 1 ! pulse $end
+$var reg 1 " clk $end
+$var reg 1 # in_bit $end
+$var reg 1 $ rst $end
+$scope module dut $end
+$var wire 1 % clk $end
+$var wire 1 & in_bit $end
+$var wire 1 ' rst $end
+$var reg 1 ( pulse $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x(
+1'
+0&
+0%
+1$
+0#
+0"
+x!
+$end
+#5000
+1"
+1%
+#6000
+1#
+1&
+0$
+0'
+#10000
+0"
+0%
+#15000
+1"
+1%
+#20000
+0"
+0%
+#25000
+1"
+1%
+#26000
+0#
+0&
+#30000
+0"
+0%
+#35000
+1"
+1%
+#40000
+0"
+0%
+#45000
+1"
+1%
+#46000
+1#
+1&
+#50000
+0"
+0%
+#55000
+1"
+1%
+#56000
+0#
+0&
+#60000
+0"
+0%
+#65000
+1"
+1%
+#70000
+0"
+0%
+#75000
+1"
+1%
+#76000

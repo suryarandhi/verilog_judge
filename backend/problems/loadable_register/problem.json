@@ -1,0 +1,30 @@
+{
+  "id": "loadable_register",
+  "title": "Loadable Register",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "register",
+    "load enable",
+    "sequential"
+  ],
+  "statement": "Create a loadable 8-bit register with enable and synchronous reset. When load is asserted on a clock edge, the register captures the input data; otherwise it retains its previous value. The reset input should clear the output to zero when asserted.",
+  "module_signature": "module loadable_register(input clk, input rst, input load, input [7:0] d, output reg [7:0] q);",
+  "behavior": [
+    "If load is 1 on the rising edge, q <= d.",
+    "If load is 0, q holds its previous value.",
+    "rst synchronously clears q to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous resets or combinational latches."
+  ],
+  "example": "clk rst load d    | q\n0 1 1 10101010 | 00000000\n1 0 1 10101010 | 10101010\n1 0 0 01010101 | 10101010",
+  "hint": "Use one always block with both clk and rst in the sensitivity list.",
+  "template": "module loadable_register(input clk, input rst, input load, input [7:0] d, output reg [7:0] q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,11 @@
+{
+  "title": "3-bit Even Parity",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "parity"
+  ],
+  "description": "Compute even parity for a 3-bit input.\\n\\nRequired module:\\nmodule even_parity_3bit(input [2:0] a, output y);",
+  "template": "module even_parity_3bit(input [2:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

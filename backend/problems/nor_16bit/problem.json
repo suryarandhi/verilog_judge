@@ -1,0 +1,11 @@
+{
+  "title": "16-bit NOR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 16-bit bitwise NOR circuit.\\n\\nRequired module:\\nmodule nor_16bit(input [15:0] a, input [15:0] b, output [15:0] y);",
+  "template": "module nor_16bit(input [15:0] a, input [15:0] b, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

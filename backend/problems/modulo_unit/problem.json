@@ -1,0 +1,28 @@
+{
+  "id": "modulo_unit",
+  "title": "Modulo Arithmetic Unit",
+  "difficulty": "Medium",
+  "category": "Arithmetic",
+  "tags": [
+    "modulo",
+    "arithmetic",
+    "datapath"
+  ],
+  "statement": "Implement a combinational unit that computes the remainder of unsigned division a % b for 8-bit operands. If b is zero, the module should output zero. This is a datapath block for remainder arithmetic.",
+  "module_signature": "module modulo_unit(input [7:0] a, input [7:0] b, output reg [7:0] remainder);",
+  "behavior": [
+    "remainder = a % b when b != 0.",
+    "remainder = 0 when b == 0.",
+    "The unit must be purely combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential division algorithms or loops with hidden state."
+  ],
+  "example": "a b | remainder\n00001010 00000011 | 00000001\n00001111 00000100 | 00000011",
+  "hint": "Implement the remainder using combinational subtraction and comparison logic if needed.",
+  "template": "module modulo_unit(input [7:0] a, input [7:0] b, output reg [7:0] remainder);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "buffer_3bit",
+  "code": "module buffer_3bit(input [2:0] a, output [2:0] y);\n  assign y = a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 000",
+      "001 001",
+      "111 111",
+      "101 101"
+    ],
+    "expected": [
+      "000 000",
+      "001 001",
+      "111 111",
+      "101 101"
+    ],
+    "raw_output": "000 000\n001 001\n111 111\n101 101",
+    "submission_id": "df03f376-6",
+    "time_seconds": 0.217,
+    "waveform_url": "/api/waveform/df03f376-6"
+  },
+  "timestamp": "2026-05-15 23:45:43"
+}

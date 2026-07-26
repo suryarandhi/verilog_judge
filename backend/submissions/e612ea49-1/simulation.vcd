@@ -1,0 +1,120 @@
+$date
+	Sat May 16 00:05:12 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 1 ! detected $end
+$var reg 1 " clk $end
+$var reg 1 # din $end
+$var reg 1 $ reset $end
+$scope module dut $end
+$var wire 1 % clk $end
+$var wire 1 & din $end
+$var wire 1 ' reset $end
+$var reg 1 ( detected $end
+$var reg 2 ) state [1:0] $end
+$upscope $end
+$scope task step $end
+$var reg 1 * bit_value $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x*
+b0 )
+0(
+1'
+0&
+0%
+1$
+0#
+0"
+0!
+$end
+#5000
+1"
+1%
+#7000
+1#
+1&
+1*
+0$
+0'
+#10000
+0"
+0%
+#15000
+b1 )
+1"
+1%
+#17000
+0#
+0&
+0*
+#20000
+0"
+0%
+#25000
+b10 )
+1"
+1%
+#27000
+1#
+1&
+1*
+#30000
+0"
+0%
+#35000
+b11 )
+1"
+1%
+#40000
+0"
+0%
+#45000
+b1 )
+1(
+1!
+1"
+1%
+#47000
+0#
+0&
+0*
+#50000
+0"
+0%
+#55000
+b10 )
+0(
+0!
+1"
+1%
+#57000
+1#
+1&
+1*
+#60000
+0"
+0%
+#65000
+b11 )
+1"
+1%
+#70000
+0"
+0%
+#75000
+b1 )
+1(
+1!
+1"
+1%
+#77000

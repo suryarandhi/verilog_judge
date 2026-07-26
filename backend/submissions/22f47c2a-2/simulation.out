@@ -1,0 +1,56 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012E7FF8 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012E2010_0 .var "data_in", 31 0;
+v012E56D0_0 .net "data_out", 31 0, L_012EDBE8; 1 drivers
+v012E5728_0 .var "dir", 0 0;
+v012E5780_0 .var "shamt", 4 0;
+S_012E8768 .scope module, "dut" "barrel_shifter_32" 2 7, 3 1, S_012E7FF8;
+ .timescale 0 0;
+v012E5558_0 .net *"_s0", 31 0, L_012E57D8; 1 drivers
+v01152D80_0 .net *"_s2", 31 0, L_012EDB90; 1 drivers
+v01152DD8_0 .net "data_in", 31 0, v012E2010_0; 1 drivers
+v01152E30_0 .alias "data_out", 31 0, v012E56D0_0;
+v012E1F60_0 .net "dir", 0 0, v012E5728_0; 1 drivers
+v012E1FB8_0 .net "shamt", 4 0, v012E5780_0; 1 drivers
+L_012E57D8 .shift/r 32, v012E2010_0, v012E5780_0;
+L_012EDB90 .shift/l 32, v012E2010_0, v012E5780_0;
+L_012EDBE8 .functor MUXZ 32, L_012EDB90, L_012E57D8, v012E5728_0, C4<>;
+    .scope S_012E7FF8;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 9 "$dumpvars", 1'sb0, S_012E7FF8;
+    %movi 8, 1, 32;
+    %set/v v012E2010_0, 8, 32;
+    %movi 8, 2, 5;
+    %set/v v012E5780_0, 8, 5;
+    %set/v v012E5728_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 10 "$display", "%h %d %b %h", v012E2010_0, v012E5780_0, v012E5728_0, v012E56D0_0;
+    %movi 8, 2147483648, 32;
+    %set/v v012E2010_0, 8, 32;
+    %movi 8, 4, 5;
+    %set/v v012E5780_0, 8, 5;
+    %set/v v012E5728_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 11 "$display", "%h %d %b %h", v012E2010_0, v012E5780_0, v012E5728_0, v012E56D0_0;
+    %movi 8, 255, 32;
+    %set/v v012E2010_0, 8, 32;
+    %set/v v012E5780_0, 0, 5;
+    %set/v v012E5728_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%h %d %b %h", v012E2010_0, v012E5780_0, v012E5728_0, v012E56D0_0;
+    %vpi_call 2 13 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\barrel_shifter_32bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\22f47c2a-2\submission.v";

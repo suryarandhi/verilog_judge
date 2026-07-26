@@ -1,0 +1,11 @@
+{
+  "problem_id": "and_1bit",
+  "code": "module and_1bit(input [0:0] a, input [0:0] b, output [0:0] y);\n  assign y = &;\nendmodule\n",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\1f4481b4-f\\submission.v:2: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\1f4481b4-f\\submission.v:2: error: syntax error in continuous assignment",
+    "submission_id": "1f4481b4-f",
+    "time_seconds": 0.193
+  },
+  "timestamp": "2026-05-15 23:45:10"
+}

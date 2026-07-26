@@ -1,0 +1,28 @@
+{
+  "id": "carry_lookahead_adder",
+  "title": "Carry Lookahead Adder",
+  "difficulty": "Hard",
+  "category": "Arithmetic",
+  "tags": [
+    "adder",
+    "carry-lookahead",
+    "arithmetic"
+  ],
+  "statement": "Build an 8-bit carry lookahead adder module that computes group generate and propagate signals to accelerate carry calculations. The adder must produce correct sum and carry-out values while using these faster carry terms. This design is used in higher-performance arithmetic units.",
+  "module_signature": "module carry_lookahead_adder(input [7:0] a, input [7:0] b, input cin, output [7:0] sum, output cout);",
+  "behavior": [
+    "sum = a + b + cin.",
+    "cout is the final carry-out.",
+    "Use carry lookahead logic to compute carries efficiently.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not implement it as a simple ripple-carry adder."
+  ],
+  "example": "a b cin | sum cout\n00000001 00000001 0 | 00000010 0\n11110000 00001111 1 | 00000000 1",
+  "hint": "Compute generate/propagate bits to avoid sequential carry propagation.",
+  "template": "module carry_lookahead_adder(input [7:0] a, input [7:0] b, input cin, output [7:0] sum, output cout);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

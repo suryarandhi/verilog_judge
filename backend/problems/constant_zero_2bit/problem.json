@@ -1,0 +1,11 @@
+{
+  "title": "2-bit Constant Zero",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "constants"
+  ],
+  "description": "Drive a constant 2-bit value.\\n\\nRequired module:\\nmodule constant_zero_2bit(output [1:0] y);",
+  "template": "module constant_zero_2bit(output [1:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

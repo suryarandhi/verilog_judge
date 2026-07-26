@@ -1,0 +1,86 @@
+{
+  "problem_id": "detect_msb_one",
+  "code": "module detect_msb_one(input [7:0] a, output  reg msb_one);\nalways@(*) begin\n\n  if(a[7] == 1)\n  msb_one = 1;\n  else\n  msb_one = 0;\nend\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "expected": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0\n0\n1\n1\n0\n0\n0\n1",
+    "submission_id": "10ee0f12-8",
+    "time_seconds": 0.228,
+    "waveform_url": "/api/waveform/10ee0f12-8"
+  },
+  "timestamp": "2026-05-17 18:30:33"
+}

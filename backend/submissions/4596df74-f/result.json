@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_set_4bit_3",
+  "code": "module bit_set_4bit_3(input [3:0] a, output [3:0] y);\n  assign y = a | (4'b1 << 3);\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 1000",
+      "1000 1000",
+      "1111 1111",
+      "1010 1010"
+    ],
+    "expected": [
+      "0000 1000",
+      "1000 1000",
+      "1111 1111",
+      "1010 1010"
+    ],
+    "raw_output": "0000 1000\n1000 1000\n1111 1111\n1010 1010",
+    "submission_id": "4596df74-f",
+    "time_seconds": 0.28,
+    "waveform_url": "/api/waveform/4596df74-f"
+  },
+  "timestamp": "2026-05-15 23:45:32"
+}

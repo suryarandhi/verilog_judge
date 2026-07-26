@@ -1,0 +1,27 @@
+{
+  "problem_id": "even_parity_8bit",
+  "code": "module even_parity_8bit(input [7:0] a, output y);\n  assign y = ~^a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000 1",
+      "00000001 0",
+      "00000011 1",
+      "11111111 1",
+      "10101010 1"
+    ],
+    "expected": [
+      "00000000 1",
+      "00000001 0",
+      "00000011 1",
+      "11111111 1",
+      "10101010 1"
+    ],
+    "raw_output": "00000000 1\n00000001 0\n00000011 1\n11111111 1\n10101010 1",
+    "submission_id": "60381231-7",
+    "time_seconds": 0.258,
+    "waveform_url": "/api/waveform/60381231-7"
+  },
+  "timestamp": "2026-05-15 23:47:32"
+}

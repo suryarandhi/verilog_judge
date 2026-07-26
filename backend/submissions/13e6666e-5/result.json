@@ -1,0 +1,37 @@
+{
+  "problem_id": "d_flipflop_sync_reset",
+  "code": "module d_flipflop_sync_reset(input clk, input rst, input d, output reg q);\n  // Write your code here\nalways@(posedge clk) begin\n  if(rst)\n  d<=0;\n  else\n  d<=q;\nend\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop_sync_reset\\tb.v:18: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\problems\\d_flipflop_sync_reset\\tb.v:19: warning: Numeric constant truncated to 1 bits.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13e6666e-5\\submission.v:5: error: d is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13e6666e-5\\submission.v:1:      : d is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13e6666e-5\\submission.v:7: error: d is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13e6666e-5\\submission.v:1:      : d is declared here as wire.\n2 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: d is not a valid l-value in tb.dut.",
+        "friendly": "error: d is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13e6666e-5\\submission.v:5: error: d is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": d is declared here as wire.",
+        "friendly": ": d is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13e6666e-5\\submission.v:1:      : d is declared here as wire."
+      },
+      {
+        "line": 7,
+        "message": "error: d is not a valid l-value in tb.dut.",
+        "friendly": "error: d is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13e6666e-5\\submission.v:7: error: d is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": d is declared here as wire.",
+        "friendly": ": d is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\13e6666e-5\\submission.v:1:      : d is declared here as wire."
+      }
+    ],
+    "submission_id": "13e6666e-5",
+    "time_seconds": 0.182
+  },
+  "timestamp": "2026-05-16 19:58:11"
+}

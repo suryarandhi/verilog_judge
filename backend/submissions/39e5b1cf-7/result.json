@@ -1,0 +1,25 @@
+{
+  "problem_id": "bit_select_4bit_0",
+  "code": "module bit_select_4bit_0(input [3:0] a, output y);\n  assign y = a[0];\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 0",
+      "0001 1",
+      "1111 1",
+      "1010 0"
+    ],
+    "expected": [
+      "0000 0",
+      "0001 1",
+      "1111 1",
+      "1010 0"
+    ],
+    "raw_output": "0000 0\n0001 1\n1111 1\n1010 0",
+    "submission_id": "39e5b1cf-7",
+    "time_seconds": 0.266,
+    "waveform_url": "/api/waveform/39e5b1cf-7"
+  },
+  "timestamp": "2026-05-15 23:45:23"
+}

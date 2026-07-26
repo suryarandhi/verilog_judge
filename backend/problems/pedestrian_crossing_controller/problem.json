@@ -1,0 +1,30 @@
+{
+  "id": "pedestrian_crossing_controller",
+  "title": "Pedestrian Crossing Controller",
+  "difficulty": "Medium",
+  "category": "FSM",
+  "tags": [
+    "fsm",
+    "controller",
+    "safety"
+  ],
+  "statement": "Design a pedestrian crossing controller that waits in a default vehicle-green state and responds to a walk request. When the request is asserted, the controller must transition through vehicle-yellow then vehicle-red before asserting walk. The walk output should be active for one cycle and the controller should then return to vehicle-green after a short delay.",
+  "module_signature": "module pedestrian_crossing_controller(input clk, input rst, input walk_request, output reg vehicle_green, output reg vehicle_yellow, output reg vehicle_red, output reg walk);",
+  "behavior": [
+    "Normal operation remains in vehicle_green until walk_request arrives.",
+    "The controller transitions through yellow and red before asserting walk.",
+    "walk is asserted only during the dedicated pedestrian phase.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use combinational loops or latches."
+  ],
+  "example": "state | vehicle_green vehicle_yellow vehicle_red walk\nIdle  | 1 0 0 0\nWalk  | 0 0 1 1",
+  "hint": "Model the sequence with named states and a state register.",
+  "template": "module pedestrian_crossing_controller(input clk, input rst, input walk_request, output reg vehicle_green, output reg vehicle_yellow, output reg vehicle_red, output reg walk);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,11 @@
+{
+  "title": "2-bit Incrementer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Build a 2-bit incrementer.\\n\\nRequired module:\\nmodule incrementer_2bit(input [1:0] a, output [1:0] y);",
+  "template": "module incrementer_2bit(input [1:0] a, output [1:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

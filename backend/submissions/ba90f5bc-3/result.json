@@ -1,0 +1,25 @@
+{
+  "problem_id": "assertion_checker",
+  "code": "module assertion_checker(input [3:0] value, output reg fault);\n  always @(*) begin\n      fault = 1'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "expected": [
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "raw_output": "x\nx\nx\nx",
+    "submission_id": "ba90f5bc-3",
+    "time_seconds": 0.241,
+    "waveform_url": "/api/waveform/ba90f5bc-3"
+  },
+  "timestamp": "2026-05-16 01:34:13"
+}

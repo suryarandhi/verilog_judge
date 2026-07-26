@@ -1,0 +1,43 @@
+{
+  "problem_id": "zero_detector",
+  "code": "module zero_detector(input [7:0] a,output reg z, output is_zero);\n  // Write your code here\n  z=(a[0]&a[1]&a[2]&a[3]&a[4]&a[5]&a[6]);\n  if z==0:\n  is_zero = 0;\n  else\n  is_zero =1;\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:3: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:3: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:5: error: invalid module item.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:6: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:7: error: invalid module item.",
+    "compile_errors": [
+      {
+        "line": 3,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:3: syntax error"
+      },
+      {
+        "line": 3,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:3: error: Invalid module instantiation"
+      },
+      {
+        "line": 5,
+        "message": "error: invalid module item.",
+        "friendly": "error: invalid module item.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:5: error: invalid module item."
+      },
+      {
+        "line": 6,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:6: syntax error"
+      },
+      {
+        "line": 7,
+        "message": "error: invalid module item.",
+        "friendly": "error: invalid module item.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f10594ab-d\\submission.v:7: error: invalid module item."
+      }
+    ],
+    "submission_id": "f10594ab-d",
+    "time_seconds": 0.237
+  },
+  "timestamp": "2026-05-16 19:46:31"
+}

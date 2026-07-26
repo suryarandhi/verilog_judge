@@ -1,0 +1,28 @@
+{
+  "id": "ripple_carry_adder",
+  "title": "Ripple Carry Adder",
+  "difficulty": "Medium",
+  "category": "Arithmetic",
+  "tags": [
+    "adder",
+    "ripple",
+    "arithmetic"
+  ],
+  "statement": "Implement an 8-bit ripple carry adder with carry-in and carry-out. The module must compute the full sum of two operands plus the carry-in, producing the lower 8 bits and a carry-out. This is the classic serialized carry-chain adder used in basic ALU datapaths.",
+  "module_signature": "module ripple_carry_adder(input [7:0] a, input [7:0] b, input cin, output [7:0] sum, output cout);",
+  "behavior": [
+    "sum = a + b + cin modulo 256.",
+    "cout is the carry-out of the addition.",
+    "No sequential state is permitted.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use the + operator for the entire 8-bit vector if you want a structural solution."
+  ],
+  "example": "a b cin | sum cout\n00000001 00000001 0 | 00000010 0\n11111111 00000001 0 | 00000000 1",
+  "hint": "Build the adder from full-adders or use vector addition directly with carry.",
+  "template": "module ripple_carry_adder(input [7:0] a, input [7:0] b, input cin, output [7:0] sum, output cout);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

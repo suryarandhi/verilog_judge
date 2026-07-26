@@ -1,0 +1,68 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011425B8 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012F2010_0 .var "clk", 0 0;
+v012F2068_0 .var "pulse_in", 0 0;
+v012FD920_0 .net "pulse_out", 0 0, v012F1F60_0; 1 drivers
+v012FD978_0 .var "rst", 0 0;
+S_012F57A0 .scope module, "dut" "pulse_stretcher" 2 8, 3 1, S_011425B8;
+ .timescale 0 0;
+v012F5828_0 .net "clk", 0 0, v012F2010_0; 1 drivers
+v012F5880_0 .net "pulse_in", 0 0, v012F2068_0; 1 drivers
+v012F1F60_0 .var "pulse_out", 0 0;
+v012F1FB8_0 .net "rst", 0 0, v012FD978_0; 1 drivers
+E_012F4288 .event "_s0";
+    .scope S_012F57A0;
+T_0 ;
+    %wait E_012F4288;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_011425B8;
+T_1 ;
+    %set/v v012F2010_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v012F2010_0, 1;
+    %inv 8, 1;
+    %set/v v012F2010_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_011425B8;
+T_2 ;
+    %vpi_call 2 12 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 13 "$dumpvars", 1'sb0, S_011425B8;
+    %set/v v012F2010_0, 0, 1;
+    %set/v v012FD978_0, 1, 1;
+    %set/v v012F2068_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b", v012FD920_0;
+    %set/v v012F2010_0, 0, 1;
+    %set/v v012FD978_0, 0, 1;
+    %set/v v012F2068_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b", v012FD920_0;
+    %set/v v012F2010_0, 0, 1;
+    %set/v v012FD978_0, 0, 1;
+    %set/v v012F2068_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b", v012FD920_0;
+    %set/v v012F2010_0, 0, 1;
+    %set/v v012FD978_0, 0, 1;
+    %set/v v012F2068_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b", v012FD920_0;
+    %vpi_call 2 18 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\pulse_stretcher\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\62f3ddcb-6\submission.v";

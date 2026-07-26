@@ -1,0 +1,86 @@
+{
+  "problem_id": "priority_encoder_4to2",
+  "code": "module priority_encoder_4to2(input [3:0] in, output reg [1:0] code, output reg valid);\n  // Write your code here\n   always@(*) begin\n    casez(in)\n    4'b1???: code = 2'b11;\n    4'b01??: code = 2'b10;\n    4'b001?: code = 2'b01;\n    4'b0001: code = 2'b00;\n    default : code = 2'b??;\n\n    endcase\n   end\n\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Your design produced unknown x/z output. Drive every output deterministically for all tested cases.",
+    "actual": [
+      "zz x",
+      "00 x",
+      "11 x",
+      "11 x",
+      "01 x",
+      "01 x",
+      "10 x",
+      "11 x"
+    ],
+    "expected": [
+      "00 0",
+      "00 1",
+      "11 1",
+      "11 1",
+      "01 1",
+      "01 1",
+      "10 1",
+      "11 1"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": false,
+        "actual": "zz x",
+        "expected": "00 0"
+      },
+      {
+        "index": 2,
+        "passed": false,
+        "actual": "00 x",
+        "expected": "00 1"
+      },
+      {
+        "index": 3,
+        "passed": false,
+        "actual": "11 x",
+        "expected": "11 1"
+      },
+      {
+        "index": 4,
+        "passed": false,
+        "actual": "11 x",
+        "expected": "11 1"
+      },
+      {
+        "index": 5,
+        "passed": false,
+        "actual": "01 x",
+        "expected": "01 1"
+      },
+      {
+        "index": 6,
+        "passed": false,
+        "actual": "01 x",
+        "expected": "01 1"
+      },
+      {
+        "index": 7,
+        "passed": false,
+        "actual": "10 x",
+        "expected": "10 1"
+      },
+      {
+        "index": 8,
+        "passed": false,
+        "actual": "11 x",
+        "expected": "11 1"
+      }
+    ],
+    "passed_tests": 0,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "zz x\n00 x\n11 x\n11 x\n01 x\n01 x\n10 x\n11 x",
+    "submission_id": "3a6e7776-6",
+    "time_seconds": 0.206,
+    "waveform_url": "/api/waveform/3a6e7776-6"
+  },
+  "timestamp": "2026-05-17 21:34:22"
+}

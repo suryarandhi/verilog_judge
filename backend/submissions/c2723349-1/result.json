@@ -1,0 +1,25 @@
+{
+  "problem_id": "byte_swap_32",
+  "code": "module byte_swap_32(input [31:0] data_in, output [31:0] data_out);\n  // Write your code here\n  assign data_out = data_in{31:0};\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\c2723349-1\\submission.v:3: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\c2723349-1\\submission.v:3: error: syntax error in continuous assignment",
+    "compile_errors": [
+      {
+        "line": 3,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\c2723349-1\\submission.v:3: syntax error"
+      },
+      {
+        "line": 3,
+        "message": "error: syntax error in continuous assignment",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\c2723349-1\\submission.v:3: error: syntax error in continuous assignment"
+      }
+    ],
+    "submission_id": "c2723349-1",
+    "time_seconds": 0.169
+  },
+  "timestamp": "2026-05-17 21:08:44"
+}

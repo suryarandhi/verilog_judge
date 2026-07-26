@@ -1,0 +1,86 @@
+{
+  "problem_id": "comparator_unsigned",
+  "code": "module comparator_unsigned(input [7:0] a, input [7:0] b, output reg gt, output reg eq, output reg lt);\n  // Write your code here\n  always@(*) begin\n    if(a>b) begin\n    gt=1;\n    eq=0;\n    lt=0;\n    end\n    else if(a==b) begin\n    eq=1;\n    gt=0;\n    lt=0;\n    end\n    else begin\n    gt=0;\n    eq=0;\n    lt=1;\n  end\n  end\n  \nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0"
+    ],
+    "expected": [
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0",
+      "0 1 0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0 1 0",
+        "expected": "0 1 0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0 1 0",
+        "expected": "0 1 0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "0 1 0",
+        "expected": "0 1 0"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0 1 0",
+        "expected": "0 1 0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0 1 0",
+        "expected": "0 1 0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "0 1 0",
+        "expected": "0 1 0"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "0 1 0",
+        "expected": "0 1 0"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0 1 0",
+        "expected": "0 1 0"
+      }
+    ],
+    "passed_tests": 8,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "0 1 0\n0 1 0\n0 1 0\n0 1 0\n0 1 0\n0 1 0\n0 1 0\n0 1 0",
+    "submission_id": "4294105f-7",
+    "time_seconds": 0.565,
+    "waveform_url": "/api/waveform/4294105f-7"
+  },
+  "timestamp": "2026-05-18 22:20:23"
+}

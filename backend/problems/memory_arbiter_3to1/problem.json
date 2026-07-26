@@ -1,0 +1,30 @@
+{
+  "id": "memory_arbiter_3to1",
+  "title": "Memory Arbiter",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "arbiter",
+    "memory",
+    "sequential"
+  ],
+  "statement": "Design a memory arbiter that grants one of three requesters access to a shared memory bus based on fixed priority. The highest-priority request should be granted while lower priorities wait. The grant state should be maintained until the active request releases the bus.",
+  "module_signature": "module memory_arbiter_3to1(input clk, input rst, input [2:0] req, output reg [2:0] grant);",
+  "behavior": [
+    "Only one grant may be asserted at a time.",
+    "Grants follow fixed priority from req[2] down to req[0].",
+    "rst synchronously deasserts all grants.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous priority encoders that bypass state."
+  ],
+  "example": "req grant\n100 100\n010 010\n001 001",
+  "hint": "Use registered grant outputs and update them on the clock edge.",
+  "template": "module memory_arbiter_3to1(input clk, input rst, input [2:0] req, output reg [2:0] grant);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

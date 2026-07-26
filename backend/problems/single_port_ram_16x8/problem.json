@@ -1,0 +1,30 @@
+{
+  "id": "single_port_ram_16x8",
+  "title": "Single-Port RAM",
+  "difficulty": "Medium",
+  "category": "Memory",
+  "tags": [
+    "ram",
+    "single-port",
+    "memory"
+  ],
+  "statement": "Implement a single-port RAM with 16 entries of 8-bit width. Writes should occur on the rising edge when wr_en is asserted, and reads should output the current value at addr. A synchronous reset should clear all memory entries.",
+  "module_signature": "module single_port_ram_16x8(input clk, input rst, input wr_en, input [3:0] addr, input [7:0] din, output reg [7:0] dout);",
+  "behavior": [
+    "Writes update memory on the clock edge when wr_en is 1.",
+    "dout reflects the current contents at addr.",
+    "rst clears all memory to 0 synchronously.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use vendor-specific memory primitives."
+  ],
+  "example": "addr wr_en din | dout\n0000 0 xx | stored\n0001 1 10101010 | 10101010",
+  "hint": "Use a reg array and clocked write logic.",
+  "template": "module single_port_ram_16x8(input clk, input rst, input wr_en, input [3:0] addr, input [7:0] din, output reg [7:0] dout);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

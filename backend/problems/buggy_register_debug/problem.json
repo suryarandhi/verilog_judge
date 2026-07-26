@@ -1,0 +1,30 @@
+{
+  "id": "buggy_register_debug",
+  "title": "Debug the Buggy Register",
+  "difficulty": "Medium",
+  "category": "Verification",
+  "tags": [
+    "debugging",
+    "register",
+    "sequential"
+  ],
+  "statement": "A register module is behaving incorrectly because it loads data when the enable signal is deasserted. Your task is to fix the logic so the register only updates on enable high at the clock edge. The register should also support synchronous reset.",
+  "module_signature": "module buggy_register_debug(input clk, input rst, input en, input [7:0] d, output reg [7:0] q);",
+  "behavior": [
+    "q captures d only when en is 1 at the rising edge.",
+    "If en is 0, q holds its current value.",
+    "rst synchronously clears q.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use latches or asynchronous set/reset behavior."
+  ],
+  "example": "clk rst en d | q\n1 0 1 10101010 | 10101010\n1 0 0 01010101 | 10101010",
+  "hint": "Use an if statement inside the clocked always block to gate updates.",
+  "template": "module buggy_register_debug(input clk, input rst, input en, input [7:0] d, output reg [7:0] q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

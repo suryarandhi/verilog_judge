@@ -1,0 +1,23 @@
+module gray_counter_3bit(
+    input clk,
+    input reset,
+    output reg [2:0] gray
+);
+
+reg [2:0] bin;
+
+always @(posedge clk) begin
+    if (reset) begin
+        bin  <= 3'b000;
+        gray <= 3'b000;
+    end
+    else begin
+        bin <= bin + 1'b1;
+
+        gray[0] <= (bin + 1'b1)[0] ^ (bin + 1'b1)[1];
+        gray[1] <= (bin + 1'b1)[1] ^ (bin + 1'b1)[2];
+        gray[2] <= (bin + 1'b1)[2];
+    end
+end
+
+endmodule

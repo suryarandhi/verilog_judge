@@ -1,0 +1,33 @@
+{
+  "problem_id": "synchronous_clear_counter",
+  "code": "module synchronous_clear_counter(input clk, input rst, input clear, output reg [3:0] count);\n  // Write your code here\nalways@(posedge clk) begin\nif (rst)\ncount<=4'b0000;\nif(!clear)\ncount<=count+1;\nend\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    "expected": [
+      "0000",
+      "0000",
+      "0000",
+      "0001",
+      "0010",
+      "0000",
+      "0001",
+      "0010"
+    ],
+    "raw_output": "xxxx\nxxxx\nxxxx\nxxxx\nxxxx\nxxxx\nxxxx\nxxxx",
+    "submission_id": "1f96ef7e-f",
+    "time_seconds": 0.269,
+    "waveform_url": "/api/waveform/1f96ef7e-f"
+  },
+  "timestamp": "2026-05-16 12:03:40"
+}

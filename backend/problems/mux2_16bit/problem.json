@@ -1,0 +1,11 @@
+{
+  "title": "16-bit 2:1 Mux",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "mux"
+  ],
+  "description": "Design a 16-bit 2:1 multiplexer.\\n\\nRequired module:\\nmodule mux2_16bit(input [15:0] a, input [15:0] b, input sel, output [15:0] y);",
+  "template": "module mux2_16bit(input [15:0] a, input [15:0] b, input sel, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

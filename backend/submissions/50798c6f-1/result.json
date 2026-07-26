@@ -1,0 +1,19 @@
+{
+  "problem_id": "constant_zero_32bit",
+  "code": "module constant_zero_32bit(output [31:0] y);\n  assign y = 32'b0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000000000000000000000000000"
+    ],
+    "expected": [
+      "00000000000000000000000000000000"
+    ],
+    "raw_output": "00000000000000000000000000000000",
+    "submission_id": "50798c6f-1",
+    "time_seconds": 0.27,
+    "waveform_url": "/api/waveform/50798c6f-1"
+  },
+  "timestamp": "2026-05-15 23:45:47"
+}

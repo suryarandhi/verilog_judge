@@ -1,0 +1,25 @@
+{
+  "problem_id": "mux2_4bit",
+  "code": "module mux2_4bit(input [3:0] a, input [3:0] b, input sel, output [3:0] y);\n  assign y = sel ? b : a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 1111 0 0000",
+      "0000 1111 1 1111",
+      "0001 0010 0 0001",
+      "0001 0010 1 0010"
+    ],
+    "expected": [
+      "0000 1111 0 0000",
+      "0000 1111 1 1111",
+      "0001 0010 0 0001",
+      "0001 0010 1 0010"
+    ],
+    "raw_output": "0000 1111 0 0000\n0000 1111 1 1111\n0001 0010 0 0001\n0001 0010 1 0010",
+    "submission_id": "096d80c0-5",
+    "time_seconds": 0.255,
+    "waveform_url": "/api/waveform/096d80c0-5"
+  },
+  "timestamp": "2026-05-15 23:45:57"
+}

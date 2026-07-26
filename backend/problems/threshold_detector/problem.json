@@ -1,0 +1,28 @@
+{
+  "id": "threshold_detector",
+  "title": "Threshold Detector",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "threshold",
+    "comparator",
+    "combinational"
+  ],
+  "statement": "Build an 8-bit threshold detector that asserts output when the input exceeds a fixed constant value of 100 decimal. The output must be high for 101 and greater, and low for 100 and below. This is a common operation in analog-to-digital and control circuits.",
+  "module_signature": "module threshold_detector(input [7:0] a, output above_threshold);",
+  "behavior": [
+    "above_threshold is 1 when a > 100.",
+    "above_threshold is 0 when a <= 100.",
+    "The logic must be purely combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use a sequential comparator or state machine."
+  ],
+  "example": "a      | above_threshold\n01100100 | 0\n01100101 | 1\n10000000 | 1",
+  "hint": "Hardcode the threshold comparison with bitwise logic if needed.",
+  "template": "module threshold_detector(input [7:0] a, output above_threshold);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

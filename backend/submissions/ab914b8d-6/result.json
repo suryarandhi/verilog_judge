@@ -1,0 +1,19 @@
+{
+  "problem_id": "constant_zero_4bit",
+  "code": "module constant_zero_4bit(output [3:0] y);\n  assign y = 4'b0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000"
+    ],
+    "expected": [
+      "0000"
+    ],
+    "raw_output": "0000",
+    "submission_id": "ab914b8d-6",
+    "time_seconds": 0.205,
+    "waveform_url": "/api/waveform/ab914b8d-6"
+  },
+  "timestamp": "2026-05-15 23:47:27"
+}

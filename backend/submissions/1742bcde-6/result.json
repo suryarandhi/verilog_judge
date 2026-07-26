@@ -1,0 +1,25 @@
+{
+  "problem_id": "sram_1kx8",
+  "code": "module sram_1kx8(input clk, input rst, input wr_en, input [9:0] addr, input [7:0] din, output reg [7:0] dout);\n  always @(*) begin\n      dout = 8'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "expected": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "raw_output": "xxxxxxxx\nxxxxxxxx\nxxxxxxxx\nxxxxxxxx",
+    "submission_id": "1742bcde-6",
+    "time_seconds": 0.273,
+    "waveform_url": "/api/waveform/1742bcde-6"
+  },
+  "timestamp": "2026-05-16 01:34:34"
+}

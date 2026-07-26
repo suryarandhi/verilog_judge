@@ -1,0 +1,11 @@
+{
+  "title": "Toggle Bit 0 of 32",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Toggle bit 0 of a 32-bit input.\\n\\nRequired module:\\nmodule bit_toggle_32bit_0(input [31:0] a, output [31:0] y);",
+  "template": "module bit_toggle_32bit_0(input [31:0] a, output [31:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

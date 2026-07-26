@@ -1,0 +1,28 @@
+{
+  "id": "carry_generate_combiner",
+  "title": "Carry Generate Combiner",
+  "difficulty": "Medium",
+  "category": "Combinational",
+  "tags": [
+    "carry",
+    "adder",
+    "combinational"
+  ],
+  "statement": "Implement an 8-bit carry generate and propagate unit that produces group generate and group propagate signals for a ripple-carry adder stage. The outputs should describe whether this block will generate a carry regardless of input carry, or propagate an input carry to the next stage. This combinational module is a datapath building block used in faster adder designs.",
+  "module_signature": "module carry_generate_combiner(input [7:0] a, input [7:0] b, output g, output p);",
+  "behavior": [
+    "g is 1 when a+b will generate a carry within the block regardless of carry-in.",
+    "p is 1 when the block propagates a carry-in to carry-out.",
+    "The design must be purely combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not instantiate a full adder array with registers."
+  ],
+  "example": "a b | g p\n00000000 00000001 | 0 0\n11111111 00000001 | 1 0\n01010101 10101010 | 0 1",
+  "hint": "Use bitwise and/or reduction logic to capture generate and propagate behavior.",
+  "template": "module carry_generate_combiner(input [7:0] a, input [7:0] b, output g, output p);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

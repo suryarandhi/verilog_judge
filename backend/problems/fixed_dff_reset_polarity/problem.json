@@ -1,0 +1,29 @@
+{
+  "id": "fixed_dff_reset_polarity",
+  "title": "Find the Bug: D Flip-flop Reset Polarity",
+  "difficulty": "Easy",
+  "category": "Verification",
+  "tags": [
+    "debugging",
+    "reset",
+    "flip-flop"
+  ],
+  "statement": "A D flip-flop was intended to have an active-high asynchronous reset, but the provided implementation resets on the wrong polarity. Your task is to write the corrected module. The output q should clear immediately when reset is high. On clock edges with reset low, q should capture d.",
+  "module_signature": "module fixed_dff(input clk, input reset, input d, output reg q);",
+  "behavior": [
+    "When reset is 1, q becomes 0 immediately.",
+    "When reset is 0, q captures d on the rising edge of clk.",
+    "q must not update on the falling edge of clk.",
+    "The corrected design must not treat reset as active low."
+  ],
+  "constraints": [
+    "Must be synthesizable Verilog.",
+    "Use asynchronous active-high reset.",
+    "Use nonblocking assignments.",
+    "Do not use delays inside the design."
+  ],
+  "example": "Broken idea: always @(posedge clk or negedge reset)\nCorrect behavior:\nreset d clk_edge q\n1     x no       0\n0     1 yes      1\n0     0 yes      0",
+  "hint": "The sensitivity list should use posedge reset, not negedge reset.",
+  "template": "module fixed_dff(input clk, input reset, input d, output reg q);\n  // Write your code here\n\nendmodule",
+  "curated": false
+}

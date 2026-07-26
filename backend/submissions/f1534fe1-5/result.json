@@ -1,0 +1,25 @@
+{
+  "problem_id": "mux4_16bit",
+  "code": "module mux4_16bit(input [15:0] a, input [15:0] b, input [15:0] c, input [15:0] d, input [1:0] sel, output reg [15:0] y);\n  always @(*) begin\n    case (sel)\n      2'b00: y = a;\n      2'b01: y = b;\n      2'b10: y = c;\n      default: y = d;\n    endcase\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 0000000000000000",
+      "01 0000000000000001",
+      "10 1111111111111111",
+      "11 1010101010101010"
+    ],
+    "expected": [
+      "00 0000000000000000",
+      "01 0000000000000001",
+      "10 1111111111111111",
+      "11 1010101010101010"
+    ],
+    "raw_output": "00 0000000000000000\n01 0000000000000001\n10 1111111111111111\n11 1010101010101010",
+    "submission_id": "f1534fe1-5",
+    "time_seconds": 0.237,
+    "waveform_url": "/api/waveform/f1534fe1-5"
+  },
+  "timestamp": "2026-05-15 23:47:35"
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "fixed_dff_reset_polarity",
+  "code": "module fixed_dff(input clk, input reset, input d, output reg q);\n  always @(posedge clk or posedge reset) begin\n    if (reset) q <= 1'b0;\n    else q <= d;\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1 1 0",
+      "0 1 1",
+      "0 0 0",
+      "1 0 0"
+    ],
+    "expected": [
+      "1 1 0",
+      "0 1 1",
+      "0 0 0",
+      "1 0 0"
+    ],
+    "raw_output": "1 1 0\n0 1 1\n0 0 0\n1 0 0",
+    "submission_id": "374f7377-5",
+    "time_seconds": 0.218,
+    "waveform_url": "/api/waveform/374f7377-5"
+  },
+  "timestamp": "2026-05-16 00:15:21"
+}

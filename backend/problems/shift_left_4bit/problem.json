@@ -1,0 +1,11 @@
+{
+  "title": "4-bit Shift Left",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "shift"
+  ],
+  "description": "Shift a 4-bit input left.\\n\\nRequired module:\\nmodule shift_left_4bit(input [3:0] a, input [1:0] shamt, output [3:0] y);",
+  "template": "module shift_left_4bit(input [3:0] a, input [1:0] shamt, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

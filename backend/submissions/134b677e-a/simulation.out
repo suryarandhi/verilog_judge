@@ -1,0 +1,49 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01141F60 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v011826F8_0 .var "a", 3 0;
+v01182750_0 .var "b", 3 0;
+v01145940_0 .net "product", 7 0, C4<00000000>; 1 drivers
+S_01141FE8 .scope module, "dut" "unsigned_multiplier_4x4" 2 7, 3 1, S_01141F60;
+ .timescale 0 0;
+v01182648_0 .net "a", 3 0, v011826F8_0; 1 drivers
+v0114EF40_0 .net "b", 3 0, v01182750_0; 1 drivers
+v011826A0_0 .alias "product", 7 0, v01145940_0;
+    .scope S_01141F60;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 11 "$dumpvars", 1'sb0, S_01141F60;
+    %set/v v011826F8_0, 0, 4;
+    %set/v v01182750_0, 0, 4;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b", v01145940_0;
+    %movi 8, 1, 4;
+    %set/v v011826F8_0, 8, 4;
+    %movi 8, 1, 4;
+    %set/v v01182750_0, 8, 4;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b", v01145940_0;
+    %set/v v011826F8_0, 1, 4;
+    %set/v v01182750_0, 1, 4;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b", v01145940_0;
+    %movi 8, 10, 4;
+    %set/v v011826F8_0, 8, 4;
+    %movi 8, 10, 4;
+    %set/v v01182750_0, 8, 4;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b", v01145940_0;
+    %vpi_call 2 16 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\unsigned_multiplier_4x4\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\134b677e-a\submission.v";

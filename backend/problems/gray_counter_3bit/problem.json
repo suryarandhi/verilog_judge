@@ -1,0 +1,32 @@
+{
+  "id": "gray_counter_3bit",
+  "title": "3-bit Gray Counter",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "counter",
+    "gray-code",
+    "sequential"
+  ],
+  "statement": "Design a 3-bit Gray-code counter. Only one output bit should change between adjacent count states. Reset initializes the counter to 000. This counter is useful when crossing encoded count values between timing regions.",
+  "module_signature": "module gray_counter_3bit(input clk, input reset, output reg [2:0] gray);",
+  "behavior": [
+    "On reset, gray becomes 000.",
+    "On each rising edge of clk, advance to the next 3-bit Gray-code state.",
+    "After 100, the counter wraps to 000.",
+    "All state updates occur on the rising edge of clk.",
+    "reset is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When reset is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Must be synthesizable Verilog.",
+    "Use registered state.",
+    "Do not use delays."
+  ],
+  "example": "cycle: 0   1   2   3   4\ngray:  000 001 011 010 110",
+  "hint": "Keep a binary counter internally and convert it to Gray code.",
+  "template": "module gray_counter_3bit(input clk, input reset, output reg [2:0] gray);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

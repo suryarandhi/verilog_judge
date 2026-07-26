@@ -1,0 +1,46 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01208768 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01201F60_0 .var "a", 31 0;
+v01201FB8_0 .net "y", 0 0, L_01202010; 1 drivers
+S_012084C0 .scope module, "dut" "reduction_or_32bit" 2 6, 3 1, S_01208768;
+ .timescale 0 0;
+v012053B8_0 .net "a", 31 0, v01201F60_0; 1 drivers
+v01204440_0 .alias "y", 0 0, v01201FB8_0;
+L_01202010 .reduce/or v01201F60_0;
+    .scope S_01208768;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_01208768;
+    %set/v v01201F60_0, 0, 32;
+    %delay 5000, 0;
+    %vpi_call 2 11 "$display", "%b %b", v01201F60_0, v01201FB8_0;
+    %movi 8, 1, 32;
+    %set/v v01201F60_0, 8, 32;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b", v01201F60_0, v01201FB8_0;
+    %set/v v01201F60_0, 1, 32;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b", v01201F60_0, v01201FB8_0;
+    %movi 8, 2147483648, 32;
+    %set/v v01201F60_0, 8, 32;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b", v01201F60_0, v01201FB8_0;
+    %movi 8, 2863311530, 32;
+    %set/v v01201F60_0, 8, 32;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b", v01201F60_0, v01201FB8_0;
+    %vpi_call 2 16 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\reduction_or_32bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\4503d82e-9\submission.v";

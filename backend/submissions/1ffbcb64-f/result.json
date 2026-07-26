@@ -1,0 +1,27 @@
+{
+  "problem_id": "register_3bit",
+  "code": "module register_3bit(input clk, input reset, input load, input [2:0] d, output reg [2:0] q);\n  always @(posedge clk or posedge reset) begin\n    if (reset) begin\n      q <= 3'b0;\n    end else if (load) begin\n      q <= d;\n    end\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "1 0 000 000",
+      "0 1 111 111",
+      "0 0 100 111",
+      "0 1 100 100",
+      "1 1 100 000"
+    ],
+    "expected": [
+      "1 0 000 000",
+      "0 1 111 111",
+      "0 0 100 111",
+      "0 1 100 100",
+      "1 1 100 000"
+    ],
+    "raw_output": "1 0 000 000\n0 1 111 111\n0 0 100 111\n0 1 100 100\n1 1 100 000",
+    "submission_id": "1ffbcb64-f",
+    "time_seconds": 0.234,
+    "waveform_url": "/api/waveform/1ffbcb64-f"
+  },
+  "timestamp": "2026-05-15 23:47:48"
+}

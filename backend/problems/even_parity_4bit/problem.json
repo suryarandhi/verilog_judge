@@ -1,0 +1,11 @@
+{
+  "title": "4-bit Even Parity",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "parity"
+  ],
+  "description": "Compute even parity for a 4-bit input.\\n\\nRequired module:\\nmodule even_parity_4bit(input [3:0] a, output y);",
+  "template": "module even_parity_4bit(input [3:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

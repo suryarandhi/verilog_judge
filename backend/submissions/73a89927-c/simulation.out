@@ -1,0 +1,78 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012CB628 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012C1F88_0 .var "clk", 0 0;
+v012C1FE0_0 .net "floor", 1 0, v012CA728_0; 1 drivers
+v012C2038_0 .net "moving_down", 0 0, v012CA780_0; 1 drivers
+v012CEE80_0 .net "moving_up", 0 0, v012CA7D8_0; 1 drivers
+v012CEED8_0 .var "request_down", 0 0;
+v012CEF30_0 .var "request_up", 0 0;
+v012CEF88_0 .var "rst", 0 0;
+S_012CBC00 .scope module, "dut" "elevator_floor_controller" 2 11, 3 1, S_012CB628;
+ .timescale 0 0;
+v012CA2F8_0 .net "clk", 0 0, v012C1F88_0; 1 drivers
+v012CA728_0 .var "floor", 1 0;
+v012CA780_0 .var "moving_down", 0 0;
+v012CA7D8_0 .var "moving_up", 0 0;
+v01152E70_0 .net "request_down", 0 0, v012CEED8_0; 1 drivers
+v01152EC8_0 .net "request_up", 0 0, v012CEF30_0; 1 drivers
+v01152F20_0 .net "rst", 0 0, v012CEF88_0; 1 drivers
+E_012C7E18 .event "_s0";
+    .scope S_012CBC00;
+T_0 ;
+    %wait E_012C7E18;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_012CB628;
+T_1 ;
+    %set/v v012C1F88_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/v 8, v012C1F88_0, 1;
+    %inv 8, 1;
+    %set/v v012C1F88_0, 8, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_012CB628;
+T_2 ;
+    %vpi_call 2 15 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 16 "$dumpvars", 1'sb0, S_012CB628;
+    %set/v v012C1F88_0, 0, 1;
+    %set/v v012CEF88_0, 1, 1;
+    %set/v v012CEF30_0, 0, 1;
+    %set/v v012CEED8_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$display", "%b %b %b", v012C1FE0_0, v012CEE80_0, v012C2038_0;
+    %set/v v012C1F88_0, 0, 1;
+    %set/v v012CEF88_0, 0, 1;
+    %set/v v012CEF30_0, 1, 1;
+    %set/v v012CEED8_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 18 "$display", "%b %b %b", v012C1FE0_0, v012CEE80_0, v012C2038_0;
+    %set/v v012C1F88_0, 0, 1;
+    %set/v v012CEF88_0, 0, 1;
+    %set/v v012CEF30_0, 1, 1;
+    %set/v v012CEED8_0, 1, 1;
+    %delay 5000, 0;
+    %vpi_call 2 19 "$display", "%b %b %b", v012C1FE0_0, v012CEE80_0, v012C2038_0;
+    %set/v v012C1F88_0, 0, 1;
+    %set/v v012CEF88_0, 0, 1;
+    %set/v v012CEF30_0, 0, 1;
+    %set/v v012CEED8_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 20 "$display", "%b %b %b", v012C1FE0_0, v012CEE80_0, v012C2038_0;
+    %vpi_call 2 21 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\elevator_floor_controller\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\73a89927-c\submission.v";

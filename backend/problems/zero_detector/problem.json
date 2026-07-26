@@ -1,0 +1,28 @@
+{
+  "id": "zero_detector",
+  "title": "Zero Detector",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "comparator",
+    "detector",
+    "combinational"
+  ],
+  "statement": "Create an 8-bit zero detector that asserts output when all bits of the input are zero. The circuit should return zero otherwise. It is a simple combinational check used in branch condition generation and comparator datapaths.",
+  "module_signature": "module zero_detector(input [7:0] a, output is_zero);",
+  "behavior": [
+    "is_zero is 1 when a == 0.",
+    "is_zero is 0 for any nonzero input.",
+    "Do not infer registers or sequential logic.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use a sequential loop or latch inference."
+  ],
+  "example": "a        | is_zero\n00000000 | 1\n00000001 | 0\n11111111 | 0",
+  "hint": "All bits must be compared to zero in a single combinational expression.",
+  "template": "module zero_detector(input [7:0] a, output is_zero);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

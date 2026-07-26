@@ -1,0 +1,37 @@
+{
+  "problem_id": "carry_generate_combiner",
+  "code": "module carry_generate_combiner(input [7:0] a, input [7:0] b, output g, output p);\nreg [7:0] sum;\nreg carry;\n\n  // Write your code here\n  assign {carry,sum} = a+b;\n  assign p =a^b;\n  if(carry) begin\n    g = 1'b1;\n    end\n    else begin \n      g = 1'b0;\n    end\n\n\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \n\n\n\n\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a28ef5ed-7\\submission.v:9: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a28ef5ed-7\\submission.v:9: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a28ef5ed-7\\submission.v:12: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a28ef5ed-7\\submission.v:12: error: Invalid module instantiation",
+    "compile_errors": [
+      {
+        "line": 9,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a28ef5ed-7\\submission.v:9: syntax error"
+      },
+      {
+        "line": 9,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a28ef5ed-7\\submission.v:9: error: Invalid module instantiation"
+      },
+      {
+        "line": 12,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a28ef5ed-7\\submission.v:12: syntax error"
+      },
+      {
+        "line": 12,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\a28ef5ed-7\\submission.v:12: error: Invalid module instantiation"
+      }
+    ],
+    "submission_id": "a28ef5ed-7",
+    "time_seconds": 0.184
+  },
+  "timestamp": "2026-05-23 10:17:45"
+}

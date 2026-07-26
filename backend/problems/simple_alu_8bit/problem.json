@@ -1,0 +1,29 @@
+{
+  "id": "simple_alu_8bit",
+  "title": "Simple ALU",
+  "difficulty": "Hard",
+  "category": "Arithmetic",
+  "tags": [
+    "alu",
+    "opcode",
+    "arithmetic"
+  ],
+  "statement": "Design an 8-bit ALU that performs add, subtract, AND, OR, and NOT operations selected by a 3-bit opcode. The module must produce a valid result for every opcode and handle two\u2019s complement subtraction correctly. The NOT operation should apply only to operand a while ignoring operand b.",
+  "module_signature": "module simple_alu_8bit(input [7:0] a, input [7:0] b, input [2:0] op, output reg [7:0] result, output reg zero);",
+  "behavior": [
+    "op=000: result = a + b.",
+    "op=001: result = a - b.",
+    "op=010: result = a & b, 011: a | b, 100: ~a.",
+    "zero is 1 when result == 0.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use behavioral arrays or function calls for operation selection."
+  ],
+  "example": "a b op | result zero\n00000001 00000010 000 | 00000011 0\n00000101 00000011 001 | 00000010 0\n11111111 00000000 100 | 00000000 1",
+  "hint": "Implement each operation explicitly and choose with a case statement.",
+  "template": "module simple_alu_8bit(input [7:0] a, input [7:0] b, input [2:0] op, output reg [7:0] result, output reg zero);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

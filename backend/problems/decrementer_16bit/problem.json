@@ -1,0 +1,11 @@
+{
+  "title": "16-bit Decrementer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "description": "Build a 16-bit decrementer.\\n\\nRequired module:\\nmodule decrementer_16bit(input [15:0] a, output [15:0] y);",
+  "template": "module decrementer_16bit(input [15:0] a, output [15:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

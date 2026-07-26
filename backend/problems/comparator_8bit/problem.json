@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Comparator",
+  "difficulty": "Medium",
+  "tags": [
+    "combinational",
+    "comparison"
+  ],
+  "description": "Design a 8-bit unsigned comparator.\\n\\nRequired module:\\nmodule comparator_8bit(input [7:0] a, input [7:0] b, output gt, output eq, output lt);",
+  "template": "module comparator_8bit(input [7:0] a, input [7:0] b, output gt, output eq, output lt);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

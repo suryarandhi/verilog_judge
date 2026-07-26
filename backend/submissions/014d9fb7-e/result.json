@@ -1,0 +1,27 @@
+{
+  "problem_id": "nonzero_detector_16bit",
+  "code": "module nonzero_detector_16bit(input [15:0] a, output y);\n  assign y = a != 0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000000000000000 0",
+      "0000000000000001 1",
+      "1111111111111111 1",
+      "1000000000000000 1",
+      "1010101010101010 1"
+    ],
+    "expected": [
+      "0000000000000000 0",
+      "0000000000000001 1",
+      "1111111111111111 1",
+      "1000000000000000 1",
+      "1010101010101010 1"
+    ],
+    "raw_output": "0000000000000000 0\n0000000000000001 1\n1111111111111111 1\n1000000000000000 1\n1010101010101010 1",
+    "submission_id": "014d9fb7-e",
+    "time_seconds": 0.268,
+    "waveform_url": "/api/waveform/014d9fb7-e"
+  },
+  "timestamp": "2026-05-15 23:46:01"
+}

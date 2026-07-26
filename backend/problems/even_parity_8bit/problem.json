@@ -1,0 +1,11 @@
+{
+  "title": "8-bit Even Parity",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "parity"
+  ],
+  "description": "Compute even parity for a 8-bit input.\\n\\nRequired module:\\nmodule even_parity_8bit(input [7:0] a, output y);",
+  "template": "module even_parity_8bit(input [7:0] a, output y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

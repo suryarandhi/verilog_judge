@@ -1,0 +1,27 @@
+{
+  "problem_id": "even_parity_16bit",
+  "code": "module even_parity_16bit(input [15:0] a, output y);\n  assign y = ~^a;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000000000000000 1",
+      "0000000000000001 0",
+      "0000000000000011 1",
+      "1111111111111111 1",
+      "1010101010101010 1"
+    ],
+    "expected": [
+      "0000000000000000 1",
+      "0000000000000001 0",
+      "0000000000000011 1",
+      "1111111111111111 1",
+      "1010101010101010 1"
+    ],
+    "raw_output": "0000000000000000 1\n0000000000000001 0\n0000000000000011 1\n1111111111111111 1\n1010101010101010 1",
+    "submission_id": "d68a233d-6",
+    "time_seconds": 0.217,
+    "waveform_url": "/api/waveform/d68a233d-6"
+  },
+  "timestamp": "2026-05-15 23:47:31"
+}

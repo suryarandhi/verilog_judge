@@ -1,0 +1,58 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012B7C10 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v012B1F60_0 .var "a", 3 0;
+v012B1FB8_0 .var "shamt", 1 0;
+v012B2010_0 .net "y", 3 0, L_012BEC70; 1 drivers
+S_01152898 .scope module, "dut" "shift_right_4bit" 2 7, 3 1, S_012B7C10;
+ .timescale 0 0;
+v012B7C98_0 .net "a", 3 0, v012B1F60_0; 1 drivers
+v01152920_0 .net "shamt", 1 0, v012B1FB8_0; 1 drivers
+v01152978_0 .alias "y", 3 0, v012B2010_0;
+L_012BEC70 .shift/r 4, v012B1F60_0, v012B1FB8_0;
+    .scope S_012B7C10;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 11 "$dumpvars", 1'sb0, S_012B7C10;
+    %movi 8, 1, 4;
+    %set/v v012B1F60_0, 8, 4;
+    %set/v v012B1FB8_0, 0, 2;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b %b", v012B1F60_0, v012B1FB8_0, v012B2010_0;
+    %movi 8, 1, 4;
+    %set/v v012B1F60_0, 8, 4;
+    %movi 8, 1, 2;
+    %set/v v012B1FB8_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b %b", v012B1F60_0, v012B1FB8_0, v012B2010_0;
+    %set/v v012B1F60_0, 1, 4;
+    %movi 8, 1, 2;
+    %set/v v012B1FB8_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b", v012B1F60_0, v012B1FB8_0, v012B2010_0;
+    %movi 8, 5, 4;
+    %set/v v012B1F60_0, 8, 4;
+    %movi 8, 2, 2;
+    %set/v v012B1FB8_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b", v012B1F60_0, v012B1FB8_0, v012B2010_0;
+    %movi 8, 8, 4;
+    %set/v v012B1F60_0, 8, 4;
+    %movi 8, 1, 2;
+    %set/v v012B1FB8_0, 8, 2;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b %b %b", v012B1F60_0, v012B1FB8_0, v012B2010_0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\shift_right_4bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\a050df1e-7\submission.v";

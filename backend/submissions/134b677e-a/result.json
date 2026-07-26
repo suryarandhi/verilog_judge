@@ -1,0 +1,25 @@
+{
+  "problem_id": "unsigned_multiplier_4x4",
+  "code": "module unsigned_multiplier_4x4(input [3:0] a, input [3:0] b, output [7:0] product);\n  assign product = 8'b0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000"
+    ],
+    "expected": [
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000"
+    ],
+    "raw_output": "00000000\n00000000\n00000000\n00000000",
+    "submission_id": "134b677e-a",
+    "time_seconds": 0.245,
+    "waveform_url": "/api/waveform/134b677e-a"
+  },
+  "timestamp": "2026-05-16 01:34:36"
+}

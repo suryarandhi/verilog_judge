@@ -1,0 +1,25 @@
+{
+  "problem_id": "mux_2to1",
+  "code": "module mux_2to1(input [7:0] a, input [7:0] b, input [2:0]sel, output [7:0] y);\n  // Write your code here\nalways@(*) begin\n  if(case)\n  y<=b;\n  else\n  y<=a;\nend\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3eaf08d8-7\\submission.v:4: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3eaf08d8-7\\submission.v:4: error: Malformed conditional expression.",
+    "compile_errors": [
+      {
+        "line": 4,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3eaf08d8-7\\submission.v:4: syntax error"
+      },
+      {
+        "line": 4,
+        "message": "error: Malformed conditional expression.",
+        "friendly": "error: Malformed conditional expression.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\3eaf08d8-7\\submission.v:4: error: Malformed conditional expression."
+      }
+    ],
+    "submission_id": "3eaf08d8-7",
+    "time_seconds": 0.259
+  },
+  "timestamp": "2026-05-16 19:34:06"
+}

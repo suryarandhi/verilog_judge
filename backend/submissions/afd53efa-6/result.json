@@ -1,0 +1,33 @@
+{
+  "problem_id": "synchronous_clear_counter",
+  "code": "module synchronous_clear_counter(input clk, input rst, input clear, output reg [3:0] count);\n  // Write your code here\nalways@(posedge clk or posedge rst) begin\nif (rst) begin\ncount<=4'b0000;\nend else begin\nif(clear) \ncount<=4'b0000;\nelse\ncount<=count+1;\nend\nend\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000",
+      "0000",
+      "0000",
+      "0001",
+      "0010",
+      "0000",
+      "0001",
+      "0010"
+    ],
+    "expected": [
+      "0000",
+      "0000",
+      "0000",
+      "0001",
+      "0010",
+      "0000",
+      "0001",
+      "0010"
+    ],
+    "raw_output": "0000\n0000\n0000\n0001\n0010\n0000\n0001\n0010",
+    "submission_id": "afd53efa-6",
+    "time_seconds": 0.334,
+    "waveform_url": "/api/waveform/afd53efa-6"
+  },
+  "timestamp": "2026-05-16 12:08:52"
+}

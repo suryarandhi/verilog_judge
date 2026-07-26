@@ -1,0 +1,73 @@
+{
+  "problem_id": "johnson_counter_4bit",
+  "code": "module johnson_counter_4bit(input clk, input rst,output reg [3:0] q);\n  wire out;\n  // Write your code here\n  always@(posedge clk) begin\n    if(rst)\n    q<=4'b0000;\n    else begin\n    out[1] <= out[0];\n    out[2] <= out[1];\n    out[3] <= out[2];\n    out[0] <= ~out[3];\n    end\n    out<=q;\n  end\n  endmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:8: error: out['sd1] is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out['sd1] is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:9: error: out['sd2] is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out['sd2] is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:10: error: out['sd3] is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out['sd3] is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:11: error: out['sd0] is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out['sd0] is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:13: error: out is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out is declared here as wire.\n5 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 8,
+        "message": "error: out['sd1] is not a valid l-value in tb.dut.",
+        "friendly": "error: out['sd1] is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:8: error: out['sd1] is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 2,
+        "message": ": out['sd1] is declared here as wire.",
+        "friendly": ": out['sd1] is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out['sd1] is declared here as wire."
+      },
+      {
+        "line": 9,
+        "message": "error: out['sd2] is not a valid l-value in tb.dut.",
+        "friendly": "error: out['sd2] is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:9: error: out['sd2] is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 2,
+        "message": ": out['sd2] is declared here as wire.",
+        "friendly": ": out['sd2] is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out['sd2] is declared here as wire."
+      },
+      {
+        "line": 10,
+        "message": "error: out['sd3] is not a valid l-value in tb.dut.",
+        "friendly": "error: out['sd3] is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:10: error: out['sd3] is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 2,
+        "message": ": out['sd3] is declared here as wire.",
+        "friendly": ": out['sd3] is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out['sd3] is declared here as wire."
+      },
+      {
+        "line": 11,
+        "message": "error: out['sd0] is not a valid l-value in tb.dut.",
+        "friendly": "error: out['sd0] is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:11: error: out['sd0] is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 2,
+        "message": ": out['sd0] is declared here as wire.",
+        "friendly": ": out['sd0] is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out['sd0] is declared here as wire."
+      },
+      {
+        "line": 13,
+        "message": "error: out is not a valid l-value in tb.dut.",
+        "friendly": "error: out is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:13: error: out is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 2,
+        "message": ": out is declared here as wire.",
+        "friendly": ": out is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\0b8a31ce-3\\submission.v:2:      : out is declared here as wire."
+      }
+    ],
+    "submission_id": "0b8a31ce-3",
+    "time_seconds": 0.326
+  },
+  "timestamp": "2026-05-18 10:44:11"
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": "all_ones_detector_2bit",
+  "code": "module all_ones_detector_2bit(input [1:0] a, output y);\n  assign y = a == {2{1'b1}};\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00 0",
+      "01 0",
+      "11 1",
+      "10 0",
+      "10 0"
+    ],
+    "expected": [
+      "00 0",
+      "01 0",
+      "11 1",
+      "10 0",
+      "10 0"
+    ],
+    "raw_output": "00 0\n01 0\n11 1\n10 0\n10 0",
+    "submission_id": "9b280cee-e",
+    "time_seconds": 0.177,
+    "waveform_url": "/api/waveform/9b280cee-e"
+  },
+  "timestamp": "2026-05-15 23:46:55"
+}

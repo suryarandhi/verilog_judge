@@ -1,0 +1,30 @@
+{
+  "id": "shared_register_file",
+  "title": "Shared Register File",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "register-file",
+    "memory",
+    "datapath"
+  ],
+  "statement": "Create a shared register file with one write port and two read ports that arbitrates competing read requests. When both reads request the same address, the module should still return the correct data on both outputs. Writes occur synchronously on the clock edge.",
+  "module_signature": "module shared_register_file(input clk, input rst, input write_en, input [2:0] write_addr, input [7:0] write_data, input [2:0] read_addr_a, input [2:0] read_addr_b, output [7:0] read_data_a, output [7:0] read_data_b);",
+  "behavior": [
+    "Simultaneous reads of the same address return the same value.",
+    "Writes happen on the rising edge when write_en is 1.",
+    "rst synchronously clears all registers.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Avoid multi-clock or asynchronous write semantics."
+  ],
+  "example": "write_addr read_addr_a read_addr_b | read_data_a read_data_b\n010 010 011 | val val2",
+  "hint": "Use a storage array with combinational read ports.",
+  "template": "module shared_register_file(input clk, input rst, input write_en, input [2:0] write_addr, input [7:0] write_data, input [2:0] read_addr_a, input [2:0] read_addr_b, output [7:0] read_data_a, output [7:0] read_data_b);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

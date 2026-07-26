@@ -1,0 +1,25 @@
+{
+  "problem_id": "single_port_ram_16x8",
+  "code": "module single_port_ram_16x8(input clk, input rst, input wr_en, input [3:0] addr, input [7:0] din, output reg [7:0] dout);\n  always @(*) begin\n      dout = 8'b0;\n    end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "expected": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    "raw_output": "xxxxxxxx\nxxxxxxxx\nxxxxxxxx\nxxxxxxxx",
+    "submission_id": "e2789a0c-e",
+    "time_seconds": 0.268,
+    "waveform_url": "/api/waveform/e2789a0c-e"
+  },
+  "timestamp": "2026-05-16 01:34:34"
+}

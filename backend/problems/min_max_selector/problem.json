@@ -1,0 +1,28 @@
+{
+  "id": "min_max_selector",
+  "title": "Min/Max Selector",
+  "difficulty": "Medium",
+  "category": "Combinational",
+  "tags": [
+    "selector",
+    "comparator",
+    "datapath"
+  ],
+  "statement": "Create a combinational min/max selector that chooses either the smaller or larger of two 8-bit signed inputs based on a control input. When sel is 0, output the minimum; when sel is 1, output the maximum. The module should handle two\u2019s complement operands correctly and produce valid signed results.",
+  "module_signature": "module min_max_selector(input signed [7:0] a, input signed [7:0] b, input sel, output signed [7:0] y);",
+  "behavior": [
+    "When sel is 0, y equals the smaller signed operand.",
+    "When sel is 1, y equals the larger signed operand.",
+    "Equal operands may output either value.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential logic or registers."
+  ],
+  "example": "a b sel | y\n00000001 00000010 0 | 00000001\n11111111 00000001 1 | 00000001",
+  "hint": "Compare operands as signed numbers, not unsigned.",
+  "template": "module min_max_selector(input signed [7:0] a, input signed [7:0] b, input sel, output signed [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

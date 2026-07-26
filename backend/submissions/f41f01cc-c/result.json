@@ -1,0 +1,25 @@
+{
+  "problem_id": "compare_select",
+  "code": "module compare_select(input [7:0] a, input [7:0] b, input sel, output reg [7:0] y);\n  // Write your code here\n  always@(*) begin\n    if (sel) begin\n    y<= max(a,b);\n    end else begin\n    y<=min(a,b);\n    end\n  end\n\n\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f41f01cc-c\\submission.v:5: error: No function max in this context (tb.dut).\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f41f01cc-c\\submission.v:7: error: No function min in this context (tb.dut).\n2 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: No function max in this context (tb.dut).",
+        "friendly": "error: No function max in this context (tb.dut).",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f41f01cc-c\\submission.v:5: error: No function max in this context (tb.dut)."
+      },
+      {
+        "line": 7,
+        "message": "error: No function min in this context (tb.dut).",
+        "friendly": "error: No function min in this context (tb.dut).",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\f41f01cc-c\\submission.v:7: error: No function min in this context (tb.dut)."
+      }
+    ],
+    "submission_id": "f41f01cc-c",
+    "time_seconds": 0.196
+  },
+  "timestamp": "2026-06-09 21:39:37"
+}

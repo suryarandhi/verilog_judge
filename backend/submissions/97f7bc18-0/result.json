@@ -1,0 +1,27 @@
+{
+  "problem_id": "decrementer_8bit",
+  "code": "module decrementer_8bit(input [7:0] a, output [7:0] y);\n  assign y = a - 1'b1;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "00000000 11111111",
+      "00000001 00000000",
+      "00000010 00000001",
+      "11111111 11111110",
+      "10101010 10101001"
+    ],
+    "expected": [
+      "00000000 11111111",
+      "00000001 00000000",
+      "00000010 00000001",
+      "11111111 11111110",
+      "10101010 10101001"
+    ],
+    "raw_output": "00000000 11111111\n00000001 00000000\n00000010 00000001\n11111111 11111110\n10101010 10101001",
+    "submission_id": "97f7bc18-0",
+    "time_seconds": 0.195,
+    "waveform_url": "/api/waveform/97f7bc18-0"
+  },
+  "timestamp": "2026-05-15 23:47:30"
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": "zero_detector_3bit",
+  "code": "module zero_detector_3bit(input [2:0] a, output y);\n  assign y = a == 0;\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "000 1",
+      "001 0",
+      "111 0",
+      "100 0",
+      "101 0"
+    ],
+    "expected": [
+      "000 1",
+      "001 0",
+      "111 0",
+      "100 0",
+      "101 0"
+    ],
+    "raw_output": "000 1\n001 0\n111 0\n100 0\n101 0",
+    "submission_id": "9fed1bef-d",
+    "time_seconds": 0.186,
+    "waveform_url": "/api/waveform/9fed1bef-d"
+  },
+  "timestamp": "2026-05-15 23:46:21"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "comparator_unsigned",
+  "title": "Unsigned Comparator",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "comparator",
+    "comparison",
+    "combinational"
+  ],
+  "statement": "Build an unsigned comparator that compares two 8-bit operands and reports greater-than, equal, and less-than conditions. The outputs must reflect the result of the comparison for every change of the inputs. This module is pure combinational logic and must not infer any storage elements.",
+  "module_signature": "module comparator_unsigned(input [7:0] a, input [7:0] b, output gt, output eq, output lt);",
+  "behavior": [
+    "gt is 1 when a > b.",
+    "eq is 1 when a == b.",
+    "lt is 1 when a < b.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential constructs or case statements with hidden registers."
+  ],
+  "example": "a b | gt eq lt\n00000001 00000010 | 0 0 1\n00000011 00000011 | 0 1 0\n11111111 00000000 | 1 0 0",
+  "hint": "You can derive lt from gt and eq if you like.",
+  "template": "module comparator_unsigned(input [7:0] a, input [7:0] b, output gt, output eq, output lt);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

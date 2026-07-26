@@ -1,0 +1,30 @@
+{
+  "id": "serial_to_parallel_register",
+  "title": "Serial-to-Parallel Register",
+  "difficulty": "Medium",
+  "category": "Sequential",
+  "tags": [
+    "shift-register",
+    "serialization",
+    "sequential"
+  ],
+  "statement": "Create a serial-to-parallel register that shifts in bits from serial_in on each clock and captures the result when load is asserted. The output holds the current parallel contents. A synchronous reset should clear the register to zero.",
+  "module_signature": "module serial_to_parallel_register(input clk, input rst, input serial_in, input load, output reg [7:0] q);",
+  "behavior": [
+    "On each rising edge, q shifts left and serial_in enters q[0].",
+    "If load is asserted, q presents the accumulated parallel word.",
+    "rst synchronously clears q to 0.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous or combinational latches."
+  ],
+  "example": "clk rst serial_in | q\n1 0 1 | 00000001\n1 0 0 | 00000010",
+  "hint": "Use a shift register and a load condition in the clocked block.",
+  "template": "module serial_to_parallel_register(input clk, input rst, input serial_in, input load, output reg [7:0] q);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,121 @@
+{
+  "problem_id": "decoder_3to8",
+  "code": "module decoder_3to8(input [2:0] sel, output [7:0] y);\n  // Write your code here\n  always@(*) begin\n    case(sel)\n    3'b000:y=8'b00000001;\n    3'b001:y=8'b00000010;\n    3'b010:y=8'b00000100;\n    3'b011:y=8'b00001000;\n    3'b100:y=8'b00010000;\n    3'b101:y=8'b00100000;\n    3'b110:y=8'b01000000;\n    3'b111:y=8'b10000000;\n    default:y=8'b0000000;\n    endcase\n  end\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:5: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:6: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:7: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:8: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:9: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:10: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:11: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:12: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:13: error: y is not a valid l-value in tb.dut.\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire.\n9 error(s) during elaboration.",
+    "compile_errors": [
+      {
+        "line": 5,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:5: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 6,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:6: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 7,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:7: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 8,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:8: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 9,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:9: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 10,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:10: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 11,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:11: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 12,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:12: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      },
+      {
+        "line": 13,
+        "message": "error: y is not a valid l-value in tb.dut.",
+        "friendly": "error: y is not a valid l-value in tb.dut.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:13: error: y is not a valid l-value in tb.dut."
+      },
+      {
+        "line": 1,
+        "message": ": y is declared here as wire.",
+        "friendly": ": y is declared here as wire.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\82cd2535-8\\submission.v:1:      : y is declared here as wire."
+      }
+    ],
+    "submission_id": "82cd2535-8",
+    "time_seconds": 0.216
+  },
+  "timestamp": "2026-05-16 19:39:44"
+}

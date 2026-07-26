@@ -1,0 +1,29 @@
+{
+  "problem_id": "priority_encoder_4to2",
+  "code": "module priority_encoder_4to2(input [3:0] in, output reg [1:0] y, output reg valid);\n  always @(*) begin\n    valid = |in;\n    if (in[3]) begin\n      y = 2'b11;\n    end else if (in[2]) begin\n      y = 2'b10;\n    end else if (in[1]) begin\n      y = 2'b01;\n    end else begin\n      y = 2'b00;\n    end\n  end\nendmodule\n",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0000 00 0",
+      "0001 00 1",
+      "0010 01 1",
+      "0101 10 1",
+      "1001 11 1",
+      "1110 11 1"
+    ],
+    "expected": [
+      "0000 00 0",
+      "0001 00 1",
+      "0010 01 1",
+      "0101 10 1",
+      "1001 11 1",
+      "1110 11 1"
+    ],
+    "raw_output": "0000 00 0\n0001 00 1\n0010 01 1\n0101 10 1\n1001 11 1\n1110 11 1",
+    "submission_id": "d8b8cce7-6",
+    "time_seconds": 0.21,
+    "waveform_url": "/api/waveform/d8b8cce7-6"
+  },
+  "timestamp": "2026-05-15 23:39:20"
+}

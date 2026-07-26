@@ -1,0 +1,28 @@
+{
+  "id": "sign_extension_datapath",
+  "title": "Sign Extension Datapath Block",
+  "difficulty": "Medium",
+  "category": "Datapath",
+  "tags": [
+    "sign-extension",
+    "datapath",
+    "combinational"
+  ],
+  "statement": "Create a datapath block that sign-extends a 7-bit signed input to 16 bits and then adds a constant offset of 8. The result should be a signed 16-bit value. This illustrates how sign extension is integrated into a datapath before arithmetic.",
+  "module_signature": "module sign_extension_datapath(input [6:0] a, output [15:0] y);",
+  "behavior": [
+    "Extend a to 16 bits preserving sign from a[6].",
+    "Add a constant 8 to the extended value.",
+    "The module must be purely combinational.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential storage or multiple clock domains."
+  ],
+  "example": "a     | y\n1000000 | 11111111_11111000\n0111111 | 00000000_10000111",
+  "hint": "First extend the sign bit then perform addition.",
+  "template": "module sign_extension_datapath(input [6:0] a, output [15:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

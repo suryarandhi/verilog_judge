@@ -1,0 +1,30 @@
+{
+  "id": "find_bug_clock_divider",
+  "title": "Find the Bug: Clock Divider",
+  "difficulty": "Medium",
+  "category": "Verification",
+  "tags": [
+    "debugging",
+    "clock",
+    "sequential"
+  ],
+  "statement": "A clock divider module is provided with a bug that causes an incorrect duty cycle. Your task is to fix the design so the output clock toggles every N input cycles and has a 50% duty cycle when N is even. The corrected module should use synchronous counters.",
+  "module_signature": "module find_bug_clock_divider(input clk, input rst, input [3:0] n, output reg clk_out);",
+  "behavior": [
+    "clk_out toggles every n input cycles.",
+    "clk_out should be low after reset until enough cycles accumulate.",
+    "rst synchronously resets the divider.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use asynchronous feedback or combinational loops."
+  ],
+  "example": "n clk_out\n0001 0 1 0 1\n0010 0 0 1 1",
+  "hint": "Count input cycles and toggle the output using a registered counter.",
+  "template": "module find_bug_clock_divider(input clk, input rst, input [3:0] n, output reg clk_out);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

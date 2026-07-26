@@ -1,0 +1,28 @@
+{
+  "id": "majority_gate",
+  "title": "3-Input Majority Gate",
+  "difficulty": "Easy",
+  "category": "Combinational",
+  "tags": [
+    "majority",
+    "voting",
+    "combinational"
+  ],
+  "statement": "Build a 3-input majority gate that outputs 1 when at least two of the three inputs are 1. The output must be low for one or zero asserted inputs. It is a basic voting circuit used in fault-tolerant systems and combinational logic designs.",
+  "module_signature": "module majority_gate(input a, input b, input c, output y);",
+  "behavior": [
+    "y is 1 when two or three inputs are 1.",
+    "y is 0 when zero or one inputs are 1.",
+    "The design must be pure combinational logic.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Avoid sequential constructs and latches."
+  ],
+  "example": "a b c | y\n0 0 0 | 0\n1 1 0 | 1\n1 1 1 | 1",
+  "hint": "Compute the sum of the bits and compare to two.",
+  "template": "module majority_gate(input a, input b, input c, output y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

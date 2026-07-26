@@ -1,0 +1,30 @@
+{
+  "id": "handshake_controller",
+  "title": "Four-Phase Handshake Controller",
+  "difficulty": "Medium",
+  "category": "FSM",
+  "tags": [
+    "handshake",
+    "fsm",
+    "control"
+  ],
+  "statement": "Implement a four-phase request/acknowledge handshake controller. When req is asserted, the controller should assert ack after one cycle and then wait for req to deassert before releasing ack. The controller must return to idle only after both signals have completed the handshake cycle.",
+  "module_signature": "module handshake_controller(input clk, input rst, input req, output reg ack);",
+  "behavior": [
+    "ack is asserted only while the request is active and the handshake is in progress.",
+    "The system waits for req to deassert before deasserting ack.",
+    "rst synchronously resets the controller to idle.",
+    "All state updates occur on the rising edge of clk.",
+    "rst is active-high and synchronous unless the problem statement explicitly says otherwise.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "When rst is asserted on a rising edge, registered outputs reset to their documented initial values."
+  ],
+  "constraints": [
+    "Do not use latches or asynchronous feedback loops."
+  ],
+  "example": "req ack\n1 0 | 1\n0 1 | 0",
+  "hint": "Use explicit states for idle, wait-for-ack, and return-to-idle.",
+  "template": "module handshake_controller(input clk, input rst, input req, output reg ack);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

@@ -1,0 +1,39 @@
+$date
+	Sat May 16 01:34:13 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 7 ! seg [6:0] $end
+$var reg 4 " bcd [3:0] $end
+$scope module dut $end
+$var wire 4 # bcd [3:0] $end
+$var reg 7 $ seg [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111110 $
+b0 #
+b0 "
+b1111110 !
+$end
+#5000
+b110000 $
+b110000 !
+b1 "
+b1 #
+#10000
+b0 $
+b0 !
+b1111 "
+b1111 #
+#15000
+b1010 "
+b1010 #
+#20000

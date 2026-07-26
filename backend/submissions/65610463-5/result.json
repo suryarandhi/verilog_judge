@@ -1,0 +1,27 @@
+{
+  "problem_id": "register_4bit",
+  "code": "module register_4bit(input clk, input reset, input load, input [3:0] d, output reg [3:0] q);\n  // Write your code here\n\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Output did not match expected results.",
+    "actual": [
+      "1 0 0000 xxxx",
+      "0 1 1010 xxxx",
+      "0 0 1111 xxxx",
+      "0 1 0101 xxxx",
+      "1 1 0101 xxxx"
+    ],
+    "expected": [
+      "1 0 0000 0000",
+      "0 1 1010 1010",
+      "0 0 1111 1010",
+      "0 1 0101 0101",
+      "1 1 0101 0000"
+    ],
+    "raw_output": "1 0 0000 xxxx\n0 1 1010 xxxx\n0 0 1111 xxxx\n0 1 0101 xxxx\n1 1 0101 xxxx",
+    "submission_id": "65610463-5",
+    "time_seconds": 0.421,
+    "waveform_url": "/api/waveform/65610463-5"
+  },
+  "timestamp": "2026-05-15 23:35:08"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "one_hot_to_binary",
+  "title": "One-Hot to Binary Encoder",
+  "difficulty": "Medium",
+  "category": "Combinational",
+  "tags": [
+    "encoder",
+    "one-hot",
+    "combinational"
+  ],
+  "statement": "Design a one-hot to binary encoder that converts an eight-bit one-hot input into a 3-bit binary output plus a valid signal. If the input is not one-hot or is all zeros, valid must be 0 and code must be 0. This module is useful in priority schemes and state decoders.",
+  "module_signature": "module one_hot_to_binary(input [7:0] one_hot, output reg [2:0] code, output valid);",
+  "behavior": [
+    "code reports the position of the asserted bit if exactly one input is high.",
+    "valid is 1 only if exactly one input bit is high.",
+    "If zero or multiple bits are asserted, valid is 0 and code is 0.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use sequential pipelines or internal state."
+  ],
+  "example": "one_hot | valid code\n00000000 | 0 000\n00010000 | 1 100\n11000000 | 0 000",
+  "hint": "Count the asserted signals and encode only when the count is one.",
+  "template": "module one_hot_to_binary(input [7:0] one_hot, output reg [2:0] code, output valid);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

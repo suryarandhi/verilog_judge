@@ -1,0 +1,52 @@
+$date
+	Sat May 16 00:15:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 32 ! data_out [31:0] $end
+$var reg 32 " data_in [31:0] $end
+$var reg 1 # dir $end
+$var reg 5 $ shamt [4:0] $end
+$scope module dut $end
+$var wire 32 % data_in [31:0] $end
+$var wire 32 & data_out [31:0] $end
+$var wire 1 ' dir $end
+$var wire 5 ( shamt [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 (
+0'
+b100 &
+b1 %
+b10 $
+0#
+b1 "
+b100 !
+$end
+#5000
+b1000000000000000000000000000 !
+b1000000000000000000000000000 &
+1#
+1'
+b100 $
+b100 (
+b10000000000000000000000000000000 "
+b10000000000000000000000000000000 %
+#10000
+b11111111 !
+b11111111 &
+0#
+0'
+b0 $
+b0 (
+b11111111 "
+b11111111 %
+#15000

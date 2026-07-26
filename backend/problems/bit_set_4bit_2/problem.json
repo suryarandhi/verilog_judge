@@ -1,0 +1,11 @@
+{
+  "title": "Set Bit 2 of 4",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bit-manipulation"
+  ],
+  "description": "Set bit 2 of a 4-bit input.\\n\\nRequired module:\\nmodule bit_set_4bit_2(input [3:0] a, output [3:0] y);",
+  "template": "module bit_set_4bit_2(input [3:0] a, output [3:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

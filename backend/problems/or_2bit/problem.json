@@ -1,0 +1,11 @@
+{
+  "title": "2-bit OR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 2-bit bitwise OR circuit.\\n\\nRequired module:\\nmodule or_2bit(input [1:0] a, input [1:0] b, output [1:0] y);",
+  "template": "module or_2bit(input [1:0] a, input [1:0] b, output [1:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

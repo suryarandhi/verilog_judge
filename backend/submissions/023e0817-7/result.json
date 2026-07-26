@@ -1,0 +1,54 @@
+{
+  "problem_id": "half_adder",
+  "code": "module half_adder(input a, input b, output sum, output carry);\n  assign sum = a ^ b;\n  assign carry = a & b;\nendmodule",
+  "verdict": {
+    "verdict": "Accepted",
+    "message": "Your design passed all hidden tests.",
+    "actual": [
+      "0 0 0 0",
+      "0 1 1 0",
+      "1 0 1 0",
+      "1 1 0 1"
+    ],
+    "expected": [
+      "0 0 0 0",
+      "0 1 1 0",
+      "1 0 1 0",
+      "1 1 0 1"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": true,
+        "actual": "0 0 0 0",
+        "expected": "0 0 0 0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "0 1 1 0",
+        "expected": "0 1 1 0"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1 0 1 0",
+        "expected": "1 0 1 0"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "1 1 0 1",
+        "expected": "1 1 0 1"
+      }
+    ],
+    "passed_tests": 4,
+    "total_tests": 4,
+    "hidden_tests": 4,
+    "raw_output": "0 0 0 0\n0 1 1 0\n1 0 1 0\n1 1 0 1",
+    "submission_id": "023e0817-7",
+    "time_seconds": 0.121,
+    "waveform_url": "/api/waveform/023e0817-7"
+  },
+  "timestamp": "2026-07-03 00:16:35"
+}

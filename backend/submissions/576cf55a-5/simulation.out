@@ -1,0 +1,59 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01235A08 .scope module, "tb" "tb" 2 2;
+ .timescale -9 -12;
+v01231FC0_0 .var "a", 2 0;
+v01232018_0 .var "b", 2 0;
+v01232070_0 .net "y", 2 0, L_0123E820; 1 drivers
+S_011328B8 .scope module, "dut" "nor_3bit" 2 6, 3 1, S_01235A08;
+ .timescale 0 0;
+L_0123E778 .functor OR 3, v01231FC0_0, v01232018_0, C4<000>, C4<000>;
+L_0123E820 .functor NOT 3, L_0123E778, C4<000>, C4<000>, C4<000>;
+v01235A90_0 .net *"_s0", 2 0, L_0123E778; 1 drivers
+v01132940_0 .net "a", 2 0, v01231FC0_0; 1 drivers
+v01132998_0 .net "b", 2 0, v01232018_0; 1 drivers
+v01231F68_0 .alias "y", 2 0, v01232070_0;
+    .scope S_01235A08;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "simulation.vcd";
+    %vpi_call 2 10 "$dumpvars", 1'sb0, S_01235A08;
+    %set/v v01231FC0_0, 0, 3;
+    %set/v v01232018_0, 0, 3;
+    %delay 5000, 0;
+    %vpi_call 2 11 "$display", "%b %b %b", v01231FC0_0, v01232018_0, v01232070_0;
+    %set/v v01231FC0_0, 0, 3;
+    %set/v v01232018_0, 1, 3;
+    %delay 5000, 0;
+    %vpi_call 2 12 "$display", "%b %b %b", v01231FC0_0, v01232018_0, v01232070_0;
+    %set/v v01231FC0_0, 1, 3;
+    %set/v v01232018_0, 0, 3;
+    %delay 5000, 0;
+    %vpi_call 2 13 "$display", "%b %b %b", v01231FC0_0, v01232018_0, v01232070_0;
+    %set/v v01231FC0_0, 1, 3;
+    %set/v v01232018_0, 1, 3;
+    %delay 5000, 0;
+    %vpi_call 2 14 "$display", "%b %b %b", v01231FC0_0, v01232018_0, v01232070_0;
+    %movi 8, 4, 3;
+    %set/v v01231FC0_0, 8, 3;
+    %set/v v01232018_0, 1, 3;
+    %delay 5000, 0;
+    %vpi_call 2 15 "$display", "%b %b %b", v01231FC0_0, v01232018_0, v01232070_0;
+    %movi 8, 2, 3;
+    %set/v v01231FC0_0, 8, 3;
+    %movi 8, 5, 3;
+    %set/v v01232018_0, 8, 3;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$display", "%b %b %b", v01231FC0_0, v01232018_0, v01232070_0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\problems\nor_3bit\tb.v";
+    "D:\buffer gate\buffer gate\verilog-judge\backend\submissions\576cf55a-5\submission.v";

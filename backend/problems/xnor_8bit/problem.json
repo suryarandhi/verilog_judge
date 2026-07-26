@@ -1,0 +1,11 @@
+{
+  "title": "8-bit XNOR",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "bitwise"
+  ],
+  "description": "Design a 8-bit bitwise XNOR circuit.\\n\\nRequired module:\\nmodule xnor_8bit(input [7:0] a, input [7:0] b, output [7:0] y);",
+  "template": "module xnor_8bit(input [7:0] a, input [7:0] b, output [7:0] y);\\n  // Write your code here\\n\\nendmodule",
+  "curated": false
+}

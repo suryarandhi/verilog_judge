@@ -1,0 +1,11 @@
+{
+  "title": "2:1 Multiplexer",
+  "difficulty": "Easy",
+  "tags": [
+    "combinational",
+    "mux"
+  ],
+  "description": "Design a 2:1 multiplexer that selects one of two 1-bit inputs.\n\nRequired module:\nmodule mux_2to1(input i0, input i1, input sel, output y);\n\nBehavior:\n- When sel is 0, y equals i0\n- When sel is 1, y equals i1",
+  "template": "module mux_2to1(input i0, input i1, input sel, output y);\n  // Write your code here\n\nendmodule",
+  "curated": false
+}

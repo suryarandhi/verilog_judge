@@ -1,0 +1,28 @@
+{
+  "id": "saturating_adder",
+  "title": "Saturating Adder",
+  "difficulty": "Medium",
+  "category": "Arithmetic",
+  "tags": [
+    "saturating",
+    "adder",
+    "arithmetic"
+  ],
+  "statement": "Design an 8-bit saturating adder that clamps results to the maximum or minimum signed value on overflow. If signed addition overflows positively, output 01111111; if it overflows negatively, output 10000000. No overflow flag is required, only the saturated result.",
+  "module_signature": "module saturating_adder(input signed [7:0] a, input signed [7:0] b, output reg signed [7:0] y);",
+  "behavior": [
+    "y = a + b unless the signed result overflows.",
+    "Positive overflow saturates to 127.",
+    "Negative overflow saturates to -128.",
+    "Purely combinational: outputs must settle after input changes.",
+    "Do not depend on initial register values, clocks, or delays.",
+    "All outputs must be driven to known 0/1 values for every input case."
+  ],
+  "constraints": [
+    "Do not use behavioral arithmetic that ignores overflow semantics."
+  ],
+  "example": "a b | y\n01111111 00000001 | 01111111\n10000000 10000000 | 10000000",
+  "hint": "Detect overflow from the sign bits of operands and result.",
+  "template": "module saturating_adder(input signed [7:0] a, input signed [7:0] b, output reg signed [7:0] y);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

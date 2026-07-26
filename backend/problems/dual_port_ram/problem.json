@@ -1,0 +1,29 @@
+{
+  "id": "dual_port_ram",
+  "title": "Dual-Port RAM",
+  "difficulty": "Hard",
+  "category": "Memory",
+  "tags": [
+    "ram",
+    "dual-port",
+    "memory"
+  ],
+  "statement": "Build a true dual-port RAM with two independent read/write ports sharing the same memory array. One port should support read operations and the other should support writes simultaneously. The module must prevent write collisions by requiring that both ports do not write the same address at the same time.",
+  "module_signature": "module dual_port_ram(input clk, input wr_en, input [3:0] wr_addr, input [7:0] wr_data, input [3:0] rd_addr, output reg [7:0] rd_data);",
+  "behavior": [
+    "rd_data returns the value stored at rd_addr.",
+    "Writes update the memory on the rising edge when wr_en is 1.",
+    "No two writes may attempt the same address simultaneously.",
+    "All state updates occur on the rising edge of clk.",
+    "Use non-blocking assignments in clocked always blocks.",
+    "Outputs must never depend on uninitialized x/z state after reset.",
+    "The testbench initializes inputs before the first active clock edge."
+  ],
+  "constraints": [
+    "Do not use behavioral arrays that infer dual-port conflict resolution automatically."
+  ],
+  "example": "wr_en wr_addr wr_data | rd_addr rd_data\n1 0001 10101010 | 0001 10101010",
+  "hint": "Implement a single memory array and separate logic for read/write ports.",
+  "template": "module dual_port_ram(input clk, input wr_en, input [3:0] wr_addr, input [7:0] wr_data, input [3:0] rd_addr, output reg [7:0] rd_data);\n  // Write your code here\n\nendmodule",
+  "curated": true
+}

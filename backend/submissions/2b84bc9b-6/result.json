@@ -1,0 +1,86 @@
+{
+  "problem_id": "gated_d_latch",
+  "code": "module gated_d_latch(\n    input en,\n    input d,\n    output reg q\n);\n\nalways @(*)\nbegin\n    if(en)\n        q = d;\nend\n\nendmodule",
+  "verdict": {
+    "verdict": "Wrong Answer",
+    "message": "Your design produced unknown x/z output. Drive every output deterministically for all tested cases.",
+    "actual": [
+      "x",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "expected": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "test_cases": [
+      {
+        "index": 1,
+        "passed": false,
+        "actual": "x",
+        "expected": "0"
+      },
+      {
+        "index": 2,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 3,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 4,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 5,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "index": 6,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 7,
+        "passed": true,
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "index": 8,
+        "passed": true,
+        "actual": "0",
+        "expected": "0"
+      }
+    ],
+    "passed_tests": 7,
+    "total_tests": 8,
+    "hidden_tests": 8,
+    "raw_output": "x\n1\n1\n0\n0\n1\n1\n0",
+    "submission_id": "2b84bc9b-6",
+    "time_seconds": 0.287,
+    "waveform_url": "/api/waveform/2b84bc9b-6"
+  },
+  "timestamp": "2026-05-18 10:00:53"
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": "detect_msb_one",
+  "code": "module detect_msb_one(input [7:0] a, output msb_one);\n  if(a[7] == 1)\n  msb_one = 1'b1;\n  else\n  msb_one = 1'b0;\nendmodule",
+  "verdict": {
+    "verdict": "Compilation Error",
+    "message": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7c2be923-b\\submission.v:3: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7c2be923-b\\submission.v:3: error: Invalid module instantiation\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7c2be923-b\\submission.v:5: syntax error\nD:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7c2be923-b\\submission.v:5: error: Invalid module instantiation",
+    "compile_errors": [
+      {
+        "line": 3,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7c2be923-b\\submission.v:3: syntax error"
+      },
+      {
+        "line": 3,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7c2be923-b\\submission.v:3: error: Invalid module instantiation"
+      },
+      {
+        "line": 5,
+        "message": "syntax error",
+        "friendly": "Syntax error. Check for a missing semicolon, parenthesis, end, or endmodule near this line.",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7c2be923-b\\submission.v:5: syntax error"
+      },
+      {
+        "line": 5,
+        "message": "error: Invalid module instantiation",
+        "friendly": "error: Invalid module instantiation",
+        "raw": "D:\\buffer gate\\buffer gate\\verilog-judge\\backend\\submissions\\7c2be923-b\\submission.v:5: error: Invalid module instantiation"
+      }
+    ],
+    "submission_id": "7c2be923-b",
+    "time_seconds": 0.207
+  },
+  "timestamp": "2026-05-17 18:29:27"
+}
